@@ -697,3 +697,17 @@ iframe {
     text-decoration: none;
     cursor: pointer;
 }
+
+.close2, .close3, .close4, .close5, .close6 {
+    color: #f5faf9;
+    position: absolute;
+    left: 65%;
+    font-size: 128px;
+    font-weight: bold;
+}
+
+.close2:hover, .close3:hover, .close4:hover, .close5:hover, .close6:hover {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
