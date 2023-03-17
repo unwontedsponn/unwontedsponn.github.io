@@ -1,0 +1,699 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+/*    overflow: hidden;*/
+    height: 100vh;
+}
+
+#smaller-body {
+    max-width: 90vw;
+    margin: auto;
+    overflow-y: scroll;
+    overflow: scroll;
+    overflow-x: hidden;
+    scroll-snap-type: y mandatory;
+    height: 100vh;
+    scroll-snap-points-y: repeat(100vh);
+}
+
+section {
+    scroll-snap-align: start;
+}
+
+/*colour palette-------------------------------------------------------------------------------------------------------*/
+.background-light {
+    background-color: #f5faf9;
+}
+
+.color-light {
+    background-color: #f5faf9;
+}
+
+.color-blue {
+    color: #acddfb;
+}
+
+.color-dark-blue {
+    color: #334862;
+}
+
+.color-dark {
+    color: #3f423e;
+}
+
+.color-green {
+    color: #5f9251;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+/*KEYFRAMES--------------------------------------------------------------------------------------------------*/
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 0.3s linear 2s;
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 0.3s linear 2s;
+    }
+}
+
+@keyframes type { 
+  from { 
+    width: 0; 
+  } 
+}
+
+@keyframes rolling {
+    from {
+        transform: rotate(0deg);
+    } to {
+        transform: rotate(360deg);
+    }    
+}
+
+/*navbar-------------------------------------------------------------------------------------------------------*/
+#header {
+    border-collapse: collapse;
+    width: 82.5vw;
+    margin: auto;
+    position: fixed;
+    margin-top: 4vh;
+    z-index: 1;
+}
+
+#logo {
+    font-family: 'Gopher Mono Semi';
+    text-align: left !important;
+    width: 12vw;
+    font-size: 150%;
+}
+
+#empty-nav {
+    color: #f5faf9;
+    width: 35vw;
+}
+
+.nav-links {
+    font-family: 'Gopher Mono';
+}
+
+#header td {
+    padding-bottom: 1vh;
+    text-align: center;
+    border-bottom: 2px solid rgba(172, 221, 251, 0.4);
+    border-right: 2px solid rgba(172, 221, 251, 0.4);    
+}
+
+#last-item{
+    border-right: none !important;
+}
+
+#header a, #portfolio-list li, #cols a {
+    color: #3f423e;
+    text-decoration: none;
+}
+
+#header a:hover, #portfolio-list li:hover, #cols a:hover {
+    color: #e39ba6;
+    text-decoration: underline;
+    text-decoration-color: #c15564;
+    text-decoration-thickness: 3px;
+}
+
+.nav-underline {
+    text-decoration: underline;
+    text-decoration-color: #c15564;
+    text-decoration-thickness: 5px;
+}
+
+/*footer-------------------------------------------------------------------------------------------------------*/
+#footer {
+    font-family: 'Gopher Mono';
+    width: 40vw;
+    position: fixed;
+    margin-top: 4vh;
+    z-index: 1;
+    bottom: 2vh;
+    left: 27vw;
+/*    line-height: 8vh;*/
+    font-size: 80%;
+}
+
+#footer td {
+    padding-top: 1vh;
+    border-top: 2px solid rgba(172, 221, 251, 0.4);
+}
+
+.border-right {
+    border-right: 2px solid rgba(172, 221, 251, 0.4);   
+}
+
+
+#green-and-pine-footer {
+    padding-left: 1.5vw;
+}
+
+#play-footer {
+    padding-left: 1vw;
+}
+
+.play-footer {
+    text-decoration: underline;
+    text-decoration-color: #c15564;
+    text-decoration-thickness: 4px;
+}
+
+#play-footer:hover {
+    color: #e39ba6;
+    text-decoration: underline;
+    text-decoration-color: #c15564;
+    text-decoration-thickness: 3px;
+    cursor: pointer;
+}
+
+/*EQUALISER*/
+#equaliser {
+    position: absolute;
+    right: 340px;
+    bottom: 0px;
+}
+
+/*$max: 100px;*/
+
+.equilizer {
+/*  height: 10vh;*/
+  width: 1vw;
+  transform: rotate(180deg);
+}
+
+.bar {
+  fill: #4a713f;
+  width: 18px;
+  animation: equalize 1.25s steps(25, end) 0s infinite;
+}
+
+.bar:nth-child(1) { 
+  animation-duration: 1.9s;
+}
+
+.bar:nth-child(2) { 
+  animation-duration: 2s;
+}
+
+.bar:nth-child(3) { 
+  animation-duration: 2.3s;
+}
+
+.bar:nth-child(4) { 
+  animation-duration: 2.4s;
+}
+
+.bar:nth-child(5) { 
+  animation-duration: 2.1s;
+}
+
+@keyframes equalize {
+  0% {
+    height: 60px;
+  }
+  4% {
+    height: 50px;
+  }
+  8% {
+    height: 40px;
+  }
+  12% {
+    height: 30px;
+  }
+  16% {
+    height: 20px;
+  }
+  20% {
+    height: 30px;
+  }
+  24% {
+    height: 40px;
+  }
+  28% {
+    height: 10px;
+  }
+  32% {
+    height: 40px;
+  }
+  36% {
+    height: 60px;
+  }
+  40% {
+    height: 20px;
+  }
+  44% {
+    height: 40px;
+  }
+  48% {
+    height: 70px;
+  }
+  52% {
+    height: 30px;
+  }
+  56% {
+    height: 10px;
+  }
+  60% {
+    height: 30px;
+  }
+  64% {
+    height: 50px;
+  }
+  68% {
+    height: 60px;
+  }
+  72% {
+    height: 70px;
+  }
+  76% {
+    height: 80px;
+  }
+  80% {
+    height: 70px;
+  }
+  84% {
+    height: 60px;
+  }
+  88% {
+    height: 50px;
+  }
+  92% {
+    height: 60px;
+  }
+  96% {
+    height: 70px;
+  }
+  100% {
+    height: 80px;
+  }
+}
+
+/*homepage body1-------------------------------------------------------------------------------------------------------*/
+#main-body1 {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    padding: 0 4vw;
+}
+
+#title {
+    position: absolute;
+    font-size: 10.5em;
+    width: 90%;
+    top: 15vh;
+    left: 5vw;
+    font-family: 'Gopher Mono Semi';
+    opacity: 0.4;
+/*    animation: 1s ease-out 0s 1 slideInFromLeft;*/
+}
+
+.title-animation {
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+}
+
+#medium-p-homepage {
+    font-family: 'Gopher Mono Semi';
+    letter-spacing: 0.3em;
+    position: absolute;
+    top: 37vh;
+    left: 15.5vw;
+    font-size: 1.5em;
+    width: 36vw;
+}
+
+#large-p-homepage {
+    font-family: 'Gopher Mono';
+    text-decoration: underline;
+    text-decoration-color: #c15564;
+    letter-spacing: 0.1em;
+    position: absolute;
+    top: 52vh;
+    left: 10vw;
+    font-size: 2em;
+    width: 35vw;
+}
+
+#small-p-homepage {
+    font-family: 'Gopher Mono';
+    letter-spacing: 0.08em;
+    position: absolute;
+    top: 82vh;
+    left: 14vw;
+    font-size: 1em;
+    width: 36%;
+}
+
+#main-body1 img {
+    position: absolute;
+    top: 32vh;
+    left: 57vw;
+    width: 18vw;
+    z-index: -1;
+    border: solid #3f423e;
+}
+
+.title-img-animation {
+    animation: 1s ease-out 0s 1 slideInFromRight;
+}
+
+/*ABOUT-------------------------------------------------------------------------------------------------------*/
+#about {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    padding: 0% 4%;
+}
+
+#about-title {
+    position: absolute;
+    font-size: 9.5em;
+    width: 90%;
+    top: 10vh;
+    left: 5vw;
+    font-family: 'Gopher Mono Semi';
+    opacity: 0.4;
+}
+
+#piano-img {
+    position: absolute;
+    width: 30vw;
+    z-index: 0;
+    opacity: 0.1;
+    left: 50vw;
+}
+
+#code-img {
+    position: absolute;
+    width: 8vw;
+    z-index: 0;
+    opacity: 0.1;
+    top: 77vh;
+    left: 3vw;
+}
+
+#about1 {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 55vw;
+/*    border: solid;*/
+}
+
+#large-p-about1 {
+    font-family: 'Gopher Mono';
+    text-decoration: underline;
+    text-decoration-color: #c15564;
+    letter-spacing: 0.1em;
+    position: absolute;
+    top: 24vh;
+    left: 10vw;
+    font-size: 3em;
+    width: 60vw;
+    margin-bottom: 5vh;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.large-p-about1-animation {
+    animation: type 3s steps(60, end);
+}
+
+#large-p-about2 {
+    font-family: 'Gopher Mono';
+    text-decoration: underline;
+    text-decoration-color: #c15564;
+    letter-spacing: 0.1em;
+    position: absolute;
+    top: 30vh;
+    left: 10vw;
+    font-size: 3em;
+    width: 60vw;
+    margin-bottom: 5vh;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.large-p-about2-animation {
+    animation: type 3s steps(60, end);
+}
+
+#cols {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-family: 'Gopher Mono';
+    gap: 2.2vw;
+    position: absolute;
+    top: 44vh;
+    margin: auto;
+    left: 5vw;
+    font-size: 95%;
+}
+
+.about-text {
+    box-sizing: border-box;
+    padding-top: 2.5vh;
+    font-family: 'Gopher Mono';
+    margin-bottom: 4vh;
+}
+
+.skills {
+    font-size: 70%;
+    margin-top: -10%;
+}
+
+#cols div {
+    flex-basis: 100%;
+}
+
+#about table {
+    font-family: 'Gopher Mono';
+    color: #3f423e;
+    max-width: 20vw;
+    border: 2px solid rgba(172, 221, 251, 0.4);
+    position: absolute;
+}
+
+#about table td {
+    padding: 3.5% 2%;
+}
+
+.border-bottom {
+    border-bottom: 2px solid rgba(172, 221, 251, 0.4);   
+}
+
+/*PORTFOLIO-----------------------------------------------------------------------------------------------------*/
+#portfolio {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    padding: 0% 4%;
+}
+
+#portfolio-title {
+    position: absolute;
+    font-size: 9.5em;
+    width: 90%;
+    top: 10vh;
+    left: 5vw;
+    font-family: 'Gopher Mono Semi';
+    opacity: 0.4;
+}
+
+#portfolio-image {
+    width: 28%;
+    position: absolute;
+    z-index: 0;
+    top: 33vh;
+    left: 9vw;
+    border: solid #3f423e;
+}
+
+.portfolio-img-animation {
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+}
+
+#portfolio-image2 {
+    width: 7%;
+    position: absolute;
+    z-index: 0;
+    top: 13vh;
+    left: 43vw;
+    opacity: 0.2;
+}
+
+.portfolio-img2-animation {
+    animation: rolling 1s;
+}
+
+#portfolio1 {
+    position: relative;
+    margin: auto;
+    width: 55vw;
+/*    border: solid;*/
+}
+
+#large-p-portfolio {
+    font-family: 'Gopher Mono';
+    text-decoration: underline;
+    text-decoration-color: #c15564;
+    letter-spacing: 0.1em;
+    position: absolute;
+    top: 24vh;
+    left: 0vw;
+    font-size: 3em;
+    width: 60vw;
+    margin-bottom: 5vh;
+}
+
+#portfolio-list {
+    font-family: 'Gopher Mono';
+    position: absolute;
+    top: 33vh;
+    left: 22vw;
+    font-size: 1.2em;
+    width: 18vw;
+    margin-bottom: 5vh;
+/*    line-height: 5.6vh;*/
+/*    border: solid;*/
+}
+
+#portfolio-list li {
+    list-style-type: none;
+    cursor: pointer;
+    padding-bottom: 12%;
+}
+
+#portfolio a {
+    color: #3f423e;
+    text-decoration: none;
+}
+
+#portfolio a:hover {
+    color: #e39ba6;
+    text-decoration: underline;
+    text-decoration-color: #c15564;
+}
+
+#portfolio-text {
+    position: absolute;
+    font-family: 'Gopher Mono';
+    top: 33.5vh;
+    left: 41vw;
+    width: 22vw;
+/*    text-align: justify;*/
+}
+
+.small-portfolio-text {
+    font-size: 90%;
+}
+
+.portfolio-tiny-text {
+    padding-top: 2vh;
+    font-size: 70%;
+    color: #4a713f;
+    list-style-type: "-";
+    line-height: 1.5em;
+}
+
+#book, #arcade, #lapland, #short-film, #game, #vlogs, #transcription, #showreel {
+    transition: font-size 1s;
+}
+
+#book:hover, #arcade:hover, #lapland:hover, #short-film:hover, #game:hover, #vlogs:hover, #transcription:hover, #showreel:hover {
+    font-size: 130%;
+}
+
+/*MODAL-----------------------------------------------------------------------------------------------------*/
+#last-item:hover {
+    color: #e39ba6;
+    text-decoration: underline;
+    text-decoration-color: #c15564;
+    text-decoration-thickness: 3px;
+    cursor: pointer;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+/*    overflow: auto; /* Enable scroll if needed */*/
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+.modal-content p {
+    font-family: 'Gopher Mono';
+}
+
+.modal-content-video {
+    margin: 15% auto;
+}
+
+iframe {
+    margin: 0 auto;
+    display: block;
+    border: solid #f5faf9;
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

@@ -1,0 +1,93 @@
+@media only screen and (max-width: 1440px) {
+/*    HOME PAGE ADJUSTMENTS*/
+    #title {
+        font-size: 8em;
+        top: 20vh;
+    }
+
+    #medium-p-homepage {
+        top: 39vh;
+        font-size: 1.3em;
+        width: 36vw;
+    }
+
+    #large-p-homepage {
+        top: 51vh;
+        width: 40vw;
+    }
+
+    #small-p-homepage {
+        top: 76vh;
+        left: 15vw;
+    }
+
+    #main-body1 img {
+        top: 34vh;
+        left: 55vw;
+        width: 22vw;
+    }
+/*    FOOTER*/
+    #equaliser {
+        right: 185px;
+    }
+
+/*    ABOUT PAGE ADJUSTMENTS*/
+    #large-p-about1, #large-p-about2 {
+        font-size: 2.2em;
+    }
+
+    #about-col-1, #about-col-2 {
+    font-size: 83%;
+    }
+
+    #code-img {
+        top: 34vh;
+    }
+
+/*    PORTFOLIO PAGE ADJUSTMENTS*/
+    #large-p-portfolio {
+        top: 27vh
+    }
+
+    #portfolio-list {
+        top: 37.5vh;
+        left: 20vw;
+        font-size: 1em;
+        width: 20vw;
+    }
+
+    #portfolio-list li {
+        padding-bottom: 8.5%;
+    }
+
+    #portfolio-image {
+        width: 26%;
+        top: 37vh;
+        left: 10vw;
+    }
+
+    #portfolio-image2 {
+        width: 10%;
+        top: 14vh;
+        left: 58vw;
+    }
+
+    #portfolio-text {
+        top: 38vh;
+        left: 42vw;
+        width: 25vw;
+        font-size: 80%;
+    }
+
+    .small-portfolio-text {
+        font-size: 75%;
+    }
+
+    .portfolio-tiny-text {
+        font-size: 60%;
+    }
+/*    MODAL CONTENT VIDEO ADJUSTMENTS*/
+    .modal-content-video {
+        margin: 18% auto;
+    }
+}

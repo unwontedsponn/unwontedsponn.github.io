@@ -1,0 +1,127 @@
+@media only screen and (max-width: 800px) {
+/*    NAV ADJUSTMENTS*/
+    #header td {
+        padding: 0  1%;
+    }
+
+/*    FOOTER ADJUSTMENTS*/
+    #equaliser {
+        right: 125px;
+    }
+
+/*    HOME PAGE ADJUSTMENTS*/
+    #title {
+        font-size: 5em;
+    }
+
+    #medium-p-homepage {
+        top: 36vh;
+        font-size: 0.8em;
+        width: 38vw;
+    }
+
+    #large-p-homepage {
+        top: 49vh;
+        width: 38vw;
+        font-size: 110%;
+    }
+
+    #small-p-homepage {
+        top: 69vh;
+        left: 15vw;
+        width: 39%;
+        font-size: 0.7em;
+    }
+
+    #main-body1 img {
+        top: 34vh;
+        left: 55vw;
+        width: 22vw;
+    }
+
+/*    ABOUT PAGE ADJUSTMENTS*/
+    #large-p-about1, #large-p-about2 {
+        font-size: 1.3em;
+    }
+
+    #large-p-about1 {
+        top: 32vh;
+    }
+
+    #large-p-about2 {
+        top: 36vh;
+    }
+
+    #about-col-1, #about-col-2 {
+        font-size: 0.3em;
+    }
+
+    #about-table {
+        font-size: 0.6em;
+    }
+
+    #about-skills-1, #about-skills-2 {
+        display: none;
+    }
+
+    #piano-img {
+        width: 28vw;
+        left: 55vw;
+    }
+
+    #code-img {
+        width: 12vw;
+        top: 32vh;
+        left: 0vw;
+    }
+
+/*    PORTFOLIO PAGE ADJUSTMENTS*/
+    #portfolio-title {
+        font-size: 7.3em;
+    }
+
+    #large-p-portfolio {
+        font-size: 1.8em;
+    }
+
+    #portfolio-image {
+        width: 30%;
+        top: 38vh;
+        left: 7vw;
+    }
+
+    #portfolio-image2 {
+        width: 12%;
+        top: 15vh;
+        left: 75vw;
+    }
+
+    #portfolio-list {
+        left: 18vw;
+        top: 38vh;
+        font-size: 0.6em;
+        width: 20vw;
+    }
+
+    #portfolio-list li {
+        padding-bottom: 10%;
+    }
+
+    #portfolio-text {
+        top: 38vh;
+        left: 38vw;
+        width: 28vw;
+    }    
+
+    .small-portfolio-text {
+        font-size: 7px;
+    }
+
+    .portfolio-tiny-text {
+        font-size: 7px;
+    }
+/*    MODAL CONTENT VIDEO ADJUSTMENTS*/
+        .modal-content-video {
+        margin: 18% auto;
+    }
+}
