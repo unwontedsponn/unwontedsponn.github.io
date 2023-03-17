@@ -9,7 +9,6 @@ html {
 }
 
 body {
-/*    overflow: hidden;*/
     height: 100vh;
 }
 
@@ -316,7 +315,7 @@ section {
   }
 }
 
-/*homepage body1-------------------------------------------------------------------------------------------------------*/
+/*homepage -----------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 #main-body1 {
     display: block;
     position: relative;
@@ -326,15 +325,20 @@ section {
     padding: 0 4vw;
 }
 
+@media only screen and (max-width: 600px) {
+  #title {
+    background-color: lightblue;
+  }
+}
+
 #title {
     position: absolute;
-    font-size: 10.5em;
-    width: 90%;
+    font-size: 9vw;
+    width: 85vw;
     top: 15vh;
     left: 5vw;
     font-family: 'Gopher Mono Semi';
     opacity: 0.4;
-/*    animation: 1s ease-out 0s 1 slideInFromLeft;*/
 }
 
 .title-animation {
@@ -343,11 +347,11 @@ section {
 
 #medium-p-homepage {
     font-family: 'Gopher Mono Semi';
-    letter-spacing: 0.3em;
+    letter-spacing: 0.3vw;
     position: absolute;
     top: 37vh;
     left: 15.5vw;
-    font-size: 1.5em;
+    font-size: 1vw;
     width: 36vw;
 }
 
@@ -355,22 +359,22 @@ section {
     font-family: 'Gopher Mono';
     text-decoration: underline;
     text-decoration-color: #c15564;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.2vw;
     position: absolute;
-    top: 52vh;
+    top: 55vh;
     left: 10vw;
-    font-size: 2em;
+    font-size: 2vw;
     width: 35vw;
 }
 
 #small-p-homepage {
     font-family: 'Gopher Mono';
-    letter-spacing: 0.08em;
+    letter-spacing: 0.08vw;
     position: absolute;
-    top: 82vh;
+    top: 83vh;
     left: 14vw;
-    font-size: 1em;
-    width: 36%;
+    font-size: 0.8vw;
+    width: 32vw;
 }
 
 #main-body1 img {
@@ -393,13 +397,13 @@ section {
     width: 100%;
     height: 100vh;
     box-sizing: border-box;
-    padding: 0% 4%;
+    padding: 0 4vw;
 }
 
 #about-title {
     position: absolute;
-    font-size: 9.5em;
-    width: 90%;
+    font-size: 8vw;
+    width: 90vw;
     top: 10vh;
     left: 5vw;
     font-family: 'Gopher Mono Semi';
@@ -428,18 +432,17 @@ section {
     flex-direction: column;
     margin: auto;
     width: 55vw;
-/*    border: solid;*/
 }
 
 #large-p-about1 {
     font-family: 'Gopher Mono';
     text-decoration: underline;
     text-decoration-color: #c15564;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.2vw;
     position: absolute;
     top: 24vh;
     left: 10vw;
-    font-size: 3em;
+    font-size: 2.5vw;
     width: 60vw;
     margin-bottom: 5vh;
     white-space: nowrap;
@@ -454,11 +457,11 @@ section {
     font-family: 'Gopher Mono';
     text-decoration: underline;
     text-decoration-color: #c15564;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.2vw;
     position: absolute;
     top: 30vh;
     left: 10vw;
-    font-size: 3em;
+    font-size: 2.5vw;
     width: 60vw;
     margin-bottom: 5vh;
     white-space: nowrap;
@@ -479,10 +482,10 @@ section {
     top: 44vh;
     margin: auto;
     left: 5vw;
-    font-size: 95%;
+    font-size: 0.7vw;
 }
 
-.about-text {
+.about-col-1, .about-col-2 {
     box-sizing: border-box;
     padding-top: 2.5vh;
     font-family: 'Gopher Mono';
@@ -490,8 +493,8 @@ section {
 }
 
 .skills {
-    font-size: 70%;
-    margin-top: -10%;
+    font-size: 0.5vw;
+    margin-top: 1vh;
 }
 
 #cols div {
@@ -521,13 +524,13 @@ section {
     width: 100%;
     height: 100vh;
     box-sizing: border-box;
-    padding: 0% 4%;
+    padding: 0 4vw;
 }
 
 #portfolio-title {
     position: absolute;
-    font-size: 9.5em;
-    width: 90%;
+    font-size: 8vw;
+    width: 90vw;
     top: 10vh;
     left: 5vw;
     font-family: 'Gopher Mono Semi';
@@ -548,12 +551,12 @@ section {
 }
 
 #portfolio-image2 {
-    width: 7%;
+    width: 7vw;
     position: absolute;
     z-index: 0;
     top: 13vh;
     left: 43vw;
-    opacity: 0.2;
+    opacity: 0.5;
 }
 
 .portfolio-img2-animation {
@@ -564,18 +567,17 @@ section {
     position: relative;
     margin: auto;
     width: 55vw;
-/*    border: solid;*/
 }
 
 #large-p-portfolio {
     font-family: 'Gopher Mono';
     text-decoration: underline;
     text-decoration-color: #c15564;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.2vw;
     position: absolute;
     top: 24vh;
     left: 0vw;
-    font-size: 3em;
+    font-size: 2.5vw;
     width: 60vw;
     margin-bottom: 5vh;
 }
@@ -585,11 +587,9 @@ section {
     position: absolute;
     top: 33vh;
     left: 22vw;
-    font-size: 1.2em;
+    font-size: 1vw;
     width: 18vw;
     margin-bottom: 5vh;
-/*    line-height: 5.6vh;*/
-/*    border: solid;*/
 }
 
 #portfolio-list li {
@@ -615,16 +615,15 @@ section {
     top: 33.5vh;
     left: 41vw;
     width: 22vw;
-/*    text-align: justify;*/
 }
 
 .small-portfolio-text {
-    font-size: 90%;
+    font-size: 0.8vw;
 }
 
 .portfolio-tiny-text {
     padding-top: 2vh;
-    font-size: 70%;
+    font-size: 0.6vw;
     color: #4a713f;
     list-style-type: "-";
     line-height: 1.5em;
@@ -655,7 +654,6 @@ section {
     top: 0;
     width: 100%;
     height: 100%;
-/*    overflow: auto; /* Enable scroll if needed */*/
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
@@ -701,7 +699,8 @@ iframe {
 .close2, .close3, .close4, .close5, .close6 {
     color: #f5faf9;
     position: absolute;
-    left: 65%;
+    top: 5s8vh;
+    left: 65vw;
     font-size: 128px;
     font-weight: bold;
 }
