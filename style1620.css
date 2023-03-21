@@ -7,7 +7,7 @@
     }
 
      #large-p-homepage {
-        top: 52vh;
+        top: 55vh;
         width: 40vw;
     }
 
@@ -15,3 +15,33 @@
         top: 77vh;
 /*        left: 15vw;*/
     }
+
+    #main-body1 img {
+        top: 34vh;
+        left: 55vw;
+        width: 20vw;
+    }
+
+    /*    ABOUT PAGE ADJUSTMENTS*/
+    #about-title {
+        font-size: 10vw;
+    }
+
+    #large-p-about1 {
+        top: 24vh;
+        left: 10vw;
+        font-size: 15.5vw;
+        width: 60vw;
+    }
+
+    #large-p-about1, #large-p-about2 {
+        font-size: 1.3em;
+    }
+
+   /* #large-p-about1 {
+        top: 32vh;
+    }
+
+    #large-p-about2 {
+        top: 36vh;
+    }*/

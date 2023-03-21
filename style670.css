@@ -1,4 +1,13 @@
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 670px) {
+/*    NAV ADJUSTMENTS*/
+    #header td {
+        padding: 0  1%;
+    }
+
+    #empty-nav, #about-nav, #portfolio-nav {
+        display: none;
+    }
+
 /*    FOOTER ADJUSTMENTS*/
     #footer {
         left: 20vw;
@@ -15,7 +24,7 @@
 
 /*    HOME PAGE ADJUSTMENTS*/
     #title {
-        font-size: 4em;
+        font-size: 5em;
     }
 
     #medium-p-homepage {
