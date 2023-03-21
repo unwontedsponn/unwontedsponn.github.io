@@ -27,7 +27,7 @@ section {
     scroll-snap-align: start;
 }
 
-/*colour palette-------------------------------------------------------------------------------------------------------*/
+/*colours and styles-------------------------------------------------------------------------------------------------------*/
 .background-light {
     background-color: #f5faf9;
 }
@@ -54,6 +54,30 @@ section {
 
 .bold {
     font-weight: bold;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+/*MISC--------------------------------------------------------------------------------------------------*/
+hr {
+    height: 0.4vh;
+    background-color: #4a713f;
+    border: none;
+    margin-bottom: 1vh;
+}
+
+#hr1 {
+    width: 20%;
+}
+
+#hr2 {
+    width: 37%;   
+}
+
+#hr3 {
+    width: 47%;   
 }
 
 /*KEYFRAMES--------------------------------------------------------------------------------------------------*/
@@ -90,6 +114,26 @@ section {
         transform: rotate(0deg);
     } to {
         transform: rotate(360deg);
+    }    
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    } 1% {
+        opacity: 0;
+    } 100% {
+        opacity: 0.5;
+    }    
+}
+
+@keyframes fadeIn2 {
+    0% {
+        opacity: 0;
+    } 1% {
+        opacity: 0;
+    } 100% {
+        opacity: 1;
     }    
 }
 
@@ -339,6 +383,7 @@ section {
     left: 5vw;
     font-family: 'Gopher Mono Semi';
     opacity: 0.4;
+/*    text-shadow: 0px 0px 2px #3f423e;*/
 }
 
 .title-animation {
@@ -349,7 +394,7 @@ section {
     font-family: 'Gopher Mono Semi';
     letter-spacing: 0.3vw;
     position: absolute;
-    top: 37vh;
+    top: 38vh;
     left: 15.5vw;
     font-size: 1vw;
     width: 36vw;
@@ -363,7 +408,7 @@ section {
     position: absolute;
     top: 55vh;
     left: 10vw;
-    font-size: 2vw;
+    font-size: 1.9vw;
     width: 35vw;
 }
 
@@ -371,7 +416,8 @@ section {
     font-family: 'Gopher Mono';
     letter-spacing: 0.08vw;
     position: absolute;
-    top: 83vh;
+/*    top: 83vh;*/
+    bottom: 11vh;
     left: 14vw;
     font-size: 0.8vw;
     width: 32vw;
@@ -424,7 +470,7 @@ section {
     z-index: 0;
     opacity: 0.1;
     top: 77vh;
-    left: 3vw;
+    left: 0vw;
 }
 
 #about1 {
@@ -510,7 +556,7 @@ section {
 }
 
 #about table td {
-    padding: 3.5% 2%;
+    padding: 3% 2%;
 }
 
 .border-bottom {
@@ -547,7 +593,8 @@ section {
 }
 
 .portfolio-img-animation {
-    animation: 1s ease-out 0s 1 slideInFromLeft;
+/*    animation: 1s ease-out 0s 1 slideInFromLeft;*/
+/*    animation: fadeIn2 6s;*/
 }
 
 #portfolio-image2 {
@@ -560,7 +607,7 @@ section {
 }
 
 .portfolio-img2-animation {
-    animation: rolling 1s;
+    animation: rolling 1.5s, fadeIn 6s;
 }
 
 #portfolio1 {
@@ -575,11 +622,15 @@ section {
     text-decoration-color: #c15564;
     letter-spacing: 0.2vw;
     position: absolute;
-    top: 24vh;
+    top: 25.5vh;
     left: 0vw;
     font-size: 2.5vw;
     width: 60vw;
     margin-bottom: 5vh;
+}
+
+#portfolio h3:hover {
+    cursor: pointer;
 }
 
 #portfolio-list {
@@ -595,7 +646,8 @@ section {
 #portfolio-list li {
     list-style-type: none;
     cursor: pointer;
-    padding-bottom: 12%;
+    padding: 2.5% 0%;
+    font-size: 85%;
 }
 
 #portfolio a {
@@ -614,7 +666,7 @@ section {
     font-family: 'Gopher Mono';
     top: 33.5vh;
     left: 41vw;
-    width: 22vw;
+    width: 23vw;
 }
 
 .small-portfolio-text {
@@ -629,13 +681,19 @@ section {
     line-height: 1.5em;
 }
 
-#book, #arcade, #lapland, #short-film, #game, #vlogs, #transcription, #showreel {
-    transition: font-size 1s;
+.external-img {
+    width: 0.8vw;
+    padding-left: 0.2vw;
+    opacity: 0.5;
 }
 
-#book:hover, #arcade:hover, #lapland:hover, #short-film:hover, #game:hover, #vlogs:hover, #transcription:hover, #showreel:hover {
+/*#book, #arcade, #lapland, #short-film, #game, #vlogs, #transcription, #showreel {
+    transition: font-size 1s;
+}*/
+
+/*#book:hover, #arcade:hover, #lapland:hover, #short-film:hover, #game:hover, #vlogs:hover, #transcription:hover, #showreel:hover {
     font-size: 130%;
-}
+}*/
 
 /*MODAL-----------------------------------------------------------------------------------------------------*/
 #last-item:hover {

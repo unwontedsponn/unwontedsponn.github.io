@@ -1,5 +1,5 @@
 // CHANGING WORD ON HOMEPAGE---------------------------------------------------------
-const array = ["websites", "music", "films", "books", "games", "things"]
+const array = ["things", "websites", "music", "films", "books", "games"]
 let changingWord = document.getElementById('change-word');
 let index = 0;
 
@@ -108,6 +108,55 @@ const observer3 = new IntersectionObserver(entries => {
 observer3.observe(portfolioImg, portfolioImg2);
 
 // PORTFOLIO TEXT APPEARANCES-----------------------------------------------------------------------------------------------------------------------
+// expanded lists
+// function webDevEnter() {
+//     document.getElementById('webDevList').style.display = "block";
+// }
+
+// function webDevLeave() {
+//     webDevList = document.getElementById('webDevList');
+//     if (webDevList) {
+//     // Do something..
+//     }
+
+
+
+//     if (bookEnter() && arcadeEnter()) {
+//         document.getElementById('webDevList').style.display = "block";
+//     } else {
+//         document.getElementById('webDevList').style.display = "none";
+//     }
+// }
+
+// function dataScienceEnter() {
+//     document.getElementById('dataScienceList').style.display = "block";
+// }
+
+// function dataScienceLeave() {
+//     if (bookLeave() && arcadeLeave() && dataScienceLeave()) {
+//         document.getElementById('dataScienceList').style.display = "none";
+//     }
+// }
+
+// function audioProjectsEnter() {
+//     document.getElementById('audioProjectsList').style.display = "block";
+// }
+
+// function audioProjectsLeave() {
+//     if (bookLeave() && arcadeLeave() && webDevLeave()) {
+//         document.getElementById('audioProjectsList').style.display = "none";
+//     }
+// }
+
+// expanded text
+function websiteEnter() {
+    document.getElementById('website-text').style.display = "block";
+}
+
+function websiteLeave() {
+    document.getElementById('website-text').style.display = "none";
+}
+
 function bookEnter() {
     document.getElementById('book-text').style.display = "block";
 }

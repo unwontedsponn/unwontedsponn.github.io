@@ -11,32 +11,33 @@
 
 /*    HOME PAGE ADJUSTMENTS*/
     #title {
-        font-size: 5em;
+        font-size: 7em;
+        opacity: 0.7;
     }
 
     #medium-p-homepage {
-        top: 36vh;
+        top: 34vh;
         font-size: 0.8em;
         width: 38vw;
     }
 
     #large-p-homepage {
-        top: 49vh;
-        width: 38vw;
-        font-size: 110%;
+        top: 48vh;
+        width: 42vw;
+        font-size: 2.5vw;
     }
 
     #small-p-homepage {
-        top: 69vh;
-        left: 15vw;
-        width: 39%;
+        top: 83vh;
+        left: 18vw;
+        width: 60%;
         font-size: 0.7em;
     }
 
     #main-body1 img {
-        top: 34vh;
-        left: 55vw;
-        width: 22vw;
+        top: 10vh;
+        left: 54vw;
+        width: 32vw;
     }
 
 /*    ABOUT PAGE ADJUSTMENTS*/
@@ -97,7 +98,7 @@
     }
 
     #portfolio-list {
-        left: 18vw;
+        left: 18    vw;
         top: 38vh;
         font-size: 0.6em;
         width: 20vw;

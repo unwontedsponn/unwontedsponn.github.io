@@ -1,0 +1,17 @@
+@media only screen and (max-width: 1620px) {
+/*    HOME PAGE ADJUSTMENTS*/
+    #title {
+/*        font-size: 8em;*/
+        top: 20vh;
+        width: 85vw;
+    }
+
+     #large-p-homepage {
+        top: 52vh;
+        width: 40vw;
+    }
+
+    #small-p-homepage {
+        top: 77vh;
+/*        left: 15vw;*/
+    }
