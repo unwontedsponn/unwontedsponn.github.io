@@ -194,6 +194,12 @@ hr {
 
 /*footer-------------------------------------------------------------------------------------------------------*/
 #footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#footer2 {
     font-family: 'Gopher Mono';
     width: 40vw;
     position: fixed;
@@ -639,6 +645,10 @@ hr {
 
 .border-bottom {
     border-bottom: 2px solid rgba(172, 221, 251, 0.4);   
+}
+
+.cv {
+    letter-spacing: 0.1vw;
 }
 
 /*PORTFOLIO-----------------------------------------------------------------------------------------------------*/
