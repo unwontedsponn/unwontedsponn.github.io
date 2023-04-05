@@ -28,3 +28,36 @@
         left: 55vw;
         width: 20vw;
     }
+
+    /*    ABOUT PAGE ADJUSTMENTS----------------------------------------------------------------------*/
+    #about-title {
+        font-size: 12vw;
+    }
+
+    #large-p-about1 {
+        top: 24vh;
+        left: 10vw;
+        width: 65vw;
+    }
+
+    #large-p-about1, #large-p-about2 {
+        font-size: 2em;
+    }
+
+    #large-p-about1 {
+        top: 26vh;
+    }
+
+    #large-p-about2 {
+        top: 32vh;
+    }
+
+    #cols {
+        font-size: 1vw;
+    }
+
+    #piano-img {
+        width: 25vw;
+        left: 60vw;
+    }
+}

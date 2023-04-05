@@ -1,5 +1,5 @@
 @media only screen and (max-width: 1175px) {    
-/*    HOME PAGE ADJUSTMENTS*/
+/*    HOME PAGE ADJUSTMENTS---------------------------------------------------------------------*/
     #title {
         font-size: 7em;
         top: 20vh;
@@ -29,3 +29,12 @@
         left: 55vw;
         width: 32vw;
     }
+    /* ABOUT ADJUSTMENTS---------------------------------------------------------------------*/
+    #about-table {
+        display: none;
+    }
+
+    #cols {
+        font-size: 1.3vw;
+    }
+}

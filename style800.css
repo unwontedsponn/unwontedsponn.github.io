@@ -9,7 +9,7 @@
         right: 125px;
     }
 
-/*    HOME PAGE ADJUSTMENTS*/
+/*    HOME PAGE ADJUSTMENTS--------------------------------------------------------------------------*/
     #title {
         font-size: 6em;
 /*        opacity: 0.7;*/
@@ -40,43 +40,46 @@
         width: 32vw;
     }
 
-/*    ABOUT PAGE ADJUSTMENTS*/
+/*    ABOUT PAGE ADJUSTMENTS-------------------------------------------------------------------------*/
+    #about-title {
+        font-size: 15vw;
+    }
+
     #large-p-about1, #large-p-about2 {
         font-size: 1.3em;
     }
 
     #large-p-about1 {
-        top: 32vh;
+        top: 22vh;
+        width: 62vw;
     }
 
     #large-p-about2 {
-        top: 36vh;
+        top: 26vh;
     }
 
-    #about-col-1, #about-col-2 {
+    #cols {
+        top: 38vh;
+        font-size: 1.6vw;
+    }
+
+    /*#about-col-1, #about-col-2 {
         font-size: 0.3em;
-    }
-
-    #about-table {
-        font-size: 0.6em;
-    }
-
-    #about-skills-1, #about-skills-2 {
-        display: none;
-    }
+    }*/
 
     #piano-img {
-        width: 28vw;
+        top: 5vh;
+        width: 35vw;
         left: 55vw;
     }
 
     #code-img {
         width: 12vw;
-        top: 32vh;
+        top: 82vh;
         left: 0vw;
     }
 
-/*    PORTFOLIO PAGE ADJUSTMENTS*/
+/*    PORTFOLIO PAGE ADJUSTMENTS-------------------------------------------------------------------------*/
     #portfolio-title {
         font-size: 7.3em;
     }
@@ -121,7 +124,7 @@
     .portfolio-tiny-text {
         font-size: 7px;
     }
-/*    MODAL CONTENT VIDEO ADJUSTMENTS*/
+/*    MODAL CONTENT VIDEO ADJUSTMENTS-------------------------------------------------------------------------*/
         .modal-content-video {
         margin: 18% auto;
     }

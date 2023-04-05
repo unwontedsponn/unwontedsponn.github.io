@@ -20,9 +20,11 @@
 
         <div id="smaller-body">
 
-            <!-- NAV MENU ----------------------------------------------------------------------------->
-            <div id="header">
-                <table id="header2" class="color-dark">                        
+            <!-- TITLE BODY ----------------------------------------------------------------------------->
+            <section id="main-body1">
+
+                <!-- NAV MENU ----------------------------------------------------------------------------->
+                <table id="header" class="color-dark">                        
                     <tr>
                         <td id="logo"><a href="#main-body1">benSpooner</a></td>
                         <td id="empty-nav">Ben Spooner</td>
@@ -33,21 +35,17 @@
                         <td class="nav-links" id="last-item">contact</td>                            
                     </tr>
                 </table>
-            </div>
 
-            <!-- THE CONTACT MODAL -->
-            <div id="myModal" class="modal">
-                
-                <!-- MODAL CONTENT -->
-                <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <p>Drop me an email at: <span class="bold">benpaulspooner@gmail.com</span></p>
+                <!-- THE CONTACT MODAL -->
+                <div id="myModal" class="modal">
+                    
+                    <!-- MODAL CONTENT -->
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <p>Drop me an email at: <span class="bold">benpaulspooner@gmail.com</span></p>
+                    </div>
+
                 </div>
-
-            </div>
-
-            <!-- TITLE BODY ----------------------------------------------------------------------------->
-            <section id="main-body1">
             
                 <h1 id="title" class="color-blue">Web Developer & Audio Specialist</h1>
                 <div id="medium-p-homepage">
@@ -61,11 +59,8 @@
                 </div>
                 <img id="title-img" src="./images/homepage-pic.jpeg">
 
-            </section>
-
-            <!-- FOOTER ----------------------------------------------------------------------------->             
-            <div id="footer">
-                <table id="footer2">
+                <!-- FOOTER ----------------------------------------------------------------------------->             
+                <table id="footer">
                     <tr>
                         <td class="bold border-right" id="listen">listenNow:</td> 
                         <td class="border-right">
@@ -85,8 +80,8 @@
                         </td>                    
                         <td><span id="play-footer" onclick="playPause()">play</span></td>
                     </tr>                    
-                </table>  
-            </div>
+                </table>              
+            </section>      
 
             <!-- ABOUT --------------------------------------------------------------------------------------------->
             <section id="about">
@@ -131,10 +126,10 @@
                 <h2 id="portfolio-title" class="color-blue">Portfoli</h2>
                 <img id="portfolio-image" src="./images/sponn img.png">
                 <img id="portfolio-image2" src="./images/dice.png">
-                <div id="large-p-portfolio">
-                    <p class="color-dark-blue">Things I've created...</p>
-                </div>
-                <div id="portfolio-cols">                    
+                <div id="portfolio1">                    
+                    <div id="large-p-portfolio">
+                        <p class="color-dark-blue">Things I've created...</p>
+                    </div>
                     <div id="portfolio-list">
                         <h3 onmouseenter="webDevEnter()" onmouseleave="webDevLeave()" id="webDev">webDev</h3>
                         <hr id="hr1">

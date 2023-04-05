@@ -50,15 +50,16 @@
     }
 
     #large-p-about1, #large-p-about2 {
-        font-size: 0.6em;
+        font-size: 1.2em;
     }
 
     #large-p-about1 {
         top: 24vh;
+        width: 70vw;
     }
 
     #large-p-about2 {
-        top: 26vh;
+        top: 27vh;
     }
 
     #cols {
@@ -66,30 +67,21 @@
         flex-direction: column;
         justify-content: center;
         width: 80vw;
-        font-family: 'Gopher Mono';
         gap: 2.2vw;
         position: absolute;
-        top: 30vh;
+        top: 40vh;
         margin: auto;
         left: 5vw;
-/*        font-size: 90%;*/
-    }
-
-    #about-text {
-        font-size: 30%;
-    }
-
-    #about-table {
-        display: none;
+        font-size: 1.8vw;
     }
 
     #about-skills-1, #about-skills-2 {
-        display: none;
+        display: block;
     }
 
     #piano-img {
         left: 55vw;
-        top: 20vh;
+        top: 14vh;
     }
 
     #code-img {
@@ -98,7 +90,7 @@
     }  
 
 /*    PORTFOLIO PAGE ADJUSTMENTS*/
-    #portfolio-title {
+    /*#portfolio-title {
         font-size: 4em;
     }
 
@@ -138,7 +130,7 @@
 
     .small-portfolio-text {
         font-size: 55%;
-    }
+    }*/
 
 /*    MODAL CONTENT VIDEO ADJUSTMENTS*/
         .modal-content-video {
