@@ -8,11 +8,8 @@
         <link href = "./fonts/gopherMono/stylesheet.css" rel = "stylesheet" type = "text/css" />      
         <!-- css -->
         <link rel="stylesheet" href="./style.css" type="text/css" media="screen"/>
-        <link rel="stylesheet" href="./style1440.css" type="text/css" media="screen"/>
         <link rel="stylesheet" href="./style1175.css" type="text/css" media="screen"/>
-        <link rel="stylesheet" href="./style800.css" type="text/css" media="screen"/>
-        <!-- <link rel="stylesheet" href="./style670.css" type="text/css" media="screen"/> -->
-        <!-- <link rel="stylesheet" href="./style600.css" type="text/css" media="screen"/> -->
+        <link rel="stylesheet" href="./style800.css" type="text/css" media="screen"/>        
         <!-- js -->
         <script type="text/javascript" src="./script.js" defer></script>
     </head>
@@ -21,17 +18,19 @@
         <div id="smaller-body">
 
                 <!-- NAV MENU ----------------------------------------------------------------------------->
-                <table id="header" class="color-dark">                        
-                    <tr>
-                        <td id="logo"><a href="#main-body1">benSpooner</a></td>
-                        <td id="empty-nav">Ben Spooner</td>
-                        <td class="nav-links" id="about-nav"><a href="#about">about</a></td>
-                        <td class="nav-links" id="portfolio-nav"><a href="#portfolio">portfolio</a></td> 
-                        <td class="nav-links"><a href="https://www.youtube.com/channel/UC3HRAUGFQ_qK4UNXN4y1tIA" target="blank">youTube</a></td>                        
-                        <td class="nav-links"><a href="https://medium.com/@benspooner" target="blank">blog</a></td>
-                        <td class="nav-links" id="last-item">contact</td>                            
-                    </tr>
-                </table>
+                <div id="nav-div">
+                    <table id="header" class="color-dark">                        
+                        <tr>
+                            <td id="logo"><a href="#main-body1">benSpooner</a></td>
+                            <td id="empty-nav">Ben Spooner</td>
+                            <td class="nav-links" id="about-nav"><a href="#about">about</a></td>
+                            <td class="nav-links" id="portfolio-nav"><a href="#portfolio">portfolio</a></td> 
+                            <td class="nav-links"><a href="https://www.youtube.com/channel/UC3HRAUGFQ_qK4UNXN4y1tIA" target="blank">youTube</a></td>                        
+                            <td class="nav-links"><a href="https://medium.com/@benspooner" target="blank">blog</a></td>
+                            <td class="nav-links" id="last-item">contact</td>                            
+                        </tr>
+                    </table>
+                </div>
 
                 <!-- THE CONTACT MODAL -->
                 <div id="myModal" class="modal">
@@ -47,7 +46,7 @@
              <!-- TITLE BODY ----------------------------------------------------------------------------->
             <section id="main-body1">
 
-                <h1 id="title" class="color-blue">Web Developer & Audio Specialist</h1>
+                <h1 id="title" class="color-blue">Aspiring Full Stack Developer</h1>
                 <div id="medium-p-homepage">
                     <p class="color-green">I like to get things done</p>
                 </div>
@@ -62,23 +61,23 @@
 
             <!-- FOOTER ----------------------------------------------------------------------------->             
             <div id="footer">
+                <div id="equaliser" style="display:none">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="equilizer" viewBox="0 0 128 128">
+                        <g>
+                            <title>Audio Equilizer</title>
+                            <rect class="bar" transform="translate(0,0)" y="15"></rect>
+                            <rect class="bar" transform="translate(25,0)" y="15"></rect>
+                            <rect class="bar" transform="translate(50,0)" y="15"></rect>
+                            <rect class="bar" transform="translate(75,0)" y="15"></rect>
+                            <rect class="bar" transform="translate(100,0)" y="15"></rect>
+                        </g>
+                    </svg>
+                </div>
                 <table id="footer2">
                     <tr>
                         <td class="bold border-right" id="listen">listenNow:</td> 
                         <td class="border-right">
                             <span id="green-and-pine-footer">greenAndPine</span>
-                            <div id="equaliser" style="display:none">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="equilizer" viewBox="0 0 128 128">
-                                    <g>
-                                        <title>Audio Equilizer</title>
-                                        <rect class="bar" transform="translate(0,0)" y="15"></rect>
-                                        <rect class="bar" transform="translate(25,0)" y="15"></rect>
-                                        <rect class="bar" transform="translate(50,0)" y="15"></rect>
-                                        <rect class="bar" transform="translate(75,0)" y="15"></rect>
-                                        <rect class="bar" transform="translate(100,0)" y="15"></rect>
-                                    </g>
-                                </svg>
-                            </div>
                         </td>                    
                         <td><span id="play-footer" onclick="playPause()">play</span></td>
                     </tr>                    
@@ -97,24 +96,24 @@
                     <img id="piano-img" src="./images/piano.png">         
                     <div id="cols">
                         <div id="about-col-1">
-                            <p class="color-green">Brief history of my web development</p>
-                            <p class="color-dark">My love for coding came out of the blue. I was studying for an MSc in Music and Sound, when I began teaching myself <span class="bold">C#</span> so I could add sounds I’d created into computer games, using the Unity Game Engine. I enjoyed the process so much that it sparked a huge thirst to explore the other exciting things that code can do. After dipping my toe into <span class="bold">C++</span> and the Unreal engine, I took the decision to study Front-End Development in earnest, using professional resources like Codecademy, freeCodeCamp and more to up-skill. In 2023 I competed against <span class="bold">twenty thousand</span> applicants and gained a place on a coding <span class="bold">scholarship</span> (HyperionDev) funded by the DoE. I have now built up a portfolio of projects including this website, a digital piano education book prototype, and a retro arcade game platform - all created solo and from scratch.</p>
-                            <p class="color-dark skills" id="about-skills-1"><span class="bold">SKILLS:</span><br><span class="color-green bold">WebDev:</span> HTML, CSS and Javascript<br><span class="color-green bold">Data Science:</span> Python, SQL<br><br><span class="cv color-dark-blue bold">> DOWNLOAD MY TECH CV</span></p>
+                            <p class="color-green">Brief history of my data and web development</p>
+                            <p class="color-dark">My love for coding came out of the blue. I was studying for an MSc in Music and Sound, when I began teaching myself <span class="bold">C#</span> so I could add sounds I’d created into computer games, using the Unity Game Engine. I enjoyed the process so much that it sparked a huge thirst to explore the other exciting things that code can do. After dipping my toe into <span class="bold">C++</span> and the Unreal engine, I took the decision to study Front-End Development in earnest, using professional resources like Codecademy, freeCodeCamp and more to up-skill. In 2023 I competed against <span class="bold">twenty thousand</span> applicants and gained a place on a Data Science coding <span class="bold">scholarship</span> course (HyperionDev) funded by the DoE. I have now built up a portfolio of projects including this website, a prototpye of a digital piano education book and a retro arcade game platform - all created solo and from scratch.</p>
+                            <p class="color-dark skills" id="about-skills-1"><span class="bold">SKILLS:</span><br><span class="color-green bold">WebDev:</span> HTML, CSS, Javascript and game programming with the HTML5 canvas<br><span class="color-green bold">Data Science:</span> Python, SQL<br><br><span class="cv color-dark-blue bold" id="cv1">> VIEW MY TECH CV</span></p>
                         </div>
                         <div id="about-col-2">
                             <p class="color-green">Brief history of my audio skills</p>
                             <p class="color-dark">My career to date has been involved with all aspects of music and sound. For the last 15 years I've performed (Joy Crookes), toured (Edinburgh Festival), taught (ABRSM), examined (RSL), composed (Kuoni), scored, produced and treated audio for a range of content. Audio is a passion in my life and I'm proud of my expertise in almost all areas. <em>Except perhaps singing</em>. In 2021 I composed the music to an award-winning short film called <em>When We Fell</em>. It was presented at festivals worldwide, <span class="bold">won three awards</span> and was nominated for the Audience Award by the prestigious British Animation Awards. Today, I release music independently as the artists <a href="https://open.spotify.com/artist/1GWf0efwkbX9yy48pMLWUL?si=uUWl3reFQnu5QJTwCYxyPQ"><span class="underline">Sponn</span></a> and <a href="https://open.spotify.com/artist/3KpLXzoIDJNgBMf4mHQigs?si=nwku_RHaSN2S6xdXMcgovQ"><span class="underline">Green and Pine</span></a>.</p>
-                            <p class="color-dark skills" id="about-skills-2"><span class="bold">SKILLS:</span><br><span class="color-green bold">Programs:</span> Logic X, Sibelius Ultimate and FMOD<br><span class="color-green bold">Tuition:</span> Drums, Piano, Production, Theory, Composition and Transcription<br><br><span class="cv color-dark-blue bold">> DOWNLOAD MY AUDIO CV</span></p>
+                            <p class="color-dark skills" id="about-skills-2"><span class="bold">SKILLS:</span><br><span class="color-green bold">Programs:</span> Logic X, Sibelius Ultimate and FMOD<br><span class="color-green bold">Tuition:</span> Drums, Piano, Production, Theory, Composition and Transcription<br><br><span class="cv color-dark-blue bold" id="cv2" id="cv2">> VIEW MY AUDIO CV</span></p>
                         </div>
                         <div id="about-table">
                             <table>
                                 <tr><td class="border-bottom"><span class="bold">Name:</span> Ben Spooner</td></tr>
-                                <tr><td class="border-bottom"><span class="bold">Occupation:</span> Web and Audio</td></tr>
+                                <tr><td class="border-bottom"><span class="bold">Occupation:</span> Web, Data and Audio</td></tr>
                                 <tr><td class="border-bottom"><span class="bold">Age:</span> 33 years young</td></tr>
                                 <tr><td class="border-bottom"><span class="bold">Favourite Book:</span> In The Miso Soup</td></tr>
+                                <tr><td class="border-bottom"><span class="bold">Bootcamp:</span> Data Science - HyperionDev<br><span class="highlight">Scholarship</span></td></tr>
                                 <tr><td class="border-bottom"><span class="bold">MSc:</span> Music and Sound for 
-                                Film and Games<br>DISTINCTION</td></tr>
-                                <tr><td class="border-bottom"><span class="bold">Bootcamp:</span> Data Science - HyperionDev<br>SCHOLARSHIP</td></tr>
+                                Film and Games<br><span class="highlight">Distinction</span></td></tr>
                                 <tr><td class="border-bottom"><span class="bold">Hobbies:</span> Reading, Walking, Eating, Learning, Creating</td></tr>
                                 <tr><td><span class="bold">Github:</span> <a href="https://github.com/unwontedsponn" target="blank"><span class="underline">https://github.com/unwontedsponn</span></a></td></tr>
                             </table>
@@ -125,9 +124,8 @@
 
             <!-- PORTFOLIO ------------------------------------------------------------------------------------------>
             <section id="portfolio">
-                <h2 id="portfolio-title" class="color-blue">Portfoli</h2>
+                <h2 id="portfolio-title" class="color-blue">Portfolio</h2>
                 <img id="portfolio-image" src="./images/sponn img.png">
-                <img id="portfolio-image2" src="./images/dice.png">
                 <div id="portfolio1">                    
                     <div id="large-p-portfolio">
                         <p class="color-dark-blue">Things I've created...</p>
@@ -159,14 +157,14 @@
                         </ul>
                     </div>
                     <div id="portfolio-text">
-                        <p class="small-portfolio-text" id="website-text" style="display: none"><span class="bold">MY ROLE: </span>Web Developer<br><br>Built from scratch using HTML, CSS and Javascript. This portfolio website allows me to demonstrate my digital and audio skills.</p>
+                        <p class="small-portfolio-text" id="website-text" style="display: none"><span class="bold">MY ROLE: </span>Web Developer<br><br>Built from scratch using HTML, CSS and Javascript.</p>
 
                         <p class="small-portfolio-text" id="book-text" style="display: none"><span class="bold">MY ROLE: </span>Author, Web Developer<br><br>"Beginner To Composer In 14 Days is delightfully different. Moving swiftly from theory to action, Ben emerges as the teacher you always wished you'd had, championing radical creative freedom, improvisation and composition - even
                         for beginners. Especially for beginners in fact. "Students need freedom to truly fall in love with their instrument" he writes, "frameworks that pique their curiosity over and over again so that practice becomes play". Whether you're a complete beginner or have a little knowledge up your sleeve, you'll adore this dynamic and intimate guide to learning the piano, peppered with evocative vignettes of a life lived with music at its heart. Best of all, you'll come away with a method you can use time and time again to create your very own music, captured on professional quality lead sheets you can share
                         with other musicians, to bring your work to life. Suitable for adults and a useful resource for teachers. Complements graded and traditional
                         approaches to learning."</p>
 
-                        <p class="small-portfolio-text" id="arcade-text" style="display: none"><span class="bold">MY ROLE: </span>Web Developer<br><br>This mini arcade allowed me to experiement with the HTML canvas and progress my front-end development.</p>
+                        <p class="small-portfolio-text" id="arcade-text" style="display: none"><span class="bold">MY ROLE: </span>Web Developer, Game Developer<br><br>This mini arcade allowed me to experiement with the HTML canvas and progress my front-end development.</p>
 
                         <p class="small-portfolio-text" id="lapland-text" style="display: none"><span class="bold">MY ROLE: </span>Composer<br><br>This is an original soundtrack for a promotional travel video for Kuoni.</p>
 
@@ -189,64 +187,86 @@
 
                     </div>                               
                 </div>
-
-                <!-- VIDEO MODALS ---------------------------------------------------------------------------------->
-                <!-- LAPLAND VIDEO MODAL -->
-                <div id="laplandVideoModal" class="modal">
-                    <!-- VIDEO MODAL CONTENT -->
-                    <div class="modal-content-video">
-                        <div>
-                            <span class="close2">&times;</span>
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/t6jYHeQHRyU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- WHEN WE FELL VIDEO MODAL -->
-                <div id="whenWeFellVideoModal" class="modal">
-                    <!-- VIDEO MODAL CONTENT -->
-                    <div class="modal-content-video">
-                        <div>
-                            <span class="close3">&times;</span>
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/XenuFH6qTdM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- vlog VIDEO MODAL -->
-                <div id="vlogVideoModal" class="modal">
-                    <!-- VIDEO MODAL CONTENT -->
-                    <div class="modal-content-video">
-                        <div>
-                            <span class="close4">&times;</span>
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/oPHcEYDMdJw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- transcription VIDEO MODAL -->
-                <div id="transcriptionVideoModal" class="modal">
-                    <!-- VIDEO MODAL CONTENT -->
-                    <div class="modal-content-video">
-                        <div>
-                            <span class="close5">&times;</span>
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/2fMqzfxyTEM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- showreel VIDEO MODAL -->
-                <div id="showreelVideoModal" class="modal">
-                    <!-- VIDEO MODAL CONTENT -->
-                    <div class="modal-content-video">
-                        <div>
-                            <span class="close6">&times;</span>
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/QeoMbuFwdaU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                        </div>
-                    </div>
-                </div>
-
             </section>
+
+            <!-- PORTFOLIO VIDEO MODALS --------------------------------------------------------------------------->
+            <!-- LAPLAND VIDEO MODAL -->
+            <div id="laplandVideoModal" class="modal">
+                <!-- VIDEO MODAL CONTENT -->
+                <div class="modal-content-video">
+                    <div>
+                        <span class="close2">&times;</span>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/t6jYHeQHRyU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <!-- WHEN WE FELL VIDEO MODAL -->
+            <div id="whenWeFellVideoModal" class="modal">
+                <!-- VIDEO MODAL CONTENT -->
+                <div class="modal-content-video">
+                    <div>
+                        <span class="close3">&times;</span>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/XenuFH6qTdM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <!-- vlog VIDEO MODAL -->
+            <div id="vlogVideoModal" class="modal">
+                <!-- VIDEO MODAL CONTENT -->
+                <div class="modal-content-video">
+                    <div>
+                        <span class="close4">&times;</span>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/oPHcEYDMdJw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <!-- transcription VIDEO MODAL -->
+            <div id="transcriptionVideoModal" class="modal">
+                <!-- VIDEO MODAL CONTENT -->
+                <div class="modal-content-video">
+                    <div>
+                        <span class="close5">&times;</span>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/2fMqzfxyTEM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <!-- showreel VIDEO MODAL -->
+            <div id="showreelVideoModal" class="modal">
+                <!-- VIDEO MODAL CONTENT -->
+                <div class="modal-content-video">
+                    <div>
+                        <span class="close6">&times;</span>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/QeoMbuFwdaU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CV1 MODAL -->
+            <div id="cv1Modal" class="modal">
+                <!-- PDF MODAL CONTENT -->
+                <div class="modal-content-pdf">
+                    <div>
+                        <span class="close7">&times;</span>
+                        <iframe width="560" height="715" src="./images/cv-tech.pdf" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CV2 MODAL -->
+            <div id="cv2Modal" class="modal">
+                <!-- PDF MODAL CONTENT -->
+                <div class="modal-content-pdf">
+                    <div>
+                        <span class="close8">&times;</span>
+                        <iframe width="560" height="715" src="./images/cv-audio.pdf" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+
         </div>    
     
     </body>

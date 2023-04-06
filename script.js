@@ -1,4 +1,4 @@
-// CHANGING WORD ON HOMEPAGE---------------------------------------------------------
+// CHANGING WORDS------------------------------
 const array = ["things", "websites", "music", "films", "books", "games"]
 let changingWord = document.getElementById('change-word');
 let index = 0;
@@ -16,7 +16,7 @@ function changeWord() {
     }
 }
 
-// music player play and pause----------------------------------------------------------------------------------------------------------------------------------------------------------------
+// music player play and pause--------------------
 const audio = new Audio("./audio/room of my own.mp3");
 const equaliser = document.getElementById('equaliser');
 let playFooter = document.getElementById('play-footer');
@@ -37,13 +37,6 @@ function playPause() {
         equaliser.style.display = "none";
     }
 }
-
-// check that about's step animation has ended--------------------------------------------------------------------------------------------------
-const aboutText = document.getElementById("large-p-about1");
-    const aboutText2 = document.getElementById("large-p-about2");
-    aboutText.addEventListener("animationend", () => {
-    aboutText2.style.display = "block";
-    });
 
 // Intersection Observer functions to keep animations active when scrolling between pages--------------------------------------------------------------------------------------------------
 // observer for title-screen
@@ -108,46 +101,6 @@ const observer3 = new IntersectionObserver(entries => {
 observer3.observe(portfolioImg, portfolioImg2);
 
 // PORTFOLIO TEXT APPEARANCES-----------------------------------------------------------------------------------------------------------------------
-// expanded lists
-// function webDevEnter() {
-//     document.getElementById('webDevList').style.display = "block";
-// }
-
-// function webDevLeave() {
-//     webDevList = document.getElementById('webDevList');
-//     if (webDevList) {
-//     // Do something..
-//     }
-
-
-
-//     if (bookEnter() && arcadeEnter()) {
-//         document.getElementById('webDevList').style.display = "block";
-//     } else {
-//         document.getElementById('webDevList').style.display = "none";
-//     }
-// }
-
-// function dataScienceEnter() {
-//     document.getElementById('dataScienceList').style.display = "block";
-// }
-
-// function dataScienceLeave() {
-//     if (bookLeave() && arcadeLeave() && dataScienceLeave()) {
-//         document.getElementById('dataScienceList').style.display = "none";
-//     }
-// }
-
-// function audioProjectsEnter() {
-//     document.getElementById('audioProjectsList').style.display = "block";
-// }
-
-// function audioProjectsLeave() {
-//     if (bookLeave() && arcadeLeave() && webDevLeave()) {
-//         document.getElementById('audioProjectsList').style.display = "none";
-//     }
-// }
-
 // expanded text
 function websiteEnter() {
     document.getElementById('website-text').style.display = "block";
@@ -340,6 +293,44 @@ span6.onclick = function() {
     modal6.style.display = "none";
 }
 
+// MODAL FOR CV1---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// Get the modal
+const modal7 = document.getElementById("cv1Modal");
+
+// Get the cv1 link that opens the modal
+const cv1 = document.getElementById("cv1");
+
+// When the user clicks on the cv1 link, open the modal 
+cv1.onclick = function() {
+    modal7.style.display = "block";
+}
+
+// Get the <span> element that closes the modal
+const span7 = document.getElementsByClassName("close7")[0];
+// When the user clicks on <span> (x), close the modal
+span7.onclick = function() {
+    modal7.style.display = "none";
+}
+
+// MODAL FOR CV2---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// Get the modal
+const modal8 = document.getElementById("cv2Modal");
+
+// Get the cv1 link that opens the modal
+const cv2 = document.getElementById("cv2");
+
+// When the user clicks on the cv1 link, open the modal 
+cv2.onclick = function() {
+    modal8.style.display = "block";
+}
+
+// Get the <span> element that closes the modal
+const span8 = document.getElementsByClassName("close8")[0];
+// When the user clicks on <span> (x), close the modal
+span8.onclick = function() {
+    modal8.style.display = "none";
+}
+
 // When the user clicks anywhere outside of the modals, close it
 window.onclick = function(event) {
     if (event.target == modal) {
@@ -361,5 +352,11 @@ window.onclick = function(event) {
     }
     if (event.target == modal6) {
         modal6.style.display = "none";
+    }
+    if (event.target == modal7) {
+        modal7.style.display = "none";
+    }
+    if (event.target == modal8) {
+        modal8.style.display = "none";
     }
 }

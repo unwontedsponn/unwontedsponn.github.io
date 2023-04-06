@@ -138,6 +138,11 @@ hr {
 }
 
 /*navbar-------------------------------------------------------------------------------------------------------*/
+#nav-div {
+    display: flex;
+    justify-content: center;
+}
+
 #header {
     border-collapse: collapse;
     width: 82.5vw;
@@ -212,8 +217,8 @@ hr {
 }
 
 #footer td {
-    padding-top: 1vh;
     border-top: 2px solid rgba(172, 221, 251, 0.4);
+    padding: 1vh 2vw;
 }
 
 .border-right {
@@ -246,14 +251,11 @@ hr {
 /*EQUALISER*/
 #equaliser {
     position: absolute;
-    right: 340px;
-    bottom: 0px;
+    left: 48vw;
+    bottom: 7vh;
 }
 
-/*$max: 100px;*/
-
 .equilizer {
-/*  height: 10vh;*/
   width: 1vw;
   transform: rotate(180deg);
 }
@@ -377,7 +379,7 @@ hr {
 
 #title {
     position: absolute;
-    font-size: 9vw;
+    font-size: 7vw;
     width: 85vw;
     top: 15vh;
     left: 5vw;
@@ -398,6 +400,12 @@ hr {
     }
 }
 
+@media only screen and (max-width: 1440px) {
+    #title {
+        top: 12.8vh;
+        font-size: 10vw;
+    }
+
 .title-animation {
     animation: 1s ease-out 0s 1 slideInFromLeft;
 }
@@ -410,6 +418,13 @@ hr {
     left: 15.5vw;
     font-size: 1vw;
     width: 36vw;
+}
+
+@media only screen and (max-width: 1440px) {
+    #medium-p-homepage {
+        top: 35vh;
+        font-size: 1.1em;
+    }
 }
 
 #large-p-homepage {
@@ -425,9 +440,16 @@ hr {
 }
 
 @media only screen and (max-width: 1620px) {
-     #large-p-homepage {
+    #large-p-homepage {
         top: 55vh;
         width: 40vw;
+    }
+}
+
+@media only screen and (max-width: 1440px) {
+    #large-p-homepage {
+        top: 52vh;
+        width: 50vw;
     }
 }
 
@@ -454,6 +476,15 @@ hr {
     }
 }
 
+@media only screen and (max-width: 1440px) {
+    #small-p-homepage {
+        top: 78vh;
+        left: 12vw;
+        font-size: 1vw;
+        width: 43vw;
+    }
+}
+
 #main-body1 img {
     position: absolute;
     top: 32vh;
@@ -468,6 +499,13 @@ hr {
         top: 34vh;
         left: 55vw;
         width: 20vw;
+    }
+}
+
+@media only screen and (max-width: 1440px) {
+    #main-body1 img {
+        left: 60vw;
+        width: 22vw;
     }
 }
 
@@ -499,6 +537,12 @@ hr {
     left: 5vw;
     font-family: 'Gopher Mono Semi';
     opacity: 0.4;
+}
+
+@media only screen and (max-width: 1750px) {
+    #about-title {
+        font-size: 12vw;
+    }
 }
 
 #piano-img {
@@ -561,11 +605,13 @@ hr {
     }
 }
 
-/*@media only screen and (max-width: 1620px) {
+@media only screen and (max-width: 1440px) {
     #large-p-about1 {
-        top: 26vh;
+        top: 27vh;
+        font-size: 2.3vw;
+        width: 65vw;
     }
-}*/
+}
 
 .large-p-about1-animation {
     animation: type 3s steps(60, end);
@@ -596,6 +642,14 @@ hr {
     }
 }
 
+@media only screen and (max-width: 1440px) {
+    #large-p-about2 {
+        top: 32vh;
+        font-size: 2.3vw;
+        width: 65vw;
+    }
+}
+
 #cols {
     display: flex;
     flex-direction: row;
@@ -615,6 +669,12 @@ hr {
     }
 }
 
+@media only screen and (max-width: 1440px) {
+    #cols {
+        font-size: 0.8vw;
+    }
+}
+
 .about-col-1, .about-col-2 {
     box-sizing: border-box;
     padding-top: 2.5vh;
@@ -623,7 +683,7 @@ hr {
 }
 
 .skills {
-    font-size: 0.5vw;
+    font-size: 0.6vw;
     margin-top: 1vh;
 }
 
@@ -634,7 +694,7 @@ hr {
 #about table {
     font-family: 'Gopher Mono';
     color: #3f423e;
-    max-width: 20vw;
+    width: 21vw;
     border: 2px solid rgba(172, 221, 251, 0.4);
     position: absolute;
 }
@@ -649,6 +709,18 @@ hr {
 
 .cv {
     letter-spacing: 0.1vw;
+}
+
+.cv:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    text-decoration-color: #c15564;
+    text-decoration-thickness: 0.2vw;
+}
+
+.highlight {
+    color: #c15564;
+    font-style: italic;
 }
 
 /*PORTFOLIO-----------------------------------------------------------------------------------------------------*/
@@ -684,7 +756,7 @@ hr {
 }*/
 
 #portfolio-image {
-    width: 28%;
+    width: 27vw;
     position: absolute;
     z-index: 0;
     top: 33vh;
@@ -693,21 +765,7 @@ hr {
 }
 
 .portfolio-img-animation {
-/*    animation: 1s ease-out 0s 1 slideInFromLeft;*/
-/*    animation: fadeIn2 6s;*/
-}
-
-#portfolio-image2 {
-    width: 7vw;
-    position: absolute;
-    z-index: 0;
-    top: 13vh;
-    left: 43vw;
-    opacity: 0.5;
-}
-
-.portfolio-img2-animation {
-    animation: rolling 1.5s, fadeIn 6s;
+    animation: 1s ease-out 0s 1 slideInFromLeft;
 }
 
 #portfolio1 {
@@ -722,7 +780,7 @@ hr {
     text-decoration-color: #c15564;
     letter-spacing: 0.2vw;
     position: absolute;
-    top: 25.5vh;
+    top: 21.5vh;
     left: 0vw;
     font-size: 2.5vw;
     width: 60vw;
@@ -749,6 +807,12 @@ hr {
     }
     #portfolio-list li {
         padding: 0.1vh;    
+    }
+}
+
+@media only screen and (max-width: 1440px) {
+    #portfolio-list {
+        font-size: 1.1vw;
     }
 }
 
@@ -780,6 +844,12 @@ hr {
 
 .small-portfolio-text {
     font-size: 0.8vw;
+}
+
+@media only screen and (max-width: 1440px) {
+    .small-portfolio-text {
+        font-size: 0.85vw;
+    }
 }
 
 .portfolio-tiny-text {
@@ -842,6 +912,10 @@ hr {
     margin: 15% auto;
 }
 
+.modal-content-pdf {
+    margin-top: 2vh;
+}
+
 iframe {
     margin: 0 auto;
     display: block;
@@ -863,16 +937,16 @@ iframe {
     cursor: pointer;
 }
 
-.close2, .close3, .close4, .close5, .close6 {
+.close2, .close3, .close4, .close5, .close6, .close7, .close8 {
     color: #f5faf9;
     position: absolute;
-    top: 5s8vh;
+    top: 58vh;
     left: 65vw;
     font-size: 128px;
     font-weight: bold;
 }
 
-.close2:hover, .close3:hover, .close4:hover, .close5:hover, .close6:hover {
+.close2:hover, .close3:hover, .close4:hover, .close5:hover, .close6:hover, .close7:hover, .close8:hover {
     color: black;
     text-decoration: none;
     cursor: pointer;
