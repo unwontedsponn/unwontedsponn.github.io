@@ -540,10 +540,10 @@ hr {
 
 #code-img {
     position: absolute;
-    width: 8vw;
+    width: 14vw;
     z-index: 0;
-    opacity: 0.1;
-    top: 80vh;
+    opacity: 0.05;
+    top: 70vh;
     left: 0vw;
 }
 
@@ -577,7 +577,7 @@ hr {
 
 @media only screen and (max-width: 1440px) {
     #large-p-about1 {
-        top: 28vh;
+        top: 27vh;
         font-size: 2.5vw;
         width: 60vw;
     }
@@ -587,6 +587,17 @@ hr {
     animation: type 3s steps(60, end);
 }
 
+#about-summary {
+    font-family: 'Gopher Mono';
+    gap: 2.2vw;
+    position: absolute;
+    top: 36.5vh;
+    margin: auto;
+    left: 5vw;
+    font-size: 0.86vw;
+    width: 59.5vw;
+}
+
 #cols {
     display: flex;
     flex-direction: row;
@@ -594,10 +605,10 @@ hr {
     font-family: 'Gopher Mono';
     gap: 2.2vw;
     position: absolute;
-    top: 41.5vh;
+    top: 47.5vh;
     margin: auto;
     left: 5vw;
-    font-size: 0.8vw;
+    font-size: 0.86vw;
 }
 
 .about-col-1, .about-col-2 {
@@ -608,7 +619,7 @@ hr {
 }
 
 .skills {
-    font-size: 0.6vw;
+    font-size: 0.7vw;
     margin-top: 1vh;
 }
 
@@ -625,7 +636,7 @@ hr {
 }
 
 #about table td {
-    padding: 3% 2%;
+    padding: 2.5% 2%;
 }
 
 .border-bottom {
@@ -645,7 +656,6 @@ hr {
 
 .highlight {
     color: #e39ba6;
-    font-style: italic;
     font-weight: bold;
 }
 
