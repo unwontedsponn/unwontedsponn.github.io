@@ -42,6 +42,9 @@ function playPause() {
 // observer for title-screen
 const title = document.querySelector('#title');
 const titleImg = document.querySelector('#title-img');
+const mediumP = document.querySelector('#medium-p-homepage');
+const largeP = document.querySelector('#large-p-homepage');
+const smallP = document.querySelector('#small-p-homepage');
 const logo = document.querySelector('#logo');
 
 const observer = new IntersectionObserver(entries => {
@@ -49,11 +52,17 @@ const observer = new IntersectionObserver(entries => {
         if (entry.isIntersecting) {
             title.classList.add('title-animation');
             titleImg.classList.add('title-img-animation');
+            mediumP.classList.add('medium-p-animation');
+            largeP.classList.add('large-p-animation');
+            smallP.classList.add('small-p-animation');
             logo.classList.add('nav-underline'); 
             return;
         }
         title.classList.remove('title-animation');
         titleImg.classList.remove('title-img-animation');
+        mediumP.classList.remove('medium-p-animation');
+        largeP.classList.remove('large-p-animation');
+        smallP.classList.remove('small-p-animation');
         logo.classList.remove('nav-underline'); 
     });
 });
@@ -61,44 +70,37 @@ observer.observe(title, titleImg);
 
 // observer for about
 const largePAbout1 = document.querySelector('#large-p-about1');
-const largePAbout2 = document.querySelector('#large-p-about2');
 const aboutNav = document.querySelector('#about-nav');
 
 const observer2 = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            largePAbout1.classList.add('large-p-about1-animation');            
-            largePAbout2.classList.add('large-p-about2-animation');
+            largePAbout1.classList.add('large-p-about1-animation');          
             aboutNav.classList.add('nav-underline');
             return;
         }
         largePAbout1.classList.remove('large-p-about1-animation');
-        largePAbout2.classList.remove('large-p-about2-animation');
-        largePAbout2.style.display = "none";
         aboutNav.classList.remove('nav-underline');
     });
 });
-observer2.observe(largePAbout1, largePAbout2);
+observer2.observe(largePAbout1);
 
 // observer for portfolio
 const portfolioImg = document.querySelector('#portfolio-image');
 const portfolioNav = document.querySelector('#portfolio-nav');
-const portfolioImg2 = document.querySelector('#portfolio-image2');
 
 const observer3 = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {          
             portfolioImg.classList.add('portfolio-img-animation');
             portfolioNav.classList.add('nav-underline');
-            portfolioImg2.classList.add('portfolio-img2-animation');
             return;
         }
         portfolioImg.classList.remove('portfolio-img-animation');
         portfolioNav.classList.remove('nav-underline');
-        portfolioImg2.classList.remove('portfolio-img2-animation');
     });
 });
-observer3.observe(portfolioImg, portfolioImg2);
+observer3.observe(portfolioImg);
 
 // PORTFOLIO TEXT APPEARANCES-----------------------------------------------------------------------------------------------------------------------
 // expanded text

@@ -69,37 +69,29 @@ hr {
 }
 
 #hr1 {
-    width: 20%;
+    width: 43%;
 }
 
 #hr2 {
-    width: 37%;   
-}
-
-#hr3 {
-    width: 47%;   
+    width: 48%;   
 }
 
 /*KEYFRAMES--------------------------------------------------------------------------------------------------*/
-@keyframes slideInFromLeft {
+@keyframes fade-in {
     0% {
-        transform: translateX(-100%);
         opacity: 0;
     }
     100% {
-        transform: translateX(0);
-        opacity: 0.3s linear 2s;
+        opacity: 0.4;
     }
 }
 
-@keyframes slideInFromRight {
+@keyframes fade-in2 {
     0% {
-        transform: translateX(100%);
         opacity: 0;
     }
     100% {
-        transform: translateX(0);
-        opacity: 0.3s linear 2s;
+        opacity: 1;
     }
 }
 
@@ -109,32 +101,28 @@ hr {
   } 
 }
 
-@keyframes rolling {
-    from {
-        transform: rotate(0deg);
-    } to {
-        transform: rotate(360deg);
-    }    
-}
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    } 1% {
-        opacity: 0;
-    } 100% {
-        opacity: 0.5;
-    }    
-}
-
-@keyframes fadeIn2 {
-    0% {
-        opacity: 0;
-    } 1% {
-        opacity: 0;
-    } 100% {
-        opacity: 1;
-    }    
+@keyframes wiggle {
+  0%, 7% {
+    transform: rotateZ(0);
+  }
+  15% {
+    transform: rotateZ(-15deg);
+  }
+  20% {
+    transform: rotateZ(10deg);
+  }
+  25% {
+    transform: rotateZ(-10deg);
+  }
+  30% {
+    transform: rotateZ(6deg);
+  }
+  35% {
+    transform: rotateZ(-4deg);
+  }
+  40%, 100% {
+    transform: rotateZ(0);
+  }
 }
 
 /*navbar-------------------------------------------------------------------------------------------------------*/
@@ -407,8 +395,13 @@ hr {
     }
 
 .title-animation {
-    animation: 1s ease-out 0s 1 slideInFromLeft;
+    animation: 1s ease-out 0s 1 fade-in;
 }
+
+/*.aspiring {
+    color: #334862;
+    opacity: 0.6;
+}*/
 
 #medium-p-homepage {
     font-family: 'Gopher Mono Semi';
@@ -418,6 +411,10 @@ hr {
     left: 15.5vw;
     font-size: 1vw;
     width: 36vw;
+}
+
+.medium-p-animation {
+    animation: 2s ease-out 0s 1 fade-in2;
 }
 
 @media only screen and (max-width: 1440px) {
@@ -439,6 +436,10 @@ hr {
     width: 35vw;
 }
 
+.large-p-animation {
+    animation: 2s ease-out 0s 1 fade-in2;
+}
+
 @media only screen and (max-width: 1620px) {
     #large-p-homepage {
         top: 55vh;
@@ -448,8 +449,10 @@ hr {
 
 @media only screen and (max-width: 1440px) {
     #large-p-homepage {
-        top: 52vh;
-        width: 50vw;
+        top: 51vh;
+        left: 25vw;
+        width: 40vw;
+        font-size: 1.7vw;
     }
 }
 
@@ -462,6 +465,10 @@ hr {
     left: 14vw;
     font-size: 0.8vw;
     width: 32vw;
+}
+
+.small-p-animation {
+    animation: 2s ease-out 0s 1 fade-in2;
 }
 
 @media only screen and (max-width: 1750px) {
@@ -510,7 +517,7 @@ hr {
 }
 
 .title-img-animation {
-    animation: 1s ease-out 0s 1 slideInFromRight;
+    animation: 2s ease-out 0s 1 fade-in2;
 }
 
 /*ABOUT-------------------------------------------------------------------------------------------------------*/
@@ -589,7 +596,7 @@ hr {
     letter-spacing: 0.2vw;
     position: absolute;
     top: 24vh;
-    left: 10vw;
+    left: 13vw;
     font-size: 2.5vw;
     width: 60vw;
     margin-bottom: 5vh;
@@ -597,57 +604,16 @@ hr {
     overflow: hidden;
 }
 
-@media only screen and (max-width: 1620px) {
-    #large-p-about1 {
-        top: 24vh;
-        left: 10vw;
-        width: 60vw;
-    }
-}
-
 @media only screen and (max-width: 1440px) {
     #large-p-about1 {
-        top: 27vh;
-        font-size: 2.3vw;
-        width: 65vw;
+        top: 28vh;
+        font-size: 2.5vw;
+        width: 60vw;
     }
 }
 
 .large-p-about1-animation {
     animation: type 3s steps(60, end);
-}
-
-#large-p-about2 {
-    font-family: 'Gopher Mono';
-    text-decoration: underline;
-    text-decoration-color: #c15564;
-    letter-spacing: 0.2vw;
-    position: absolute;
-    top: 30vh;
-    left: 10vw;
-    font-size: 2.5vw;
-    width: 60vw;
-    margin-bottom: 5vh;
-    white-space: nowrap;
-    overflow: hidden;
-}
-
-.large-p-about2-animation {
-    animation: type 3s steps(60, end);
-}
-
-@media only screen and (max-width: 1620px) {
-    #large-p-about2 {
-        top: 32vh;
-    }
-}
-
-@media only screen and (max-width: 1440px) {
-    #large-p-about2 {
-        top: 32vh;
-        font-size: 2.3vw;
-        width: 65vw;
-    }
 }
 
 #cols {
@@ -657,22 +623,10 @@ hr {
     font-family: 'Gopher Mono';
     gap: 2.2vw;
     position: absolute;
-    top: 44vh;
+    top: 41.5vh;
     margin: auto;
     left: 5vw;
-    font-size: 0.7vw;
-}
-
-@media only screen and (max-width: 1620px) {
-    #cols {
-        font-size: 0.8vw;
-    }
-}
-
-@media only screen and (max-width: 1440px) {
-    #cols {
-        font-size: 0.8vw;
-    }
+    font-size: 0.8vw;
 }
 
 .about-col-1, .about-col-2 {
@@ -719,8 +673,9 @@ hr {
 }
 
 .highlight {
-    color: #c15564;
+    color: #e39ba6;
     font-style: italic;
+    font-weight: bold;
 }
 
 /*PORTFOLIO-----------------------------------------------------------------------------------------------------*/
@@ -749,12 +704,6 @@ hr {
     }
 }
 
-/*@media only screen and (max-width: 600px) {
-    #portfolio-title {
-        font-size: 1vw;
-    }
-}*/
-
 #portfolio-image {
     width: 27vw;
     position: absolute;
@@ -765,7 +714,7 @@ hr {
 }
 
 .portfolio-img-animation {
-    animation: 1s ease-out 0s 1 slideInFromLeft;
+    animation: wiggle 2s linear;
 }
 
 #portfolio1 {
@@ -785,10 +734,6 @@ hr {
     font-size: 2.5vw;
     width: 60vw;
     margin-bottom: 5vh;
-}
-
-#portfolio h3:hover {
-    cursor: pointer;
 }
 
 #portfolio-list {
@@ -819,7 +764,7 @@ hr {
 #portfolio-list li {
     list-style-type: none;
     cursor: pointer;
-    padding: 2.8% 0%;
+    padding: 3.4% 0%;
     font-size: 80%;
 }
 
@@ -865,14 +810,6 @@ hr {
     padding-left: 0.2vw;
     opacity: 0.5;
 }
-
-/*#book, #arcade, #lapland, #short-film, #game, #vlogs, #transcription, #showreel {
-    transition: font-size 1s;
-}*/
-
-/*#book:hover, #arcade:hover, #lapland:hover, #short-film:hover, #game:hover, #vlogs:hover, #transcription:hover, #showreel:hover {
-    font-size: 130%;
-}*/
 
 /*MODAL-----------------------------------------------------------------------------------------------------*/
 #last-item:hover {
@@ -937,11 +874,20 @@ iframe {
     cursor: pointer;
 }
 
-.close2, .close3, .close4, .close5, .close6, .close7, .close8 {
+.close2, .close3, .close4, .close5, .close6 {
     color: #f5faf9;
     position: absolute;
-    top: 58vh;
+    top: 8vh;
     left: 65vw;
+    font-size: 128px;
+    font-weight: bold;
+}
+
+.close7, .close8 {
+    color: #f5faf9;
+    position: absolute;
+    top: 8vh;
+    left: 70vw;
     font-size: 128px;
     font-weight: bold;
 }
