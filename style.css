@@ -144,15 +144,18 @@ hr {
 }
 
 /*navbar-------------------------------------------------------------------------------------------------------*/
-#nav-div {
+/*this centres the nav table in chrome, but not safari. WHY???????????*/
+/*#nav-div {
     display: flex;
     justify-content: center;
-}
+}*/
 
 #header {
     border-collapse: collapse;
     width: 82.5vw;
     margin: auto;
+    /* margin-left is added to center nav table as there is issues with flex here in safari */
+    margin-left: 3.8vw;
     position: fixed;
     margin-top: 4vh;
     z-index: 1;
@@ -293,84 +296,32 @@ hr {
 }
 
 @keyframes equalize {
-  0% {
-    height: 60px;
-  }
-  4% {
-    height: 50px;
-  }
-  8% {
-    height: 40px;
-  }
-  12% {
-    height: 30px;
-  }
-  16% {
-    height: 20px;
-  }
-  20% {
-    height: 30px;
-  }
-  24% {
-    height: 40px;
-  }
-  28% {
-    height: 10px;
-  }
-  32% {
-    height: 40px;
-  }
-  36% {
-    height: 60px;
-  }
-  40% {
-    height: 20px;
-  }
-  44% {
-    height: 40px;
-  }
-  48% {
-    height: 70px;
-  }
-  52% {
-    height: 30px;
-  }
-  56% {
-    height: 10px;
-  }
-  60% {
-    height: 30px;
-  }
-  64% {
-    height: 50px;
-  }
-  68% {
-    height: 60px;
-  }
-  72% {
-    height: 70px;
-  }
-  76% {
-    height: 80px;
-  }
-  80% {
-    height: 70px;
-  }
-  84% {
-    height: 60px;
-  }
-  88% {
-    height: 50px;
-  }
-  92% {
-    height: 60px;
-  }
-  96% {
-    height: 70px;
-  }
-  100% {
-    height: 80px;
-  }
+  0% {height: 60px;}
+  4% {height: 50px;}
+  8% {height: 40px;}
+  12% {height: 30px;}
+  16% {height: 20px;}
+  20% {height: 30px;}
+  24% {height: 40px;}
+  28% {height: 10px;}
+  32% {height: 40px;}
+  36% {height: 60px;}
+  40% {height: 20px;}
+  44% {height: 40px;}
+  48% {height: 70px;}
+  52% {height: 30px;}
+  56% {height: 10px;}
+  60% {height: 30px;}
+  64% {height: 50px;}
+  68% {height: 60px;}
+  72% {height: 70px;}
+  76% {height: 80px;}
+  80% {height: 70px;}
+  84% {height: 60px;}
+  88% {height: 50px;}
+  92% {height: 60px;}
+  96% {height: 70px;}
+  100% {height: 80px;}
 }
 
 /*homepage -----------------------------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -468,10 +419,10 @@ hr {
 
 @media only screen and (max-width: 1440px) {
     #large-p-homepage {
-        top: 51vh;
+        top: 51.5vh;
         left: 12vw;
         width: 45vw;
-        font-size: 1.7vw;
+        font-size: 1.8vw;
     }
 }
 
