@@ -544,8 +544,8 @@
         text-decoration-thickness: 0.2vw;
     }
 
-    #cv1size {
-        height: 90vh;
+    .cvsize {
+        height: 100vh;
     }
 
     .highlight {
