@@ -229,16 +229,12 @@
 
     #footer td {
         border-top: 2px solid rgba(172, 221, 251, 0.4);
-        padding: 1vh 2vw;
+        text-align: center;
+        padding: 1vh;
     }
 
     .border-right {
         border-right: 2px solid rgba(172, 221, 251, 0.4);   
-    }
-
-
-    #green-and-pine-footer {
-        padding-left: 1.5vw;
     }
 
     #play-footer {
