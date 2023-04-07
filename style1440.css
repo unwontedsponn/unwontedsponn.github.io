@@ -1,63 +1,743 @@
 @media only screen and (max-width: 1440px) {
-/*    HOME PAGE ADJUSTMENTS*/
-    #title {
-        font-size: 8em;
-        top: 20vh;
+    * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
     }
 
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        height: 100vh;
+    }
+
+    #smaller-body {
+        max-width: 90vw;
+        margin: auto;
+        overflow-y: scroll;
+        overflow: scroll;
+        overflow-x: hidden;
+        scroll-snap-type: y mandatory;
+        height: 100vh;
+        scroll-snap-points-y: repeat(100vh);
+    }
+
+    section {
+        scroll-snap-align: start;
+    }
+
+    /*colours and styles-------------------------------------------------------------------------------------------------------*/
+    .background-light {
+        background-color: #f5faf9;
+    }
+
+    .color-light {
+        background-color: #f5faf9;
+    }
+
+    .color-blue {
+        color: #acddfb;
+    }
+
+    .color-dark-blue {
+        color: #334862;
+    }
+
+    .color-dark {
+        color: #3f423e;
+    }
+
+    .color-green {
+        color: #5f9251;
+    }
+
+    .bold {
+        font-weight: bold;
+    }
+
+    .underline {
+        text-decoration: underline;
+    }
+
+    /*MISC--------------------------------------------------------------------------------------------------*/
+    hr {
+        height: 0.4vh;
+        background-color: #4a713f;
+        border: none;
+        margin-bottom: 1vh;
+    }
+
+    #hr1 {
+        width: 43%;
+    }
+
+    #hr2 {
+        width: 48%;   
+    }
+
+    /*KEYFRAMES--------------------------------------------------------------------------------------------------*/
+    @keyframes slideInFromLeft {
+        0% {
+            transform: translateX(-20%);
+        }
+        100% {
+            transform: translateX(0%);
+        }
+    }
+
+    @keyframes slideInFromRight {
+        0% {
+            transform: translateX(20%);
+        }
+        100% {
+            transform: translateX(0%);
+        }
+    }
+
+    @keyframes fade-in {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 0.4;
+        }
+    }
+
+    @keyframes fade-in2 {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @keyframes type { 
+      from { 
+        width: 0; 
+      } 
+    }
+
+    @keyframes wiggle {
+      0%, 7% {
+        transform: rotateZ(0);
+      }
+      15% {
+        transform: rotateZ(-15deg);
+      }
+      20% {
+        transform: rotateZ(10deg);
+      }
+      25% {
+        transform: rotateZ(-10deg);
+      }
+      30% {
+        transform: rotateZ(6deg);
+      }
+      35% {
+        transform: rotateZ(-4deg);
+      }
+      40%, 100% {
+        transform: rotateZ(0);
+      }
+    }
+
+    /*navbar-------------------------------------------------------------------------------------------------------*/
+    /*this centres the nav table in chrome, but not safari. WHY???????????*/
+    /*#nav-div {
+        display: flex;
+        justify-content: center;
+    }*/
+
+    #header {
+        border-collapse: collapse;
+        width: 82.5vw;
+        margin: auto;
+        /* margin-left is added to center nav table as there is issues with flex here in safari */
+        margin-left: 3.8vw;
+        position: fixed;
+        margin-top: 4vh;
+        z-index: 1;
+    }
+
+    #logo {
+        font-family: 'Gopher Mono Semi';
+        text-align: left !important;
+        width: 12vw;
+        font-size: 150%;
+    }
+
+    #empty-nav {
+        color: #f5faf9;
+        width: 35vw;
+    }
+
+    .nav-links {
+        font-family: 'Gopher Mono';
+    }
+
+    #header td {
+        padding-bottom: 1vh;
+        text-align: center;
+        border-bottom: 2px solid rgba(172, 221, 251, 0.4);
+        border-right: 2px solid rgba(172, 221, 251, 0.4);    
+    }
+
+    #last-item{
+        border-right: none !important;
+    }
+
+    #header a, #portfolio-list li, #cols a {
+        color: #3f423e;
+        text-decoration: none;
+    }
+
+    #header a:hover, #portfolio-list li:hover, #cols a:hover {
+        color: #e39ba6;
+        text-decoration: underline;
+        text-decoration-color: #c15564;
+        text-decoration-thickness: 3px;
+    }
+
+    .nav-underline {
+        text-decoration: underline;
+        text-decoration-color: #c15564;
+        text-decoration-thickness: 5px;
+    }
+
+    /*footer-------------------------------------------------------------------------------------------------------*/
+    #footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #footer2 {
+        font-family: 'Gopher Mono';
+        width: 40vw;
+        position: fixed;
+        margin-top: 4vh;
+        z-index: 1;
+        bottom: 2vh;
+        left: 27vw;
+    /*    line-height: 8vh;*/
+        font-size: 80%;
+    }
+
+    #footer td {
+        border-top: 2px solid rgba(172, 221, 251, 0.4);
+        padding: 1vh 2vw;
+    }
+
+    .border-right {
+        border-right: 2px solid rgba(172, 221, 251, 0.4);   
+    }
+
+
+    #green-and-pine-footer {
+        padding-left: 1.5vw;
+    }
+
+    #play-footer {
+        padding-left: 1vw;
+    }
+
+    .play-footer {
+        text-decoration: underline;
+        text-decoration-color: #c15564;
+        text-decoration-thickness: 4px;
+    }
+
+    #play-footer:hover {
+        color: #e39ba6;
+        text-decoration: underline;
+        text-decoration-color: #c15564;
+        text-decoration-thickness: 3px;
+        cursor: pointer;
+    }
+
+    /*EQUALISER*/
+    #equaliser {
+        position: absolute;
+        left: 48vw;
+        bottom: 7vh;
+    }
+
+    .equilizer {
+      width: 1vw;
+      transform: rotate(180deg);
+    }
+
+    .bar {
+      fill: #4a713f;
+      width: 18px;
+      animation: equalize 1.25s steps(25, end) 0s infinite;
+    }
+
+    .bar:nth-child(1) { 
+      animation-duration: 1.9s;
+    }
+
+    .bar:nth-child(2) { 
+      animation-duration: 2s;
+    }
+
+    .bar:nth-child(3) { 
+      animation-duration: 2.3s;
+    }
+
+    .bar:nth-child(4) { 
+      animation-duration: 2.4s;
+    }
+
+    .bar:nth-child(5) { 
+      animation-duration: 2.1s;
+    }
+
+    @keyframes equalize {
+      0% {height: 60px;}
+      4% {height: 50px;}
+      8% {height: 40px;}
+      12% {height: 30px;}
+      16% {height: 20px;}
+      20% {height: 30px;}
+      24% {height: 40px;}
+      28% {height: 10px;}
+      32% {height: 40px;}
+      36% {height: 60px;}
+      40% {height: 20px;}
+      44% {height: 40px;}
+      48% {height: 70px;}
+      52% {height: 30px;}
+      56% {height: 10px;}
+      60% {height: 30px;}
+      64% {height: 50px;}
+      68% {height: 60px;}
+      72% {height: 70px;}
+      76% {height: 80px;}
+      80% {height: 70px;}
+      84% {height: 60px;}
+      88% {height: 50px;}
+      92% {height: 60px;}
+      96% {height: 70px;}
+      100% {height: 80px;}
+    }
+
+    /*homepage -----------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+    #main-body1 {
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        box-sizing: border-box;
+        padding: 0 4vw;
+    }
+
+    #title {
+        position: absolute;
+        font-size: 10vw;
+        width: 85vw;
+        top: 12.8vh;
+        left: 5vw;
+        font-family: 'Gopher Mono Semi';
+        opacity: 0.4;
+    }
+
+    .title-animation {
+        animation: 1s ease-out 0s 1 fade-in;
+        animation: 1s ease-out 0s 1 slideInFromLeft;
+    }
+
+    /*.aspiring {
+        color: #334862;
+        opacity: 0.6;
+    }*/
+
     #medium-p-homepage {
-        top: 36vh;
+        font-family: 'Gopher Mono Semi';
+        letter-spacing: 0.3vw;
+        position: absolute;
+        top: 35vh;
+        left: 15.5vw;
         font-size: 1.1em;
         width: 36vw;
     }
 
+    .medium-p-animation {
+        animation: 1s ease-out 0s 1 fade-in2;
+    }
+
     #large-p-homepage {
-        top: 51vh;
-        width: 40vw;
+        font-family: 'Gopher Mono';
+        text-decoration: underline;
+        text-decoration-color: #c15564;
+        letter-spacing: 0.2vw;
+        position: absolute;
+        top: 51.5vh;
+        left: 12vw;
+        font-size: 1.8vw;
+        width: 45vw;
+    }
+
+    .large-p-animation {
+        animation: 1s ease-out 0s 1 fade-in2;
     }
 
     #small-p-homepage {
-        top: 74vh;
-        left: 15vw;
+        font-family: 'Gopher Mono';
+        letter-spacing: 0.08vw;
+        position: absolute;
+        top: 78vh;
+        left: 12vw;
         font-size: 1vw;
-        width: 38vw;
+        width: 43vw;
+    }
+
+    .small-p-animation {
+        animation: 1s ease-out 0s 1 fade-in2;
     }
 
     #main-body1 img {
-        top: 34vh;
-        left: 55vw;
-        width: 20vw;
-    }
-
-    /*    ABOUT PAGE ADJUSTMENTS----------------------------------------------------------------------*/
-    #about-title {
-        font-size: 12vw;
-    }
-
-    #large-p-about1 {
-        top: 24vh;
-        left: 10vw;
-        width: 65vw;
-    }
-
-    #large-p-about1, #large-p-about2 {
-        font-size: 2em;
-    }
-
-    #large-p-about1 {
-        top: 26vh;
-    }
-
-    #large-p-about2 {
+        position: absolute;
         top: 32vh;
+        left: 60vw;
+        width: 22vw;
+        z-index: -1;
+        border: solid #3f423e;
     }
 
-    #cols {
-        font-size: 1vw;
+    .title-img-animation {
+        animation: 1s ease-out 0s 1 fade-in2;
+        animation: 1s ease-out 0s 1 slideInFromRight;
+    }
+
+    /*ABOUT-------------------------------------------------------------------------------------------------------*/
+    #about {
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        box-sizing: border-box;
+        padding: 0 4vw;
+    }
+
+    #about-title {
+        position: absolute;
+        font-size: 8vw;
+        width: 90vw;
+        top: 10vh;
+        left: 5vw;
+        font-family: 'Gopher Mono Semi';
+        opacity: 0.4;
     }
 
     #piano-img {
-        width: 25vw;
-        left: 60vw;
+        position: absolute;
+        width: 30vw;
+        z-index: 0;
+        opacity: 0.1;
+        left: 50vw;
+    }
+
+    #code-img {
+        position: absolute;
+        width: 14vw;
+        z-index: 0;
+        opacity: 0.05;
+        top: 70vh;
+        left: 0vw;
+    }
+
+    #about1 {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        width: 55vw;
+    }
+
+    #large-p-about1 {
+        font-family: 'Gopher Mono';
+        text-decoration: underline;
+        text-decoration-color: #c15564;
+        letter-spacing: 0.2vw;
+        position: absolute;
+        top: 27vh;
+        left: 13vw;
+        font-size: 2.5vw;
+        width: 60vw;
+        margin-bottom: 5vh;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .large-p-about1-animation {
+        animation: type 3s steps(60, end);
+    }
+
+    #about-summary {
+        font-family: 'Gopher Mono';
+        gap: 2.2vw;
+        position: absolute;
+        top: 36.5vh;
+        margin: auto;
+        left: 5vw;
+        font-size: 0.86vw;
+        width: 59.5vw;
+    }
+
+    #cols {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        font-family: 'Gopher Mono';
+        gap: 2.2vw;
+        position: absolute;
+        top: 47.5vh;
+        margin: auto;
+        left: 5vw;
+        font-size: 0.86vw;
+    }
+
+    .about-col-1, .about-col-2 {
+        box-sizing: border-box;
+        padding-top: 2.5vh;
+        font-family: 'Gopher Mono';
+        margin-bottom: 4vh;
+    }
+
+    .skills {
+        font-size: 0.7vw;
+        margin-top: 1vh;
+    }
+
+    #cols div {
+        flex-basis: 100%;
+    }
+
+    #about table {
+        font-family: 'Gopher Mono';
+        color: #3f423e;
+        width: 21vw;
+        border: 2px solid rgba(172, 221, 251, 0.4);
+        position: absolute;
+    }
+
+    #about table td {
+        padding: 2.5% 2%;
+    }
+
+    .border-bottom {
+        border-bottom: 2px solid rgba(172, 221, 251, 0.4);   
+    }
+
+    .cv {
+        letter-spacing: 0.1vw;
+    }
+
+    .cv:hover {
+        text-decoration: underline;
+        cursor: pointer;
+        text-decoration-color: #c15564;
+        text-decoration-thickness: 0.2vw;
+    }
+
+    .highlight {
+        color: #e39ba6;
+        font-weight: bold;
+    }
+
+    /*PORTFOLIO-----------------------------------------------------------------------------------------------------*/
+    #portfolio {
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        box-sizing: border-box;
+        padding: 0 4vw;
+    }
+
+    #portfolio-title {
+        position: absolute;
+        font-size: 8vw;
+        width: 90vw;
+        top: 10vh;
+        left: 5vw;
+        font-family: 'Gopher Mono Semi';
+        opacity: 0.4;
+    }
+
+    #portfolio-image {
+        width: 27vw;
+        position: absolute;
+        z-index: 0;
+        top: 33vh;
+        left: 9vw;
+        border: solid #3f423e;
+    }
+
+    .portfolio-img-animation {
+        animation: wiggle 2s linear;
+    }
+
+    #portfolio1 {
+        position: relative;
+        margin: auto;
+        width: 55vw;
+    }
+
+    #large-p-portfolio {
+        font-family: 'Gopher Mono';
+        text-decoration: underline;
+        text-decoration-color: #c15564;
+        letter-spacing: 0.2vw;
+        position: absolute;
+        top: 21.5vh;
+        left: 0vw;
+        font-size: 2.5vw;
+        width: 60vw;
+        margin-bottom: 5vh;
+    }
+
+    #portfolio-list {
+        font-family: 'Gopher Mono';
+        position: absolute;
+        top: 33vh;
+        left: 22vw;
+        font-size: 1.1vw;
+        width: 18vw;
+        margin-bottom: 5vh;
+    }
+
+    #portfolio-list li {
+        list-style-type: none;
+        cursor: pointer;
+        padding: 3.4% 0%;
+        font-size: 80%;
+    }
+
+    #portfolio a {
+        color: #3f423e;
+        text-decoration: none;
+    }
+
+    #portfolio a:hover {
+        color: #e39ba6;
+        text-decoration: underline;
+        text-decoration-color: #c15564;
+    }
+
+    #portfolio-text {
+        position: absolute;
+        font-family: 'Gopher Mono';
+        top: 33.5vh;
+        left: 41vw;
+        width: 23vw;
+    }
+
+    .small-portfolio-text {
+        font-size: 0.85vw;
+    }
+
+    .portfolio-tiny-text {
+        padding-top: 2vh;
+        font-size: 0.6vw;
+        color: #4a713f;
+        list-style-type: "-";
+        line-height: 1.5em;
+    }
+
+    .external-img {
+        width: 0.8vw;
+        padding-left: 0.2vw;
+        opacity: 0.5;
+    }
+
+    /*MODAL-----------------------------------------------------------------------------------------------------*/
+    #last-item:hover {
+        color: #e39ba6;
+        text-decoration: underline;
+        text-decoration-color: #c15564;
+        text-decoration-thickness: 3px;
+        cursor: pointer;
+    }
+
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    }
+
+    /* Modal Content/Box */
+    .modal-content {
+        background-color: #fefefe;
+        margin: 15% auto; /* 15% from the top and centered */
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%; /* Could be more or less, depending on screen size */
+    }
+
+    .modal-content p {
+        font-family: 'Gopher Mono';
+    }
+
+    .modal-content-video {
+        margin: 15% auto;
+    }
+
+    .modal-content-pdf {
+        margin-top: 2vh;
+    }
+
+    iframe {
+        margin: 0 auto;
+        display: block;
+        border: solid #f5faf9;
+    }
+
+    /* The Close Button */
+    .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .close2, .close3, .close4, .close5, .close6 {
+        color: #f5faf9;
+        position: absolute;
+        top: 8vh;
+        left: 65vw;
+        font-size: 128px;
+        font-weight: bold;
+    }
+
+    .close7, .close8 {
+        color: #f5faf9;
+        position: absolute;
+        top: 8vh;
+        left: 70vw;
+        font-size: 128px;
+        font-weight: bold;
+    }
+
+    .close2:hover, .close3:hover, .close4:hover, .close5:hover, .close6:hover, .close7:hover, .close8:hover {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
     }
 }
