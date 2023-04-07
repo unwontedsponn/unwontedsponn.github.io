@@ -544,6 +544,10 @@
         text-decoration-thickness: 0.2vw;
     }
 
+    #cv1size {
+        height: 90vh;
+    }
+
     .highlight {
         color: #e39ba6;
         font-weight: bold;
