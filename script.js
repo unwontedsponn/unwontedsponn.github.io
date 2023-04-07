@@ -1,16 +1,16 @@
 // CHANGING WORDS------------------------------
-const array = ["things", "websites", "music", "films", "books", "games"]
+const array = ["websites", "apps", "games", "music", "films", "books"]
 let changingWord = document.getElementById('change-word');
 let index = 0;
 
 setInterval(changeWord, 1500);
 
 function changeWord() {
-    if (index < 7) {
+    if (index < array.length + 1) {
         changingWord.textContent = array[index];
         index++;
     }
-    if (index === 7) {
+    if (index === array.length + 1) {
         index = 0;
         changeWord();
     }
@@ -126,6 +126,14 @@ function arcadeEnter() {
 
 function arcadeLeave() {
     document.getElementById('arcade-text').style.display = "none";
+}
+
+function gitHubEnter() {
+    document.getElementById('github-text').style.display = "block";   
+}
+
+function gitHubLeave() {
+    document.getElementById('github-text').style.display = "none";
 }
 
 function laplandEnter() {
