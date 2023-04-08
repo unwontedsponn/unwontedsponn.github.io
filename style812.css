@@ -468,7 +468,7 @@
         text-decoration-color: #c15564;
         letter-spacing: 0.2vw;
         position: absolute;
-        top: 19vh;
+        top: 18vh;
         left: 13vw;
         font-size: 3.5vw;
         width: 60vw;
@@ -485,7 +485,7 @@
         font-family: 'Gopher Mono';
         gap: 2.2vw;
         position: absolute;
-        top: 22vh;
+        top: 23vh;
         margin: auto;
         left: 5vw;
         font-size: 1.7vw;
@@ -695,6 +695,7 @@
 
     .modal-content-video {
         margin: 15% auto;
+        width: 80%;
     }
 
     .modal-content-pdf {
