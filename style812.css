@@ -229,7 +229,7 @@
         margin-top: 4vh;
         z-index: 1;
         bottom: 2vh;
-        left: 15vw;
+        left: 13.5vw;
     /*    line-height: 8vh;*/
         font-size: 80%;
     }
@@ -341,8 +341,7 @@
 
     #title {
         position: absolute;
-/*        font-size: 10vw;*/
-        font-size: 11vw;
+        font-size: 10vw;
         width: 85vw;
         top: 16vh;
         left: 5vw;
@@ -500,7 +499,7 @@
         font-family: 'Gopher Mono';
         gap: 2.2vw;
         position: absolute;
-        top: 39.2vh;
+        top: 37.8vh;
         margin: auto;
         left: 5vw;
         font-size: 1.8vw;
@@ -570,7 +569,7 @@
 
     #portfolio-title {
         position: absolute;
-        font-size: 10vw;
+        font-size: 16vw;
         width: 90vw;
         top: 10vh;
         left: 5vw;
@@ -579,11 +578,11 @@
     }
 
     #portfolio-image {
-        width: 31vw;
+        width: 41vw;
         position: absolute;
         z-index: 0;
-        top: 34vh;
-        left: 5vw;
+        top: 64vh;
+        left: 55vw;
         border: solid #3f423e;
     }
 
@@ -603,9 +602,9 @@
         text-decoration-color: #c15564;
         letter-spacing: 0.2vw;
         position: absolute;
-        top: 23vh;
+        top: 13vh;
         left: 0vw;
-        font-size: 2.5vw;
+        font-size: 3.5vw;
         width: 60vw;
         margin-bottom: 5vh;
     }
@@ -613,9 +612,9 @@
     #portfolio-list {
         font-family: 'Gopher Mono';
         position: absolute;
-        top: 34vh;
-        left: 22vw;
-        font-size: 1.4vw;
+        top: 18vh;
+        left: 5vw;
+        font-size: 3.4vw;
         width: 18vw;
         margin-bottom: 5vh;
     }
@@ -639,11 +638,7 @@
     }
 
     #portfolio-text {
-        position: absolute;
-        font-family: 'Gopher Mono';
-        top: 34vh;
-        left: 41vw;
-        width: 23vw;
+        display: none;
     }
 
     .small-portfolio-text {
