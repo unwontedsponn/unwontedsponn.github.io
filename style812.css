@@ -364,8 +364,8 @@
         letter-spacing: 0.3vw;
         position: absolute;
         top: 24.5vh;
-        left: 52vw;
-        font-size: 0.7em;
+        left: 51.7vw;
+        font-size: 0.6em;
         width: 43vw;
     }
 
@@ -451,7 +451,7 @@
         width: 17vw;
         z-index: 0;
         opacity: 0.05;
-        top: 70vh;
+        top: 68vh;
         left: 0vw;
     }
 
@@ -485,7 +485,7 @@
         font-family: 'Gopher Mono';
         gap: 2.2vw;
         position: absolute;
-        top: 21vh;
+        top: 22vh;
         margin: auto;
         left: 5vw;
         font-size: 1.7vw;
@@ -602,7 +602,7 @@
         text-decoration-color: #c15564;
         letter-spacing: 0.2vw;
         position: absolute;
-        top: 18vh;
+        top: 16vh;
         left: 0vw;
         font-size: 3.5vw;
         width: 60vw;
@@ -613,9 +613,9 @@
         font-family: 'Gopher Mono';
         position: absolute;
         top: 24vh;
-        left: -5vw;
+        left: -15vw;
         font-size: 3vw;
-        width: 28vw;
+        width: 38vw;
         margin-bottom: 5vh;
     }
 
