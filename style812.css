@@ -499,7 +499,7 @@
         font-family: 'Gopher Mono';
         gap: 2.2vw;
         position: absolute;
-        top: 37.2vh;
+        top: 40.2vh;
         margin: auto;
         left: 5vw;
         font-size: 1.86vw;
@@ -514,8 +514,7 @@
     }
 
     .skills {
-        font-size: 1.3vw;
-        margin-top: 1vh;
+        display: none;
     }
 
     #about-col-1, #about-col-2 div {
@@ -523,13 +522,7 @@
     }
 
     #about table {
-        font-family: 'Gopher Mono';
-        color: #3f423e;
-        width: 61vw;
-        border: 2px solid rgba(172, 221, 251, 0.4);
-        position: absolute;
-        top: 36.5vh;
-        left: 13vw;
+        display: none;
     }
 
     .about-table-br {
