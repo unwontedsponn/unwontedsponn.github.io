@@ -422,7 +422,7 @@
 
     #about-title {
         position: absolute;
-        font-size: 8vw;
+        font-size: 12vw;
         width: 90vw;
         top: 10vh;
         left: 5vw;
@@ -522,7 +522,7 @@
     }
 
     #about table td {
-        padding: 2.5% 2%;
+        padding: 2.2% 2%;
     }
 
     .border-bottom {
