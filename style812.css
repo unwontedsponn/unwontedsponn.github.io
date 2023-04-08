@@ -341,7 +341,8 @@
 
     #title {
         position: absolute;
-        font-size: 10vw;
+/*        font-size: 10vw;*/
+        font-size: 11vw;
         width: 85vw;
         top: 16vh;
         left: 5vw;
@@ -363,7 +364,7 @@
         font-family: 'Gopher Mono Semi';
         letter-spacing: 0.3vw;
         position: absolute;
-        top: 22.5vh;
+        top: 24.5vh;
         left: 55vw;
         font-size: 0.7em;
         width: 36vw;
@@ -379,7 +380,7 @@
         text-decoration-color: #c15564;
         letter-spacing: 0.2vw;
         position: absolute;
-        top: 39vh;
+        top: 42vh;
         left: 7vw;
         font-size: 4.8vw;
         width: 45vw;
