@@ -363,10 +363,10 @@
         font-family: 'Gopher Mono Semi';
         letter-spacing: 0.3vw;
         position: absolute;
-        top: 35.5vh;
-        left: 10.5vw;
+        top: 28.5vh;
+        left: 15.5vw;
         font-size: 0.7em;
-        width: 56vw;
+        width: 46vw;
     }
 
     .medium-p-animation {
@@ -393,7 +393,7 @@
         font-family: 'Gopher Mono';
         letter-spacing: 0.08vw;
         position: absolute;
-        top: 70.5vh;
+        top: 65.5vh;
         left: 12vw;
         font-size: 3.1vw;
         width: 66vw;
@@ -405,7 +405,7 @@
 
     #main-body1 img {
         position: absolute;
-        top: 24vh;
+        top: 34vh;
         left: 50vw;
         width: 37vw;
         z-index: -1;
