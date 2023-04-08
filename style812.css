@@ -393,7 +393,7 @@
         font-family: 'Gopher Mono';
         letter-spacing: 0.08vw;
         position: absolute;
-        top: 65.5vh;
+        top: 65vh;
         left: 12vw;
         font-size: 3.1vw;
         width: 66vw;
@@ -468,7 +468,7 @@
         text-decoration-color: #c15564;
         letter-spacing: 0.2vw;
         position: absolute;
-        top: 18vh;
+        top: 19vh;
         left: 13vw;
         font-size: 3.5vw;
         width: 60vw;
@@ -612,10 +612,10 @@
     #portfolio-list {
         font-family: 'Gopher Mono';
         position: absolute;
-        top: 24vh;
+        top: 21vh;
         left: -15vw;
-        font-size: 3.5vw;
-        width: 38vw;
+        font-size: 3.7vw;
+        width: 48vw;
         margin-bottom: 5vh;
     }
 
