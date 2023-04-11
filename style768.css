@@ -265,7 +265,7 @@
     /*EQUALISER*/
     #equaliser {
         position: absolute;
-        left: 56vw;
+        left: 46vw;
         bottom: 8.5vh;
     }
 
@@ -469,7 +469,7 @@
         letter-spacing: 0.2vw;
         position: absolute;
         top: 22.5vh;
-        left: 12vw;
+        left: 11vw;
         font-size: 3.5vw;
         width: 60vw;
         margin-bottom: 5vh;
@@ -581,7 +581,7 @@
         width: 41vw;
         position: absolute;
         z-index: 0;
-        top: 46.5vh;
+        top: 47vh;
         left: 44vw;
         border: solid #3f423e;
     }
