@@ -1,4 +1,4 @@
-/*this is the size of an ipad 6th generation*/
+/*this is the size of an ipad 6th generation landscape*/
 @media only screen and (max-width: 1024px) {
     * {
         margin: 0px;
@@ -261,7 +261,7 @@
     #equaliser {
         position: absolute;
         left: 48vw;
-        bottom: 10vh;
+        bottom: 7vh;
     }
 
     .equilizer {
@@ -358,7 +358,7 @@
         font-family: 'Gopher Mono Semi';
         letter-spacing: 0.3vw;
         position: absolute;
-        top: 36.5vh;
+        top: 33.5vh;
         left: 15.5vw;
         font-size: 1em;
         width: 36vw;
@@ -374,9 +374,9 @@
         text-decoration-color: #c15564;
         letter-spacing: 0.2vw;
         position: absolute;
-        top: 51.8vh;
+        top: 47vh;
         left: 12vw;
-        font-size: 1.8vw;
+        font-size: 1.9vw;
         width: 45vw;
     }
 
@@ -388,7 +388,7 @@
         font-family: 'Gopher Mono';
         letter-spacing: 0.08vw;
         position: absolute;
-        top: 77.5vh;
+        top: 70vh;
         left: 12vw;
         font-size: 1vw;
         width: 43vw;
@@ -462,7 +462,7 @@
         text-decoration-color: #c15564;
         letter-spacing: 0.2vw;
         position: absolute;
-        top: 28.5vh;
+        top: 25vh;
         left: 13vw;
         font-size: 2.5vw;
         width: 60vw;
@@ -482,7 +482,7 @@
         top: 36.5vh;
         margin: auto;
         left: 5vw;
-        font-size: 0.86vw;
+        font-size: 0.76vw;
         width: 59.5vw;
     }
 
@@ -496,7 +496,7 @@
         top: 47.5vh;
         margin: auto;
         left: 5vw;
-        font-size: 0.86vw;
+        font-size: 0.76vw;
     }
 
     .about-col-1, .about-col-2 {
@@ -616,7 +616,7 @@
     #portfolio-list li {
         list-style-type: none;
         cursor: pointer;
-        padding: 3.4% 0%;
+        padding: 3.2% 0%;
         font-size: 80%;
     }
 
