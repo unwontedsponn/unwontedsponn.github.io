@@ -152,6 +152,10 @@
         justify-content: center;
     }*/
 
+    #empty-nav, #about-nav, #portfolio-nav, #youtube, #blog {
+        display: block;
+    }
+
     #header {
         border-collapse: collapse;
         width: 82.5vw;
@@ -359,9 +363,9 @@
         font-family: 'Gopher Mono Semi';
         letter-spacing: 0.3vw;
         position: absolute;
-        top: 24.5vh;
-        left: 51.2vw;
-        font-size: 0.8em;
+        top: 25vh;
+        left: 50.2vw;
+        font-size: 1em;
         width: 43vw;
     }
 
@@ -375,10 +379,10 @@
         text-decoration-color: #c15564;
         letter-spacing: 0.2vw;
         position: absolute;
-        top: 42vh;
+        top: 45vh;
         left: 7vw;
         font-size: 4.1vw;
-        width: 45vw;
+        width: 42vw;
     }
 
     .large-p-animation {
@@ -390,9 +394,9 @@
         letter-spacing: 0.08vw;
         position: absolute;
         top: 65vh;
-        left: 12vw;
+        left: 10vw;
         font-size: 2.2vw;
-        width: 68vw;
+        width: 52vw;
     }
 
     .small-p-animation {
@@ -401,7 +405,7 @@
 
     #main-body1 img {
         position: absolute;
-        top: 36vh;
+        top: 39vh;
         left: 50vw;
         width: 37vw;
         z-index: -1;
@@ -464,7 +468,7 @@
         text-decoration-color: #c15564;
         letter-spacing: 0.2vw;
         position: absolute;
-        top: 23vh;
+        top: 22vh;
         left: 13vw;
         font-size: 3.5vw;
         width: 60vw;
@@ -481,7 +485,7 @@
         font-family: 'Gopher Mono';
         gap: 2.2vw;
         position: absolute;
-        top: 23vh;
+        top: 26vh;
         margin: auto;
         left: 5vw;
         font-size: 1.4vw;
@@ -495,7 +499,7 @@
         font-family: 'Gopher Mono';
         gap: 2.2vw;
         position: absolute;
-        top: 37.8vh;
+        top: 41vh;
         margin: auto;
         left: 5vw;
         font-size: 1.4vw;
@@ -598,7 +602,7 @@
         text-decoration-color: #c15564;
         letter-spacing: 0.2vw;
         position: absolute;
-        top: 18vh;
+        top: 19vh;
         left: -3vw;
         font-size: 3.2vw;
         width: 60vw;
@@ -608,9 +612,9 @@
     #portfolio-list {
         font-family: 'Gopher Mono';
         position: absolute;
-        top: 21vh;
+        top: 23vh;
         left: -15vw;
-        font-size: 3.2vw;
+        font-size: 3vw;
         width: 48vw;
         margin-bottom: 5vh;
     }
