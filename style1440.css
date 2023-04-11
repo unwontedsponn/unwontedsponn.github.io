@@ -574,6 +574,15 @@
         border: solid #3f423e;
     }
 
+    #portfolio-image2 {
+        opacity: 0.2;
+        width: 13vw;
+        position: absolute;
+        z-index: 0;
+        top: 10vh;
+        left: 69vw;
+    }
+
     .portfolio-img-animation {
         animation: wiggle 2s linear;
     }

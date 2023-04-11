@@ -1,5 +1,5 @@
 /*this is the size of an iphone 12 mini portrait*/
-@media only screen and (max-width: 360px), (max-height: 780px) {
+@media only screen and (max-width: 360px) {
     * {
         margin: 0px;
         padding: 0px;
