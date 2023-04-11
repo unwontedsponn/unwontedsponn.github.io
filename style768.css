@@ -152,9 +152,9 @@
         justify-content: center;
     }*/
 
-    #empty-nav, #about-nav, #portfolio-nav, #youtube, #blog {
+    /*#empty-nav, #about-nav, #portfolio-nav, #youtube, #blog {
         display: block;
-    }
+    }*/
 
     #header {
         border-collapse: collapse;
