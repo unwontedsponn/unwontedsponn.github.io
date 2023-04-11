@@ -393,10 +393,10 @@
         font-family: 'Gopher Mono';
         letter-spacing: 0.08vw;
         position: absolute;
-        top: 68vh;
+        top: 66vh;
         left: 7.5vw;
         font-size: 2vw;
-        width: 45vw;
+        width: 40vw;
     }
 
     .small-p-animation {
@@ -469,7 +469,7 @@
         letter-spacing: 0.2vw;
         position: absolute;
         top: 22.5vh;
-        left: 13vw;
+        left: 12vw;
         font-size: 3.5vw;
         width: 60vw;
         margin-bottom: 5vh;
@@ -485,7 +485,7 @@
         font-family: 'Gopher Mono';
         gap: 2.2vw;
         position: absolute;
-        top: 29vh;
+        top: 30vh;
         margin: auto;
         left: 5vw;
         font-size: 1.4vw;
@@ -499,7 +499,7 @@
         font-family: 'Gopher Mono';
         gap: 2.2vw;
         position: absolute;
-        top: 46.5vh;
+        top: 46.8vh;
         margin: auto;
         left: 5vw;
         font-size: 1.4vw;
@@ -581,7 +581,7 @@
         width: 41vw;
         position: absolute;
         z-index: 0;
-        top: 48vh;
+        top: 46.5vh;
         left: 44vw;
         border: solid #3f423e;
     }
