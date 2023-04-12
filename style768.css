@@ -514,7 +514,8 @@
     }
 
     .skills {
-        display: none;
+        font-size: 0.7vw;
+        margin-top: 1vh;
     }
 
     #about-col-1, #about-col-2 div {
