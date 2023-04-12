@@ -435,7 +435,7 @@
         width: 30vw;
         z-index: 0;
         opacity: 0.1;
-        left: 50vw;
+        left: 50.5vw;
     }
 
     #code-img {
@@ -461,7 +461,7 @@
         letter-spacing: 0.2vw;
         position: absolute;
         top: 27vh;
-        left: 13vw;
+        left: 12vw;
         font-size: 2.5vw;
         width: 60vw;
         margin-bottom: 5vh;
@@ -481,7 +481,7 @@
         margin: auto;
         left: 5vw;
         font-size: 0.86vw;
-        width: 59.5vw;
+        width: 49.5vw;
     }
 
     #cols {
@@ -522,7 +522,7 @@
     }
 
     #about table td {
-        padding: 2.2% 2%;
+        padding: 2% 2%;
     }
 
     .border-bottom {
