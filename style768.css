@@ -265,7 +265,7 @@
     /*EQUALISER*/
     #equaliser {
         position: absolute;
-        left: 49vw;
+        left: 50vw;
         bottom: 8.5vh;
     }
 
@@ -604,7 +604,7 @@
         position: absolute;
         top: 19vh;
         left: -3vw;
-        font-size: 3.2vw;
+        font-size: 3.25vw;
         width: 60vw;
         margin-bottom: 5vh;
     }
@@ -654,7 +654,7 @@
     }
 
     .external-img {
-        width: 2.4vw;
+        width: 2vw;
         padding-left: 0.2vw;
         opacity: 0.5;
     }
