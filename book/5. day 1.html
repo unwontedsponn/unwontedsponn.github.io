@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Day 1: Ebony & Ivory</title>
+
+		<link rel="stylesheet" href="./css_js/css/style.css">
+		<script src="./css_js/js/day-1-piano.js" type="text/javascript" defer></script>
+		<script src="./css_js/js/prompt-day1.js" type="text/javascript" defer></script>
+
+	</head>
+	<body>
+		<article>
+			<nav>
+				<a href="4. how to use this book.html">◀︎</a>
+				<a href="1. index.html">◆</a>
+				<a href="5.b day 1 quote.html">►</a>
+			</nav>
+
+			<h1><span class="chap_num">DAY 1: Ebony & Ivory</span>
+				Exploring the notes of the piano
+			</h1>
+
+			<p class="font-size-body-text"><span class="bold">C notes</span><br>
+			At first glance the keys of the piano look
+			complex, but chances are you can already see
+			a pattern emerging. Black keys are in groups of
+			twos and threes. You can use these groups as
+			signposts, to navigate your way to any other
+			note with ease. I’ll demonstrate with the note
+			C. C’s are always located to the left of black key
+			pairs. How many C’s are there on your piano?
+			Take a moment to work it out.</p>
+
+			<svg id="container" viewbox="0 0 4160 400" class="piano-border-sides"></svg>
+
+			<p class="font-size-body-text">What’s the difference between all of the
+			notes we call C? The answer is pitch. Some
+			sound high, some sound low. Others sound
+			somewhere in between. The C in the middle
+			of the piano is called middle C. The distance
+			between a C and the next C to its left or right is
+			called an octave.</p>
+
+			<svg id="container_2" viewbox="0 0 4160 400" class="piano-border-sides"></svg>
+
+			<!-- arrow underneath -->
+			<svg viewBox="0 0 24 24" width="100%" height="20" class="chromatic-arrow">
+
+				<!-- arrow heads -->
+			  	<defs>
+			  		<marker id="arrowhead" markerWidth="10" markerHeight="7" 
+    				refX="0" refY="3.5" orient="auto">
+					<polygon points="0 2, 6.5 3.5, 0 5" fill="black"/>
+					</marker>
+			  	</defs>
+
+			  	<defs>
+			  		<marker id="arrowhead-c" markerWidth="10" markerHeight="7" 
+    				refX="0" refY="3.5" orient="auto">
+					<polygon points="0 2, 6.5 3.5, 0 5" fill="#a0d3c3" stroke="#a0d3c3"/>
+					</marker>
+			  	</defs>
+
+			  	<!-- straight arrow -->
+				<line x1="85" y1="25" x2="85" y2="16" marker-end="url(#arrowhead)" />
+				<line x1="-28" y1="25" x2="-28" y2="16" marker-end="url(#arrowhead-c)" class="middle-c"/>
+				<line x1="-140" y1="25" x2="-140" y2="16" marker-end="url(#arrowhead)" />
+			</svg>
+
+			<p class="font-size-body-text">You’re going to try an exercise now to
+			familiarise yourself with all of the notes of the
+			piano. You can use any finger you like, on your
+			right or left hand. Don’t be afraid to try a few
+			or all of your fingers. Each time you play a note
+			say it out loud, to drill the names of notes.</p>
+
+			<!-- handwriting click me note -->
+			<p class="handwriting-style handwriting-day1-1">tick as you go</p>
+
+			<!-- small arrow -->
+			<svg viewBox="0 0 24 24" width="10%" height="30" class="small-arrow-day1-1">
+
+			  	<!-- arrow head -->
+			  	<defs>
+			  		<marker id="arrowhead" markerWidth="10" markerHeight="7" 
+    				refX="0" refY="3.5" orient="auto" class="individual-arrow">
+					<polygon points="0 2, 6.5 3.5, 0 5" fill="#ec9865"/>
+					</marker>
+			  	</defs>
+
+				 <!-- curved left arrows -->
+				<path class="individual-arrow"
+				    d="
+				      M -8 5
+				      A 25 13 0 0 0 14 9"
+				      marker-end="url(#arrowhead)"
+				    />
+			</svg>
+
+			<ul class="font-size-body-text custom-ol">
+				<li>Play the first C above middle C.
+					<label class="container checkbox1">
+					  <input type="checkbox">
+					  <span class="checkmark"></span>
+					</label>
+				</li>
+				<li>The first C below middle C.
+					<label class="container checkbox2">
+					  <input type="checkbox">
+					  <span class="checkmark"></span>
+					</label>
+				</li>
+				<li>All of the C’s ascending.
+					<label class="container checkbox3">
+					  <input type="checkbox">
+					  <span class="checkmark"></span>
+					</label>
+				</li>
+				<li>All of the C’s descending.
+					<label class="container checkbox4">
+					  <input type="checkbox">
+					  <span class="checkmark"></span>
+					</label>
+				</li>
+				<li>All of the C’s on the piano in any order.
+					<label class="container checkbox5">
+					  <input type="checkbox">
+					  <span class="checkmark"></span>
+					</label>
+				</li>
+				<li>Create a short excerpt of music using
+				only these C’s.
+					<label class="container checkbox6">
+					  <input type="checkbox">
+					  <span class="checkmark"></span>
+					</label>
+				</li>
+				<li>Repeat your excerpt.
+					<label class="container checkbox7">
+					  <input type="checkbox">
+					  <span class="checkmark"></span>
+					</label>
+				</li>
+				<li>Perform it (even if that’s just to the cat).
+					<label class="container checkbox8">
+					  <input type="checkbox">
+					  <span class="checkmark"></span>
+					</label>
+				</li>
+			</ul>
+
+			<p class="font-size-body-text"><span class="bold">White notes</span><br>
+			Next find all of the F’s. F’s are always to the left
+			of black keys grouped in three. Then find all of
+			the D’s, always in between black note pairs. Now all the A’s...</p>
+
+			<svg id="container_3" viewbox="0 0 4160 400" class="piano-border-sides"></svg>
+
+			<ul class="font-size-body-text custom-ol">
+				<li>Repeat the bullet points above, this time
+				with each of the white notes - A, B, D, E, F, G.
+					<label class="container checkbox9">
+					  <input type="checkbox">
+					  <span class="checkmark"></span>
+					</label>
+				</li>
+			</ul>
+
+			<p class="font-size-body-text"><span class="bold">Black notes</span><br>
+			Time for the black notes. Did you know black
+			notes have two names? When we move from
+			C to the next key up, we call that black note C
+			sharp (C# for short). When we move from D to
+			the next key down, we call that same black note
+			D flat (aka Db). Can you find all the C#’s? All the Db’s? (Gotcha, they’re the same keys). How about
+			all the F#’s? The Gb’s? Now you’re getting it.</p>
+
+			<ul class="font-size-body-text custom-ol">
+				<li>Repeat the bullet points above with each
+				of the black notes.
+					<label class="container checkbox10">
+					  <input type="checkbox">
+					  <span class="checkmark"></span>
+					</label>
+				</li>
+			</ul>
+
+			<svg id="container_empty" viewbox="0 0 4160 120"></svg>
+
+			<svg id="container_4" viewbox="0 0 4160 400" class="piano-border-sides"></svg>
+
+			<svg id="container_spacer" viewbox="0 0 4160 100"></svg>
+
+			<div class="pop_up_box"><span class="bold">A rose by any other name</span><br>
+				<p class="font-size-body-text">C# is the enharmonic equivalent of Db.
+				An enharmonic equivalent is simply
+				a note that shares the same pitch as
+				another note, though it bears a different
+				name. Big words for a deceptively
+				simple concept.</p>
+			</div>
+
+			<p class="font-size-body-text"><span class="bold">C chromatic scale</span><br>
+			Play every note, white and black, from one C up
+			to the next C (one octave). You can use either
+			hand and any of your fingers. Think exploration
+			rather than perfection and say every note you
+			play out loud: sharps on the way up...</p>
+
+			<svg id="container_empty_Two" viewbox="0 0 4160 120"></svg>
+
+			<svg id="container_5" viewbox="0 0 4160 400" class="piano-border-sides"></svg>
+
+			<!-- arrow underneath -->
+			<svg viewBox="0 0 24 24" width="100%" height="20" class="chromatic-arrow">
+
+				<!-- arrow head -->
+			  	<defs>
+			  		<marker id="arrowhead" markerWidth="10" markerHeight="7" 
+    				refX="0" refY="3.5" orient="auto">
+					<polygon points="0 2, 6.5 3.5, 0 5" fill="black"/>
+					</marker>
+			  	</defs>
+
+			  	<!-- straight arrow -->
+				<line x1="-28" y1="5" x2="70" y2="5" marker-end="url(#arrowhead)" />
+			</svg>
+
+			<p class="font-size-body-text">...flats on the way down.</p>
+
+			<svg id="container_empty_Three" viewbox="0 0 4160 120"></svg>
+
+			<svg id="container_6" viewbox="0 0 4160 400" class="piano-border-sides"></svg>
+
+			<!-- arrow underneath -->
+			<svg viewBox="0 0 24 24" width="100%" height="20" class="chromatic-arrow">
+
+				<!-- arrow head -->
+			  	<defs>
+			  		<marker id="arrowhead" markerWidth="10" markerHeight="7" 
+    				refX="0" refY="3.5" orient="auto">
+					<polygon points="0 2, 6.5 3.5, 0 5" fill="black"/>
+					</marker>
+			  	</defs>
+
+			  	<!-- straight arrow -->
+				<line x1="86" y1="5" x2="-17" y2="5" marker-end="url(#arrowhead)" />
+			</svg>
+
+			<p class="font-size-body-text">Can you do two octaves? How about four?
+			Notice how every note is the same distance
+			apart, the smallest step possible in western
+			music (things get a little more interesting in
+			the East but that’s a story for another day). The
+			distance you’ve identified is called a semitone
+			(S). Playing semitones in order like you’ve
+			been doing is called a chromatic scale. Let’s
+			break that word down. Chromatic indicates
+			movement in semitones, while scale just
+			means ordered notes.</p>
+
+			<ul class="font-size-body-text custom-ol">
+				<li>Play the C Chromatic Scale ascending
+				then descending (one octave).
+					<label class="container checkbox11">
+					  <input type="checkbox">
+					  <span class="checkmark"></span>
+					</label>
+				</li>
+				<li>Two octaves.
+					<label class="container checkbox12">
+					  <input type="checkbox">
+					  <span class="checkmark"></span>
+					</label>
+				</li>
+				<li>Four octaves. See how fast you can
+				play it accurately.
+					<label class="container checkbox13">
+					  <input type="checkbox">
+					  <span class="checkmark"></span>
+					</label>
+				</li>
+			</ul>
+
+			<p class="font-size-body-text"><span class="bold">Time to choose:</span> When you’re confident that
+			you know the names of all twelve notes of the
+			piano it’s time to choose the starting point of
+			your piece, your ‘root’ note (R), your anchor.
+			If this is your first time reading this book, you
+			may want to use a white note as your root,
+			or use C like I do in the example below. If
+			you’ve taken this journey with me before or
+			have some experience with the piano already,
+			choose any note, white or black.</p>
+
+			<p class="font-size-body-text">Turn to your worksheet. Write in your root note
+			under R on the Major Key table. If you choose a
+			black note, write its flat (not sharp) name. Here
+			I’ve used the example C.</p>
+
+			<table class="main-table fixed-table-layout">
+				<thead>
+					<tr>
+						<th colspan="8" class="orange bold">MAJOR KEY</th>	
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>R</td>
+						<td>T</td>
+						<td>T</td>
+						<td>S</td>
+						<td>T</td>
+						<td>T</td>
+						<td>T</td>
+						<td>S</td>
+					</tr>
+					<tr>
+						<td class="green-2 bold">C</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td style="color: white">C</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr class="chords">
+						<td>Im</td>
+						<td>iim</td>
+						<td>iiim</td>
+						<td>IV</td>
+						<td>V</td>
+						<td>vim</td>
+						<td>viio</td>
+						<td>I</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<p class="font-size-body-text">⧗ This is where the fun begins. Improvise
+			for one whole minute using your root note.
+			No cutting it short. You’d be surprised how
+			creative you can be with just one ingredient.
+			Allow your imagination to flow, don’t worry
+			about what’s coming out. Many great songs
+			started with a happy accident. Need a bit
+			of help getting started? Here are some
+			suggestions for you.</p>
+
+			<ul class="font-size-body-text custom-ol">
+				<li>Use just your right hand, just your left or
+				alternate between the two.</li>
+				<li>Play hands together.</li>
+				<li>Switch fingers each time you play a new
+				note. Don’t forget the little finger!</li>
+				<li>Try playing one note at a time. Now two
+				together, now three.</li>
+				<li>Explore every inch of your instrument.
+				The higher end, or register as it is formally
+				known. Now the lower register.</li>
+				<li>Use your right hand to play high notes and
+				your left to play low notes. Or the reverse.</li>
+				<li>Vary the tempo at which you play. Tempo
+				means speed: fast, moderate or slow.</li>
+				<li>Add dynamics: how softly you play, how
+				loudly.</li>
+				<li>Try expressing different emotions, like
+				anger or sleepiness.</li>
+				<li>Try touching the sustain pedal below your
+				right foot. How does this alter the mood?
+				Does it enhance it or take something away?</li>
+			</ul>
+
+			<p class="font-size-body-text"><span class="bold">Time to choose:</span> When your time is up choose
+			another note to improvise with for one minute.
+			You can repeat this as many times as you like.</p>
+
+			<nav>
+				<a href="4. how to use this book.html">◀︎</a>
+				<a href="1. index.html">◆</a>
+				<a href="5.b day 1 quote.html">►</a>
+			</nav>
+		</article>
+	</body>
+</html>

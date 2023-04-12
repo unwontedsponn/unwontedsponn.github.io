@@ -1,0 +1,950 @@
+html {
+	display: block;
+}
+
+html, body {
+	padding: 0;
+	margin: 0;
+}
+
+head {
+	display: none;
+}
+
+@font-face {
+	font-family: 'Unna';
+	src: url(../../fonts/Unna/Unna-Regular.otf);
+}
+
+body {
+	font-family: 'Trebuchet MS';
+	font-size: 20px;
+	line-height: 1.45;
+	color: black;
+	background: white;
+	text-align: justify;
+}
+
+.font-size-body-text {
+	font-size: 90%;
+}
+
+article {
+	margin: 0 auto;
+    max-width: 35em;
+    min-width: 30em;
+    padding: 2em 1em 5em;
+    position: relative;
+    overflow-wrap: break-word;
+}
+
+nav {
+	display: block;
+	height: 0;
+	text-align: right;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+    margin: 1rem 0;
+    letter-spacing: 2px;
+}
+
+.chap_num {
+    font-size: 60%;
+    color: #aaa;
+    margin-top: -0.7em;
+    display: block;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+a:hover {
+	text-decoration: underline;
+	transition: 0.4s;
+	color: dimgray;
+	cursor: pointer;
+}
+
+#links {
+	font-size: 90%;
+}
+
+.custom-ol {
+	list-style-type: "- ";
+}
+
+/*cover image------------------------------*/
+.img {
+	border: 5px solid;
+	box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.4);
+	margin: 1em 0;
+	width: 550px;
+	height: 778px;
+}
+
+.img-front {
+	position: absolute;
+	width: 550px;
+	/*-webkit-transition: opacity Is ease-in-out;
+	-moz-transition: opacity 1s ease-in-out ;
+	-ms-transition: opacity 1s ease-in-out ; 
+	-o-transition: opacity Is ease-in-out;
+	transition: opacity Is ease-in-out;*/
+}
+
+.img-front:hover {
+	opacity: 0;
+}
+
+.img-back {
+	width: 550px;	
+}
+
+/*contents------------------------------*/
+.contents li {
+	margin-top: 5px;
+}
+
+.nobull {
+	list-style-type: "";
+}
+
+/*strikethrough--------------------------------------*/
+/*.strikethrough {
+	text-decoration: line-through;
+}
+
+.strikethrough-text:hover {
+	cursor: pointer;
+}*/
+
+/*checkboxes--------------------------------------*/
+.container {
+	display: block;
+	position: absolute;
+	padding-left: 35px;
+	margin-bottom: 12px;
+	cursor: pointer;
+	font-size: 22px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 350;
+  height: 18px;
+  width: 18px;
+  background-color: white;
+  border: 3px solid;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #a0d3c3;
+}
+
+/* When the checkbox is checked, add the orange background */
+.container input:checked ~ .checkmark {
+  background-color: #ec9865;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 5px;
+  top: 1px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.checkbox1 {
+	left: -16px;
+	top: 762px;
+}
+
+.checkbox2 {
+	left: -16px;
+	top: 788px;
+}
+
+.checkbox3 {
+	left: -16px;
+	top: 814px;
+}
+
+.checkbox4 {
+	left: -16px;
+	top: 840px;
+}
+
+.checkbox5 {
+	left: -16px;
+	top: 866px;
+}
+
+.checkbox6 {
+	left: -16px;
+	top: 892px;
+}
+
+.checkbox7 {
+	left: -16px;
+	top: 918px;
+}
+
+.checkbox8 {
+	left: -16px;
+	top: 944px;
+}
+
+.checkbox9 {
+	left: -16px;
+	top: 1176px;
+}
+
+.checkbox10 {
+	left: -16px;
+	top: 1420px;
+}
+
+.checkbox11 {
+	left: -16px;
+	bottom: 1296px;
+}
+
+.checkbox12 {
+	left: -16px;
+	bottom: 1270px
+}
+
+.checkbox13 {
+	left: -16px;
+	bottom: 1244px;
+}
+
+/*prompt popup stuff------------------------------*/
+.placeholderTextWhite {
+	color: white;
+}
+
+.textBlack {
+	color: black;
+}
+
+.hover:hover {
+	cursor: pointer;
+}
+
+/*quote page------------------------------*/
+.img {
+	border: 5px solid;
+	box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.4);
+	margin: 1em 0;
+	max-width: 550px;
+	max-height: 778px;
+}
+
+.img-quote {
+	position: absolute;
+	max-height: 780px;
+	width: 550px;
+}
+
+/*quote footer------------------------------*/
+blockquote {
+    margin: 0 0 0 3em;
+    padding: 0;
+    position: relative;
+    font-size: 85%;
+    color: black;
+}
+
+blockquote:before {
+    content: '“';
+    position: absolute;
+    left: -0.5em;
+}
+
+blockquote p:last-of-type:after {
+    content: '”';
+}
+
+blockquote footer:before {
+    content: '—';
+    position: absolute;
+    left: -1em;
+}
+
+.quote-text {
+	font-family: 'baskerville italic';
+	font-size: 150%;
+}
+
+.transparent {
+	position: absolute;
+	margin-left: 28px;
+	margin-top: 300px;
+	max-width: 450px;
+	background-color: rgba(255,255,255,0.9);
+	padding-top: 1px;
+	padding-right: 40px;
+	padding-bottom: 15px;
+	border: solid;
+}
+
+/*piano, click me & arrow icon------------------------------*/
+.title-left {
+	display: inline-block;	
+}
+
+#piano-icon {
+	height: auto;
+	max-width: 40px;
+}
+
+#piano-icon:hover {
+	cursor: pointer;
+}
+
+#piano-icon:on {
+	cursor: pointer;
+}
+
+@font-face {
+	font-family: 'selima';
+	src: url(../../fonts/selima-script/selima.otf);
+}
+
+.handwriting-style {
+	font-family: selima;
+	color: #ec9865;
+}
+
+.handwriting-index {
+	position: absolute;
+	top: 80px;
+	right: 40px;
+}
+
+.handwriting-back-to-website {
+	position: absolute;
+	bottom: 80px;
+	right: -60px;
+	font-size: 150%;
+}
+
+.handwriting-back-to-website:hover {
+	position: absolute;
+	bottom: 80px;
+	right: -60px;
+	font-size: 160%;
+	color: #a0d3c3;
+}
+
+.small-arrow-index {
+	position: absolute;
+	right: 75px;
+	top: 115px;
+	stroke-width: 0.2;
+	fill: black;
+	font: 5px 'Trebuchet MS';
+}
+
+.handwriting-contents {
+	position: absolute;
+	top: -5px;
+	right: 50px;
+}
+
+.small-arrow-contents {
+	position: absolute;
+	right: 30px;
+	top: 23px;
+	stroke-width: 0.2;
+	fill: black;
+	font: 5px 'Trebuchet MS';
+/*	background: black;*/
+}
+
+.piano-icon-introduction {
+	position: absolute;
+	left: 250px;
+	top: 50px;
+}
+
+.handwriting-introduction {
+	position: absolute;
+	top: 30px;
+	left: 320px;
+}
+
+.small-arrow-introduction {
+	position: absolute;
+	left: 295px;
+	top: 60px;
+}
+
+.handwriting-how-to-use-this-book {
+	position: absolute;
+	top: 220px;
+	left: -50px;
+}
+
+.small-arrow-how-to-use-this-book {
+	position: absolute;
+	top: 248px;
+	left: 10px;
+}
+
+.handwriting-day1-1 {
+	position: absolute;
+	top: 720px;
+	left: -80px;
+}
+
+.small-arrow-day1-1 {
+	position: absolute;
+	top: 763px;
+	left: -40px;
+}
+
+.piano-icon-sexy-curvy-bass {
+	position: absolute;
+	left: 290px;
+	top: 50px;
+}
+
+.handwriting-sexy-curvy-bass {
+	position: absolute;
+	top: 30px;
+	left: 355px;
+}
+
+.small-arrow-sexy-curvy-bass {
+	position: absolute;
+	left: 335px;
+	top: 60px;
+}
+
+.piano-icon-like-a-gift {
+	position: absolute;
+	left: 210px;
+	top: 50px;
+}
+
+.handwriting-like-a-gift {
+	position: absolute;
+	top: 30px;
+	left: 280px;
+}
+
+.small-arrow-like-a-gift {
+	position: absolute;
+	left: 260px;
+	top: 60px;
+}
+
+.piano-icon-taffeta-euphoria {
+	position: absolute;
+	left: 300px;
+	top: 50px;
+}
+
+.handwriting-taffeta-euphoria {
+	position: absolute;
+	top: 30px;
+	left: 375px;
+}
+
+.small-arrow-taffeta-euphoria {
+	position: absolute;
+	left: 350px;
+	top: 60px;
+}
+
+.piano-icon-afterword {
+	position: absolute;
+	left: 200px;
+	top: 50px;
+}
+
+.handwriting-afterword {
+	position: absolute;
+	top: 30px;
+	left: 275px;
+}
+
+.small-arrow-afterword {
+	position: absolute;
+	left: 250px;
+	top: 60px;
+}
+
+.handwriting-worksheet {
+	position: absolute;
+	top: 205px;
+	left: -85px;
+}
+
+.small-arrow-worksheet {
+	position: absolute;
+	top: 245px;
+	left: -30px;
+}
+
+/*book colours & font styles------------------------------*/
+.orange {
+	background: #ec9865;
+/*	background: cmyk(0%, 45%, 64%, 0%);*/
+}
+
+.green {
+	background: #a0d3c3;
+	color: #a0d3c3;
+}
+
+.green-2 {
+	background: #a0d3c3;
+}
+
+.grey {
+	background: #f3f3f3;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.center-text {
+	text-align: center;
+}
+
+.left-text {
+	text-align: left;	
+}
+
+/*pop up box------------------------------*/
+.pop_up_box {
+	padding: 33px;
+	font-size: 90%;
+	background-color: snow;
+	color: black;
+	border: solid black;
+}
+
+/*svg------------------------------------------*/
+svg {
+	stroke: currentColor;
+	stroke-width: 0.3;
+	fill: none;
+	stroke-linejoin: round;
+	stroke-linecap: round;
+}
+
+.hand-diagram {
+/*	background: black;*/
+}
+
+.key-signature-text {
+	stroke-width: 0.2;
+	fill: black;
+	font: 3px 'Trebuchet MS';
+}
+
+.small-key-signature-text {
+	stroke-width: 0.1;
+	fill: black;
+	font: 2px 'Trebuchet MS';	
+}
+
+.individual-arrow {
+	stroke-width: 1.3;
+	stroke: #ec9865;
+	stroke-linecap: round;
+}
+
+.svg-text {
+	stroke-width: 0.03;
+	font: 1.3px 'Trebuchet MS';
+	fill: black;
+}
+
+.time-signature {
+	stroke-width: 0.03;
+	font: 4px 'Trebuchet MS';
+	fill: black;	
+}
+
+.time-signature {
+	stroke-width: 0.03;
+	font: 4px 'Trebuchet MS';
+	fill: black;	
+}
+
+.note-names {
+	stroke-width: 0.03;
+	font: 3px 'Trebuchet MS';
+	fill: black;
+}
+
+.day-14-piano {
+	stroke-width: 0.03;
+	font: 6px 'Trebuchet MS';
+	fill: black;	
+}
+
+.small-arrow {
+	stroke-width: 0.8;
+}
+
+.chord-text {
+	stroke-width: 0.03;
+	font: 3px 'Trebuchet MS';
+	fill: black;	
+}
+
+.rehearsal-text {
+	stroke-width: 0.03;
+	font: 5.5px 'Trebuchet MS';
+	fill: black;
+	border: solid;	
+}
+
+.fine {
+	stroke-width: 0.03;
+	font: 3px 'Trebuchet MS';
+	fill: black;	
+	font-style: italic;
+}
+
+.dc {
+	stroke-width: 0.03;
+	font: 3px 'Trebuchet MS';
+	fill: black;
+}
+
+.special {
+	fill:#ec9865;
+	stroke: #ec9865;
+	font-size: 0.13em;
+}
+
+.special-2 {
+	stroke: #a0d3c3;
+	font-size: 0.13em;
+}
+
+.tie {
+	stroke-width: 2.5;
+}
+
+.ties {
+	stroke-width: 0.4;	
+}
+
+.notes {
+	stroke-width: 0.8;
+}
+
+.notes-example{
+	stroke-width: 0.1;	
+}
+
+.quarter {
+	fill: black;
+}
+
+.small-note {
+	stroke: black;
+	width: 45px;
+	position: relative;
+	right: 19px;
+	max-height: 25px;
+}
+
+.head-thickness {
+	stroke-width: 1.9;
+}
+
+.small-stem {
+	stroke-width: 1.9;
+}
+
+.head-outline {
+	stroke: grey;
+	stroke-width: 0.6;
+}
+
+.middle-c {
+	stroke: #a0d3c3;
+}
+
+.chromatic-arrow {
+	stroke: #ec9865;
+	stroke-width: 2;
+}
+
+.straight-lines {
+	stroke-width: 0.2;	
+}
+
+.repeat-barline {
+	stroke-width: 0.5;		
+}
+
+/*table layout------------------------------*/
+.fixed-table-layout {
+	table-layout: fixed;
+	width: 100%;
+}
+
+.border-none {
+	border-right: none;
+}
+
+/*tied notes table------------------------------*/
+.tied-notes {
+	border-collapse: collapse;
+	min-width: 400px;
+/*	width: 100%;*/
+	text-align: center;
+}
+
+.tied-notes tbody tr:nth-child(1) td:nth-child(1),
+.tied-notes tbody tr:nth-child(1) td:nth-child(5),
+.tied-notes tbody tr:nth-child(1) td:nth-child(7) {
+	border-right: 2px solid;
+}
+
+/*main table------------------------------*/
+.main-table {
+	border-collapse: collapse;
+	margin: 25px 0;
+	font-size: 0.9em;
+	min-width: 400px;
+	overflow: hidden;
+/*	box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);*/
+	width: 100%;
+	text-align: center;
+	border: solid;
+}
+
+.main-table thead th {
+	border: solid;
+/*	padding: 30px 20px;*/
+}
+
+.main-table th,
+.main-table td {
+	padding: 12px 15px;
+}
+
+.main-table tbody tr {
+	border-bottom: 1px solid #ddd;
+}
+
+.main-table tbody td {
+	border-right: 1px solid #ddd;
+}
+
+.main-table tbody tr:last-of-type.chords {
+	color: lightgray;
+}
+
+/*rhythmic-values-table------------------------------*/
+.rhythmic-values-table tbody tr:nth-child(2) td:nth-child(2),
+.rhythmic-values-table tbody tr:nth-child(2) td:nth-child(3),
+.rhythmic-values-table tbody tr:nth-child(2) td:nth-child(4),
+.rhythmic-values-table tbody tr:nth-child(3) td:nth-child(2),
+.rhythmic-values-table tbody tr:nth-child(3) td:nth-child(4) {
+	border: none;
+}
+
+/*oom-pah-table------------------------------*/
+.oom-pah tbody tr:nth-child(1) td:nth-child(1),
+.oom-pah tbody tr:nth-child(1) td:nth-child(2),
+.oom-pah tbody tr:nth-child(1) td:nth-child(3),
+.oom-pah tbody tr:nth-child(1) td:nth-child(4),
+.oom-pah tbody tr:nth-child(1) td:nth-child(5),
+.oom-pah tbody tr:nth-child(2) td:nth-child(1),
+.oom-pah tbody tr:nth-child(2) td:nth-child(2),
+.oom-pah tbody tr:nth-child(2) td:nth-child(3),
+.oom-pah tbody tr:nth-child(3) td:nth-child(1),
+.oom-pah tbody tr:nth-child(3) td:nth-child(2),
+.oom-pah tbody tr:nth-child(3) td:nth-child(3),
+.oom-pah tbody tr:nth-child(4) td:nth-child(1),
+.oom-pah tbody tr:nth-child(4) td:nth-child(2),
+.oom-pah tbody tr:nth-child(4) td:nth-child(3),
+.oom-pah tbody tr:nth-child(4) td:nth-child(4),
+.oom-pah tbody tr:nth-child(4) td:nth-child(5),
+.oom-pah tbody tr:nth-child(5) td:nth-child(1),
+.oom-pah tbody tr:nth-child(5) td:nth-child(2),
+.oom-pah tbody tr:nth-child(5) td:nth-child(3),
+.oom-pah tbody tr:nth-child(5) td:nth-child(4),
+.oom-pah tbody tr:nth-child(5) td:nth-child(5),
+.oom-pah tbody tr:nth-child(5) td:nth-child(6),
+.oom-pah tbody tr:nth-child(6) td:nth-child(1),
+.oom-pah tbody tr:nth-child(6) td:nth-child(2),
+.oom-pah tbody tr:nth-child(6) td:nth-child(3),
+.oom-pah tbody tr:nth-child(6) td:nth-child(4),
+.oom-pah tbody tr:nth-child(6) td:nth-child(5),
+.oom-pah tbody tr:nth-child(6) td:nth-child(6),
+.oom-pah tbody tr:nth-child(7) td:nth-child(1),
+.oom-pah tbody tr:nth-child(7) td:nth-child(2),
+.oom-pah tbody tr:nth-child(7) td:nth-child(3),
+.oom-pah tbody tr:nth-child(9) td:nth-child(1),
+.oom-pah tbody tr:nth-child(9) td:nth-child(2),
+.oom-pah tbody tr:nth-child(9) td:nth-child(3),
+.oom-pah tbody tr:nth-child(1),
+.oom-pah tbody tr:nth-child(2),
+.oom-pah tbody tr:nth-child(3),
+.oom-pah tbody tr:nth-child(4),
+.oom-pah tbody tr:nth-child(5),
+.oom-pah tbody tr:nth-child(6),
+.oom-pah tbody tr:nth-child(7),
+.oom-pah tbody tr:nth-child(8) {
+	border: none;
+	border-bottom: none;
+}
+
+/*worksheet-table------------------------------*/
+.table_2_head {
+	font-weight: bold;
+	border: solid;
+}
+
+.worksheet-table {
+	border-collapse: collapse;
+	margin: 25px 0;
+	font-size: 0.9em;
+	min-width: 400px;
+	overflow: hidden;
+/*	box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);*/
+	width: 100%;
+	text-align: center;
+	border: solid;
+	table-layout: fixed;
+}
+
+.worksheet-table tbody tr:nth-child(1) .borderless {
+	border: none;
+}
+
+.worksheet-table td {
+	padding: 12px 15px;
+	border-right: 1px solid #ddd;
+}
+
+.worksheet-table tr:first-child td:nth-child(1),
+.worksheet-table tr:first-child td:nth-child(3),
+.worksheet-table tr:first-child td:nth-child(5),
+.worksheet-table tr:first-child td:nth-child(7),
+.worksheet-table tr:nth-child(2) td:nth-child(4),
+.worksheet-table tr:nth-child(3) td:nth-child(4),
+.worksheet-table tr:nth-child(1) td:nth-child(9),
+.worksheet-table tr:nth-child(2) td:nth-child(8),
+.worksheet-table tr:nth-child(3) td:nth-child(8),
+.worksheet-table tr:nth-child(1) td:nth-child(13),
+.worksheet-table tr:nth-child(2) td:nth-child(12),
+.worksheet-table tr:nth-child(3) td:nth-child(12) {
+	border-right: solid black;
+}
+
+.worksheet-table tbody tr {
+	border-bottom: 1px solid #ddd;
+}
+
+/*invisible table------------------------------*/
+.invisible_table {
+	table-layout: fixed;
+	width: 100%;
+	font-size: 90%;
+	text-align: center;
+}
+
+.invisible_table_2 {
+	table-layout: fixed;
+	width: 100%;
+	font-size: 90%;
+	text-align: left;
+}
+
+.invisible_table_phrases {
+	table-layout: auto;
+	width: 100%;
+	font-size: 90%;
+	text-align: left;
+}
+
+.border-top {
+	border-top: 1px solid;
+}
+
+
+/*day 1 piano------------------------------*/
+.white-key {
+    stroke: #555555;
+/*    fill: #FFFFF7;*/
+	fill: white;
+}
+.black-key {
+    stroke: #979797;
+/*    fill: #4b4b4b;*/
+	fill: black;
+}
+.white-key-text {
+    font-size: 2.3em;
+    pointer-events: none;
+    user-select: none;
+}
+.black-key-text {
+    font-size: 2em;
+/*    fill: #fff;*/
+	fill: white;
+    font-weight: 200;
+    pointer-events: none;
+    user-select: none;
+    display: absolute;
+    bottom: 50;
+}
+.show {
+    fill: #a0d3c3;
+}
+
+.show.black-key ~ text {
+    fill: #ec9865;
+}
