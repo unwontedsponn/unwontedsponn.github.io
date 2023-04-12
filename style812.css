@@ -152,10 +152,6 @@
         justify-content: center;
     }*/
 
-    #empty-nav, #about-nav, #portfolio-nav, #youtube, #blog {
-        display: none;
-    }
-
     #header {
         border-collapse: collapse;
         width: 82.5vw;
@@ -341,9 +337,9 @@
 
     #title {
         position: absolute;
-        font-size: 10vw;
+        font-size: 8vw;
         width: 85vw;
-        top: 16vh;
+        top: 18vh;
         left: 5vw;
         font-family: 'Gopher Mono Semi';
         opacity: 0.4;
@@ -407,7 +403,7 @@
         position: absolute;
         top: 36vh;
         left: 50vw;
-        width: 37vw;
+        width: 17vw;
         z-index: -1;
         border: solid #3f423e;
     }
