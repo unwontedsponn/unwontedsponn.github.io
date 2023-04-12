@@ -435,7 +435,7 @@
         width: 30vw;
         z-index: 0;
         opacity: 0.1;
-        left: 50vw;
+        left: 51vw;
     }
 
     #code-img {
@@ -480,8 +480,8 @@
         top: 36.5vh;
         margin: auto;
         left: 5vw;
-        font-size: 0.66vw;
-        width: 59.5vw;
+        font-size: 0.7vw;
+        width: 49.5vw;
     }
 
     #cols {
@@ -491,10 +491,10 @@
         font-family: 'Gopher Mono';
         gap: 2.2vw;
         position: absolute;
-        top: 47.5vh;
+        top: 48.5vh;
         margin: auto;
         left: 5vw;
-        font-size: 0.66vw;
+        font-size: 0.7vw;
     }
 
     .about-col-1, .about-col-2 {
@@ -522,7 +522,7 @@
     }
 
     #about table td {
-        padding: 2% 2%;
+        padding: 1.5% 2%;
     }
 
     .border-bottom {
