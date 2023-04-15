@@ -341,7 +341,8 @@
 
     #title {
         position: absolute;
-        font-size: 10vw;
+/*        font-size: 10vw;*/
+        font-size: 50vw;
         width: 85vw;
         top: 12vh;
         left: 5vw;
