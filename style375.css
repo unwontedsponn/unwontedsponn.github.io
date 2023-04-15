@@ -515,7 +515,7 @@
     }
 
     .skills {
-/*        display: none;*/
+        font-size: 1vw;
     }
 
     #about-col-1, #about-col-2 div {
@@ -696,7 +696,7 @@
 
     .modal-content-video {
         margin: 15% auto;
-/*        width: 70vw;*/
+        width: 100%;
     }
 
     .modal-content-pdf {
