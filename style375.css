@@ -266,7 +266,7 @@
     #equaliser {
         position: absolute;
         left: 56vw;
-        bottom: 8.5vh;
+        bottom: 8.8vh;
     }
 
     .equilizer {
@@ -364,7 +364,7 @@
         font-family: 'Gopher Mono Semi';
         letter-spacing: 0.3vw;
         position: absolute;
-        top: 24.5vh;
+        top: 12vh;
         left: 51.2vw;
         font-size: 0.5em;
         width: 43vw;
@@ -408,7 +408,7 @@
         position: absolute;
         top: 36vh;
         left: 50vw;
-        width: 37vw;
+        width: 35vw;
         z-index: -1;
         border: solid #3f423e;
     }
@@ -469,8 +469,8 @@
         text-decoration-color: #c15564;
         letter-spacing: 0.2vw;
         position: absolute;
-        top: 16vh;
-        left: 13vw;
+        top: 19vh;
+        left: 12vw;
         font-size: 3.5vw;
         width: 60vw;
         margin-bottom: 5vh;
@@ -486,7 +486,7 @@
         font-family: 'Gopher Mono';
         gap: 2.2vw;
         position: absolute;
-        top: 23vh;
+        top: 24vh;
         margin: auto;
         left: 5vw;
         font-size: 1.9vw;
@@ -500,7 +500,7 @@
         font-family: 'Gopher Mono';
         gap: 2.2vw;
         position: absolute;
-        top: 37.8vh;
+        top: 39vh;
         margin: auto;
         left: 5vw;
         font-size: 1.9vw;
@@ -603,7 +603,7 @@
         text-decoration-color: #c15564;
         letter-spacing: 0.2vw;
         position: absolute;
-        top: 13vh;
+        top: 18vh;
         left: -3vw;
         font-size: 3.6vw;
         width: 60vw;
@@ -613,7 +613,7 @@
     #portfolio-list {
         font-family: 'Gopher Mono';
         position: absolute;
-        top: 21vh;
+        top: 23vh;
         left: -15vw;
         font-size: 3.9vw;
         width: 48vw;
