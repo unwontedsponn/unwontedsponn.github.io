@@ -1,4 +1,4 @@
-/*this is the size of an iphone 12 mini portrait*/
+/*this is the size of an iphone 12 mini landscape*/
 @media only screen and (max-width: 812px) {
     * {
         margin: 0px;
@@ -337,7 +337,8 @@
 
     #title {
         position: absolute;
-        font-size: 8vw;
+/*        font-size: 8vw;*/
+        font-size: 80vw;
         width: 85vw;
         top: 18vh;
         left: 5vw;
