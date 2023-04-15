@@ -365,9 +365,9 @@
         letter-spacing: 0.3vw;
         position: absolute;
         top: 12vh;
-        left: 51.2vw;
+        left: 46vw;
         font-size: 0.5em;
-        width: 43vw;
+        width: 53vw;
     }
 
     .medium-p-animation {
@@ -406,7 +406,7 @@
 
     #main-body1 img {
         position: absolute;
-        top: 36vh;
+        top: 39vh;
         left: 50vw;
         width: 35vw;
         z-index: -1;
@@ -489,7 +489,7 @@
         top: 24vh;
         margin: auto;
         left: 5vw;
-        font-size: 1.9vw;
+        font-size: 2vw;
         width: 47.5vw;
     }
 
@@ -503,7 +503,7 @@
         top: 39vh;
         margin: auto;
         left: 5vw;
-        font-size: 1.9vw;
+        font-size: 2vw;
         width: 130%;
     }
 
@@ -570,9 +570,9 @@
 
     #portfolio-title {
         position: absolute;
-        font-size: 14vw;
+        font-size: 15vw;
         width: 90vw;
-        top: 12vh;
+        top: 11vh;
         left: 5vw;
         font-family: 'Gopher Mono Semi';
         opacity: 0.4;
@@ -623,7 +623,7 @@
     #portfolio-list li {
         list-style-type: none;
         cursor: pointer;
-        padding: 3.4% 0%;
+        padding: 3.7% 0%;
         font-size: 80%;
     }
 
