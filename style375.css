@@ -515,7 +515,8 @@
     }
 
     .skills {
-        font-size: 1vw;
+/*        font-size: 1vw;*/
+        font-size: 1.3vw;
     }
 
     #about-col-1, #about-col-2 div {
