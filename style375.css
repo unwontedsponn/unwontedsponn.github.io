@@ -515,7 +515,7 @@
     }
 
     .skills {
-        display: none;
+/*        display: none;*/
     }
 
     #about-col-1, #about-col-2 div {
@@ -582,7 +582,7 @@
         width: 41vw;
         position: absolute;
         z-index: 0;
-        top: 54vh;
+        top: 52vh;
         left: 45vw;
         border: solid #3f423e;
     }
@@ -603,7 +603,7 @@
         text-decoration-color: #c15564;
         letter-spacing: 0.2vw;
         position: absolute;
-        top: 16.5vh;
+        top: 17vh;
         left: -3vw;
         font-size: 3.6vw;
         width: 60vw;
@@ -696,7 +696,7 @@
 
     .modal-content-video {
         margin: 15% auto;
-        width: 70vw;
+/*        width: 70vw;*/
     }
 
     .modal-content-pdf {
