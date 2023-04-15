@@ -364,8 +364,8 @@
         font-family: 'Gopher Mono Semi';
         letter-spacing: 0.3vw;
         position: absolute;
-        top: 12vh;
-        left: 46vw;
+        top: 13.5vh;
+        left: 42vw;
         font-size: 0.5em;
         width: 53vw;
     }
@@ -489,7 +489,7 @@
         top: 24vh;
         margin: auto;
         left: 5vw;
-        font-size: 2vw;
+        font-size: 1.9vw;
         width: 47.5vw;
     }
 
@@ -503,7 +503,7 @@
         top: 39vh;
         margin: auto;
         left: 5vw;
-        font-size: 2vw;
+        font-size: 1.9vw;
         width: 130%;
     }
 
@@ -603,7 +603,7 @@
         text-decoration-color: #c15564;
         letter-spacing: 0.2vw;
         position: absolute;
-        top: 18vh;
+        top: 16.5vh;
         left: -3vw;
         font-size: 3.6vw;
         width: 60vw;
@@ -623,7 +623,7 @@
     #portfolio-list li {
         list-style-type: none;
         cursor: pointer;
-        padding: 3.7% 0%;
+        padding: 4.2% 0%;
         font-size: 80%;
     }
 
