@@ -1,5 +1,5 @@
 /*this is the size of an iphone 12 mini portrait*/
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 375px) and (orientation: portrait) {
     * {
         margin: 0px;
         padding: 0px;
@@ -696,8 +696,7 @@
     }
 
     .modal-content-video {
-        margin: 15% auto;
-        width: 100%;
+        margin: 0 auto;
     }
 
     .modal-content-pdf {

@@ -1,5 +1,5 @@
 /*this is the size of an iphone 12 mini landscape*/
-@media only screen and (max-width: 812px) {
+@media only screen and (max-width: 812px) and (orientation: landscape) {
     * {
         margin: 0px;
         padding: 0px;
@@ -157,7 +157,7 @@
         width: 82.5vw;
         margin: auto;
         /* margin-left is added to center nav table as there is issues with flex here in safari */
-        margin-left: 3.8vw;
+        margin-left: -2.8vw;
         position: fixed;
         margin-top: 4vh;
         z-index: 1;
@@ -168,7 +168,7 @@
         text-align: left !important;
         width: 12vw;
         font-size: 150%;
-        padding-right: 8vw !important;
+        padding-right: 2vw !important;
     }
 
     #empty-nav {
@@ -225,7 +225,7 @@
         margin-top: 4vh;
         z-index: 1;
         bottom: 2vh;
-        left: 13.5vw;
+        left: 25vw;
     /*    line-height: 8vh;*/
         font-size: 80%;
     }
@@ -261,8 +261,8 @@
     /*EQUALISER*/
     #equaliser {
         position: absolute;
-        left: 56vw;
-        bottom: 8.5vh;
+        left: 47vw;
+        bottom: 14.3vh;
     }
 
     .equilizer {
@@ -337,11 +337,10 @@
 
     #title {
         position: absolute;
-/*        font-size: 8vw;*/
-        font-size: 80vw;
+        font-size: 7vw;
         width: 85vw;
-        top: 18vh;
-        left: 5vw;
+        top: 18.5vh;
+        left: 1.3vw;
         font-family: 'Gopher Mono Semi';
         opacity: 0.4;
     }
@@ -360,8 +359,8 @@
         font-family: 'Gopher Mono Semi';
         letter-spacing: 0.3vw;
         position: absolute;
-        top: 24.5vh;
-        left: 51.2vw;
+        top: 35.8vh;
+        left: 41vw;
         font-size: 0.5em;
         width: 43vw;
     }
@@ -376,10 +375,10 @@
         text-decoration-color: #c15564;
         letter-spacing: 0.2vw;
         position: absolute;
-        top: 42vh;
+        top: 52vh;
         left: 7vw;
-        font-size: 4.8vw;
-        width: 45vw;
+        font-size: 1.8vw;
+        width: 50vw;
     }
 
     .large-p-animation {
@@ -391,8 +390,8 @@
         letter-spacing: 0.08vw;
         position: absolute;
         top: 65vh;
-        left: 12vw;
-        font-size: 2.8vw;
+        left: 1vw;
+        font-size: 1.2vw;
         width: 68vw;
     }
 
@@ -403,8 +402,9 @@
     #main-body1 img {
         position: absolute;
         top: 36vh;
-        left: 50vw;
-        width: 17vw;
+        left: 70vw;
+/*        width: 17vw;*/
+        width: 14vw;
         z-index: -1;
         border: solid #3f423e;
     }
@@ -426,9 +426,9 @@
 
     #about-title {
         position: absolute;
-        font-size: 20vw;
+        font-size: 10vw;
         width: 90vw;
-        top: 10vh;
+        top: 15.5vh;
         left: 5vw;
         font-family: 'Gopher Mono Semi';
         opacity: 0.4;
@@ -436,16 +436,16 @@
 
     #piano-img {
         position: absolute;
-        width: 40vw;
+        width: 20vw;
         z-index: 0;
         opacity: 0.1;
-        left: 50vw;
+        left: 53vw;
         top: 16vh;
     }
 
     #code-img {
         position: absolute;
-        width: 17vw;
+        width: 9vw;
         z-index: 0;
         opacity: 0.05;
         top: 68vh;
@@ -465,9 +465,9 @@
         text-decoration-color: #c15564;
         letter-spacing: 0.2vw;
         position: absolute;
-        top: 18vh;
+        top: 31.7vh;
         left: 13vw;
-        font-size: 3.5vw;
+        font-size: 1.5vw;
         width: 60vw;
         margin-bottom: 5vh;
         white-space: nowrap;
@@ -482,10 +482,10 @@
         font-family: 'Gopher Mono';
         gap: 2.2vw;
         position: absolute;
-        top: 23vh;
+        top: 37.5vh;
         margin: auto;
         left: 5vw;
-        font-size: 1.7vw;
+        font-size: 0.8vw;
         width: 47.5vw;
     }
 
@@ -496,10 +496,10 @@
         font-family: 'Gopher Mono';
         gap: 2.2vw;
         position: absolute;
-        top: 37.8vh;
+        top: 54vh;
         margin: auto;
         left: 5vw;
-        font-size: 1.7vw;
+        font-size: 0.8vw;
         width: 130%;
     }
 
@@ -566,20 +566,20 @@
 
     #portfolio-title {
         position: absolute;
-        font-size: 14vw;
+        font-size: 7vw;
         width: 90vw;
-        top: 10vh;
+        top: 17vh;
         left: 5vw;
         font-family: 'Gopher Mono Semi';
         opacity: 0.4;
     }
 
     #portfolio-image {
-        width: 41vw;
+        width: 21vw;
         position: absolute;
         z-index: 0;
-        top: 54vh;
-        left: 45vw;
+        top: 28vh;
+        left: 52vw;
         border: solid #3f423e;
     }
 
@@ -599,9 +599,9 @@
         text-decoration-color: #c15564;
         letter-spacing: 0.2vw;
         position: absolute;
-        top: 16vh;
+        top: 28.5vh;
         left: -3vw;
-        font-size: 3.5vw;
+        font-size: 1.5vw;
         width: 60vw;
         margin-bottom: 5vh;
     }
@@ -609,9 +609,9 @@
     #portfolio-list {
         font-family: 'Gopher Mono';
         position: absolute;
-        top: 21vh;
-        left: -15vw;
-        font-size: 3.7vw;
+        top: 34vh;
+        left: -10vw;
+        font-size: 1.33vw;
         width: 48vw;
         margin-bottom: 5vh;
     }
@@ -619,7 +619,7 @@
     #portfolio-list li {
         list-style-type: none;
         cursor: pointer;
-        padding: 3.4% 0%;
+        padding: 0.2% 0%;
         font-size: 80%;
     }
 
@@ -651,7 +651,7 @@
     }
 
     .external-img {
-        width: 2.4vw;
+        width: 1vw;
         padding-left: 0.2vw;
         opacity: 0.5;
     }
@@ -691,8 +691,8 @@
     }
 
     .modal-content-video {
-        margin: 15% auto;
-        width: 70vw;
+        margin: 0 auto;
+/*        width: 20vw;*/
     }
 
     .modal-content-pdf {
