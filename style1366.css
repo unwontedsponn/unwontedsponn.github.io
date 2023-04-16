@@ -1,5 +1,5 @@
-/*this is the size of an ipad 6th generation portrait*/
-@media only screen and (max-width: 1024px) and (orientation: portrait) {
+/*this is the size of an ipad 6th generation landscape*/
+@media only screen and (max-width: 1366px) and (orientation: landscape) {
     * {
         margin: 0px;
         padding: 0px;
@@ -152,16 +152,12 @@
         justify-content: center;
     }*/
 
-    /*#empty-nav, #about-nav, #portfolio-nav, #youtube, #blog {
-        display: block;
-    }*/
-
     #header {
         border-collapse: collapse;
         width: 82.5vw;
         margin: auto;
         /* margin-left is added to center nav table as there is issues with flex here in safari */
-        margin-left: 3.5vw;
+        margin-left: 3.8vw;
         position: fixed;
         margin-top: 4vh;
         z-index: 1;
@@ -172,7 +168,6 @@
         text-align: left !important;
         width: 12vw;
         font-size: 150%;
-        padding-right: 2vw !important;
     }
 
     #empty-nav {
@@ -193,7 +188,7 @@
         border-right: 2px solid rgba(172, 221, 251, 0.4);    
     }
 
-    #last-item {
+    #last-item{
         border-right: none !important;
     }
 
@@ -229,7 +224,7 @@
         margin-top: 4vh;
         z-index: 1;
         bottom: 2vh;
-        left: 28.5vw;
+        left: 27vw;
     /*    line-height: 8vh;*/
         font-size: 80%;
     }
@@ -265,8 +260,8 @@
     /*EQUALISER*/
     #equaliser {
         position: absolute;
-        left: 50vw;
-        bottom: 8.5vh;
+        left: 48vw;
+        bottom: 7vh;
     }
 
     .equilizer {
@@ -343,7 +338,7 @@
         position: absolute;
         font-size: 10vw;
         width: 85vw;
-        top: 12vh;
+        top: 18vh;
         left: 5vw;
         font-family: 'Gopher Mono Semi';
         opacity: 0.4;
@@ -363,10 +358,10 @@
         font-family: 'Gopher Mono Semi';
         letter-spacing: 0.3vw;
         position: absolute;
-        top: 25.5vh;
-        left: 50vw;
-        font-size: 0.9em;
-        width: 43vw;
+        top: 34vh;
+        left: 15.5vw;
+        font-size: 1em;
+        width: 36vw;
     }
 
     .medium-p-animation {
@@ -379,10 +374,10 @@
         text-decoration-color: #c15564;
         letter-spacing: 0.2vw;
         position: absolute;
-        top: 45vh;
-        left: 8.8vw;
-        font-size: 3.8vw;
-        width: 38vw;
+        top: 47.7vh;
+        left: 12vw;
+        font-size: 1.9vw;
+        width: 45vw;
     }
 
     .large-p-animation {
@@ -393,10 +388,10 @@
         font-family: 'Gopher Mono';
         letter-spacing: 0.08vw;
         position: absolute;
-        top: 66vh;
-        left: 7.5vw;
-        font-size: 2vw;
-        width: 40vw;
+        top: 71.5vh;
+        left: 12vw;
+        font-size: 1vw;
+        width: 43vw;
     }
 
     .small-p-animation {
@@ -405,9 +400,9 @@
 
     #main-body1 img {
         position: absolute;
-        top: 40.5vh;
-        left: 50vw;
-        width: 37vw;
+        top: 34vh;
+        left: 60vw;
+        width: 22vw;
         z-index: -1;
         border: solid #3f423e;
     }
@@ -429,7 +424,7 @@
 
     #about-title {
         position: absolute;
-        font-size: 20vw;
+        font-size: 14vw;
         width: 90vw;
         top: 10vh;
         left: 5vw;
@@ -439,19 +434,18 @@
 
     #piano-img {
         position: absolute;
-        width: 40vw;
+        width: 30vw;
         z-index: 0;
         opacity: 0.1;
-        left: 51vw;
-        top: 16vh;
+        left: 55vw;
     }
 
     #code-img {
         position: absolute;
-        width: 18vw;
+        width: 14vw;
         z-index: 0;
         opacity: 0.05;
-        top: 73vh;
+        top: 70vh;
         left: 0vw;
     }
 
@@ -468,9 +462,9 @@
         text-decoration-color: #c15564;
         letter-spacing: 0.2vw;
         position: absolute;
-        top: 22.5vh;
-        left: 11vw;
-        font-size: 3.5vw;
+        top: 25.5vh;
+        left: 13vw;
+        font-size: 2.5vw;
         width: 60vw;
         margin-bottom: 5vh;
         white-space: nowrap;
@@ -485,11 +479,11 @@
         font-family: 'Gopher Mono';
         gap: 2.2vw;
         position: absolute;
-        top: 30vh;
+        top: 36.5vh;
         margin: auto;
         left: 5vw;
-        font-size: 1.4vw;
-        width: 47.5vw;
+        font-size: 0.76vw;
+        width: 59.5vw;
     }
 
     #cols {
@@ -499,11 +493,10 @@
         font-family: 'Gopher Mono';
         gap: 2.2vw;
         position: absolute;
-        top: 46.8vh;
+        top: 45vh;
         margin: auto;
         left: 5vw;
-        font-size: 1.4vw;
-        width: 130%;
+        font-size: 0.76vw;
     }
 
     .about-col-1, .about-col-2 {
@@ -514,24 +507,24 @@
     }
 
     .skills {
-        font-size: 0.9vw;
+        font-size: 0.7vw;
         margin-top: 1vh;
     }
 
-    #about-col-1, #about-col-2 div {
+    #cols div {
         flex-basis: 100%;
     }
 
     #about table {
-        display: none;
-    }
-
-    .about-table-br {
-        display: none;
+        font-family: 'Gopher Mono';
+        color: #3f423e;
+        width: 21vw;
+        border: 2px solid rgba(172, 221, 251, 0.4);
+        position: absolute;
     }
 
     #about table td {
-        padding: 1% 2%;
+        padding: 1.8% 2%;
     }
 
     .border-bottom {
@@ -570,7 +563,7 @@
 
     #portfolio-title {
         position: absolute;
-        font-size: 14.5vw;
+        font-size: 10vw;
         width: 90vw;
         top: 10vh;
         left: 5vw;
@@ -579,11 +572,11 @@
     }
 
     #portfolio-image {
-        width: 41vw;
+        width: 31vw;
         position: absolute;
         z-index: 0;
-        top: 47vh;
-        left: 44vw;
+        top: 34vh;
+        left: 5vw;
         border: solid #3f423e;
     }
 
@@ -603,9 +596,9 @@
         text-decoration-color: #c15564;
         letter-spacing: 0.2vw;
         position: absolute;
-        top: 19vh;
-        left: -3vw;
-        font-size: 3.25vw;
+        top: 21vh;
+        left: 0vw;
+        font-size: 2.5vw;
         width: 60vw;
         margin-bottom: 5vh;
     }
@@ -613,17 +606,17 @@
     #portfolio-list {
         font-family: 'Gopher Mono';
         position: absolute;
-        top: 26vh;
-        left: -13vw;
-        font-size: 2.4vw;
-        width: 48vw;
+        top: 34vh;
+        left: 22vw;
+        font-size: 1.4vw;
+        width: 18vw;
         margin-bottom: 5vh;
     }
 
     #portfolio-list li {
         list-style-type: none;
         cursor: pointer;
-        padding: 3.4% 0%;
+        padding: 3% 0%;
         font-size: 80%;
     }
 
@@ -639,7 +632,11 @@
     }
 
     #portfolio-text {
-        display: none;
+        position: absolute;
+        font-family: 'Gopher Mono';
+        top: 34vh;
+        left: 41vw;
+        width: 23vw;
     }
 
     .small-portfolio-text {
@@ -655,7 +652,7 @@
     }
 
     .external-img {
-        width: 2vw;
+        width: 0.8vw;
         padding-left: 0.2vw;
         opacity: 0.5;
     }
@@ -695,7 +692,7 @@
     }
 
     .modal-content-video {
-        margin: 35% auto;
+        margin: 15% auto;
     }
 
     .modal-content-pdf {
