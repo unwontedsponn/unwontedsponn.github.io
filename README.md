@@ -1,4 +1,4 @@
-# unwontedsponn.github.io
+# unwontedsponn.github.io / benspooner.co.uk
 
 This is my responsive personal website built with HTML, CSS and Javascript, hosted on github pages. It includes a link to two other projects:
 - Online retro game arcade I created with HTML5 Canvas, CSS and ES6 Javascript game mechanics.
