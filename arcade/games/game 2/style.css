@@ -1,0 +1,148 @@
+@font-face {
+	font-family: 'valorax';
+	src: url(./font/valorax-font/valorax-lg25V.otf);
+}
+
+* {
+	padding: 0;
+	margin: 0 auto;
+	font-family: valorax;
+}
+
+#container-div {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+#title {
+	flex-basis: 100%;
+	text-align: center;
+	padding-top: 1%;
+	padding-bottom: 1%;
+}
+
+#title a {
+	color: lightcoral;
+}
+
+#title a:hover {
+	color: pink;
+}
+
+#main-content-div {
+	flex-basis: 100%;
+	justify-content: center;
+	flex-direction: row;
+	display: flex;
+}
+
+#rules-block {
+	flex-basis: 100%;	
+}
+
+#rules {
+	text-align: right;
+	width: 90%;
+	box-sizing: border-box;
+	padding-left: 10%;
+}
+
+#center-block {
+	margin: 0 auto;
+	display: block;	
+}
+
+#start, #end-restart {
+	flex-basis: 100%;
+	border: solid;
+	background: #eee;
+	min-width: 600px;
+	height: 600px;
+	text-align: center;
+}
+
+#game-over {
+	margin-top: 35%;
+}
+
+#start button, #end-restart button {
+	border: solid;
+	text-align: center;
+}
+
+#start-button {
+	font-size: 150%;
+	padding: 10px;
+	border: solid;
+	margin-top: 45%;	
+}
+
+#restart-button {
+	font-size: 150%;
+	padding: 10px;
+	border: solid;
+	margin-top: 11%;	
+}
+
+#start-button:hover {
+	background: lightgrey;
+	cursor: pointer;
+}
+
+#restart-button:hover {
+	background: lightgrey;
+	cursor: pointer;
+}
+
+#myCanvas {
+	flex-basis: 100%;
+	border: solid;
+	background: #eee;
+}
+
+#controls {
+	flex-basis: 100%;
+/*	margin-top: auto;*/
+}
+
+#controls > div {
+	text-align: left;
+	width: 90%;
+	box-sizing: border-box;
+}
+
+#footer {
+	display: flex;
+	flex-basis: 100%;
+	flex-direction: row;
+}
+
+#back {
+	flex-basis: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+button {
+	font-size: 150%;
+	padding: 10px;
+	border: solid;
+}
+
+button:hover {
+	background: lightgrey;
+	cursor: pointer;
+}
+
+#score {
+	flex-basis: 100%;
+	text-align: center;
+	padding-top: 1.7%;
+	padding-bottom: 1.7%;
+}
+
+#next {
+	flex-basis: 100%;
+	display: flex;
+	justify-content: center;
+}
