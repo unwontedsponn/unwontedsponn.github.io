@@ -38,6 +38,17 @@ function playPause() {
     }
 }
 
+// aboutPage- age in years calculator inside info table--------------------
+function calculateAge() {
+    const birthDate = new Date("1989-11-24");
+    const currentDate = new Date();
+    const ageInMilliseconds = currentDate - birthDate;
+    const ageInYears = Math.floor(ageInMilliseconds / (1000 * 60 * 60 * 24 * 365.25));
+    document.getElementById("age").textContent = ageInYears;
+}
+
+calculateAge();
+
 // Intersection Observer functions to keep animations active when scrolling between pages--------------------------------------------------------------------------------------------------
 // observer for title-screen
 const title = document.querySelector('#title');
