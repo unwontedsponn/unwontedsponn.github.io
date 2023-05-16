@@ -1,0 +1,1349 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Day 14: Where You Lead</title>
+		
+		<link rel="stylesheet" href="./css_js/css/style.css">
+
+		<script src="./css_js/scores.js" defer></script>
+
+	</head>
+	<body>
+		<article>
+			<nav>
+				<a href="20.b day 13 quote.html">◀︎</a>
+				<a href="1. index.html">◆</a>
+				<a href="21.b day 14 quote.html">►</a>
+			</nav>
+
+			<h1><span class="chap_num">Day 14: Where You Lead</span>
+				Creating your lead sheet
+			</h1>
+
+			<p class="font-size-body-text">
+			When composers (like you!) are ready to share their work, they create a lead sheet. A lead sheet is a standardised way of writing music so that others can easily follow. It captures the core ingredients of a composition such as the notes of the melody, the key, the chords, and sometimes some rhythmic understanding of the accompanying chords.</p>
+
+			<p class="font-size-body-text"><span class="bold">Musical notation</span><br>In your worksheet you have written down the <em>letter names</em> of the notes of your melody, but with so many different A's, B's and C's on the piano, how will other musicians know which to choose? The solution is musical notation. In the excerpt of notation below you can see how each note represents a <em>specific</em> key on the piano. The first note, for example, is middle C. Not the C above or the C below. This note only ever refers to <em>middle</em> C.</p>
+
+  			<!-- <div id="output"></div> -->
+
+			<!-- piano score with all white notes ------------------------------------------------------------------------->
+			<svg viewBox="0 0 24 24" width="100%" height="150" class="my-lead-sheet">
+			  	<!-- text -->
+			  	<text x="-38.8" y="24" class="note-names">Middle C</text>
+			  	<text x="-22.2" y="20.5" class="note-names">D</text>
+			  	<text x="-15.1" y="20.5" class="note-names">E</text>
+			  	<text x="-8.2" y="20.5" class="note-names">F</text>
+			  	<text x="-1.2" y="20.5" class="note-names">G</text>
+			  	<text x="6.2" y="20.5" class="note-names">A</text>
+			  	<text x="12.8" y="20.5" class="note-names">B</text>
+			  	<text x="19.8" y="20.5" class="note-names">C</text>
+			  	<text x="26.4" y="20.5" class="note-names">D</text>
+			  	<text x="33.4" y="20.5" class="note-names">E</text>
+			  	<text x="40.8" y="20.5" class="note-names">F</text>
+			  	<text x="47.8" y="20.5" class="note-names">G</text>
+			  	<text x="54.7" y="24" class="note-names">A</text>
+
+			  	<!-- arrow heads -->
+			  	<defs>
+			  		<marker id="arrowhead" markerWidth="10" markerHeight="7" 
+    				refX="0" refY="3.5" orient="auto">
+					<polygon points="0 2, 6.5 3.5, 0 5" fill="black"/>
+					</marker>
+			  	</defs>
+
+			  	<!-- straight arrows -->
+				<line x1="-28" y1="21" x2="-28" y2="19" marker-end="url(#arrowhead)" />
+				<line x1="55.5" y1="21" x2="55.5" y2="17" marker-end="url(#arrowhead)" />
+
+			  	<!-- image -->
+			  	<image href="./images/treble clef.svg" height="11" width="10" x="-44" y="5.8" />
+
+				<!-- notes -->
+			  	<ellipse cx= "-28" cy="15.5" rx="1.1" ry="0.65" class="quarter"/>
+			  	<ellipse cx= "-21" cy="14.8" rx="1.1" ry="0.65" class="quarter"/>
+			  	<ellipse cx= "-14" cy="14" rx="1.1" ry="0.65" class="quarter"/>
+			  	<ellipse cx= "-7" cy="13.3" rx="1.1" ry="0.65" class="quarter"/>
+			  	<ellipse cx= "0" cy="12.5" rx="1.1" ry="0.65" class="quarter"/>
+			  	<ellipse cx= "7" cy="11.7" rx="1.1" ry="0.65" class="quarter"/>
+			  	<ellipse cx= "14" cy="10.9" rx="1.1" ry="0.65" class="quarter"/>
+			  	<ellipse cx= "21" cy="10.2" rx="1.1" ry="0.65" class="quarter"/>
+			  	<ellipse cx= "28" cy="9.6" rx="1.1" ry="0.65" class="quarter"/>
+			  	<ellipse cx= "35" cy="8.7" rx="1.1" ry="0.65" class="quarter"/>
+			  	<ellipse cx= "42" cy="8" rx="1.1" ry="0.65" class="quarter"/>
+			  	<ellipse cx= "49" cy="7.3" rx="1.1" ry="0.65" class="quarter"/>
+			  	<ellipse cx= "56" cy="6.6" rx="1.1" ry="0.65" class="quarter"/>
+			  	
+
+			  	<polyline points="-26.9 9.5, -26.9 15.5" />
+			  	<polyline points="-19.9 9, -19.9 15" />
+			  	<polyline points="-13 8.5, -13 14.3" />
+			  	<polyline points="-6 7.6, -6 13.6" />
+			  	<polyline points="1.1 6.9, 1.1 12.6" />
+			  	<polyline points="8 5.9, 8 12" />
+			  	<polyline points="13 10.7, 13 17" />
+			  	<polyline points="19.8 10.2, 19.8 16" />
+			  	<polyline points="26.8 9.9, 26.8 15.3" />
+			  	<polyline points="33.8 8.7, 33.8 14.5" />
+			  	<polyline points="40.8 7.9, 40.8 13.6" />
+			  	<polyline points="47.9 7.2, 47.9 13.1" />
+			  	<polyline points="54.9 6.5, 54.9 12.1" />
+
+				<!-- stave lines -->
+					<line x1="-42" y1="8" x2="66" y2="8" class="straight-lines"/>
+					<line x1="-42" y1="9.5" x2="66" y2="9.5" class="straight-lines"/>
+					<line x1="-42" y1="11" x2="66" y2="11" class="straight-lines"/>
+					<line x1="-42" y1="12.5" x2="66" y2="12.5" class="straight-lines"/>
+					<line x1="-42" y1="14" x2="66" y2="14" class="straight-lines"/>
+
+				<!-- ledger lines -->
+					<line x1="-30" y1="15.5" x2="-26" y2="15.5" class="straight-lines"/>
+					<line x1="58" y1="6.6" x2="54" y2="6.6" class="straight-lines"/>
+
+			  	<!-- vertical lines -->
+			  	<polyline points="-42 8, -42 14" class="straight-lines"/>
+				
+				<polyline points="65.6 8, 65.6 14" class="straight-lines"/>
+				<polyline points="65.7 8, 65.7 14" class="straight-lines"/>
+				<polyline points="65.8 8, 65.8 14" class="straight-lines"/>
+			  	<polyline points="65.9 8, 65.9 14" class="straight-lines"/>
+			  	<polyline points="66 8, 66 14" class="straight-lines"/>
+			</svg>
+
+			<!-- arrows above piano -------------------------------------------------------------------------------------->
+			<svg viewBox="0 0 24 24" width="100%" height="60" class="chromatic-arrow">
+
+				<!-- text -->
+			  	<text x="-12" y="10" class="day-14-piano">Middle C</text>
+			  	<text x="61.3" y="10" class="day-14-piano">A</text>
+
+				<!-- arrow heads -->
+			  	<defs>
+			  		<marker id="arrowhead" markerWidth="10" markerHeight="7" 
+    				refX="0" refY="3.5" orient="auto">
+					<polygon points="0 2, 6.5 3.5, 0 5" fill="black"/>
+					</marker>
+			  	</defs>
+
+			  	<!-- straight arrow -->
+				<line x1="-2" y1="12" x2="-2" y2="17.5" class="small-arrow" marker-end="url(#arrowhead)" />
+				<line x1="63" y1="12" x2="63" y2="17.5" class="small-arrow" marker-end="url(#arrowhead)" />
+			</svg>
+
+			<!-- piano -------------------------------------------------------------------------------------->
+			<svg id="container" viewbox="0 0 4160 600"></svg>
+
+			<p class="font-size-body-text">
+			After middle C the notes ascend up the <em>white
+			keys</em>, all the way up to the A an octave above.
+			The curly symbol at the very start of the
+			excerpt is called a treble clef. It’s this clef that
+			assigns the five horizontal lines their notes, the
+			five horizontal lines we call the stave.</p>
+
+			<p class="font-size-body-text">
+			There’s a handy way to remember what the
+			spaces between the lines mean too, ‘FACE’:</p>
+
+			<!-- FACE excerpt -------------------------------------------------------------------------->
+			<svg viewBox="0 0 24 24" width="100%" height="150" class="my-lead-sheet">
+			  	<!-- text -->
+			  	<text x="-23" y="20" class="time-signature">F</text>
+			  	<text x="-1" y="20" class="time-signature">A</text>
+			  	<text x="18.2" y="20" class="time-signature">C</text>
+			  	<text x="38.2" y="20" class="time-signature">E</text>
+
+			  	<!-- image -->
+			  	<image href="./images/treble clef.svg" height="11" width="10" x="-44" y="5.8" />
+
+				<!-- notes -->
+			  	<ellipse cx= "-22" cy="13.2" rx="1.1" ry="0.65" class="quarter"/>
+			  	<ellipse cx= "0" cy="11.8" rx="1.1" ry="0.65" class="quarter"/>
+			  	<ellipse cx= "20" cy="10.2" rx="1.1" ry="0.65" class="quarter"/>
+			  	<ellipse cx= "40" cy="8.8" rx="1.1" ry="0.65" class="quarter"/>
+			  	
+
+			  	<polyline points="-21 7.8, -21 13" />
+			  	<polyline points="1 6.6, 1 12" />
+			  	<polyline points="18.9 10.2, 18.9 15.8" />
+			  	<polyline points="38.9 9, 38.9 14.4" />
+
+				<!-- horizontal lines -->
+					<line x1="-42" y1="8" x2="66" y2="8" class="straight-lines"/>
+					<line x1="-42" y1="9.5" x2="66" y2="9.5" class="straight-lines"/>
+					<line x1="-42" y1="11" x2="66" y2="11" class="straight-lines"/>
+					<line x1="-42" y1="12.5" x2="66" y2="12.5" class="straight-lines"/>
+					<line x1="-42" y1="14" x2="66" y2="14" class="straight-lines"/>
+
+			  	<!-- vertical lines -->
+			  	<polyline points="-42 8, -42 14" class="straight-lines"/>
+				
+				<polyline points="65.6 8, 65.6 14" class="straight-lines"/>
+				<polyline points="65.7 8, 65.7 14" class="straight-lines"/>
+				<polyline points="65.8 8, 65.8 14" class="straight-lines"/>
+			  	<polyline points="65.9 8, 65.9 14" class="straight-lines"/>
+			  	<polyline points="66 8, 66 14" class="straight-lines"/>
+			</svg>
+
+			<p class="font-size-body-text">
+			So there you have it. Transforming the letter
+			names on your worksheet into notation
+			is simply a matter of identifying the right
+			horizontal line or space to use for each note. But what about when you want to write a black
+			key? A sharp or a flat?</p>
+
+			<p class="font-size-body-text"><span class="bold">Key signatures</span><br>To add in sharp or flat notes, simply write the
+			ones you need all together next to the treble
+			clef. A collection of sharps/flats like this is
+			called a key signature. It lets the reader know
+			the home key of the composition, in other
+			words what sharps or flats to play throughout
+			the whole composition. While the sharp/
+			flat symbols in key signatures sit on just <em>one</em>
+			horizontal line/space, they in fact turn <em>all</em> the
+			notes that share that name sharp or flat. For
+			example, the key signature for D major has F#’s
+			and C#’s. In a composition starting with this key
+			signature, you would <em>always</em> play F#’s and C#’s
+			instead of regular F’s and C’s. The key signature
+			for Bb major has Bb’s and Eb’s. In a composition
+			starting like this, you would <em>always</em> play Bb’s and
+			Eb’s instead of regular B’s and E’s.</p>
+
+			<!-- comparing two key signatures ------------------------------------------------------------------------------->
+			<table class="invisible_table fixed-table-layout">
+				<tbody>
+					<tr>
+						<td></td>
+						<td>
+							<!-- D major key excerpt -->
+							<svg viewBox="0 0 24 24" width="" height="" class="key-signatures">
+								<!-- text -->
+			  					<text x="3.6" y="18.8" class="small-key-signature-text">D major key signature</text>
+
+							  	<!-- image -->
+							  	<image href="./images/treble clef.svg" height="11" width="10" x="-2" y="5.8" />
+
+							  	<!-- key signature -->
+							  	<polyline points="6 6.6, 6 9.6" />
+							  	<polyline points="6.8 6.4, 6.8 9.4" />
+
+							  	<polyline points="5.5 8, 7.5 6.8" />
+							  	<polyline points="5.5 9, 7.5 7.8" />
+
+							  	<polyline points="8 9, 8 11.6" />
+							  	<polyline points="8.8 8.8, 8.8 11.4" />
+
+							  	<polyline points="7.5 10, 9.5 9" />	
+							  	<polyline points="7.5 11.2, 9.5 10.1" />
+
+							  	<polyline points="-35.6 1§, -33.6 8.8" />
+							  	<polyline points="-35.6 11.4, -33.6 10" />
+
+							  	<polyline points="-33 5.8, -33 8.6" />
+							  	<polyline points="-32.2 5.4, -32.2 8" />
+
+							  	<polyline points="-33.6 7.4, -31.6 5.8" />
+							  	<polyline points="-33.6 8.4, -31.6 7" />
+
+								<!-- horizontal lines -->
+									<line x1="0" y1="8" x2="24" y2="8" class="straight-lines"/>
+									<line x1="0" y1="9.5" x2="24" y2="9.5" class="straight-lines"/>
+									<line x1="0" y1="11" x2="24" y2="11" class="straight-lines"/>
+									<line x1="0" y1="12.5" x2="24" y2="12.5" class="straight-lines"/>
+									<line x1="0" y1="14" x2="24" y2="14" class="straight-lines"/>
+							</svg>
+						</td>
+						<td></td>
+						<td>
+							<!-- Bb major key excerpt -->
+							<svg viewBox="0 0 24 24" width="" height="" class="key-signatures">
+								<!-- text -->
+			  					<text x="3.6" y="18.8" class="small-key-signature-text">Bb major key signature</text>
+
+
+							  	<!-- image -->
+							  	<image href="./images/treble clef.svg" height="11" width="10" x="-2" y="5.8" />
+
+							  	<!-- flat symbol image -->
+								<image href="./images/flat.svg" height="3.5" width="3" x="5" y="8.5" />
+								<image href="./images/flat.svg" height="3.5" width="3" x="7" y="6" />
+
+								<!-- horizontal lines -->
+									<line x1="0" y1="8" x2="24" y2="8" class="straight-lines"/>
+									<line x1="0" y1="9.5" x2="24" y2="9.5" class="straight-lines"/>
+									<line x1="0" y1="11" x2="24" y2="11" class="straight-lines"/>
+									<line x1="0" y1="12.5" x2="24" y2="12.5" class="straight-lines"/>
+									<line x1="0" y1="14" x2="24" y2="14" class="straight-lines"/>
+							</svg>
+						</td>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+
+			<p class="font-size-body-text">Look at this short melody in the key of A major.
+			How many sharps are in the key signature?
+			How many sharps are actually in the melody?</p>
+
+			<!-- 'A major' key excerpt ------------------------------------------------------------------------------->
+			<svg viewBox="0 0 24 24" width="100%" height="150" class="my-lead-sheet">
+			  	<!-- text -->
+			  	<text x="-30" y="10.8" class="time-signature">4</text>
+			  	<text x="-30" y="13.8" class="time-signature">4</text>
+
+			  	<!-- image -->
+			  	<image href="./images/treble clef.svg" height="11" width="10" x="-44" y="5.8" />
+
+				<!-- notes -->
+			  	<ellipse cx="-23" cy="11.8" rx="1.1" ry="0.65"/>
+			  	<ellipse cx="-13.5" cy="10.3" rx="1.1" ry="0.65"/>
+
+			  	<ellipse cx= "-4.5" cy="11.8" rx="1.1" ry="0.65" class="quarter"/>
+			  	<ellipse cx= "1" cy="11" rx="1.1" ry="0.65" class="quarter"/>
+			  	<ellipse cx= "6.5" cy="11" rx="1.1" ry="0.65" class="quarter"/>
+			  	<ellipse cx= "11.8" cy="12.6" rx="1.1" ry="0.65" class="quarter"/>
+
+			  	<ellipse cx="21.8" cy="11.8" rx="1.1" ry="0.65"/>
+			  	<ellipse cx="31.5" cy="14" rx="1.1" ry="0.65"/>
+
+			  	<ellipse cx="47.4" cy="11.8" rx="1.1" ry="0.65"/>
+			  	
+
+			  	<polyline points="-22 7, -22 12" />
+			  	<polyline points="-14.6 10.4, -14.6 15" />
+			  	<polyline points="-3.4 6.7, -3.4 11.8" />
+			  	<polyline points="-0.2 11,-0.2 16" />
+			  	<polyline points="5.3 11,5.3 16" />
+			  	<polyline points="12.8 7.5, 12.8 12.8" />
+			  	<polyline points="22.8 6.7, 22.8 11.8" />
+			  	<polyline points="32.6 8.7, 32.6 13.8" />
+
+			  	<!-- key signature -->
+			  	<polyline points="-37 6.6, -37 9.6" />
+			  	<polyline points="-36.2 6.4, -36.2 9.4" />
+
+			  	<polyline points="-37.6 8, -35.6 6.8" />
+			  	<polyline points="-37.6 9, -35.6 7.8" />
+
+			  	<polyline points="-35 8.8, -35 11.6" />
+			  	<polyline points="-34.2 8.6, -34.2 11.4" />
+
+			  	<polyline points="-35.6 10.4, -33.6 8.8" />
+			  	<polyline points="-35.6 11.4, -33.6 10" />
+
+			  	<polyline points="-33 5.8, -33 8.6" />
+			  	<polyline points="-32.2 5.4, -32.2 8" />
+
+			  	<polyline points="-33.6 7.4, -31.6 5.8" />
+			  	<polyline points="-33.6 8.4, -31.6 7" />
+
+				<!-- horizontal lines -->
+					<line x1="-42" y1="8" x2="66" y2="8" class="straight-lines"/>
+					<line x1="-42" y1="9.5" x2="66" y2="9.5" class="straight-lines"/>
+					<line x1="-42" y1="11" x2="66" y2="11" class="straight-lines"/>
+					<line x1="-42" y1="12.5" x2="66" y2="12.5" class="straight-lines"/>
+					<line x1="-42" y1="14" x2="66" y2="14" class="straight-lines"/>
+
+			  	<!-- vertical lines -->
+			  	<polyline points="-42 8, -42 14" class="straight-lines"/>
+			  	<polyline points="-8 8, -8 14" class="straight-lines"/>
+			  	<polyline points="17 8, 17 14" class="straight-lines"/>
+			  	<polyline points="42 8, 42 14" class="straight-lines"/>
+				
+				<polyline points="65.6 8, 65.6 14" class="straight-lines"/>
+				<polyline points="65.7 8, 65.7 14" class="straight-lines"/>
+				<polyline points="65.8 8, 65.8 14" class="straight-lines"/>
+			  	<polyline points="65.9 8, 65.9 14" class="straight-lines"/>
+			  	<polyline points="66 8, 66 14" class="straight-lines"/>
+			</svg>
+
+			<p class="font-size-body-text">The correct answer is there are two sharps in
+			the melody. Did you find them both?</p>
+
+			<ul class="font-size-body-text custom-ol">
+				<li>Find the key signature of your
+				composition below, the <em>home</em> key that
+				your A section starts in. Now add it to the
+				start of every stave on your <span class="bold">lead sheet</span>.</li>
+			</ul>
+
+			<!-- key signatures ------------------------------------------------------------------------------->
+			<table class="main-table">
+				<thead>
+					<tr>
+						<th class="orange bold" colspan="4">KEY SIGNATURES: MAJOR AND RELATIVE MINOR</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<!-- C major key excerpt -->
+							<svg viewBox="0 0 24 24" width="" height="">
+								<!-- text -->
+			  					<text x="6" y="18.8" class="key-signature-text">C major</text>
+			  					<text x="6.5" y="22.8" class="key-signature-text">A minor</text>
+
+
+							  	<!-- image -->
+							  	<image href="./images/treble clef.svg" height="11" width="10" x="-2" y="5.8" />
+
+								<!-- horizontal lines -->
+									<line x1="0" y1="8" x2="24" y2="8" class="straight-lines"/>
+									<line x1="0" y1="9.5" x2="24" y2="9.5" class="straight-lines"/>
+									<line x1="0" y1="11" x2="24" y2="11" class="straight-lines"/>
+									<line x1="0" y1="12.5" x2="24" y2="12.5" class="straight-lines"/>
+									<line x1="0" y1="14" x2="24" y2="14" class="straight-lines"/>
+							</svg>
+						</td>
+						<td>
+							<!-- G major key excerpt -->
+							<svg viewBox="0 0 24 24" width="" height="" class="key-signatures">
+								<!-- text -->
+			  					<text x="6" y="18.8" class="key-signature-text">G major</text>
+			  					<text x="6.5" y="22.8" class="key-signature-text">E minor</text>
+
+
+							  	<!-- image -->
+							  	<image href="./images/treble clef.svg" height="11" width="10" x="-2" y="5.8" />
+
+							  	<!-- key signature -->
+							  	<polyline points="6 6.6, 6 9.6" />
+							  	<polyline points="6.8 6.4, 6.8 9.4" />
+
+							  	<polyline points="5.5 8, 7.5 6.8" />
+							  	<polyline points="5.5 9, 7.5 7.8" />
+
+							  	<polyline points="-35 8.8, -35 11.6" />
+							  	<polyline points="-34.2 8.6, -34.2 11.4" />
+
+							  	<polyline points="-35.6 10.4, -33.6 8.8" />
+							  	<polyline points="-35.6 11.4, -33.6 10" />
+
+							  	<polyline points="-33 5.8, -33 8.6" />
+							  	<polyline points="-32.2 5.4, -32.2 8" />
+
+							  	<polyline points="-33.6 7.4, -31.6 5.8" />
+							  	<polyline points="-33.6 8.4, -31.6 7" />
+
+								<!-- horizontal lines -->
+									<line x1="0" y1="8" x2="24" y2="8" class="straight-lines"/>
+									<line x1="0" y1="9.5" x2="24" y2="9.5" class="straight-lines"/>
+									<line x1="0" y1="11" x2="24" y2="11" class="straight-lines"/>
+									<line x1="0" y1="12.5" x2="24" y2="12.5" class="straight-lines"/>
+									<line x1="0" y1="14" x2="24" y2="14" class="straight-lines"/>
+							</svg>
+						</td>
+						<td>
+							<!-- D major key excerpt -->
+							<svg viewBox="0 0 24 24" width="" height="" class="key-signatures">
+								<!-- text -->
+			  					<text x="6" y="18.8" class="key-signature-text">D major</text>
+			  					<text x="6.5" y="22.8" class="key-signature-text">B minor</text>
+
+
+							  	<!-- image -->
+							  	<image href="./images/treble clef.svg" height="11" width="10" x="-2" y="5.8" />
+
+							  	<!-- key signature -->
+							  	<polyline points="6 6.6, 6 9.6" />
+							  	<polyline points="6.8 6.4, 6.8 9.4" />
+
+							  	<polyline points="5.5 8, 7.5 6.8" />
+							  	<polyline points="5.5 9, 7.5 7.8" />
+
+							  	<polyline points="8 9, 8 11.6" />
+							  	<polyline points="8.8 8.8, 8.8 11.4" />
+
+							  	<polyline points="7.5 10, 9.5 9" />	
+							  	<polyline points="7.5 11.2, 9.5 10.1" />
+
+							  	<polyline points="-35.6 1§, -33.6 8.8" />
+							  	<polyline points="-35.6 11.4, -33.6 10" />
+
+							  	<polyline points="-33 5.8, -33 8.6" />
+							  	<polyline points="-32.2 5.4, -32.2 8" />
+
+							  	<polyline points="-33.6 7.4, -31.6 5.8" />
+							  	<polyline points="-33.6 8.4, -31.6 7" />
+
+								<!-- horizontal lines -->
+									<line x1="0" y1="8" x2="24" y2="8" class="straight-lines"/>
+									<line x1="0" y1="9.5" x2="24" y2="9.5" class="straight-lines"/>
+									<line x1="0" y1="11" x2="24" y2="11" class="straight-lines"/>
+									<line x1="0" y1="12.5" x2="24" y2="12.5" class="straight-lines"/>
+									<line x1="0" y1="14" x2="24" y2="14" class="straight-lines"/>
+							</svg>
+						</td>
+						<td>
+							<!-- A major key excerpt -->
+							<svg viewBox="0 0 24 24" width="" height="" class="key-signatures">
+								<!-- text -->
+			  					<text x="6" y="18.8" class="key-signature-text">A major</text>
+			  					<text x="6.5" y="22.8" class="key-signature-text">F# minor</text>
+
+
+							  	<!-- image -->
+							  	<image href="./images/treble clef.svg" height="11" width="10" x="-2" y="5.8" />
+
+							  	<!-- key signature -->
+							  	<polyline points="6 6.6, 6 9.6" />
+							  	<polyline points="6.8 6.4, 6.8 9.4" />
+
+							  	<polyline points="5.5 8, 7.5 6.8" />
+							  	<polyline points="5.5 9, 7.5 7.8" />
+
+							  	<polyline points="8 9, 8 11.6" />
+							  	<polyline points="8.8 8.8, 8.8 11.4" />
+
+							  	<polyline points="7.5 10, 9.5 9" />	
+							  	<polyline points="7.5 11.2, 9.5 10.1" />
+
+							  	<polyline points="10 5.7, 10 8.7" />
+							  	<polyline points="10.8 5.5, 10.8 8.5" />
+
+							  	<polyline points="9.5 7.2, 11.5 6" />
+							  	<polyline points="9.5 8.2, 11.5 7" />
+
+								<!-- horizontal lines -->
+									<line x1="0" y1="8" x2="24" y2="8" class="straight-lines"/>
+									<line x1="0" y1="9.5" x2="24" y2="9.5" class="straight-lines"/>
+									<line x1="0" y1="11" x2="24" y2="11" class="straight-lines"/>
+									<line x1="0" y1="12.5" x2="24" y2="12.5" class="straight-lines"/>
+									<line x1="0" y1="14" x2="24" y2="14" class="straight-lines"/>
+							</svg>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<!-- E major key excerpt -->
+							<svg viewBox="0 0 24 24" width="" height="" class="key-signatures">
+								<!-- text -->
+			  					<text x="6" y="18.8" class="key-signature-text">E major</text>
+			  					<text x="6.5" y="22.8" class="key-signature-text">C# minor</text>
+
+
+							  	<!-- image -->
+							  	<image href="./images/treble clef.svg" height="11" width="10" x="-2" y="5.8" />
+
+							  	<!-- key signature -->
+							  	<polyline points="6 6.6, 6 9.6" />
+							  	<polyline points="6.8 6.4, 6.8 9.4" />
+
+							  	<polyline points="5.5 8, 7.5 6.8" />
+							  	<polyline points="5.5 9, 7.5 7.8" />
+
+							  	<polyline points="8 9, 8 11.6" />
+							  	<polyline points="8.8 8.8, 8.8 11.4" />
+
+							  	<polyline points="7.5 10, 9.5 9" />	
+							  	<polyline points="7.5 11.2, 9.5 10.1" />
+
+							  	<polyline points="10 5.7, 10 8.7" />
+							  	<polyline points="10.8 5.5, 10.8 8.5" />
+
+							  	<polyline points="9.5 7.2, 11.5 6" />
+							  	<polyline points="9.5 8.2, 11.5 7" />
+
+							  	<polyline points="12 8.2, 12 10.6" />
+							  	<polyline points="12.8 7.8, 12.8 10.4" />
+
+							  	<polyline points="11.5 9.4, 13.5 8.2" />
+							  	<polyline points="11.5 10.5, 13.5 9.4" />
+
+								<!-- horizontal lines -->
+									<line x1="0" y1="8" x2="24" y2="8" class="straight-lines"/>
+									<line x1="0" y1="9.5" x2="24" y2="9.5" class="straight-lines"/>
+									<line x1="0" y1="11" x2="24" y2="11" class="straight-lines"/>
+									<line x1="0" y1="12.5" x2="24" y2="12.5" class="straight-lines"/>
+									<line x1="0" y1="14" x2="24" y2="14" class="straight-lines"/>
+							</svg>
+						</td>
+						<td>
+							<!-- B major key excerpt -->
+							<svg viewBox="0 0 24 24" width="" height="" class="key-signatures">
+								<!-- text -->
+			  					<text x="6" y="18.8" class="key-signature-text">B major</text>
+			  					<text x="6.5" y="22.8" class="key-signature-text">G# minor</text>
+
+
+							  	<!-- image -->
+							  	<image href="./images/treble clef.svg" height="11" width="10" x="-2" y="5.8" />
+
+							  	<!-- key signature -->
+							  	<polyline points="6 6.6, 6 9.6" />
+							  	<polyline points="6.8 6.4, 6.8 9.4" />
+
+							  	<polyline points="5.5 8, 7.5 6.8" />
+							  	<polyline points="5.5 9, 7.5 7.8" />
+
+							  	<polyline points="8 9, 8 11.6" />
+							  	<polyline points="8.8 8.8, 8.8 11.4" />
+
+							  	<polyline points="7.5 10, 9.5 9" />	
+							  	<polyline points="7.5 11.2, 9.5 10.1" />
+
+							  	<polyline points="10 5.7, 10 8.7" />
+							  	<polyline points="10.8 5.5, 10.8 8.5" />
+
+							  	<polyline points="9.5 7.2, 11.5 6" />
+							  	<polyline points="9.5 8.2, 11.5 7" />
+
+							  	<polyline points="12 8.2, 12 10.6" />
+							  	<polyline points="12.8 7.8, 12.8 10.4" />
+
+							  	<polyline points="11.5 9.4, 13.5 8.2" />
+							  	<polyline points="11.5 10.5, 13.5 9.4" />
+
+							  	<polyline points="14 10.4, 14 13" />
+							  	<polyline points="14.8 10.2, 14.8 12.8" />
+
+							  	<polyline points="13.5 11.5, 15.5 10.4" />
+							  	<polyline points="13.5 12.8, 15.5 11.6" />
+
+								<!-- horizontal lines -->
+									<line x1="0" y1="8" x2="24" y2="8" class="straight-lines"/>
+									<line x1="0" y1="9.5" x2="24" y2="9.5" class="straight-lines"/>
+									<line x1="0" y1="11" x2="24" y2="11" class="straight-lines"/>
+									<line x1="0" y1="12.5" x2="24" y2="12.5" class="straight-lines"/>
+									<line x1="0" y1="14" x2="24" y2="14" class="straight-lines"/>
+							</svg>
+						</td>
+						<td>
+							<!-- F major key excerpt -->
+							<svg viewBox="0 0 24 24" width="" height="" class="key-signatures">
+								<!-- text -->
+			  					<text x="6" y="18.8" class="key-signature-text">F major</text>
+			  					<text x="6.5" y="22.8" class="key-signature-text">D minor</text>
+
+							  	<!-- treble clef image -->
+							  	<image href="./images/treble clef.svg" height="11" width="10" x="-2" y="5.8" />
+
+							  	<!-- flat symbol image -->
+								<image href="./images/flat.svg" height="3.5" width="3" x="5" y="8.5" />
+
+								<!-- horizontal lines -->
+									<line x1="0" y1="8" x2="24" y2="8" class="straight-lines"/>
+									<line x1="0" y1="9.5" x2="24" y2="9.5" class="straight-lines"/>
+									<line x1="0" y1="11" x2="24" y2="11" class="straight-lines"/>
+									<line x1="0" y1="12.5" x2="24" y2="12.5" class="straight-lines"/>
+									<line x1="0" y1="14" x2="24" y2="14" class="straight-lines"/>
+							</svg>
+						</td>
+						<td>
+							<!-- Bb major key excerpt -->
+							<svg viewBox="0 0 24 24" width="" height="" class="key-signatures">
+								<!-- text -->
+			  					<text x="6" y="18.8" class="key-signature-text">Bb major</text>
+			  					<text x="6.5" y="22.8" class="key-signature-text">G minor</text>
+
+
+							  	<!-- image -->
+							  	<image href="./images/treble clef.svg" height="11" width="10" x="-2" y="5.8" />
+
+							  	<!-- flat symbol image -->
+								<image href="./images/flat.svg" height="3.5" width="3" x="5" y="8.5" />
+								<image href="./images/flat.svg" height="3.5" width="3" x="7" y="6" />
+
+								<!-- horizontal lines -->
+									<line x1="0" y1="8" x2="24" y2="8" class="straight-lines"/>
+									<line x1="0" y1="9.5" x2="24" y2="9.5" class="straight-lines"/>
+									<line x1="0" y1="11" x2="24" y2="11" class="straight-lines"/>
+									<line x1="0" y1="12.5" x2="24" y2="12.5" class="straight-lines"/>
+									<line x1="0" y1="14" x2="24" y2="14" class="straight-lines"/>
+							</svg>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<!-- Eb major key excerpt -->
+							<svg viewBox="0 0 24 24" width="" height="" class="key-signatures">
+								<!-- text -->
+			  					<text x="6" y="18.8" class="key-signature-text">Eb major</text>
+			  					<text x="6.5" y="22.8" class="key-signature-text">C minor</text>
+
+
+							  	<!-- image -->
+							  	<image href="./images/treble clef.svg" height="11" width="10" x="-2" y="5.8" />
+
+							  	<!-- flat symbol image -->
+								<image href="./images/flat.svg" height="3.5" width="3" x="5" y="8.5" />
+								<image href="./images/flat.svg" height="3.5" width="3" x="7" y="6" />
+								<image href="./images/flat.svg" height="3.5" width="3" x="9" y="9" />
+
+								<!-- horizontal lines -->
+									<line x1="0" y1="8" x2="24" y2="8" class="straight-lines"/>
+									<line x1="0" y1="9.5" x2="24" y2="9.5" class="straight-lines"/>
+									<line x1="0" y1="11" x2="24" y2="11" class="straight-lines"/>
+									<line x1="0" y1="12.5" x2="24" y2="12.5" class="straight-lines"/>
+									<line x1="0" y1="14" x2="24" y2="14" class="straight-lines"/>
+							</svg>
+						</td>
+						<td>
+							<!-- Ab major key excerpt -->
+							<svg viewBox="0 0 24 24" width="" height="" class="key-signatures">
+								<!-- text -->
+			  					<text x="6" y="18.8" class="key-signature-text">Ab major</text>
+			  					<text x="6.5" y="22.8" class="key-signature-text">F minor</text>
+
+
+							  	<!-- image -->
+							  	<image href="./images/treble clef.svg" height="11" width="10" x="-2" y="5.8" />
+
+							  	<!-- flat symbol image -->
+								<image href="./images/flat.svg" height="3.5" width="3" x="5" y="8.5" />
+								<image href="./images/flat.svg" height="3.5" width="3" x="7" y="6" />
+								<image href="./images/flat.svg" height="3.5" width="3" x="9" y="9" />
+								<image href="./images/flat.svg" height="3.5" width="3" x="11" y="7" />
+
+								<!-- horizontal lines -->
+									<line x1="0" y1="8" x2="24" y2="8" class="straight-lines"/>
+									<line x1="0" y1="9.5" x2="24" y2="9.5" class="straight-lines"/>
+									<line x1="0" y1="11" x2="24" y2="11" class="straight-lines"/>
+									<line x1="0" y1="12.5" x2="24" y2="12.5" class="straight-lines"/>
+									<line x1="0" y1="14" x2="24" y2="14" class="straight-lines"/>
+							</svg>
+						</td>
+						<td>
+							<!-- Db major key excerpt -->
+							<svg viewBox="0 0 24 24" width="" height="" class="key-signatures">
+								<!-- text -->
+			  					<text x="6" y="18.8" class="key-signature-text">Db major</text>
+			  					<text x="6.5" y="22.8" class="key-signature-text">Bb minor</text>
+
+
+							  	<!-- image -->
+							  	<image href="./images/treble clef.svg" height="11" width="10" x="-2" y="5.8" />
+
+							  	<!-- flat symbol image -->
+								<image href="./images/flat.svg" height="3.5" width="3" x="5" y="8.5" />
+								<image href="./images/flat.svg" height="3.5" width="3" x="7" y="6" />
+								<image href="./images/flat.svg" height="3.5" width="3" x="9" y="9" />
+								<image href="./images/flat.svg" height="3.5" width="3" x="11" y="7" />
+								<image href="./images/flat.svg" height="3.5" width="3" x="13" y="10" />
+
+								<!-- horizontal lines -->
+									<line x1="0" y1="8" x2="24" y2="8" class="straight-lines"/>
+									<line x1="0" y1="9.5" x2="24" y2="9.5" class="straight-lines"/>
+									<line x1="0" y1="11" x2="24" y2="11" class="straight-lines"/>
+									<line x1="0" y1="12.5" x2="24" y2="12.5" class="straight-lines"/>
+									<line x1="0" y1="14" x2="24" y2="14" class="straight-lines"/>
+							</svg>
+						</td>
+						<td>
+							<!-- Gb major key excerpt -->
+							<svg viewBox="0 0 24 24" width="" height="" class="key-signatures">
+								<!-- text -->
+			  					<text x="6" y="18.8" class="key-signature-text">Gb major</text>
+			  					<text x="6.5" y="22.8" class="key-signature-text">Eb minor</text>
+
+
+							  	<!-- image -->
+							  	<image href="./images/treble clef.svg" height="11" width="10" x="-2" y="5.8" />
+
+							  	<!-- flat symbol image -->
+								<image href="./images/flat.svg" height="3.5" width="3" x="5" y="8.5" />
+								<image href="./images/flat.svg" height="3.5" width="3" x="7" y="6" />
+								<image href="./images/flat.svg" height="3.5" width="3" x="9" y="9" />
+								<image href="./images/flat.svg" height="3.5" width="3" x="11" y="7" />
+								<image href="./images/flat.svg" height="3.5" width="3" x="13" y="10" />
+								<image href="./images/flat.svg" height="3.5" width="3" x="15" y="7.6" />
+
+								<!-- horizontal lines -->
+									<line x1="0" y1="8" x2="24" y2="8" class="straight-lines"/>
+									<line x1="0" y1="9.5" x2="24" y2="9.5" class="straight-lines"/>
+									<line x1="0" y1="11" x2="24" y2="11" class="straight-lines"/>
+									<line x1="0" y1="12.5" x2="24" y2="12.5" class="straight-lines"/>
+									<line x1="0" y1="14" x2="24" y2="14" class="straight-lines"/>
+							</svg>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<p class="font-size-body-text">Notice how major keys and their relative minor
+			keys have the same set of sharps or flats. This
+			means that the key signature you’ve added to
+			your lead sheet works for both the A and the
+			B section of your composition. Also notice
+			that C major and A minor do not require a key
+			signature as there aren’t any black notes in
+			their key - the key signature is left blank.</p>
+
+			<p class="font-size-body-text"><span class="bold">Notating your melody</span><br>Your melody is made up of the notes you want
+			to be played and the rhythm of those notes.
+			Musical notation captures both simultaneously.
+			In the excerpt below the first note is a D and a
+			whole note. So is the second. Next comes a B
+			whole note, and so on.</p>
+
+			<p class="font-size-body-text">Notice the pair of 4’s at the start of the lead
+			sheet. That is the time signature and its
+			function is to tell people that each bar has four
+			beats in it (as per the top 4), each one lasting
+			for a quarter note (as per the 4 underneath).
+			As you progress your studies in music, you
+			will discover many different time signatures,
+			with different numbers at the top and bottom.
+			However 4/4 is a great starting point, as it’s
+			one of the most common time signatures in
+			Western music.</p>
+
+			<!-- A section -------------------------------------------------------------------------------------------->
+			<svg viewBox="0 0 24 24" width="100%" height="150" class="my-lead-sheet">
+			  	<!-- text -->
+			  	<text x="-36" y="10.8" class="time-signature">4</text>
+			  	<text x="-36" y="13.8" class="time-signature">4</text>
+
+			  	<!-- image -->
+			  	<image href="./images/treble clef.svg" height="11" width="10" x="-44" y="5.8" />
+
+				<!-- notes -->
+			  	<ellipse cx="-30.5" cy="9.5" rx="1.1" ry="0.65"/>
+			  	<ellipse cx="-10.5" cy="9.5" rx="1.1" ry="0.65"/>
+			  	<ellipse cx="15.5" cy="11" rx="1.1" ry="0.65"/>
+			  	<ellipse cx="42.5" cy="11" rx="1.1" ry="0.65"/>
+			  	<ellipse cx="53.5" cy="12.5" rx="1.1" ry="0.65" class="quarter"/>
+			  	<ellipse cx="59.4" cy="11.8" rx="1.1" ry="0.65" class="quarter"/>
+			  	
+
+			  	<polyline points="41.4 10.8, 41.4 16.4" />
+			  	<polyline points="54.6 7.4, 54.6 12.4" />
+			  	<polyline points="60.5 6.7, 60.5 11.8" />
+
+				<!-- horizontal lines -->
+					<line x1="-42" y1="8" x2="66" y2="8" class="straight-lines"/>
+					<line x1="-42" y1="9.5" x2="66" y2="9.5" class="straight-lines"/>
+					<line x1="-42" y1="11" x2="66" y2="11" class="straight-lines"/>
+					<line x1="-42" y1="12.5" x2="66" y2="12.5" class="straight-lines"/>
+					<line x1="-42" y1="14" x2="66" y2="14" class="straight-lines"/>
+
+				<!-- ties -->
+				<path class="ties"
+				    d="
+				      M -30 8.3
+				      A 33 36 0 0 1 -10.5 8.3"
+				    />
+
+				<path class="ties"
+				    d="
+				      M 15.2 9.7
+				      A 38 36 0 0 1 42.5 9.7"
+				    />
+
+				<!-- circles -->
+				<circle cx="64" cy="10.2" r="0.2" class="quarter"/>
+				<circle cx="64" cy="11.7" r="0.2" class="quarter"/>
+
+			  	<!-- vertical lines -->
+			  	<polyline points="-42 8, -42 14" class="straight-lines"/>
+			  	<polyline points="-14.3 8, -14.3 14" class="straight-lines"/>
+			  	<polyline points="12 8, 12 14" class="straight-lines"/>
+			  	<polyline points="39 8, 39 14" class="straight-lines"/>
+			  	<polyline points="65 8, 65 14" class="straight-lines"/>
+				
+				<polyline points="65.6 8, 65.6 14" class="straight-lines"/>
+				<polyline points="65.7 8, 65.7 14" class="straight-lines"/>
+				<polyline points="65.8 8, 65.8 14" class="straight-lines"/>
+			  	<polyline points="65.9 8, 65.9 14" class="straight-lines"/>
+			  	<polyline points="66 8, 66 14" class="straight-lines"/>
+			</svg>
+
+			<div class="pop_up_box"><span class="bold">Stems</span><br>
+				<p class="font-size-body-text">The stem is the line that connects to the
+				note. This is required for half and quarter
+				notes. For notes above the middle line of
+				the stave, the stem needs to start to the
+				left of the note and point downwards.
+				The reverse applies for notes below the
+				middle line of the stave, their stems
+				point upwards. If you have a note on the
+				middle line (the note B) the stem can go
+				in either direction.</p>
+			</div>
+
+			<ul class="font-size-body-text custom-ol">
+				<li>Locate the position of your starting note
+				on the stave. Make a final decision about
+				which register to begin your melody in
+				e.g. middle C or the C an octave up.</li>
+				<li>Write your starting note at the start of
+				your lead sheet, being sure to choose
+				the right rhythmic value e.g. whole note,
+				half note etc. Is your stem pointing in the
+				correct direction?</li>
+				<li>Visually divide each bar into four beats
+				and align your notation accordingly. This
+				will help you evenly space your notation,
+				making it easier to read and play back.</li>
+				<li>Continue notating your melody all the
+				way to the end.</li>
+				<li>Remember to include any ties you
+				have included.</li>
+			</ul>
+
+			<p class="font-size-body-text"><span class="bold">Useful shorthand for repeating A and B sections</span><br>Rather than writing out sections multiple times
+			(yawn) musicians have developed a shorthand.
+			First they label their sections with a capital A
+			and B. These are called rehearsal marks, and are
+			added to the lead sheet where the sections begin.</p>
+
+			<p class="font-size-body-text">Next they add a repeat symbol: double dots and
+			lines at the start and end of whichever section
+			you want to repeat. If you want to repeat the first
+			few bars just put the repeat sign at the end of
+			those bars, it’s not required at the start as well.</p>
+
+			<p class="font-size-body-text">To show you want the A section to be repeated
+			<em>after</em> having played the B section, add D.C.
+			at the end of the B section. It stands for ‘da
+			capo’, which is Italian for ‘from the beginning’.
+			It tells you to jump back to the start of your
+			piece. At the end of the A section add another
+			Italian word, ‘Fine’ (pronounced ‘fee-nay’). ‘Fine’
+			means ‘finish’ the piece here.</p>
+
+			<!-- A and B section -------------------------------------------------------------------------------------------->
+			<!-- A section -->
+			<svg viewBox="0 0 24 24" width="100%" height="150" class="my-lead-sheet">
+			  	<!-- text -->
+			  	<text x="-36" y="10.8" class="time-signature">4</text>
+			  	<text x="-36" y="13.8" class="time-signature">4</text>
+
+			  	<text x="-39" y="4.8" class="rehearsal-text">A</text>
+			  	<text x="59" y="6" class="fine">fine</text>
+			  	
+				<!-- rehearsal box -->
+			  	<rect width="5" height="5" x="-39.9" y="0.4"/>
+
+			  	<!-- image -->
+			  	<image href="./images/treble clef.svg" height="11" width="10" x="-44" y="5.8" />
+
+				<!-- notes -->
+			  	<ellipse cx="-30.5" cy="9.5" rx="1.1" ry="0.65"/>
+			  	<ellipse cx="-10.5" cy="9.5" rx="1.1" ry="0.65"/>
+			  	<ellipse cx="15.5" cy="11" rx="1.1" ry="0.65"/>
+			  	<ellipse cx="42.5" cy="11" rx="1.1" ry="0.65"/>
+			  	<ellipse cx="53.5" cy="12.5" rx="1.1" ry="0.65" class="quarter"/>
+			  	<ellipse cx="59.4" cy="11.8" rx="1.1" ry="0.65" class="quarter"/>
+			  	
+
+			  	<polyline points="41.4 10.8, 41.4 16.4" />
+			  	<polyline points="54.6 7.4, 54.6 12.4" />
+			  	<polyline points="60.5 6.7, 60.5 11.8" />
+
+				<!-- horizontal lines -->
+					<line x1="-42" y1="8" x2="66" y2="8" class="straight-lines"/>
+					<line x1="-42" y1="9.5" x2="66" y2="9.5" class="straight-lines"/>
+					<line x1="-42" y1="11" x2="66" y2="11" class="straight-lines"/>
+					<line x1="-42" y1="12.5" x2="66" y2="12.5" class="straight-lines"/>
+					<line x1="-42" y1="14" x2="66" y2="14" class="straight-lines"/>
+
+				<!-- ties -->
+				<path class="ties"
+				    d="
+				      M -30 8.3
+				      A 33 36 0 0 1 -10.5 8.3"
+				    />
+
+				<path class="ties"
+				    d="
+				      M 15.2 9.7
+				      A 38 36 0 0 1 42.5 9.7"
+				    />
+
+				<!-- circles -->
+				<circle cx="64" cy="10.2" r="0.2" class="quarter"/>
+				<circle cx="64" cy="11.7" r="0.2" class="quarter"/>
+
+			  	<!-- vertical lines -->
+			  	<polyline points="-42 8, -42 14" class="straight-lines"/>
+			  	<polyline points="-14.3 8, -14.3 14" class="straight-lines"/>
+			  	<polyline points="12 8, 12 14" class="straight-lines"/>
+			  	<polyline points="39 8, 39 14" class="straight-lines"/>
+			  	<polyline points="65 8, 65 14" class="straight-lines"/>
+				
+				<polyline points="65.6 8, 65.6 14" class="straight-lines"/>
+				<polyline points="65.7 8, 65.7 14" class="straight-lines"/>
+				<polyline points="65.8 8, 65.8 14" class="straight-lines"/>
+			  	<polyline points="65.9 8, 65.9 14" class="straight-lines"/>
+			  	<polyline points="66 8, 66 14" class="straight-lines"/>
+			</svg>
+
+			<!-- B section -->
+			<svg viewBox="0 0 24 24" width="100%" height="150" class="my-lead-sheet">
+			  	<!-- text -->
+			  	<text x="-39" y="4.8" class="rehearsal-text">B</text>
+			  	<text x="59" y="6" class="dc">D.C.</text>
+			  	
+				<!-- rehearsal box -->
+			  	<rect width="5" height="5" x="-39.9" y="0.4"/>
+
+			  	<!-- image -->
+			  	<image href="./images/treble clef.svg" height="11" width="10" x="-44" y="5.8" />
+
+				<!-- notes -->
+			  	<ellipse cx="-30.5" cy="11" rx="1.1" ry="0.65" class="quarter"/>
+			  	<ellipse cx="-26.5" cy="10.2" rx="1.1" ry="0.65" class="quarter"/>
+			  	<ellipse cx="-22.5" cy="11" rx="1.1" ry="0.65" class="quarter"/>
+			  	<ellipse cx="-18.5" cy="12.5" rx="1.1" ry="0.65" class="quarter"/>
+
+			  	<ellipse cx="-10.5" cy="12.5" rx="1.1" ry="0.65"/>
+			  	<ellipse cx="0.5" cy="12.5" rx="1.1" ry="0.65" class="quarter"/>
+			  	<ellipse cx="6.7" cy="14" rx="1.1" ry="0.65" class="quarter"/>
+
+			  	<ellipse cx="15.5" cy="14" rx="1.1" ry="0.65"/>
+			  	<ellipse cx="28" cy="14" rx="1.1" ry="0.65" class="quarter"/>
+			  	<ellipse cx="34" cy="14.8" rx="1.1" ry="0.65" class="quarter"/>
+
+			  	<ellipse cx="42.5" cy="14.8" rx="1.1" ry="0.65"/>
+			  	<ellipse cx="53.5" cy="12.5" rx="1.1" ry="0.65" class="quarter"/>
+			  	<ellipse cx="59.4" cy="11.8" rx="1.1" ry="0.65" class="quarter"/>
+			  	
+				<polyline points="-31.7 11, -31.7 16.4" />
+				<polyline points="-27.6 10, -27.6 15.6" />
+				<polyline points="-23.6 11, -23.6 16.4" />
+				<polyline points="-17.5 7.6, -17.5 12.6" />
+
+				<polyline points="-9.4 7.6, -9.4 12.6" />
+				<polyline points="1.6 7.6, 1.6 12.6" />
+				<polyline points="7.8 8.6, 7.8 14" />
+
+				<polyline points="16.6 8.6, 16.6 14" />
+				<polyline points="29.1 8.6, 29.1 14" />
+				<polyline points="35 9.2, 35 15" />
+
+			  	<polyline points="43.6 9.2, 43.6 14.8" />
+			  	<polyline points="54.6 7.4, 54.6 12.4" />
+			  	<polyline points="60.5 6.7, 60.5 11.8" />
+
+				<!-- horizontal lines -->
+					<line x1="-42" y1="8" x2="66" y2="8" class="straight-lines"/>
+					<line x1="-42" y1="9.5" x2="66" y2="9.5" class="straight-lines"/>
+					<line x1="-42" y1="11" x2="66" y2="11" class="straight-lines"/>
+					<line x1="-42" y1="12.5" x2="66" y2="12.5" class="straight-lines"/>
+					<line x1="-42" y1="14" x2="66" y2="14" class="straight-lines"/>
+
+				<!-- ties -->
+				<path class="ties"
+				    d="
+				      M -10.5 13.7
+				      A 24 36 0 0 0 0.5 13.7"
+				    />
+
+				<path class="ties"
+				    d="
+				      M 7 15.4
+				      A 20 36 0 0 0 15.5 15.4"
+				    />
+
+				<path class="ties"
+				    d="
+				      M 16.4 15.5
+				      A 25 36 0 0 0 27.5 15.5"
+				    />
+
+				<path class="ties"
+				    d="
+				      M 35 16.4
+				      A 20 36 0 0 0 42.5 16.4"
+				    />
+
+				<!-- circles -->
+				<circle cx="-34" cy="10.2" r="0.2" class="quarter"/>
+				<circle cx="-34" cy="11.7" r="0.2" class="quarter"/>
+
+				<circle cx="64" cy="10.2" r="0.2" class="quarter"/>
+				<circle cx="64" cy="11.7" r="0.2" class="quarter"/>
+
+			  	<!-- vertical lines -->
+			  	<polyline points="-42 8, -42 14" class="straight-lines"/>
+
+			  	<polyline points="-36 8, -36 14" class="straight-lines"/>
+			  	<polyline points="-35.9 8, -35.9 14" class="straight-lines"/>
+			  	<polyline points="-35.8 8, -35.8 14" class="straight-lines"/>
+			  	<polyline points="-35.7 8, -35.7 14" class="straight-lines"/>
+			  	<polyline points="-35.6 8, -35.6 14" class="straight-lines"/>
+
+			  	<polyline points="-34.9 8, -34.9 14" class="straight-lines"/>
+			  	<polyline points="-14.3 8, -14.3 14" class="straight-lines"/>
+			  	<polyline points="12 8, 12 14" class="straight-lines"/>
+			  	<polyline points="39 8, 39 14" class="straight-lines"/>
+			  	<polyline points="65 8, 65 14" class="straight-lines"/>
+				
+				<polyline points="65.6 8, 65.6 14" class="straight-lines"/>
+				<polyline points="65.7 8, 65.7 14" class="straight-lines"/>
+				<polyline points="65.8 8, 65.8 14" class="straight-lines"/>
+			  	<polyline points="65.9 8, 65.9 14" class="straight-lines"/>
+			  	<polyline points="66 8, 66 14" class="straight-lines"/>
+			</svg>
+
+			<ul class="font-size-body-text custom-ol">
+				<li>Add rehearsal marks, D.C. and ‘Fine’
+				to your lead sheet to create a basic
+				ABA structure.</li>
+				<li>Now add any repeat symbols you
+				need to further extend your piece
+				the way you want.</li>
+			</ul>
+
+			<p class="font-size-body-text"><span class="bold">Adding the LH chords</span><br>Accompanying chords can be captured on the
+			lead sheet by simply writing the chord names
+			above the stave.</p>
+
+			<ul class="font-size-body-text custom-ol">
+				<li>Add your LH chords, writing them
+				directly above beat one of each bar
+				where they fall.</li>
+				<li>Don’t forget to use lowercase m for
+				minor and o for diminished chords.</li>
+			</ul>
+
+			<!-- Full Score -------------------------------------------------------------------------------------------------->
+			<!-- A section -->
+			<svg viewBox="0 0 24 24" width="100%" height="150" class="my-lead-sheet">
+			  	<!-- text -->
+			  	<text x="-36" y="10.8" class="time-signature">4</text>
+			  	<text x="-36" y="13.8" class="time-signature">4</text>
+			  	
+			  	<text x="-33" y="6.5" class="chord-text">C</text>
+			  	<text x="-12" y="6.5" class="chord-text">G</text>
+			  	<text x="14" y="6.5" class="chord-text">C</text>
+			  	<text x="41" y="6.5" class="chord-text">G</text>
+
+			  	<text x="-39" y="4.8" class="rehearsal-text">A</text>
+			  	<text x="59" y="6" class="fine">fine</text>
+			  	
+				<!-- rehearsal box -->
+			  	<rect width="5" height="5" x="-39.9" y="0.4"/>
+
+			  	<!-- image -->
+			  	<image href="./images/treble clef.svg" height="11" width="10" x="-44" y="5.8" />
+
+				<!-- notes -->
+			  	<ellipse cx="-30.5" cy="9.5" rx="1.1" ry="0.65"/>
+			  	<ellipse cx="-10.5" cy="9.5" rx="1.1" ry="0.65"/>
+			  	<ellipse cx="15.5" cy="11" rx="1.1" ry="0.65"/>
+			  	<ellipse cx="42.5" cy="11" rx="1.1" ry="0.65"/>
+			  	<ellipse cx="53.5" cy="12.5" rx="1.1" ry="0.65" class="quarter"/>
+			  	<ellipse cx="59.4" cy="11.8" rx="1.1" ry="0.65" class="quarter"/>
+			  	
+
+			  	<polyline points="41.4 10.8, 41.4 16.4" />
+			  	<polyline points="54.6 7.4, 54.6 12.4" />
+			  	<polyline points="60.5 6.7, 60.5 11.8" />
+
+				<!-- horizontal lines -->
+					<line x1="-42" y1="8" x2="66" y2="8" class="straight-lines"/>
+					<line x1="-42" y1="9.5" x2="66" y2="9.5" class="straight-lines"/>
+					<line x1="-42" y1="11" x2="66" y2="11" class="straight-lines"/>
+					<line x1="-42" y1="12.5" x2="66" y2="12.5" class="straight-lines"/>
+					<line x1="-42" y1="14" x2="66" y2="14" class="straight-lines"/>
+
+				<!-- ties -->
+				<path class="ties"
+				    d="
+				      M -30 8.3
+				      A 33 36 0 0 1 -10.5 8.3"
+				    />
+
+				<path class="ties"
+				    d="
+				      M 15.2 9.7
+				      A 38 36 0 0 1 42.5 9.7"
+				    />
+
+				<!-- circles -->
+				<circle cx="64" cy="10.2" r="0.2" class="quarter"/>
+				<circle cx="64" cy="11.7" r="0.2" class="quarter"/>
+
+			  	<!-- vertical lines -->
+			  	<polyline points="-42 8, -42 14" class="straight-lines"/>
+			  	<polyline points="-14.3 8, -14.3 14" class="straight-lines"/>
+			  	<polyline points="12 8, 12 14" class="straight-lines"/>
+			  	<polyline points="39 8, 39 14" class="straight-lines"/>
+			  	<polyline points="65 8, 65 14" class="straight-lines"/>
+				
+				<polyline points="65.6 8, 65.6 14" class="straight-lines"/>
+				<polyline points="65.7 8, 65.7 14" class="straight-lines"/>
+				<polyline points="65.8 8, 65.8 14" class="straight-lines"/>
+			  	<polyline points="65.9 8, 65.9 14" class="straight-lines"/>
+			  	<polyline points="66 8, 66 14" class="straight-lines"/>
+			</svg>
+
+			<!-- B section -->
+			<svg viewBox="0 0 24 24" width="100%" height="150" class="my-lead-sheet">
+			  	<!-- text -->
+			  	<text x="-33" y="6.5" class="chord-text">Am</text>
+			  	<text x="-12" y="6.5" class="chord-text">F</text>
+			  	<text x="14" y="6.5" class="chord-text">C</text>
+			  	<text x="41" y="6.5" class="chord-text">G</text>
+
+			  	<text x="-39" y="4.8" class="rehearsal-text">B</text>
+			  	<text x="59" y="6" class="dc">D.C.</text>
+			  	
+				<!-- rehearsal box -->
+			  	<rect width="5" height="5" x="-39.9" y="0.4"/>
+
+			  	<!-- image -->
+			  	<image href="./images/treble clef.svg" height="11" width="10" x="-44" y="5.8" />
+
+				<!-- notes -->
+			  	<ellipse cx="-30.5" cy="11" rx="1.1" ry="0.65" class="quarter"/>
+			  	<ellipse cx="-26.5" cy="10.2" rx="1.1" ry="0.65" class="quarter"/>
+			  	<ellipse cx="-22.5" cy="11" rx="1.1" ry="0.65" class="quarter"/>
+			  	<ellipse cx="-18.5" cy="12.5" rx="1.1" ry="0.65" class="quarter"/>
+
+			  	<ellipse cx="-10.5" cy="12.5" rx="1.1" ry="0.65"/>
+			  	<ellipse cx="0.5" cy="12.5" rx="1.1" ry="0.65" class="quarter"/>
+			  	<ellipse cx="6.7" cy="14" rx="1.1" ry="0.65" class="quarter"/>
+
+			  	<ellipse cx="15.5" cy="14" rx="1.1" ry="0.65"/>
+			  	<ellipse cx="28" cy="14" rx="1.1" ry="0.65" class="quarter"/>
+			  	<ellipse cx="34" cy="14.8" rx="1.1" ry="0.65" class="quarter"/>
+
+			  	<ellipse cx="42.5" cy="14.8" rx="1.1" ry="0.65"/>
+			  	<ellipse cx="53.5" cy="12.5" rx="1.1" ry="0.65" class="quarter"/>
+			  	<ellipse cx="59.4" cy="11.8" rx="1.1" ry="0.65" class="quarter"/>
+			  	
+				<polyline points="-31.7 11, -31.7 16.4" />
+				<polyline points="-27.6 10, -27.6 15.6" />
+				<polyline points="-23.6 11, -23.6 16.4" />
+				<polyline points="-17.5 7.6, -17.5 12.6" />
+
+				<polyline points="-9.4 7.6, -9.4 12.6" />
+				<polyline points="1.6 7.6, 1.6 12.6" />
+				<polyline points="7.8 8.6, 7.8 14" />
+
+				<polyline points="16.6 8.6, 16.6 14" />
+				<polyline points="29.1 8.6, 29.1 14" />
+				<polyline points="35 9.2, 35 15" />
+
+			  	<polyline points="43.6 9.2, 43.6 14.8" />
+			  	<polyline points="54.6 7.4, 54.6 12.4" />
+			  	<polyline points="60.5 6.7, 60.5 11.8" />
+
+				<!-- horizontal lines -->
+					<line x1="-42" y1="8" x2="66" y2="8" class="straight-lines"/>
+					<line x1="-42" y1="9.5" x2="66" y2="9.5" class="straight-lines"/>
+					<line x1="-42" y1="11" x2="66" y2="11" class="straight-lines"/>
+					<line x1="-42" y1="12.5" x2="66" y2="12.5" class="straight-lines"/>
+					<line x1="-42" y1="14" x2="66" y2="14" class="straight-lines"/>
+
+				<!-- ties -->
+				<path class="ties"
+				    d="
+				      M -10.5 13.7
+				      A 24 36 0 0 0 0.5 13.7"
+				    />
+
+				<path class="ties"
+				    d="
+				      M 7 15.4
+				      A 20 36 0 0 0 15.5 15.4"
+				    />
+
+				<path class="ties"
+				    d="
+				      M 16.4 15.5
+				      A 25 36 0 0 0 27.5 15.5"
+				    />
+
+				<path class="ties"
+				    d="
+				      M 35 16.4
+				      A 20 36 0 0 0 42.5 16.4"
+				    />
+
+				<!-- circles -->
+				<circle cx="-34" cy="10.2" r="0.2" class="quarter"/>
+				<circle cx="-34" cy="11.7" r="0.2" class="quarter"/>
+
+				<circle cx="64" cy="10.2" r="0.2" class="quarter"/>
+				<circle cx="64" cy="11.7" r="0.2" class="quarter"/>
+
+			  	<!-- vertical lines -->
+			  	<polyline points="-42 8, -42 14" class="straight-lines"/>
+
+			  	<polyline points="-36 8, -36 14" class="straight-lines"/>
+			  	<polyline points="-35.9 8, -35.9 14" class="straight-lines"/>
+			  	<polyline points="-35.8 8, -35.8 14" class="straight-lines"/>
+			  	<polyline points="-35.7 8, -35.7 14" class="straight-lines"/>
+			  	<polyline points="-35.6 8, -35.6 14" class="straight-lines"/>
+
+			  	<polyline points="-34.9 8, -34.9 14" class="straight-lines"/>
+			  	<polyline points="-14.3 8, -14.3 14" class="straight-lines"/>
+			  	<polyline points="12 8, 12 14" class="straight-lines"/>
+			  	<polyline points="39 8, 39 14" class="straight-lines"/>
+			  	<polyline points="65 8, 65 14" class="straight-lines"/>
+				
+				<polyline points="65.6 8, 65.6 14" class="straight-lines"/>
+				<polyline points="65.7 8, 65.7 14" class="straight-lines"/>
+				<polyline points="65.8 8, 65.8 14" class="straight-lines"/>
+			  	<polyline points="65.9 8, 65.9 14" class="straight-lines"/>
+			  	<polyline points="66 8, 66 14" class="straight-lines"/>
+			</svg>
+
+			<p class="font-size-body-text"><span class="bold">Leave it out</span><br>Take a moment to notice what <em>isn’t</em> on your
+			lead sheet. That’s right, it’s <em>how</em> you play
+			your LH chords: the chord inversions and LH
+			patterns (e.g. Oom-pah, arpeggiated chords)
+			that you detailed on your worksheet. Why
+			is this? Well, if you were to give your lead
+			sheet to a saxophonist or bass player, your
+			LH directions would make no sense to them.
+			They apply specifically to you on the piano. Of
+			course, you will still want to remember them,
+			so jot them down on your lead sheet - on <em>your</em>
+			copy only!</p>
+
+			<p class="font-size-body-text">There’s one other thing that’s not on your lead
+			sheet, and that’s the root notes that you end
+			the piece on. It isn’t needed on the lead sheet
+			because it’s convention to finish on the root, to
+			come back home so to speak.</p>
+
+			<p class="font-size-body-text"><span class="bold">Hit it!</span><br>You can now give your lead sheet to other
+			musicians and have some fun jamming
+			together. When playing with others, it’s
+			common to play the A and B sections once
+			through exactly as written to establish the
+			foundation of the piece. Don’t forget the
+			repeats: AABB.</p>
+
+			<p class="font-size-body-text">From there you can repeat the A and B sections
+			multiple times, to give each player a shot at
+			improvising, taking it in turns so as not to clash with each other (musically or otherwise!)
+			When it’s your turn to take a back seat simply
+			play your LH chords and leave out your RH.
+			Over time you’ll be able to add decorative RH
+			touches as others do their improv, but be sure
+			to start simple. Less is usually more.</p>
+
+			<p class="font-size-body-text">When everyone has had a go at improvising,
+			play the piece one last time as written, with
+			just a few embellishments to keep things spicy.
+			Finish with the A section one final time.</p>
+
+			<ul class="font-size-body-text custom-ol">
+				<li>First time through - AABB exactly as written.</li>
+				<li>Second time through and beyond - AABB
+				AABB... players take to turns to improvise.</li>
+				<li>Last time through - AABB AA as written
+				with embellishments as you wish.</li>
+				<li>In summary - AABB (AABB AABB...) AABB AA.</li>
+			</ul>
+
+			<nav>
+				<a href="20.b day 13 quote.html">◀︎</a>
+				<a href="1. index.html">◆</a>
+				<a href="21.b day 14 quote.html">►</a>
+			</nav>
+		</article>
+	</body>
+
+	<script src="./css_js/js/day-14-piano.js" type="text/javascript"></script>
+</html>
