@@ -4,7 +4,6 @@ const ctx = canvas.getContext("2d");
 function startGame() {
     document.getElementById('start').style.display = "none"; 
     document.getElementById('myCanvas').style.display = "block"; 
-    // document.getElementById('end-restart').style.display = "none";  
 
     // global variables--------------------------------------------------------------------------------
     let timer = 0;
@@ -27,7 +26,6 @@ function startGame() {
     let ballX = Math.floor(Math.random() * (550 - 50 + 1) + 50);
     let ballY = Math.floor(Math.random() * (550 - 50 + 1) + 50);
     const ballRadius = 8;
-
     let dx = Math.round(Math.random()) * 6 - 3;
     let dy = Math.round(Math.random()) * 6 - 3;
 
@@ -36,7 +34,6 @@ function startGame() {
     const goal = new Audio("./sfx/goal.mp3");
     const paddleHit = new Audio("./sfx/paddle-hit.mp3");
     const sideBounce = new Audio("./sfx/side-bounce.mp3");
-    // jumpSFX.volume = 0.1;        
 
     // create player--------------------------------------------------------------------------------------------------
     function drawPlayer() {
@@ -59,17 +56,10 @@ function startGame() {
     // Create ball------------------------------------------------------------------------------------------------        
     function drawBall() {
         ctx.beginPath();
-        ctx.arc(ballX, ballY, ballRadius, 0, Math.PI*2);
+        ctx.arc(ballX, ballY, ballRadius, 0, Math.PI * 2);
         ctx.fillStyle = "purple";
         ctx.fill();
         ctx.closePath();
-    }
-
-    // collission detection function NOT USED ATM----------------------------------------------------------------------------------------
-    function collisionDetectionRects(rect1, rect2) {
-        if ( !(rect1.x > rect2.x + rect2.width || rect1.x + rect1.width < rect2.x || rect1.y > rect2.y + rect2.height || rect1.y + rect1.height < rect2.y) ) {
-            return true;
-        }
     }
 
     // Make player move with the arrow keys-----------------------------------------------------------------------------------
@@ -114,14 +104,14 @@ function startGame() {
         drawOpponent();
 
         // Move the player
-        if(upPressed2) {
+        if (upPressed2) {
             playerY -=10;       
-        } else if(downPressed2) {
+        } else if (downPressed2) {
             playerY += 10;
         }
 
         // Stop player going through the north and south walls
-        if(playerY < 0) {
+        if (playerY < 0) {
             playerY = 0;
         }
         if(playerY > canvas.height - playerHeight) {
@@ -129,9 +119,9 @@ function startGame() {
         }
 
         // Move the opponent
-        if(upPressed) {
+        if (upPressed) {
             opponentY -=10;     
-        } else if(downPressed) {
+        } else if (downPressed) {
             opponentY += 10;
         }
 
@@ -143,43 +133,28 @@ function startGame() {
             opponentY = canvas.height - opponentHeight;
         }
 
-        // // Make player go through the north and south walls
-        // if(playerY < 0) {
-        //     playerY = canvas.height;
-        // }
-        // if(playerY > canvas.height) {
-        //     playerY = 0;
-        // }
-
         // Move the ball
-        if(ballY + dy > canvas.width - ballRadius || ballY + dy < ballRadius) {
+        if (ballY + dy > canvas.width - ballRadius || ballY + dy < ballRadius) {
             sideBounce.play();
             dy = -dy;       
-        }    
-        else if(ballX + dx < 15 + ballRadius) {
-            if(ballY > playerY && ballY < playerY + playerHeight) {
+        } else if (ballX + dx < 15 + ballRadius) {
+            if (ballY > playerY && ballY < playerY + playerHeight) {
                 paddleHit.play();
                 dx = -dx;           
             } else {
                 goal.play();
                 music.pause();
-
-                // endGame();
-
                 alert("GAME OVER");
                 document.location.reload();
                 clearInterval(interval); // Needed for Chrome to end game
             }
-        } else if(ballX + dx > opponentX) {
-            if(ballY > opponentY && ballY < opponentY + opponentHeight) {
+        } else if (ballX + dx > opponentX) {
+            if (ballY > opponentY && ballY < opponentY + opponentHeight) {
                 paddleHit.play();
                 dx = -dx;            
             } else {
                 goal.play();
                 music.pause();
-                
-                // endGame();
-
                 alert("GAME OVER");
                 document.location.reload();
                 clearInterval(interval); // Needed for Chrome to end game
@@ -192,14 +167,6 @@ function startGame() {
         document.getElementById('count').innerHTML = Math.floor(timer++ / 50);
     }
 
-    var interval = setInterval(draw, 10);    
-
-music.play();
-
+    const interval = setInterval(draw, 10);    
+    music.play();
 }
-
-// function endGame() {
-//     document.getElementById('start').style.display = "none"; 
-//     document.getElementById('myCanvas').style.display = "none";
-//     document.getElementById('end-restart').style.display = "block";
-// }
