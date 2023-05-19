@@ -5,14 +5,14 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Game 1</title>
-		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" type="text/css" href="../../style.css">
 	</head>
 	<body>
 		<div id="container-div">
 			
 			<div id="title">
             	<h1><a href="../../index.html">Ben's Arcade</a></h1>
-            	<h3>Game 1</h3>
+            	<h3 class="current-game">Lone Legends</h3>
             </div>
 
             <div id="main-content-div">
@@ -21,42 +21,39 @@
             		<div id="rules">
             			<h2>Rules</h2>
 		            	<p>You are the blue square and you can move through walls. Your aim is to eat as many purple edibles as you can. But if you get hit by a falling enemy you die.</p>
-            		</div>            		
-					<!-- <div id="volume">
-						<button>sound on</button>
-					</div> -->            		
+		            	<br>
+		            	<p>------ONE PLAYER------</p>
+		            	<p>UP | LEFT | DOWN | RIGHT</p>
+            		</div>	   
 	            </div>
 
 	            <div id="center-block">
 	            	<div id="start">
 		            	<a href="#" onclick="startGame()"><button id="start-button">Start Game</button></a>
 		            </div>
-		            <canvas id="myCanvas" width="600" height="600" style="display: none"></canvas>
-		            <!-- <div id="end-restart" style="display: none">
-		            	<h3 id="game-over">GAME OVER!</h3>
-		            	<a href="#" onclick="restartGame()"><button id="restart-button">Play again?</button></a>
-		            </div> -->
+		            <canvas id="myCanvas" width="600" height="600" style="display: none"></canvas>		         
 	            </div>
 
-	            <div id="controls">	            		            		            	
+	            <div id="games">	            		            		            	
             		<div>
-            			<h2>controls</h2>
-		            	<p>UP / LEFT / DOWN / RIGHT</p>
-		            	<p>------<em>arrow keys</em>------</p>
+            			<h2>games</h2>
+		            	<p class="current-game">- Lone Legends</p>
+		            	<p>- <a href="../game 2/index.html">Ping Pong Partners In Crime</a></p>
+		            	<p>- <a href="../game 3/index.html">Space Race Rascals</a></p>
             		</div>      	
-	            </div>	            
+	            </div>	                
 
             </div>
 
             <div id="footer">
-            	<div id="back">
-            		<!-- <button id="back-button">previous game</button> -->
+            	<div id="back">         
             	</div>
             	<div id="score">
+            		<button id="muteButton">Mute</button>
             		<h2>Score: <span id="count">0</span></h2>
+            		<h3>Time: <span id="time">00:00</span></h3>
             	</div>
-            	<div id="next">
-            		<a href="../game 2/index.html"><button id="next-button">next game</button></a>
+            	<div id="next">            		
             	</div>
             </div>
 

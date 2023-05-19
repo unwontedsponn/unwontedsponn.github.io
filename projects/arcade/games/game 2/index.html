@@ -5,14 +5,14 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Game 2</title>
-		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" type="text/css" href="../../style.css">
 	</head>
 	<body>
 		<div id="container-div">
 			
 			<div id="title">
             	<h1><a href="../../index.html">Ben's Arcade</a></h1>
-            	<h3>Game 2</h3>
+            	<h3 class="current-game">Ping Pong Partners In Crime</h3>
             </div>
 
             <div id="main-content-div">
@@ -20,7 +20,11 @@
             	<div id="rules-block">  
             		<div id="rules">
             			<h2>Rules</h2>
-		            	<p>Two player game. You can both move up and down. Blue paddle uses W / S and black paddle uses up / down. The aim is to bounce the ball into your opponents goal. If the ball bounces into your goal, you lose.</p>
+		            	<p>This is a rally game. Bounce the ball 10 times to win. If the ball bounces into either goal you lose 1 point.</p>
+		            	<br>
+		            	<p>-----two player-----</p>
+		            	<p>W | S - player 1</p>
+		            	<p>Up | Down - player 2</p>
             		</div>                     		        			
 	            </div>
 
@@ -31,11 +35,12 @@
 		            <canvas id="myCanvas" width="600" height="600" style="display: none"></canvas>		        
 	            </div>	 
 
-	            <div id="controls">	            		            		            	
+	            <div id="games">	            		            		            	
             		<div>
-            			<h2>controls</h2>
-		            	<p>W / S | UP / DOWN</p>
-		            	<p>---<em>arrow keys</em>---</p>
+            			<h2>games</h2>
+		            	<p>- <a href="../game 1/index.html">Lone Legends</a></p>
+		            	<p class="current-game">- Ping Pong Partners In Crime</p>
+		            	<p>- <a href="../game 3/index.html">Space Race Rascals</a></p>
             		</div>      	
 	            </div>	            
 
@@ -43,13 +48,13 @@
 
             <div id="footer">
             	<div id="back">
-            		<a href="../game 1/index.html"><button id="back-button">previous game</button></a>
             	</div>
             	<div id="score">
+            		<button id="muteButton">Mute</button>
             		<h2>Score: <span id="count">0</span></h2>
+            		<h3>Time: <span id="time">00:00</span></h3>
             	</div>
             	<div id="next">
-            		<a href="../../index.html"><button id="next-button">back to home</button></a>
             	</div>
             </div>                        
 
