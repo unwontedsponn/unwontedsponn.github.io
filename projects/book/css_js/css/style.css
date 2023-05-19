@@ -1,19 +1,20 @@
-html {
-	display: block;
-}
+html {display: block;}
 
 html, body {
 	padding: 0;
 	margin: 0;
 }
 
-head {
-	display: none;
-}
+head {display: none;}
 
 @font-face {
 	font-family: 'Unna';
 	src: url(../../fonts/Unna/Unna-Regular.otf);
+}
+
+@font-face {
+	font-family: 'selima';
+	src: url(../../fonts/selima-script/selima.otf);
 }
 
 body {
@@ -25,9 +26,7 @@ body {
 	text-align: justify;
 }
 
-.font-size-body-text {
-	font-size: 90%;
-}
+.font-size-body-text {font-size: 90%;}
 
 article {
 	margin: 0 auto;
@@ -69,13 +68,9 @@ a:hover {
 	cursor: pointer;
 }
 
-#links {
-	font-size: 90%;
-}
+#links {font-size: 90%;}
 
-.custom-ol {
-	list-style-type: "- ";
-}
+.custom-ol {list-style-type: "- ";}
 
 /*cover image------------------------------*/
 .img {
@@ -89,38 +84,16 @@ a:hover {
 .img-front {
 	position: absolute;
 	width: 550px;
-	/*-webkit-transition: opacity Is ease-in-out;
-	-moz-transition: opacity 1s ease-in-out ;
-	-ms-transition: opacity 1s ease-in-out ; 
-	-o-transition: opacity Is ease-in-out;
-	transition: opacity Is ease-in-out;*/
 }
 
-.img-front:hover {
-	opacity: 0;
-}
+.img-front:hover {opacity: 0;}
 
-.img-back {
-	width: 550px;	
-}
+.img-back {width: 550px;}
 
 /*contents------------------------------*/
-.contents li {
-	margin-top: 5px;
-}
+.contents li {margin-top: 5px;}
 
-.nobull {
-	list-style-type: "";
-}
-
-/*strikethrough--------------------------------------*/
-/*.strikethrough {
-	text-decoration: line-through;
-}
-
-.strikethrough-text:hover {
-	cursor: pointer;
-}*/
+.nobull {list-style-type: "";}
 
 /*checkboxes--------------------------------------*/
 .container {
@@ -157,14 +130,10 @@ a:hover {
 }
 
 /* On mouse-over, add a grey background color */
-.container:hover input ~ .checkmark {
-  background-color: #a0d3c3;
-}
+.container:hover input ~ .checkmark {background-color: #a0d3c3;}
 
 /* When the checkbox is checked, add the orange background */
-.container input:checked ~ .checkmark {
-  background-color: #ec9865;
-}
+.container input:checked ~ .checkmark {background-color: #ec9865;}
 
 /* Create the checkmark/indicator (hidden when not checked) */
 .checkmark:after {
@@ -174,9 +143,7 @@ a:hover {
 }
 
 /* Show the checkmark when checked */
-.container input:checked ~ .checkmark:after {
-  display: block;
-}
+.container input:checked ~ .checkmark:after {display: block;}
 
 /* Style the checkmark/indicator */
 .container .checkmark:after {
@@ -191,83 +158,42 @@ a:hover {
   transform: rotate(45deg);
 }
 
-.checkbox1 {
+.checkbox1, .checkbox2, .checkbox3, .checkbox4, .checkbox5, .checkbox6, .checkbox7, .checkbox8, .checkbox9, .checkbox10, .checkbox11, .checkbox12, .checkbox13 {
 	left: -16px;
-	top: 762px;
 }
 
-.checkbox2 {
-	left: -16px;
-	top: 788px;
-}
+.checkbox1 {top: 762px;}
 
-.checkbox3 {
-	left: -16px;
-	top: 814px;
-}
+.checkbox2 {top: 788px;}
 
-.checkbox4 {
-	left: -16px;
-	top: 840px;
-}
+.checkbox3 {top: 814px;}
 
-.checkbox5 {
-	left: -16px;
-	top: 866px;
-}
+.checkbox4 {top: 840px;}
 
-.checkbox6 {
-	left: -16px;
-	top: 892px;
-}
+.checkbox5 {top: 866px;}
 
-.checkbox7 {
-	left: -16px;
-	top: 918px;
-}
+.checkbox6 {top: 892px;}
 
-.checkbox8 {
-	left: -16px;
-	top: 944px;
-}
+.checkbox7 {top: 918px;}
 
-.checkbox9 {
-	left: -16px;
-	top: 1176px;
-}
+.checkbox8 {top: 944px;}
 
-.checkbox10 {
-	left: -16px;
-	top: 1420px;
-}
+.checkbox9 {top: 1176px;}
 
-.checkbox11 {
-	left: -16px;
-	bottom: 1296px;
-}
+.checkbox10 {top: 1420px;}
 
-.checkbox12 {
-	left: -16px;
-	bottom: 1270px
-}
+.checkbox11 {bottom: 1296px;}
 
-.checkbox13 {
-	left: -16px;
-	bottom: 1244px;
-}
+.checkbox12 {bottom: 1270p;}
+
+.checkbox13 {bottom: 1244px;}
 
 /*prompt popup stuff------------------------------*/
-.placeholderTextWhite {
-	color: white;
-}
+.placeholderTextWhite {color: white;}
 
-.textBlack {
-	color: black;
-}
+.textBlack {color: black;}
 
-.hover:hover {
-	cursor: pointer;
-}
+.hover:hover {cursor: pointer;}
 
 /*quote page------------------------------*/
 .img {
@@ -299,9 +225,7 @@ blockquote:before {
     left: -0.5em;
 }
 
-blockquote p:last-of-type:after {
-    content: '”';
-}
+blockquote p:last-of-type:after {content: '”';}
 
 blockquote footer:before {
     content: '—';
@@ -327,27 +251,16 @@ blockquote footer:before {
 }
 
 /*piano, click me & arrow icon------------------------------*/
-.title-left {
-	display: inline-block;	
-}
+.title-left {display: inline-block;}
 
 #piano-icon {
 	height: auto;
 	max-width: 40px;
 }
 
-#piano-icon:hover {
-	cursor: pointer;
-}
+#piano-icon:hover {cursor: pointer;}
 
-#piano-icon:on {
-	cursor: pointer;
-}
-
-@font-face {
-	font-family: 'selima';
-	src: url(../../fonts/selima-script/selima.otf);
-}
+#piano-icon:on {cursor: pointer;}
 
 .handwriting-style {
 	font-family: selima;
@@ -375,13 +288,16 @@ blockquote footer:before {
 	color: #a0d3c3;
 }
 
+.small-arrow-index, .small-arrow-contents, .small-arrow-introduction, .small-arrow-how-to-use-this-book, .small-arrow-day1-1, .small-arrow-sexy-curvy-bass, .small-arrow-like-a-gift, .small-arrow-taffeta-euphoria, .small-arrow-afterword, .small-arrow-worksheet {
+  stroke-width: 0.2;
+  fill: black;
+  font: 5px 'Trebuchet MS';
+}
+
 .small-arrow-index {
 	position: absolute;
 	right: 75px;
 	top: 115px;
-	stroke-width: 0.2;
-	fill: black;
-	font: 5px 'Trebuchet MS';
 }
 
 .handwriting-contents {
@@ -394,10 +310,6 @@ blockquote footer:before {
 	position: absolute;
 	right: 30px;
 	top: 23px;
-	stroke-width: 0.2;
-	fill: black;
-	font: 5px 'Trebuchet MS';
-/*	background: black;*/
 }
 
 .piano-icon-introduction {
@@ -527,35 +439,22 @@ blockquote footer:before {
 }
 
 /*book colours & font styles------------------------------*/
-.orange {
-	background: #ec9865;
-/*	background: cmyk(0%, 45%, 64%, 0%);*/
-}
+.orange {background: #ec9865;}
 
 .green {
 	background: #a0d3c3;
 	color: #a0d3c3;
 }
 
-.green-2 {
-	background: #a0d3c3;
-}
+.green-2 {background: #a0d3c3;}
 
-.grey {
-	background: #f3f3f3;
-}
+.grey {background: #f3f3f3;}
 
-.bold {
-	font-weight: bold;
-}
+.bold {font-weight: bold;}
 
-.center-text {
-	text-align: center;
-}
+.center-text {text-align: center;}
 
-.left-text {
-	text-align: left;	
-}
+.left-text {text-align: left;}
 
 /*pop up box------------------------------*/
 .pop_up_box {
@@ -573,10 +472,6 @@ svg {
 	fill: none;
 	stroke-linejoin: round;
 	stroke-linecap: round;
-}
-
-.hand-diagram {
-/*	background: black;*/
 }
 
 .key-signature-text {
@@ -627,9 +522,7 @@ svg {
 	fill: black;	
 }
 
-.small-arrow {
-	stroke-width: 0.8;
-}
+.small-arrow {stroke-width: 0.8;}
 
 .chord-text {
 	stroke-width: 0.03;
@@ -668,25 +561,15 @@ svg {
 	font-size: 0.13em;
 }
 
-.tie {
-	stroke-width: 2.5;
-}
+.tie {stroke-width: 2.5;}
 
-.ties {
-	stroke-width: 0.4;	
-}
+.ties {stroke-width: 0.4;}
 
-.notes {
-	stroke-width: 0.8;
-}
+.notes {stroke-width: 0.8;}
 
-.notes-example{
-	stroke-width: 0.1;	
-}
+.notes-example{stroke-width: 0.1;}
 
-.quarter {
-	fill: black;
-}
+.quarter {fill: black;}
 
 .small-note {
 	stroke: black;
@@ -696,35 +579,25 @@ svg {
 	max-height: 25px;
 }
 
-.head-thickness {
-	stroke-width: 1.9;
-}
+.head-thickness {stroke-width: 1.9;}
 
-.small-stem {
-	stroke-width: 1.9;
-}
+.small-stem {stroke-width: 1.9;}
 
 .head-outline {
 	stroke: grey;
 	stroke-width: 0.6;
 }
 
-.middle-c {
-	stroke: #a0d3c3;
-}
+.middle-c {stroke: #a0d3c3;}
 
 .chromatic-arrow {
 	stroke: #ec9865;
 	stroke-width: 2;
 }
 
-.straight-lines {
-	stroke-width: 0.2;	
-}
+.straight-lines {stroke-width: 0.2;}
 
-.repeat-barline {
-	stroke-width: 0.5;		
-}
+.repeat-barline {stroke-width: 0.5;}
 
 /*table layout------------------------------*/
 .fixed-table-layout {
@@ -732,15 +605,12 @@ svg {
 	width: 100%;
 }
 
-.border-none {
-	border-right: none;
-}
+.border-none {border-right: none;}
 
 /*tied notes table------------------------------*/
 .tied-notes {
 	border-collapse: collapse;
 	min-width: 400px;
-/*	width: 100%;*/
 	text-align: center;
 }
 
@@ -757,33 +627,23 @@ svg {
 	font-size: 0.9em;
 	min-width: 400px;
 	overflow: hidden;
-/*	box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);*/
 	width: 100%;
 	text-align: center;
 	border: solid;
 }
 
-.main-table thead th {
-	border: solid;
-/*	padding: 30px 20px;*/
-}
+.main-table thead th {border: solid;}
 
 .main-table th,
 .main-table td {
 	padding: 12px 15px;
 }
 
-.main-table tbody tr {
-	border-bottom: 1px solid #ddd;
-}
+.main-table tbody tr {border-bottom: 1px solid #ddd;}
 
-.main-table tbody td {
-	border-right: 1px solid #ddd;
-}
+.main-table tbody td {border-right: 1px solid #ddd;}
 
-.main-table tbody tr:last-of-type.chords {
-	color: lightgray;
-}
+.main-table tbody tr:last-of-type.chords {color: lightgray;}
 
 /*rhythmic-values-table------------------------------*/
 .rhythmic-values-table tbody tr:nth-child(2) td:nth-child(2),
@@ -853,16 +713,13 @@ svg {
 	font-size: 0.9em;
 	min-width: 400px;
 	overflow: hidden;
-/*	box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);*/
 	width: 100%;
 	text-align: center;
 	border: solid;
 	table-layout: fixed;
 }
 
-.worksheet-table tbody tr:nth-child(1) .borderless {
-	border: none;
-}
+.worksheet-table tbody tr:nth-child(1) .borderless {border: none;}
 
 .worksheet-table td {
 	padding: 12px 15px;
@@ -884,9 +741,7 @@ svg {
 	border-right: solid black;
 }
 
-.worksheet-table tbody tr {
-	border-bottom: 1px solid #ddd;
-}
+.worksheet-table tbody tr {border-bottom: 1px solid #ddd;}
 
 /*invisible table------------------------------*/
 .invisible_table {
@@ -910,20 +765,16 @@ svg {
 	text-align: left;
 }
 
-.border-top {
-	border-top: 1px solid;
-}
+.border-top {border-top: 1px solid;}
 
 
 /*day 1 piano------------------------------*/
 .white-key {
     stroke: #555555;
-/*    fill: #FFFFF7;*/
 	fill: white;
 }
 .black-key {
     stroke: #979797;
-/*    fill: #4b4b4b;*/
 	fill: black;
 }
 .white-key-text {
@@ -933,7 +784,6 @@ svg {
 }
 .black-key-text {
     font-size: 2em;
-/*    fill: #fff;*/
 	fill: white;
     font-weight: 200;
     pointer-events: none;
@@ -941,10 +791,6 @@ svg {
     display: absolute;
     bottom: 50;
 }
-.show {
-    fill: #a0d3c3;
-}
+.show {fill: #a0d3c3;}
 
-.show.black-key ~ text {
-    fill: #ec9865;
-}
+.show.black-key ~ text {fill: #ec9865;}
