@@ -1,13 +1,29 @@
 const canvas = document.getElementById("myCanvas");
 const ctx = canvas.getContext("2d");
 
+// Retrieves the high score from storage and sets initial value to 0
+let highScoreLoneLegend = localStorage.getItem('highScoreLoneLegend') ?? 0;
+let highScore = 0;
+
+let muteButton;
+
 function startGame() {
-	document.getElementById('start').style.display = "none"; 
+	// Hide the start & restart button and show the game canvas
+	document.getElementById('start').style.display = "none"; 	
     document.getElementById('myCanvas').style.display = "block";  
+
+    // Remove the start game event listener to avoid multiple event bindings
+    if (muteButton) muteButton.removeEventListener("click", startGame);
+
+    // Revert muteButton back to it's original mute/unmute state
+    muteButton = document.getElementById('muteButton');
+    muteButton.textContent = "mute";
+    // Add onclick function to muteButton to toggle sfx on/off
+    muteButton.addEventListener("click", toggleMute);     
 
     // Global variables
 	let timer = 0;
-    let count = 0;
+    let score = 0;           
 
 	let [upPressed, rightPressed, downPressed, leftPressed] = [false, false, false, false];
 	let x = Math.floor(Math.random() * (575 - 10 + 1) + 10);
@@ -20,7 +36,7 @@ function startGame() {
 	const enemies3 = [];
 	let frame = 0;
 
-	const originalColour = canvas.style.backgroundColor;
+	let gameRunning = true;
 
 	// Sound effects
 	const soundEffects = {
@@ -76,14 +92,13 @@ function startGame() {
 				ctx.fillStyle = this.color;
 				ctx.fillRect(this.x, this.y, this.width, this.height);
 			} else {
-				// If player collides with an edible, update its position and increment the count
+				// If player collides with an edible, update its position and increment the score
 				this.y = Math.floor(Math.random() * (575 - 10 + 1) + 10);
 				this.x = Math.floor(Math.random() * (575 - 10 + 1) + 10);
 				ctx.fillStyle = this.color;
 				ctx.fillRect(this.x, this.y, this.width, this.height);
-				soundEffects.powerUp.play();
-				document.getElementById('count').innerHTML = count;
-				count++;
+				soundEffects.powerUp.play();			
+				score++;			
 			}
 		}								
 	}
@@ -117,12 +132,28 @@ function startGame() {
 		}
 		draw() {
 			if (collisionDetection(player, this)) {		
-				// If player collides with an enemy, play sound, show game over alert, and reload the page
+				// If player collides with an enemy, play sound, show game over alert, and reload the page								
 				soundEffects.hit.play();
 				soundEffects.music.pause();
-				alert("GAME OVER");
-	            document.location.reload();
-	            clearInterval(interval); // Needed for Chrome to end game	                       
+
+				// Update highscores each time the game ends				
+				if (score > highScoreLoneLegend) {
+					localStorage.setItem('highScoreLoneLegend', score);
+					highScoreLoneLegend = score;
+				}														
+				if (score > highScore) highScore = score;
+
+				// End the game and display 'YOU LOSE'
+				gameRunning = false;
+				ctx.font = "44px valorax";
+				ctx.fillStyle = "lightcoral";
+				ctx.fillText("You lose! ", 160, 300);				
+				
+				// Transform the mute button into a restart button that restarts the game onclick
+				let restartButton = document.getElementById('muteButton');
+				restartButton.textContent = "Restart game?";
+				restartButton.addEventListener("click", startGame);
+
 			} else {
 				ctx.fillStyle = this.color;
 				ctx.fillRect(this.x, this.y, this.width, this.height);				
@@ -137,7 +168,7 @@ function startGame() {
 			enemiesArray[i].draw();
 		}
 		// Create a new enemy at a random position at a specified frame interval
-		if (frame % frameInterval === 0) enemiesArray.push(new Enemy(Math.floor(Math.random() * (599 - 10 + 1) + 0), speed));
+		if (frame % frameInterval === 0) enemiesArray.push(new Enemy(Math.floor(Math.random() * (599 - 10 + 1) + 0), speed));		
 	}
 
 	// Collission detection function
@@ -165,6 +196,10 @@ function startGame() {
 
 	// animate the game
 	function animate() {
+		// Check if the game is still running
+		if (!gameRunning) return; // Game over, stop the animation
+
+		// Clear the canvas
 		ctx.clearRect(0, 0, canvas.width, canvas.height);
 		frame++;
 		createEdibles(edibles);
@@ -173,6 +208,14 @@ function startGame() {
 		createEnemies(enemies3, 300, dy3);
 	    player.draw();
 		requestAnimationFrame(animate);
+
+		// Add score, timer & highscore to canvas
+		ctx.font = "14px valorax";
+		ctx.fillStyle = "black";
+		ctx.fillText("Score: " + score, 10, 30);
+		ctx.fillText("Time: " + formatTime(timer), 10, 50);			
+		ctx.fillText("High score: " + highScore, 10, 70);
+		ctx.fillText("High score all-time: " + highScoreLoneLegend, 10, 90);
 	}
 	
 	animate();      
@@ -193,13 +236,7 @@ function startGame() {
     // Increment timer in seconds
     setInterval(() => {
         timer++;
-        document.getElementById('time').innerHTML = (formatTime(timer)); // Output will be in the format MM:SS
     }, 1000);
-
-    // Add onclick function to muteButton that toggles sfx on/off
-    muteButton.addEventListener("click", function() {
-        toggleMute();
-    });
 
     // Toggle function for mute on/off
     function toggleMute() {

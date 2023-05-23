@@ -4,15 +4,15 @@
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Game 3</title>
-		<link rel="stylesheet" type="text/css" href="style.css">
+		<title>A Snake's Journey</title>
+		<link rel="stylesheet" type="text/css" href="../../style.css">
 	</head>
 	<body>
 		<div id="container-div">
 			
 			<div id="title">
             	<h1><a href="../../index.html">Ben's Arcade</a></h1>
-            	<h3>Game 3</h3>
+            	<h3 class="current-game">A Snake's Journey</h3>
             </div>
 
             <div id="main-content-div">
@@ -20,45 +20,44 @@
             	<div id="rules-block">  
             		<div id="rules">
             			<h2>Rules</h2>
-		            	<p>You are the blue paddle and you can move up and down. Your aim is bounce the ball into the opponents goal. But if the ball bounces into your goal, you lose.</p>
-            		</div>                     		        			
+		            	<p>You are the blue square and you can move through walls. Your aim is to eat as many purple edibles as you can. But if you get hit by a falling enemy you die.</p>
+		            	<br>
+		            	<p>------ONE PLAYER------</p>
+		            	<p>UP | LEFT | DOWN | RIGHT</p>
+            		</div>	   
 	            </div>
 
 	            <div id="center-block">
 	            	<div id="start">
 		            	<a href="#" onclick="startGame()"><button id="start-button">Start Game</button></a>
 		            </div>
-		            <canvas id="myCanvas" width="600" height="600" style="display: none"></canvas>
-		            <div id="end-restart" style="display: none">
-		            	<h3>GAME OVER!</h3>
-		            	<a href="#" onclick="startGame()"><button id="restart-button">Play again?</button></a>
-		            </div>
-	            </div>	          
+		            <canvas id="myCanvas" width="600" height="600" style="display: none"></canvas>		         
+	            </div>
 
-	            <div id="controls">	            		            		            	
+	            <div id="games">	            		            		            	
             		<div>
-            			<h2>controls</h2>
-		            	<p>UP / DOWN / Space</p>
-		            	<!-- <p>---<em>arrow keys</em>---</p> -->
+            			<h2>games</h2>
+		            	<p>- <a href="../game 1/index.html">Lone Legends</a></p>
+		            	<p>- <a href="../game 2/index.html">Ping Pong Partners In Crime</a></p>
+		            	<p>- <a href="../game 3/index.html">Space Race Rascals</a></p>
+		            	<p class="current-game">- A Snake's Journey</p>
             		</div>      	
-	            </div>	            
+	            </div>	                
 
             </div>
 
             <div id="footer">
-            	<div id="back">
-            		<a href="../game 2/index.html"><button id="back-button">previous game</button></a>
+            	<div id="back">         
             	</div>
             	<div id="score">
-            		<h2>Score: <span id="count">0</span></h2>
+            		<button id="muteButton">Mute</button>            		
             	</div>
-            	<div id="next">
-            		<!-- <a href=""><button id="next-button">next game</button></a> -->
+            	<div id="next">            		
             	</div>
-            </div>                        
+            </div>
 
 		</div>
-      
+
+        <script type="text/javascript" src="script.js"></script>
 	</body>
-	<script type="text/javascript" src="script.js"></script>
 </html>

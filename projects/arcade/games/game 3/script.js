@@ -1,14 +1,29 @@
 const canvas = document.getElementById("myCanvas");
 const ctx = canvas.getContext("2d");
 
+// Retrieves the high score from storage and sets initial value to 0
+let highScoreSpaceRace = localStorage.getItem('highScoreSpaceRace') ?? 0;
+let highScore = 0;
+
+let muteButton;
+
 function startGame() {
     // Hide the start button and show the game canvas
     document.getElementById('start').style.display = "none"; 
-    document.getElementById('myCanvas').style.display = "block";  
+    document.getElementById('myCanvas').style.display = "block"; 
+
+    // Remove the start game event listener to avoid multiple event bindings
+    if (muteButton) muteButton.removeEventListener("click", startGame);
+
+    // Revert muteButton back to it's original mute/unmute state
+    muteButton = document.getElementById('muteButton');
+    muteButton.textContent = "mute";
+    // Add onclick function to muteButton to toggle sfx on/off
+    muteButton.addEventListener("click", toggleMute);      
 
     // Global variables
-    let timer = 0;
-    let count = 0;
+    let timer = 30;
+    let score = 0;
 
     let [upPressed, downPressed, upPressed2, downPressed2] = [false, false, false, false];
 
@@ -37,9 +52,10 @@ function startGame() {
 
     const originalColour = canvas.style.backgroundColor;
 
+    let gameRunning = true;
+
     // Sound effects
     const soundEffects = {
-        powerUp: new Audio("./sfx/powerUp.mp3"),
         hit: new Audio("./sfx/hit.mp3"),
         music: new Audio("./sfx/music.mp3"),
         throughWalls: new Audio("./sfx/through-walls.mp3")
@@ -70,8 +86,7 @@ function startGame() {
 
             // If players reaches the top, they reappear at the bottom, & score increases by 1
             if (player.y < 0 || player2.y < 0) {
-                count++;
-                document.getElementById('count').innerHTML = count;
+                score++;                
                 soundEffects.throughWalls.play();
                 if (player.y < 0) player.y = canvas.height - playerHeight;
                 if (player2.y < 0) player2.y = canvas.height - playerHeight;
@@ -81,12 +96,26 @@ function startGame() {
                 player.y = canvas.height - playerHeight;
                 player2.y = canvas.height - playerHeight;
             }
-            // Game ends when score reaches 10
-            if (count === 10) {                
+            // Update highscores each time the game ends                
+            if (score > highScoreSpaceRace) {
+                localStorage.setItem('highScoreSpaceRace', score);
+                highScoreSpaceRace = score;
+            }                                                       
+            if (score > highScore) highScore = score;
+
+            // End the game when timer reaches 0 and display 'TIME OUT'
+            if (timer === 0) {                                
                 soundEffects.music.pause();
-                alert("GAME OVER");
-                document.location.reload();
-                clearInterval(interval); // Needed for Chrome to end game  
+
+                gameRunning = false;
+                ctx.font = "44px valorax";
+                ctx.fillStyle = "lightcoral";
+                ctx.fillText("Time out! ", 160, 300);
+
+                // Transform the mute button into a restart button that restarts the game onclick
+                let restartButton = document.getElementById('muteButton');
+                restartButton.textContent = "Restart game?";
+                restartButton.addEventListener("click", startGame);
             }   
         }       
     }
@@ -114,9 +143,8 @@ function startGame() {
             // Check for enemy collision with players
             if (collisionDetection(player, this) || collisionDetection(player2, this)) {         
                 soundEffects.hit.play();
-                // Reduce score by 1
-                count--;
-                document.getElementById('count').innerHTML = count;
+                // Reduce score by 1 if above 0
+                if (score >= 1) score--;                
                 // Change background to red
                 canvas.style.backgroundColor = "lightcoral";
                 // Change the background back to grey after 1 second
@@ -177,6 +205,9 @@ function startGame() {
 
     // Animation function
     function animate() {
+        // Check if the game is still running
+        if (!gameRunning) return; // Game over, stop the animation
+
         // Clear the canvas
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         frame++;
@@ -189,6 +220,14 @@ function startGame() {
         player.draw();
         player2.draw();
         requestAnimationFrame(animate);
+
+        // Add score, timer & highscore to canvas
+        ctx.font = "14px valorax";
+        ctx.fillStyle = "black";
+        ctx.fillText("Score: " + score, 10, 30);
+        ctx.fillText("Time: " + formatTime(timer), 10, 50);
+        ctx.fillText("High score: " + highScore, 10, 70);
+        ctx.fillText("High score all-time: " + highScoreSpaceRace, 10, 90);
     }
 
     animate(); // Start the animation loop
@@ -206,16 +245,10 @@ function startGame() {
         return `${formattedMinutes}:${formattedSeconds}`;
     }
 
-    // Increment timer in seconds
+    // Decrement timer in seconds
     setInterval(() => {
-        timer++;
-        document.getElementById('time').innerHTML = (formatTime(timer)); // Output will be in the format MM:SS
-    }, 1000);
-
-    // Add onclick function to muteButton that toggles sfx on/off
-    muteButton.addEventListener("click", function() {
-        toggleMute();
-    });
+        timer--;    
+    }, 1000);    
 
     // Toggle function for mute on/off
     function toggleMute() {

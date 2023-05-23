@@ -1,13 +1,29 @@
 const canvas = document.getElementById("myCanvas");
 const ctx = canvas.getContext("2d");
 
+// Retrieves the high score from storage and sets initial value to 0
+let highScorePingPong = localStorage.getItem('highScorePingPong') ?? 0;
+let highScore = 0;
+
+let muteButton;
+
 function startGame() {
+    // Hide the start & restart button and show the game canvas
     document.getElementById('start').style.display = "none"; 
     document.getElementById('myCanvas').style.display = "block"; 
 
+    // Remove the start game event listener to avoid multiple event bindings
+    if (muteButton) muteButton.removeEventListener("click", startGame);
+
+    // Revert muteButton back to it's original mute/unmute state
+    muteButton = document.getElementById('muteButton');
+    muteButton.textContent = "mute";
+    // Add onclick function to muteButton to toggle sfx on/off
+    muteButton.addEventListener("click", toggleMute);    
+
     // Global variables
     let timer = 0;
-    let count = 0;
+    let score = 0;
 
     let [upPressed, downPressed, upPressed2, downPressed2] = [false, false, false, false];
 
@@ -28,6 +44,8 @@ function startGame() {
     let dy = Math.round(Math.random()) * 6 - 3;
 
     const originalColour = canvas.style.backgroundColor;
+
+    let gameRunning = true;
 
     // Sound effects
     const soundEffects = {
@@ -84,6 +102,8 @@ function startGame() {
 
     // Function to draw the game onto the canvas
     function draw() {
+        if (!gameRunning) return; // Game over, stop the animation
+
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         drawPlayer();
         drawBall();
@@ -112,15 +132,13 @@ function startGame() {
         // Move the ball and handle collisions with left wall
         } else if (ballX + dx < 15 + ballRadius) {
             if (ballY > playerY && ballY < playerY + playerHeight) {
-                count++;
-                document.getElementById('count').innerHTML = count;
+                score++;                
                 soundEffects.paddleHit.play();
                 dx = -dx;           
             } else {
                 soundEffects.goal.play();
-                // Reduce score by 1
-                count--;
-                document.getElementById('count').innerHTML = count;
+                // Reduce score by 1 if above 0
+                if (score >=1) score--;            
                 dx = -dx;
                 // Change background to red
                 canvas.style.backgroundColor = "lightcoral";
@@ -132,15 +150,13 @@ function startGame() {
         // Move the ball and handle collisions with right wall
         } else if (ballX + dx > opponentX) {
             if (ballY > opponentY && ballY < opponentY + opponentHeight) {
-                count++;
-                document.getElementById('count').innerHTML = count;
+                score++;            
                 soundEffects.paddleHit.play();
                 dx = -dx;            
             } else {
                 soundEffects.goal.play();
-                // Reduce score by 1
-                count--;
-                document.getElementById('count').innerHTML = count;
+                // Reduce score by 1 if above 0
+                if (score >=1) score--;            
                 dx = -dx;
                 // Change background to red
                 canvas.style.backgroundColor = "lightcoral";
@@ -154,13 +170,34 @@ function startGame() {
         ballX += dx;
         ballY += dy;
 
-        // Game ends when score reaches 10
-        if (count === 10) {                
+        // Update highscores each time the game ends                
+        if (timer > highScorePingPong) {
+            localStorage.setItem('highScorePingPong', timer);
+            highScorePingPong = timer;
+        }                                                       
+        if (timer > highScore) highScore = timer;
+
+        // End the game when score reaches 10 and display 'YOU WIN'
+        if (score === 10) {                
             soundEffects.music.pause();
-            alert("YOU WIN!");
-            document.location.reload();
-            clearInterval(interval); // Needed for Chrome to end game  
-        }   
+            gameRunning = false;
+            ctx.font = "44px valorax";
+            ctx.fillStyle = "lightcoral";
+            ctx.fillText("You win! ", 160, 300);  
+
+            // Transform the mute button into a restart button that restarts the game onclick
+            let restartButton = document.getElementById('muteButton');
+            restartButton.textContent = "Restart game?";
+            restartButton.addEventListener("click", startGame); 
+        }
+
+        // Add score and timer to canvas
+        ctx.font = "14px valorax";
+        ctx.fillStyle = "black";
+        ctx.fillText("Score: " + score, 10, 30);
+        ctx.fillText("Time: " + formatTime(timer), 10, 50);
+        ctx.fillText("High score: " + formatTime(highScore), 10, 70);
+        ctx.fillText("High score all-time: " + formatTime(highScorePingPong), 10, 90);
     }
 
     const interval = setInterval(draw, 10);    
@@ -181,13 +218,7 @@ function startGame() {
      // Increment timer in seconds
     setInterval(() => {
         timer++;
-        document.getElementById('time').innerHTML = (formatTime(timer)); // Output will be in the format MM:SS
     }, 1000);
-
-    // Add onclick function to muteButton that toggles sfx on/off
-    muteButton.addEventListener("click", function() {
-        toggleMute();
-    });
 
     // Toggle function for mute on/off
     function toggleMute() {
