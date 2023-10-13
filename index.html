@@ -7,15 +7,10 @@
         <!-- fonts -->
         <link href = "./fonts/gopherMono/stylesheet.css" rel = "stylesheet" type = "text/css" />      
         <!-- css -->
-        <link rel="stylesheet" href="./styles/style1920.css" type="text/css" media="screen"/>
-        <link rel="stylesheet" href="./styles/style1470.css" type="text/css" media="screen"/>
-        <link rel="stylesheet" href="./styles/style1440.css" type="text/css" media="screen"/>
-        <link rel="stylesheet" href="./styles/style1366.css" type="text/css" media="screen"/>
-        <link rel="stylesheet" href="./styles/style1024.css" type="text/css" media="screen"/>
-        <link rel="stylesheet" href="./styles/style812.css" type="text/css" media="screen"/>
-        <link rel="stylesheet" href="./styles/style375.css" type="text/css" media="screen"/>
+        <link rel="stylesheet" href="./style.css" type="text/css" media="screen"/>
         <!-- js -->
         <script type="text/javascript" src="./script.js" defer></script>
+        <script type="text/javascript" src="./gameScript.js" defer></script>
     </head>
     <body class="background-light">
 
@@ -25,46 +20,48 @@
                 <div id="nav-div">
                     <table id="header" class="color-dark">                        
                         <tr>
-                            <td id="logo"><a href="#main-body1">benSpooner</a></td>
+                            <td id="logo"><a href="#main-body1">benSpooner<span></span></a></td>
                             <td id="empty-nav">Ben Spooner</td>
                             <td class="nav-links" id="about-nav"><a href="#about">about</a></td>
-                            <td class="nav-links" id="portfolio-nav"><a href="#portfolio">portfolio</a></td> 
-                            <td class="nav-links" id="youtube"><a href="https://www.youtube.com/channel/UC3HRAUGFQ_qK4UNXN4y1tIA" target="blank">youTube</a></td>                      
-                            <td class="nav-links" id="blog"><a href="https://benspooner.medium.com/" target="blank">blog</a></td>
+                            <td class="nav-links" id="book-nav"><a href="#book">myBook</a></td>
+                            <td class="nav-links" id="game-nav"><a href="#game">myGame</a></td>                            
                             <td class="nav-links" id="last-item">contact</td>                            
                         </tr>
                     </table>
                 </div>
 
                 <!-- THE CONTACT MODAL -->
-                <div id="myModal" class="modal">
-                    
+                <div id="myModal" class="modal">                    
                     <!-- MODAL CONTENT -->
                     <div class="modal-content">
                         <span class="close">&times;</span>
                         <p>Drop me an email at: <span class="bold">benpaulspooner@gmail.com</span></p>
                     </div>
-
                 </div>
             
              <!-- TITLE BODY ----------------------------------------------------------------------------->
             <section id="main-body1">
-
-                <h1 id="title" class="color-blue"><span class="aspiring">Aspiring</span> Full Stack Developer</h1>
+                <h1 id="title" class="color-blue">Hello,<br>I'm <span id="ben">Ben</span></h1>
                 <div id="medium-p-homepage">
                     <p class="color-green">I like to get things done</p>
                 </div>
                 <div id="large-p-homepage">
-                    <p class="color-dark-blue">I'm my happiest when I'm creating... <span id="change-word">things</span></p>
+                    <p class="color-dark-blue">and I like making... <span id="change-word">things</span></p>
                 </div>
                 <div id="small-p-homepage">
-                    <p class="color-dark">From websites and games to music and sound, I love being involved in a project and a team, especially if it means seeing it through from start to finish.</p>
+                    <p class="color-dark">I thrive on bringing ideas to life. From crafting books and games to websites and musical pieces, I'm fuelled by a passion for creative endeavours, and <span id="done"><em>getting things done</em></span>.</p>
                 </div>
                 <img id="title-img" src="./images/homepage-pic.jpeg">
             </section>
 
             <!-- FOOTER ----------------------------------------------------------------------------->             
             <div id="footer">
+                <div id="volume-count" style="display:none">
+                    <span id="volume-count-number"></span>
+                </div>
+                <div class="volume down" style="display:none" onclick="decreaseVolume()">
+                    <p>-</p>
+                </div>
                 <div id="equaliser" style="display:none">
                     <svg xmlns="http://www.w3.org/2000/svg" class="equilizer" viewBox="0 0 128 128">
                         <g>
@@ -77,9 +74,12 @@
                         </g>
                     </svg>
                 </div>
+                <div class="volume up" style="display:none" onclick="increaseVolume()">
+                    <p>+</p>
+                </div>
                 <table id="footer2">
                     <tr>
-                        <td class="bold border-right" id="listen">listenNow:</td> 
+                        <td class="bold border-right"><span id="listen">listenNow:</span></td> 
                         <td class="border-right">
                             <span id="green-and-pine-footer">greenAndPine</span>
                         </td>                    
@@ -92,171 +92,96 @@
             <section id="about">
                 <h2 id="about-title" class="color-blue">About</h2>
                 <div id="about1">                    
-                    <div>
-                        <p class="color-dark-blue" id="large-p-about1">A little bit about me...</p>
-                    </div>                    
+                    <p class="color-dark-blue" id="large-p-about1">A little bit about me<span id="about-ellipsis">...</span></p>
                     <img id="code-img" src="./images/code.svg">
                     <img id="piano-img" src="./images/piano.png">         
                     <div id="about-summary">
-                        <p class="color-dark">Following a 15yr career as a business owner, offering music/audio services, I transitioned into pastures new. I up-skilled in web development before securing a place on a competitive Hyperion Dev Software Engineering & Data Science bootcamp, <span class="bold">competing against 20,000 other applicants</span>. I am now looking to join a company where I can add value to a dynamic team and grow in this field.</p>
+                        <p class="color-dark">Following a 15yr career as a business owner, offering music/audio services, I transitioned into pastures new. I up-skilled in web development before securing a scholarship on a competitive Software Engineering & Data Science course, <span class="bold">competing against 20,000 other applicants</span> and I now spend my time combining my love for all things tech, music and art.</p>
                     </div>
                     <div id="cols">
                         <div id="about-col-1">
                             <p class="color-green">Brief history of my tech skills:</p>
-                            <p class="color-dark">My love of coding came out of the blue. I was studying for an MSc in Music and Sound and began teaching myself <span class="bold">C#</span> so I could add sounds to computer games in the Unity Game Engine. I enjoyed the process so much that it sparked a whole new direction. I used professional resources like Codecademy, freeCodeCamp and more to immerse myself in my new passion. I have now built up a portfolio of projects including a portfolio website, a prototype for a digital piano education book and a retro arcade game platform - all created solo and from scratch.</p>
-                            <p class="color-dark skills" id="about-skills-1"><span class="bold">SKILLS:</span><br><span class="color-green bold">WebDev:</span> HTML, CSS, Javascript and game programming with the HTML5 canvas<br><span class="color-green bold">Data Science:</span> Python, SQL<br><br><span class="cv color-dark-blue bold" id="cv">> VIEW MY CV</span></p>
+                            <p class="color-dark">My love of coding came out of the blue. I was studying for an MSc in Music and Sound and began teaching myself C# so I could add sounds to computer games in the Unity Game Engine. I enjoyed the process so much that it sparked a whole new direction. Since then I've continued my self-directed study and immersed myself in my new passion. This portfolio website was built from scratch using HTML, CSS and Javascript, and the game on this site was built using a Test Driven Development approach.</p>
                         </div>
                         <div id="about-col-2">
                             <p class="color-green">Brief history of my audio skills:</p>
-                            <p class="color-dark">For the last 15 years I've performed (Joy Crookes), toured (Edinburgh Festival), taught (ABRSM), examined (RSL), composed (Kuoni), scored, produced and treated audio for a range of content. In 2021 I composed the music to an award-winning short film called <em>When We Fell</em>. It was presented at festivals worldwide, <span class="bold">won three awards</span> and was nominated for the Audience Award by the prestigious British Animation Awards. Today, I release music independently as the artists <a href="https://open.spotify.com/artist/1GWf0efwkbX9yy48pMLWUL?si=uUWl3reFQnu5QJTwCYxyPQ" target="blank"><span class="underline">Sponn</span></a> and <a href="https://open.spotify.com/artist/3KpLXzoIDJNgBMf4mHQigs?si=nwku_RHaSN2S6xdXMcgovQ" target="blank"><span class="underline">Green and Pine</span></a>.</p>
-                            <p class="color-dark skills" id="about-skills-2"><span class="bold">SKILLS:</span><br><span class="color-green bold">Programs:</span> Logic X, Sibelius Ultimate and FMOD<br><span class="color-green bold">Tuition:</span> Drums, Piano, Production, Theory, Composition and Transcription<br><br>
+                            <p class="color-dark">For the last 15 years I've performed (Joy Crookes), toured (Edinburgh Festival), taught (ABRSM), examined (RSL), composed (Kuoni), scored, produced and treated audio for a range of content. In 2021 I composed the music to an award-winning short film called <span class="underline"><a href="https://www.youtube.com/watch?v=XenuFH6qTdM&t=2s&ab_channel=BenSpooner" target="_blank">When We Fell↑</a></span>. It was presented at festivals worldwide, <span class="bold">won three awards</span> and was nominated for the Audience Award by the prestigious British Animation Awards. Today, I release music independently as the artists <span id="sponn" class="underline"><a href="https://open.spotify.com/artist/1GWf0efwkbX9yy48pMLWUL?si=d6KoLV7kTyG1upYz_fVe1w" target="_blank">Sponn↑</a></span> and <span class="underline" id="green-and-pine"><a href="https://open.spotify.com/artist/3KpLXzoIDJNgBMf4mHQigs?si=fsKeEcI0Q5ObO97_c7Ezvw" target="_blank">Green and Pine↑</a>.</p><br>
                         </div>
                         <div id="about-table">
                             <table>
                                 <tr><td class="border-bottom"><span class="bold">Name:</span> Ben Spooner</td></tr>
-                                <tr><td class="border-bottom"><span class="bold">Occupation:</span> Audio specialist</td></tr>
                                 <tr><td class="border-bottom"><span class="bold">Age: </span><span id="age"></span> years young</td></tr>
                                 <tr><td class="border-bottom"><span class="bold">Favourite Book:</span> In The Miso Soup</td></tr>
-                                <tr><td class="border-bottom"><span class="bold">Bootcamp:</span> Data Science - HyperionDev<br class="about-table-br"><span class="highlight">Scholarship</span></td></tr>
-                                <tr><td class="border-bottom"><span class="bold">MSc:</span> Music and Sound for 
-                                Film and Games<br class="about-table-br"><span class="highlight">Distinction</span></td></tr>
-                                <tr><td class="border-bottom"><span class="bold">Hobbies:</span> Reading, Walking, Eating, Learning, Creating</td></tr>
-                                <tr><td><span class="bold">Extra links: </span><a href="https://github.com/unwontedsponn" target="blank"><span class="underline">gitHub</span></a> | <a href="https://www.linkedin.com/in/ben-spooner-12aab937/" target="blank"><span class="underline">linkedIn</span></a></td></tr>
+                                <tr><td class="border-bottom"><span class="bold">Tech Stack: </span>Javascript (TDD), HTML & CSS</td></tr>
+                                <tr><td class="border-bottom"><span class="bold">Sound Stack: </span>Logic X, Sibelius & FMOD</td></tr>
+                                <tr><td class="border-bottom"><span class="bold">Education: </span>Music and Sound for Film and Games (MSc)<br><span class="highlight">Distinction</span><br>
+                                </td></tr>
+                                <tr><td class="border-bottom"><span class="bold">Hobbies:</span> Reading, Walking, Eating, Learning, Cooking & Creating</td></tr>
+                                <tr><td><span class="bold">Extra links: </span>
+                                    <a href="https://github.com/unwontedsponn" target="_blank"><span class="underline">gitHub↑</span></a> | 
+                                    <a href="https://www.linkedin.com/in/ben-spooner-12aab937/" target="_blank"><span class="underline">linkedIn↑</span></a> | 
+                                    <a href="https://sponn.itch.io/keep-the-music-alive" target="_blank"><span class="underline">KTMA↑</span></a> | 
+                                    <a href="https://benspooner.medium.com/" target="_blank"><span class="underline">blog↑</span></a>
+                                </td></tr>
                             </table>
                         </div>                        
                     </div>
+                    <p class="color-dark" id="fun-fact"><span class="bold">FUN FACT</span><br><span class="color-green bold" id="green-words">I jammed with an eccentric British pop icon</span><span id="dark-words">, quite unexpectedly when performing at a North London gig. Adam Ant arrived with an entourage and beckoned us mid set that he wanted to join us on stage. Which he did... we had a blast!</span><br><br><span class="youtube bold"><a href="https://www.youtube.com/channel/UC3HRAUGFQ_qK4UNXN4y1tIA" target="_blank">> VIEW MY YOUTUBE CHANNEL↑</a></span></p>
                 </div>
             </section>
 
-            <!-- PORTFOLIO ------------------------------------------------------------------------------------------>
-            <section id="portfolio">
-                <h2 id="portfolio-title" class="color-blue">Portfolio</h2>
-                <img id="portfolio-image" src="./images/sponn img.png">
-                <div id="portfolio1">                    
-                    <div id="large-p-portfolio">
-                        <p class="color-dark-blue">Things I've created...</p>
+            <!-- BOOK ------------------------------------------------------------------------------------------>
+            <section id="book">  
+                <h2 id="book-title" class="color-blue">myBook</h2>
+                <p class="color-dark-blue" id="large-p-book1">Beginner To Composer...</p>
+                <p class="color-dark-blue" id="large-p-book2">In 14 Days</p>
+                <img src="./images/mybook.jpg" id="book-pic">
+                <p id="book-text">
+                    <span class="color-dark">
+                        Beginner To Composer In 14 Days is delightfully different. Moving swiftly from theory to action, Ben emerges as the teacher you always wished you'd had, championing radical creative freedom, improvisation and composition - even for beginners. Especially for beginners in fact. "Students need freedom to truly fall in love with their instrument" he writes, "frameworks that pique their curiosity over and over again so that practice becomes play". Whether you're a complete beginner or have a little knowledge up your sleeve, you'll adore this dynamic and intimate guide to learning the piano, peppered with evocative vignettes of a life lived with music at its heart. Best of all, you'll come away with a method you can use time and time again to create your very own music, captured on professional quality lead sheets you can share with other musicians, to bring your work to life. Suitable for adults and a useful resource for teachers. Complements graded and traditional approaches to learning.
+                    </span>
+                </p>
+                <div id="buy-now">
+                    <span class="bold color-dark">BUY NOW</span>
+                    <div id="list-container">
+                        <div class="column">
+                            <ul>
+                                <li><a href="https://www.amazon.co.uk/Ben-Spooners-Beginner-Composer-Days/dp/139996769X/ref=sr_1_1?crid=WO4S5PFXTGBM&keywords=beginner+to+composer+in+14+days&qid=1697134011&sprefix=beginner+to+compo%2Caps%2C75&sr=8-1" target="_blank">- <span class="underline buy-now-links">Amazon↑</span></a></li>
+                                <li><a href="https://books.apple.com/gb/book/ben-spooners-beginner-to-composer-in-14-days/id6468330191" target="_blank">- <span class="underline buy-now-links">Apple Books↑</span></a></li>
+                                <li><a href="https://www.barnesandnoble.com/w/ben-spooners-beginner-to-composer-in-14-days-ben-spooner/1144130455" target="_blank">- <span class="underline buy-now-links">Barnes & Noble↑</span></a></li>
+                                <li><a href="https://www.scribd.com/book/674549841/Ben-Spooner-s-Beginner-to-Composer-in-14-Days" target="_blank">- <span class="underline buy-now-links">Scribd↑</span></a></li>
+                            </ul>  
+                        </div>
+                        <div class="column" style="display:none">
+                            <ul>
+                                <li><a href="https://www.amazon.co.uk/Ben-Spooners-Beginner-Composer-Days/dp/139996769X/ref=sr_1_1?crid=WO4S5PFXTGBM&keywords=beginner+to+composer+in+14+days&qid=1697134011&sprefix=beginner+to+compo%2Caps%2C75&sr=8-1" target="_blank">- <span class="underline buy-now-links">Amazon↑</span></a></li>
+                                <li><a href="https://books.apple.com/gb/book/ben-spooners-beginner-to-composer-in-14-days/id6468330191" target="_blank">- <span class="underline buy-now-links">Apple Books↑</span></a></li>
+                                <li><a href="https://www.barnesandnoble.com/w/ben-spooners-beginner-to-composer-in-14-days-ben-spooner/1144130455" target="_blank">- <span class="underline buy-now-links">Barnes & Noble↑</span></a></li>
+                                <li><a href="https://www.scribd.com/book/674549841/Ben-Spooner-s-Beginner-to-Composer-in-14-Days" target="_blank">- <span class="underline buy-now-links">Scribd↑</span></a></li>
+                            </ul>
+                        </div>
+                        <div class="column" style="display:none">
+                            <ul>
+                                <li><a href="https://www.amazon.co.uk/Ben-Spooners-Beginner-Composer-Days/dp/139996769X/ref=sr_1_1?crid=WO4S5PFXTGBM&keywords=beginner+to+composer+in+14+days&qid=1697134011&sprefix=beginner+to+compo%2Caps%2C75&sr=8-1" target="_blank">- <span class="underline buy-now-links">Amazon↑</span></a></li>
+                                <li><a href="https://books.apple.com/gb/book/ben-spooners-beginner-to-composer-in-14-days/id6468330191" target="_blank">- <span class="underline buy-now-links">Apple Books↑</span></a></li>
+                                <li><a href="https://www.barnesandnoble.com/w/ben-spooners-beginner-to-composer-in-14-days-ben-spooner/1144130455" target="_blank">- <span class="underline buy-now-links">Barnes & Noble↑</span></a></li>
+                                <li><a href="https://www.scribd.com/book/674549841/Ben-Spooner-s-Beginner-to-Composer-in-14-Days" target="_blank">- <span class="underline buy-now-links">Scribd↑</span></a></li>
+                            </ul>
+                        </div>
                     </div>
-                    <div id="portfolio-list">
-                        <h3 id="webDev">techProjects</h3>
-                        <hr id="hr1">
-                        <ul id="techList">
-                            <li onmouseenter="elements['website'].enter()" onmouseleave="elements['website'].leave()" id="website">-thisWebsite</li>           
-                            <li onmouseenter="elements['book'].enter()" onmouseleave="elements['book'].leave()" id="book"><a href="./projects/book/1. index.html" target="blank">-digitalBookPrototype</a><img src="./images/externalLink.svg" class="external-img"></li>           
-                            <li onmouseenter="elements['arcade'].enter()" onmouseleave="elements['arcade'].leave()" id="arcade"><a href="./projects/arcade/index.html" target="blank">-retroArcadeGames</a><img src="./images/externalLink.svg" class="external-img"></li>
-                            <li onmouseenter="elements['gitHub'].enter()" onmouseleave="elements['gitHub'].leave()" id="github"><a href="https://github.com/unwontedsponn" target="blank">-moreOnMyGithub</a><img src="./images/externalLink.svg" class="external-img"></li>
-                        </ul>
-                        <h3 id="audioProjects">audioProjects</h3>
-                        <hr id="hr2">
-                        <ul id="audioProjectsList">
-                            <li onmouseover="elements['lapland'].enter()" onmouseleave="elements['lapland'].leave()" id="lapland">-kuoniBrandedContent</li>
-                            <li onmouseenter="elements['shortFilm'].enter()" onmouseleave="elements['shortFilm'].leave()" id="short-film">-whenWeFellFilm</li>
-                            <li onmouseenter="elements['game'].enter()" onmouseleave="elements['game'].leave()" id="game"><a href="https://sponn.itch.io/keep-the-music-alive" target="blank">-ktmaGamePrototype</a><img src="./images/externalLink.svg" class="external-img"></li>                                                    
-                            <li onmouseover="elements['vlog'].enter()" onmouseleave="elements['vlog'].leave()" id="vlogs">-hayleyJadeVlogs</li>
-                            <li onmouseover="elements['transcription'].enter()" onmouseleave="elements['transcription'].leave()" id="transcription">-jazzTranscriptions</li>
-                            <li onmouseover="elements['showreel'].enter()" onmouseleave="elements['showreel'].leave()" id="showreel">-showreel22'</li>   
-                        </ul>
-                    </div>
-                    <div id="portfolio-text">
-                        <p class="small-portfolio-text color-dark" id="website-text" style="display: none"><span class="bold">MY ROLE: </span>Web Developer<br><br>Responsive portfolio website. Built from scratch using HTML, CSS and Javascript. Best viewed on devices with width:<br><br><span class="bold">Monitor: </span>1920<br><span class="bold">Laptop: </span>1470, 1440<br><span class="bold">iPad landscape: </span>1366<br><span class="bold">iPad portrait: </span>1024<br><span class="bold">iPhone landscape: </span>812<br><span class="bold">iPhone portrait: </span>375</p>
-
-                        <p class="small-portfolio-text color-dark" id="book-text" style="display: none"><span class="bold">MY ROLE: </span>Author, Web Developer<br><br>"Beginner To Composer In 14 Days is delightfully different. Moving swiftly from theory to action, Ben emerges as the teacher you always wished you'd had, championing radical creative freedom, improvisation and composition - even
-                        for beginners. Especially for beginners in fact. "Students need freedom to truly fall in love with their instrument" he writes, "frameworks that pique their curiosity over and over again so that practice becomes play". Whether you're a complete beginner or have a little knowledge up your sleeve, you'll adore this dynamic and intimate guide to learning the piano, peppered with evocative vignettes of a life lived with music at its heart. Best of all, you'll come away with a method you can use time and time again to create your very own music, captured on professional quality lead sheets you can share
-                        with other musicians, to bring your work to life. Suitable for adults and a useful resource for teachers. Complements graded and traditional
-                        approaches to learning."</p>
-
-                        <p class="small-portfolio-text color-dark" id="arcade-text" style="display: none"><span class="bold">MY ROLE: </span>Web Developer, Game Developer<br><br>This mini arcade allowed me to experiment with the HTML canvas and progress my front-end development.</p>
-
-                        <p class="small-portfolio-text color-dark" id="github-text" style="display: none"><span class="bold">MY ROLE: </span>Web Developer, Python Developer<br><br>A collection of my repositories on GitHub.</p>
-
-                        <p class="small-portfolio-text color-dark" id="lapland-text" style="display: none"><span class="bold">MY ROLE: </span>Composer<br><br>This is an original soundtrack for a promotional travel video for Kuoni.</p>
-
-                        <p class="small-portfolio-text color-dark" id="short-film-text" style="display: none"><span class="bold">MY ROLE: </span>Film Producer, Composer<br><br>"Landscapes gave way, a bird flew by. A rolling canvas and one-take animation explores the wafer thin line between freedom and obliteration. Nothing can be taken for granted in this life. Everything changes, falls. The lived experience of this truth is captured by the journey of a bird through ever-shifting landscapes, on paper that also crumbles and rips before our very eyes. Accompanying this story is a dynamic soundtrack, with contemporary jazz influences. This original composition plays with chaos and simplicity, tension and ease, bringing forth another aspect of this visual and musical collaboration. Through hard times there is hope. Through destruction, growth."</p>
-
-                        <ul class="portfolio-tiny-text" id="short-film-list" style="display:none">
-                            <li>Best UK Film at Brighton International Animation Festival '22</li>
-                            <li>Lodz Audience Award at Borderlands Competition, StopTrik festival '21</li>
-                            <li>Maribor Audience Grand Prix Award at Borderlands Competition at StopTrik festival '21</li>
-                            <li>Nominated for Audience Award at British Animation Awards '22</li>
-                        </ul>
-
-                        <p class="small-portfolio-text color-dark" id="game-text" style="display: none"><span class="bold">MY ROLE: </span>Game Producer, Composer, Sound Designer, Audio Programmer<br><br>"Keep The Music Alive tells the story of a budding composer, eager to make his mark. To pass each level he must keep moving, overcoming obstacles to finish writing his masterpiece. This retro 2D platform game features a stunning Contemporary Jazz/Classical soundtrack by award winning artist Sponn, which the player shapes in real-time as they play, blurring the boundaries between being a listener and an active creator of this mini album."</p>
-
-                        <p class="small-portfolio-text color-dark" id="vlog-text" style="display: none"><span class="bold">MY ROLE: </span>Sound Editor<br><br>Sound editing and music sync for content by vlogger Hayley Jade.</p>
-
-                        <p class="small-portfolio-text color-dark" id="transcription-text" style="display: none"><span class="bold">MY ROLE: </span>Transcriber<br><br>Jazz trio transcriptions scored by ear.</p>
-
-                        <p class="small-portfolio-text color-dark" id="showreel-text" style="display: none">Highlights of my work in audio synchronisation.</p>
-
-                    </div>                               
+                    <br>
+                    <span id="book-sample" class="bold">
+                        <a href="./images/sample and worksheet.pdf" target="_blank"><span class="buy-now-worksheet">View Sample + Free Worksheet DOWNLOAD↓</span></a>
+                    </span>
                 </div>
             </section>
 
-            <!-- PORTFOLIO VIDEO MODALS --------------------------------------------------------------------------->
-            <!-- LAPLAND VIDEO MODAL -->
-            <div id="laplandVideoModal" class="modal">
-                <!-- VIDEO MODAL CONTENT -->
-                <div class="modal-content-video">
-                    <div>
-                        <span class="close2">&times;</span>
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/t6jYHeQHRyU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    </div>
-                </div>
-            </div>
-
-            <!-- WHEN WE FELL VIDEO MODAL -->
-            <div id="whenWeFellVideoModal" class="modal">
-                <!-- VIDEO MODAL CONTENT -->
-                <div class="modal-content-video">
-                    <div>
-                        <span class="close3">&times;</span>
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/XenuFH6qTdM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    </div>
-                </div>
-            </div>
-
-            <!-- vlog VIDEO MODAL -->
-            <div id="vlogVideoModal" class="modal">
-                <!-- VIDEO MODAL CONTENT -->
-                <div class="modal-content-video">
-                    <div>
-                        <span class="close4">&times;</span>
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/oPHcEYDMdJw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    </div>
-                </div>
-            </div>
-
-            <!-- transcription VIDEO MODAL -->
-            <div id="transcriptionVideoModal" class="modal">
-                <!-- VIDEO MODAL CONTENT -->
-                <div class="modal-content-video">
-                    <div>
-                        <span class="close5">&times;</span>
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/2fMqzfxyTEM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    </div>
-                </div>
-            </div>
-
-            <!-- showreel VIDEO MODAL -->
-            <div id="showreelVideoModal" class="modal">
-                <!-- VIDEO MODAL CONTENT -->
-                <div class="modal-content-video">
-                    <div>
-                        <span class="close6">&times;</span>
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/QeoMbuFwdaU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    </div>
-                </div>
-            </div>
-
-            <!-- CV1 MODAL -->
-            <div id="cv1Modal" class="modal">
-                <!-- PDF MODAL CONTENT -->
-                <div class="modal-content-pdf">
-                    <div>
-                        <span class="close7">&times;</span>
-                        <iframe class="cvsize" width="560" height="715" src="./images/cv.pdf" allowfullscreen></iframe>
-                    </div>
-                </div>
-            </div>
+            <!-- GAME ------------------------------------------------------------------------------------------>
+            <section id="game">                                  
+                <div id="canvas-container">
+                    <canvas id="my-canvas"></canvas>
+                </div>                    
+            </section>
 
         </div>    
     

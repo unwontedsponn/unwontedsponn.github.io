@@ -1,0 +1,1862 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html {scroll-behavior: smooth;}
+
+body {height: 100vh;}
+
+#smaller-body {
+    max-width: 90vw;
+    margin: auto;
+    overflow-y: scroll;
+    overflow: scroll;
+    overflow-x: hidden;
+    scroll-snap-type: y mandatory;
+    height: 100vh;
+}
+
+section {scroll-snap-align: start;}
+
+/**
+ * Colours and Styles
+ */
+/*--------------------------------------------------------------------------------------------------------------------*/
+.background-light {background-color: #f5faf9;}
+.color-blue {color: #acddfb;}
+.color-dark-blue {color: #334862;}
+.color-dark {color: #3f423e;}
+.color-green {color: #5f9251;}
+.bold {font-weight: bold;}
+.underline {text-decoration: underline;}
+
+/**
+ * Keyframes
+ */
+/*--------------------------------------------------------------------------------------------------------------------*/
+@keyframes slideInFromLeft {
+    0% {transform: translateX(-20%);}
+    100% {transform: translateX(0%);}
+}
+
+@keyframes slideInFromRight {
+    0% {transform: translateX(20%);}
+    100% {transform: translateX(0%);}
+}
+
+@keyframes fade-in {
+    0% {opacity: 0;}
+    100% {opacity: 0.4;}
+}
+
+@keyframes fade-in2 {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes type {from {width: 0;}}
+
+@keyframes wiggle {
+  0% {transform: rotate(0deg);}
+  25% {transform: rotate(10deg);}
+  50% {transform: rotate(-10deg);}
+  75% {transform: rotate(10deg);}
+  100% {transform: rotate(0deg);}
+}
+
+
+/**
+ * Navbar
+ */
+/*--------------------------------------------------------------------------------------------------------------------*/
+@media only screen and (max-width: 375px) and (orientation: portrait) { /*this is the size of an iphone 12 mini portrait*/
+    #empty-nav, #about-nav, #game-nav, #book-nav, #worksheet-nav {display: none;}
+}
+
+
+@media only screen and (max-width: 1366px) and (orientation: landscape), /*this is the size of an ipad 6th generation landscape*/
+       only screen and (max-width: 812px) and (orientation: landscape) {/*this is the size of an iphone 12 mini landscape*/
+    #header {margin-left: -2.8vw;}
+}
+
+@media only screen and (max-width: 1024px) and (orientation: portrait) { /*this is the size of an ipad 6th generation portrait*/
+    #header {margin-left: 3.5vw;}
+}
+
+#header {
+    border-collapse: collapse;
+    width: 82.5vw;
+    margin: auto;
+    position: fixed;
+    margin-top: 4vh;
+    z-index: 1;
+    margin-left: 3.8vw; /* margin-left is added to center nav table as there are issues with flex in Safari */
+}
+
+@media only screen and (max-width: 1024px) and (orientation: portrait), /*this is the size of an ipad 6th generation portrait*/
+       only screen and (max-width: 812px) and (orientation: landscape), /*this is the size of an iphone 12 mini landscape*/
+       only screen and (max-width: 375px) and (orientation: portrait) {/*this is the size of an iphone 12 mini portrait*/
+    #logo {padding-right: 2vw !important;}
+}
+
+#logo {
+    font-family: 'Gopher Mono Semi';
+    text-align: left !important;
+    width: 12vw;
+    font-size: 150%;
+}
+
+#empty-nav {
+    color: #f5faf9;
+    width: 45vw;
+}
+
+.nav-links {font-family: 'Gopher Mono';}
+
+@media only screen and (max-width: 1470px) { /*this is the size of a macbook air 13.6 inch*/
+    .nav-links {
+        padding-left: 2.2vw;
+        padding-right: 1.2vw;
+    }
+}
+
+@media only screen and (max-width: 1440px) { /*this is the size of a macbook pro 13inch*/
+    #header td {
+        padding-left: 1.2vw;
+        padding-right: 1.2vw;
+    }
+}
+
+@media only screen and (max-width: 1366px) and (orientation: landscape), /*this is the size of an ipad 6th generation landscape*/
+       only screen and (max-width: 1024px) and (orientation: portrait), /*this is the size of an ipad 6th generation portrait*/
+       only screen and (max-width: 812px) and (orientation: landscape), /*this is the size of an iphone 12 mini landscape*/
+       only screen and (max-width: 375px) and (orientation: portrait) {/*this is the size of an iphone 12 mini portrait*/
+    #header td {
+        padding-left: 1vw;
+        padding-right: 1vw;
+    }
+}
+
+#header td {
+    padding-bottom: 1vh;
+    text-align: center;
+    border-bottom: 2px solid rgba(172, 221, 251, 0.4);
+    border-right: 2px solid rgba(172, 221, 251, 0.4);    
+}
+
+#last-item{border-right: none !important;}
+
+#header a, #game-list li, #cols a {
+    color: #3f423e;
+    text-decoration: none;
+}
+
+#header a:hover, #game-list li:hover, #cols a:hover {
+    color: #e39ba6;
+    text-decoration: underline;
+    text-decoration-color: #c15564;
+    text-decoration-thickness: 3px;
+}
+
+.nav-underline {
+    text-decoration: underline;
+    text-decoration-color: #c15564;
+    text-decoration-thickness: 5px;
+}
+
+/**
+ * Footer
+ */
+/*--------------------------------------------------------------------------------------------------------------------*/
+#footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media only screen and (max-width: 375px) and (orientation: portrait) { /*this is the size of an iphone 12 mini portrait*/
+    #footer {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1920px), /*this is the size of a 24 inch monitor*/
+       only screen and (max-width: 1536px), /*this is the size of a XPS 15"laptop*/
+       only screen and (max-width: 1470px), /*this is the size of a macbook air 13.6 inch*/
+       only screen and (max-width: 1440px), /*this is the size of a macbook pro 13inch*/
+       only screen and (max-width: 1366px) and (orientation: landscape) { /*this is the size of an ipad 6th generation landscape*/
+    #footer2 {left: 27vw;}
+}
+
+@media only screen and (max-width: 1024px) and (orientation: portrait) { /*this is the size of an ipad 6th generation portrait*/
+    #footer2 {left: 28.5vw;}
+}
+
+@media only screen and (max-width: 812px) and (orientation: landscape) { /*this is the size of an iphone 12 mini landscape*/
+    #footer2 {left: 25vw;}
+}
+
+@media only screen and (max-width: 375px) and (orientation: portrait) { /*this is the size of an iphone 12 mini portrait*/
+    #footer2 {left: 13.5vw;}
+}
+
+#footer2 {
+    font-family: 'Gopher Mono';
+    width: 40vw;
+    position: fixed;
+    margin-top: 4vh;
+    z-index: 1;
+    bottom: 2vh;
+    font-size: 80%;
+}
+
+#footer td {
+    border-top: 2px solid rgba(172, 221, 251, 0.4);
+    text-align: center;
+    padding: 1vh;
+}
+
+.border-right {border-right: 2px solid rgba(172, 221, 251, 0.4);}
+
+#play-footer {padding-left: 1vw;}
+
+.play-footer {
+    text-decoration: underline;
+    text-decoration-color: #c15564;
+    text-decoration-thickness: 4px;
+}
+
+#play-footer:hover {
+    color: #e39ba6;
+    text-decoration: underline;
+    text-decoration-color: #c15564;
+    text-decoration-thickness: 3px;
+    cursor: pointer;
+}
+
+.volume {
+    position: absolute;
+    bottom: 7vh;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.up {left: 49.7vw;}
+
+.down {left: 47vw;}
+
+@media only screen and (max-width: 1920px) {/*this is the size of a 24 inch monitor*/
+    #volume-count {left: 48vw;}
+}
+
+@media only screen and (max-width: 1536px) { /*this is the size of a XPS 15"laptop*/
+    #volume-count {left: 47.8vw;}
+}
+
+@media only screen and (max-width: 1440px) {/*this is the size of a macbook pro 13inch*/
+    #volume-count {left: 47.8vw;}
+}
+
+#volume-count {
+    position: absolute;
+    bottom: 9vh;
+    font-family: 'Gopher Mono Semi';
+    font-size: 70%;
+    z-index: 1;
+}
+
+@media only screen and (max-width: 1920px), /*this is the size of a 24 inch monitor*/
+       only screen and (max-width: 1470px), /*this is the size of a macbook air 13.6 inch*/
+       only screen and (max-width: 1440px), /*this is the size of a macbook pro 13inch*/
+       only screen and (max-width: 1366px) and (orientation: landscape) { /*this is the size of an ipad 6th generation landscape*/
+    #equaliser {
+        left: 48vw;
+        bottom: 7vh;
+    }
+}
+
+@media only screen and (max-width: 1024px) and (orientation: portrait) { /*this is the size of an ipad 6th generation portrait*/
+    #equaliser {display: none;}
+}
+
+@media only screen and (max-width: 812px) and (orientation: landscape) { /*this is the size of an iphone 12 mini landscape*/
+    #equaliser {
+        left: 47vw;
+        bottom: 14.3vh;
+    }
+}
+
+#equaliser {position: absolute;}
+
+.equilizer {
+  width: 1vw;
+  transform: rotate(180deg);
+}
+
+.bar {
+  fill: #4a713f;
+  width: 18px;
+  animation: equalize 1.25s steps(25, end) 0s infinite;
+}
+
+.bar:nth-child(1) {animation-duration: 1.9s;}
+.bar:nth-child(2) {animation-duration: 2s;}
+.bar:nth-child(3) {animation-duration: 2.3s;}
+.bar:nth-child(4) {animation-duration: 2.4s;}
+.bar:nth-child(5) {animation-duration: 2.1s;}
+
+@keyframes equalize {
+  0% {height: 60px;}
+  4% {height: 50px;}
+  8% {height: 40px;}
+  12% {height: 30px;}
+  16% {height: 20px;}
+  20% {height: 30px;}
+  24% {height: 40px;}
+  28% {height: 10px;}
+  32% {height: 40px;}
+  36% {height: 60px;}
+  40% {height: 20px;}
+  44% {height: 40px;}
+  48% {height: 70px;}
+  52% {height: 30px;}
+  56% {height: 10px;}
+  60% {height: 30px;}
+  64% {height: 50px;}
+  68% {height: 60px;}
+  72% {height: 70px;}
+  76% {height: 80px;}
+  80% {height: 70px;}
+  84% {height: 60px;}
+  88% {height: 50px;}
+  92% {height: 60px;}
+  96% {height: 70px;}
+  100% {height: 80px;}
+}
+
+#listen, #green-and-pine-footer, #play-footer {
+    position: relative;
+    top: 0.6vh;
+}
+
+/**
+ * Homepage
+ */
+/*--------------------------------------------------------------------------------------------------------------------*/
+#main-body1 {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    padding: 0 4vw;
+    overflow: hidden;
+}
+
+#title {
+    position: absolute;
+    font-family: 'Gopher Mono Semi';
+    opacity: 0.4;
+}
+
+@media only screen and (max-width: 1920px) { /*this is the size of a 24 inch monitor*/
+    #title {
+        font-size: 10.5vw;
+        top: 12vh;
+        left: 8vw;
+    }
+}
+
+@media only screen and (max-width: 1536px) { /*this is the size of a XPS 15"laptop*/
+    #title {
+        font-size: 13.3vw;
+        top: 13vh;
+        left: 5vw;
+    }
+}
+
+@media only screen and (max-width: 1470px) { /*this is the size of a macbook air 13.6 inch*/
+    #title {
+        font-size: 13vw;
+        top: 11vh;
+        left: 5vw;
+    }
+}
+
+@media only screen and (max-width: 1440px) { /*this is the size of a macbook pro 13inch*/
+    #title {
+        font-size: 12.5vw;
+        top: 13vh;
+        left: 7vw;
+    }
+}
+
+@media only screen and (max-width: 1366px) and (orientation: landscape) { /*this is the size of an ipad 6th generation landscape*/
+    #title {
+        font-size: 12vw;
+        top: 18vh;
+        left: 5vw;
+    }
+}
+
+@media only screen and (max-width: 1024px) and (orientation: portrait) { /*this is the size of an ipad 6th generation portrait*/
+    #title {
+        font-size: 19vw;
+        top: 12vh;
+        left: 5vw;
+    }
+}
+
+@media only screen and (max-width: 812px) and (orientation: landscape) { /*this is the size of an iphone 12 mini landscape*/
+    #title {
+        font-size: 11vw;
+        top: 18.5vh;
+        left: 1.3vw;
+    }
+}
+
+@media only screen and (max-width: 375px) and (orientation: portrait) { /*this is the size of an iphone 12 mini portrait*/
+    #title {
+        font-size: 22vw;
+        top: 12vh;
+        left: 6vw;
+        width: 50vw;
+        opacity: 0.4;
+    }
+    #ben {
+        font-size: 32vw;
+    }
+}
+
+.title-animation {
+    animation: 1s ease-out 0s 1 fade-in;
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+}
+
+#medium-p-homepage {
+    font-family: 'Gopher Mono Semi';
+    letter-spacing: 0.3vw;
+    position: absolute;
+}
+
+@media only screen and (max-width: 1920px) { /*this is the size of a 24 inch monitor*/
+    #medium-p-homepage {
+        font-size: 1vw;
+        top: 35vh;
+        left: 15.5vw;
+        width: 36vw;
+    }
+}
+
+@media only screen and (max-width: 1536px) { /*this is the size of a XPS 15"laptop*/
+    #medium-p-homepage {
+        top: 37vh;
+    }
+}
+
+@media only screen and (max-width: 1470px) { /*this is the size of a macbook air 13.6 inch*/
+    #medium-p-homepage {
+        font-size: 1.2vw;
+        top: 36.5vh;
+        left: 15.5vw;
+        width: 36vw;
+    }
+}
+
+@media only screen and (max-width: 1440px) { /*this is the size of a macbook pro 13inch*/
+    #medium-p-homepage {
+        font-size: 1.1em;
+        top: 35vh;
+        left: 15.5vw;
+        width: 36vw;
+    }
+}
+
+@media only screen and (max-width: 1366px) and (orientation: landscape) { /*this is the size of an ipad 6th generation landscape*/
+    #medium-p-homepage {
+        font-size: 1em;
+        top: 36vh;
+        left: 15.5vw;
+        width: 36vw;
+    }
+}
+
+@media only screen and (max-width: 1024px) and (orientation: portrait) { /*this is the size of an ipad 6th generation portrait*/
+    #medium-p-homepage {
+        font-size: 0.9em;
+        top: 28vh;
+        left: 50vw;
+        width: 43vw;
+    }
+}
+
+@media only screen and (max-width: 812px) and (orientation: landscape) { /*this is the size of an iphone 12 mini landscape*/
+    #medium-p-homepage {
+        font-size: 0.7em;
+        top: 42vh;
+        left: 18vw;
+        width: 43vw;
+    }
+}
+
+@media only screen and (max-width: 375px) and (orientation: portrait) { /*this is the size of an iphone 12 mini portrait*/
+    #medium-p-homepage {
+        /*font-size: 0.7em;
+        top: 23.8vh;
+        left: 41vw;
+        width: 43vw;*/
+        display: none;
+    }
+    #done {
+        color: #5f9251;
+    }
+}
+
+.medium-p-animation {animation: 1s ease-out 0s 1 fade-in2;}
+
+#large-p-homepage {
+    font-family: 'Gopher Mono';
+    text-decoration: underline;
+    text-decoration-color: #c15564;
+    letter-spacing: 0.2vw;
+    position: absolute;
+}
+
+@media only screen and (max-width: 1920px) { /*this is the size of a 24 inch monitor*/
+    #large-p-homepage {
+        bottom: 28.5vh;
+        left: 15vw;
+        width: 35vw;
+        font-size: 2.2vw;
+    }
+}
+
+@media only screen and (max-width: 1536px) { /*this is the size of a XPS 15"laptop*/
+    #large-p-homepage {
+        top: 63.5vh;
+        font-size: 2.4vw;
+    }
+}
+
+@media only screen and (max-width: 1470px) { /*this is the size of a macbook air 13.6 inch*/
+    #large-p-homepage {
+        top: 64.5vh;
+        font-size: 2.7vw;
+        width: 35vw;
+        left: 12vw;
+    }
+}
+
+@media only screen and (max-width: 1440px) { /*this is the size of a macbook pro 13inch*/
+    #large-p-homepage {
+        top: 60vh;
+        font-size: 2.5vw;
+        left: 12vw;
+        width: 40vw;
+    }
+}
+
+@media only screen and (max-width: 1366px) and (orientation: landscape) { /*this is the size of an ipad 6th generation landscape*/
+    #large-p-homepage {
+        top: 51.7vh;
+        left: 12vw;
+        font-size: 2.9vw;
+        width: 45vw;
+    }
+}
+
+@media only screen and (max-width: 1024px) and (orientation: portrait) { /*this is the size of an ipad 6th generation portrait*/
+    #large-p-homepage {
+        top: 47vh;
+        left: 8.8vw;
+        font-size: 4.8vw;
+        width: 33vw;
+    }
+}
+
+@media only screen and (max-width: 812px) and (orientation: landscape) { /*this is the size of an iphone 12 mini landscape*/
+    #large-p-homepage {
+        top: 62vh;
+        left: 7vw;
+        font-size: 3.1vw;
+        width: 50vw;
+    }
+}
+
+@media only screen and (max-width: 375px) and (orientation: portrait) { /*this is the size of an iphone 12 mini portrait*/
+    #large-p-homepage {
+        top: 53vh;
+        left: 6vw;
+        font-size: 6.5vw;
+        width: 90vw;
+    }
+}
+
+.large-p-animation {animation: 1s ease-out 0s 1 fade-in2;}
+
+#small-p-homepage {
+    font-family: 'Gopher Mono';
+    letter-spacing: 0.08vw;
+    position: absolute;
+}
+
+@media only screen and (max-width: 1920px) { /*this is the size of a 24 inch monitor*/
+    #small-p-homepage {
+        bottom: 13vh;
+        left: 17vw;
+        font-size: 0.8vw;
+        width: 40%;
+    }
+}
+
+@media only screen and (max-width: 1536px) { /*this is the size of a XPS 15"laptop*/
+    #small-p-homepage {
+        font-size: 0.85vw;
+        left: 9vw;
+    }
+}
+
+@media only screen and (max-width: 1470px) { /*this is the size of a macbook air 13.6 inch*/
+    #small-p-homepage {
+        top: 82vh;
+        left: 9vw;
+        font-size: 0.9vw;
+        width: 48vw;
+    }
+}
+
+@media only screen and (max-width: 1440px) { /*this is the size of a macbook pro 13inch*/
+    #small-p-homepage {
+        top: 78vh;
+        left: 12vw;
+        font-size: 1vw;
+        width: 43vw;
+    }
+}
+
+@media only screen and (max-width: 1366px) and (orientation: landscape) { /*this is the size of an ipad 6th generation landscape*/
+    #small-p-homepage {
+        top: 65.5vh;
+        left: 12vw;
+        font-size: 1.2vw;
+        width: 43vw;
+    }
+}
+
+@media only screen and (max-width: 1024px) and (orientation: portrait) { /*this is the size of an ipad 6th generation portrait*/
+    #small-p-homepage {
+        top: 66vh;
+        left: 7.5vw;
+        font-size: 2vw;
+        width: 40vw;
+    }
+}
+
+@media only screen and (max-width: 812px) and (orientation: landscape) { /*this is the size of an iphone 12 mini landscape*/
+    #small-p-homepage {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 375px) and (orientation: portrait) { /*this is the size of an iphone 12 mini portrait*/
+    #small-p-homepage {
+        top: 66vh;
+        left: 5vw;
+        font-size: 3.3vw;
+        width: 80vw;
+    }
+}
+
+.small-p-animation {animation: 1s ease-out 0s 1 fade-in2;}
+
+@media only screen and (max-width: 1920px) { /*this is the size of a 24 inch monitor*/
+    #main-body1 img {
+        bottom: 15vh;
+        right: 10vw;
+        width: 20vw;
+    }
+}
+
+@media only screen and (max-width: 1536px) { /*this is the size of a XPS 15"laptop*/
+    #main-body1 img {
+        top: 35vh;
+        left: 63vw;
+        width: 19vw;
+    }
+}
+
+@media only screen and (max-width: 1470px) { /*this is the size of a macbook air 13.6 inch*/
+    #main-body1 img {
+        top: 22vh;
+        left: 61vw;
+        width: 22.5vw;
+    }
+}
+
+@media only screen and (max-width: 1440px) { /*this is the size of a macbook pro 13inch*/
+    #main-body1 img {
+        top: 22vh;
+        left: 60vw;
+        width: 22vw;
+    }
+}
+
+@media only screen and (max-width: 1366px) and (orientation: landscape) { /*this is the size of an ipad 6th generation landscape*/
+    #main-body1 img {
+        top: 27vh;
+        left: 60vw;
+        width: 22vw;
+    }
+}
+
+@media only screen and (max-width: 1024px) and (orientation: portrait) { /*this is the size of an ipad 6th generation portrait*/
+    #main-body1 img {
+        top: 44.5vh;
+        left: 50vw;
+        width: 34vw;
+    }
+}
+
+@media only screen and (max-width: 812px) and (orientation: landscape) { /*this is the size of an iphone 12 mini landscape*/
+    #main-body1 img {
+        top: 18vh;
+        left: 55vw;
+        width: 20vw;
+    }
+}
+
+@media only screen and (max-width: 375px) and (orientation: portrait) { /*this is the size of an iphone 12 mini portrait*/
+    #main-body1 img {
+        top: 0vh;
+        left: -8vw;
+        width: 130vw;
+        opacity: 0.06;
+        border: none;
+/*        display: none;*/
+    }
+}
+
+#main-body1 img {
+    position: absolute;
+    z-index: -1;
+    border: solid #3f423e;
+}
+
+.title-img-animation {
+    animation: 1s ease-out 0s 1 fade-in2;
+    animation: 1s ease-out 0s 1 slideInFromRight;
+}
+
+/**
+ * About
+ */
+/*--------------------------------------------------------------------------------------------------------------------*/
+#about {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    padding: 0 4vw;
+    overflow: hidden;
+}
+
+#about-title {
+    position: absolute;
+    width: 90vw;
+    left: 5vw;
+    font-family: 'Gopher Mono Semi';
+    opacity: 0.4;
+}
+
+@media only screen and (max-width: 1920px) { /*this is the size of a 24 inch monitor*/
+    #about-title {
+        font-size: 10vw;
+        top: 10vh;
+    }
+}
+
+@media only screen and (max-width: 1536px) { /*this is the size of a XPS 15"laptop*/
+    #about-title {
+        font-size: 12vw;
+        top: 9vh;
+    }
+}
+
+@media only screen and (max-width: 1470px), /*this is the size of a macbook air 13.6 inch*/
+       only screen and (max-width: 1440px) { /*this is the size of a macbook pro 13inch*/
+    #about-title {
+        font-size: 12vw;
+        top: 10vh;
+    }
+}
+
+@media only screen and (max-width: 1366px) and (orientation: landscape) { /*this is the size of an ipad 6th generation landscape*/
+    #about-title {
+        font-size: 14vw;
+        top: 10vh;
+    }
+}
+
+@media only screen and (max-width: 1024px) and (orientation: portrait) { /*this is the size of an ipad 6th generation portrait*/
+    #about-title {
+        font-size: 20vw;
+        top: 10vh;
+    }
+}
+
+@media only screen and (max-width: 812px) and (orientation: landscape) { /*this is the size of an iphone 12 mini landscape*/
+    #about-title {
+        font-size: 10vw;
+        top: 15.5vh;
+    }
+}
+
+@media only screen and (max-width: 375px) and (orientation: portrait) { /*this is the size of an iphone 12 mini portrait*/
+    #about-title {
+        font-size: 25vw;
+        top: 9.5vh;
+    }
+}
+
+#piano-img {
+    position: absolute;
+    z-index: 0;
+    opacity: 0.1;
+}
+
+@media only screen and (max-width: 1920px) { /*this is the size of a 24 inch monitor*/
+    #piano-img {
+        left: 51vw;
+        width: 30vw;
+    }
+}
+
+@media only screen and (max-width: 1536px) { /*this is the size of a XPS 15"laptop*/
+    #piano-img {
+        left: 51vw;
+        top: 2vh;
+        width: 35vw;
+    }
+}
+
+@media only screen and (max-width: 1470px), /*this is the size of a macbook air 13.6 inch*/
+       only screen and (max-width: 1440px) { /*this is the size of a macbook pro 13inch*/
+    #piano-img {
+        left: 50.5vw;
+        width: 30vw;
+    }
+}
+
+@media only screen and (max-width: 1366px) and (orientation: landscape) { /*this is the size of an ipad 6th generation landscape*/
+    #piano-img {
+        left: 55vw;
+        width: 30vw;
+    }
+}
+
+@media only screen and (max-width: 1024px) and (orientation: portrait) { /*this is the size of an ipad 6th generation portrait*/
+    #piano-img {
+        width: 40vw;
+        left: 51vw;
+        top: 16vh;
+    }
+}
+
+@media only screen and (max-width: 812px) and (orientation: landscape) { /*this is the size of an iphone 12 mini landscape*/
+    #piano-img {
+        width: 20vw;
+        left: 53vw;
+        top: 16vh;
+    }
+}
+
+@media only screen and (max-width: 375px) and (orientation: portrait) { /*this is the size of an iphone 12 mini portrait*/
+    #piano-img {
+        width: 42vw;
+        left: 50vw;
+        top: 46vh;
+    }
+}
+
+#code-img {
+    position: absolute;
+    z-index: 0;
+    opacity: 0.05;
+    left: 0vw;
+}
+
+@media only screen and (max-width: 1920px), /*this is the size of a 24 inch monitor*/
+       only screen and (max-width: 1470px) { /*this is the size of a macbook air 13.6 inch*/
+   #code-img {
+        top: 68vh;
+        width: 14vw;
+    }
+}
+
+@media only screen and (max-width: 1440px), /*this is the size of a macbook pro 13inch*/
+       only screen and (max-width: 1366px) and (orientation: landscape) { /*this is the size of an ipad 6th generation landscape*/
+    #code-img {
+        top: 70vh;
+        width: 14vw;
+    }
+}
+
+@media only screen and (max-width: 1024px) and (orientation: portrait) { /*this is the size of an ipad 6th generation portrait*/
+    #code-img {
+        width: 18vw;
+        top: 73vh;
+    }
+}
+
+@media only screen and (max-width: 812px) and (orientation: landscape) { /*this is the size of an iphone 12 mini landscape*/
+    #code-img {
+        width: 9vw;
+        top: 68vh;
+    }
+}
+
+@media only screen and (max-width: 375px) and (orientation: portrait) { /*this is the size of an iphone 12 mini portrait*/
+    #code-img {
+        width: 18vw;
+        top: 72vh;
+    }
+}
+
+#about1 {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 55vw;
+}
+
+#large-p-about1 {
+    font-family: 'Gopher Mono';
+    text-decoration: underline;
+    text-decoration-color: #c15564;
+    letter-spacing: 0.2vw;
+    position: absolute;
+    width: 65vw;
+    margin-bottom: 5vh;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+@media only screen and (max-width: 1920px) { /*this is the size of a 24 inch monitor*/
+   #large-p-about1 {
+        top: 27vh;
+        left: 13vw;
+        font-size: 2vw;
+    }
+}
+
+@media only screen and (max-width: 1536px) { /*this is the size of a XPS 15"laptop*/
+    #large-p-about1 {
+        left: 12vw;
+        font-size: 2.65vw;
+    }
+}
+
+@media only screen and (max-width: 1470px) { /*this is the size of a macbook air 13.6 inch*/
+    #large-p-about1 {
+        top: 29vh;
+        left: 13vw;
+        font-size: 2vw;
+    }
+}
+
+@media only screen and (max-width: 1440px) { /*this is the size of a macbook pro 13inch*/
+    #large-p-about1 {
+        top: 27vh;
+        left: 12vw;
+        font-size: 2.5vw;
+    }
+}
+
+@media only screen and (max-width: 1366px) and (orientation: landscape) { /*this is the size of an ipad 6th generation landscape*/
+    #large-p-about1 {
+        top: 25.5vh;
+        left: 13vw;
+        font-size: 2.5vw;
+    }
+}
+
+@media only screen and (max-width: 1024px) and (orientation: portrait) { /*this is the size of an ipad 6th generation portrait*/
+    #large-p-about1 {
+        top: 22.5vh;
+        left: 11vw;
+        font-size: 3.5vw;
+    }
+}
+
+@media only screen and (max-width: 812px) and (orientation: landscape) { /*this is the size of an iphone 12 mini landscape*/
+    #large-p-about1 {
+        top: 31.7vh;
+        left: 13vw;
+        font-size: 1.5vw;
+    }
+}
+
+@media only screen and (max-width: 375px) and (orientation: portrait) { /*this is the size of an iphone 12 mini portrait*/
+    #large-p-about1 {
+        top: 22vh;
+        left: 7vw;
+        width: 75vw;
+        font-size: 4.8vw;
+    }
+}
+
+.large-p-about1-animation {animation: type 3s steps(60, end);}
+
+#about-summary {
+    font-family: 'Gopher Mono';
+    gap: 2.2vw;
+    position: absolute;
+    margin: auto;
+    left: 5vw;
+}
+
+@media only screen and (max-width: 1920px) { /*this is the size of a 24 inch monitor*/
+   #about-summary {
+        top: 36.5vh;
+        font-size: 0.75vw;
+        width: 49.5vw;
+    }
+}
+
+@media only screen and (max-width: 1536px) { /*this is the size of a XPS 15"laptop*/
+    #about-summary {
+        top: 36.5vh;
+        font-size: 0.85vw;
+        width: 49.5vw;
+    }
+}
+
+@media only screen and (max-width: 1470px) { /*this is the size of a macbook air 13.6 inch*/
+    #about-summary {
+        top: 36.5vh;
+        font-size: 0.8vw;
+        width: 49.5vw;
+    }
+}
+
+@media only screen and (max-width: 1440px) { /*this is the size of a macbook pro 13inch*/
+    #about-summary {
+        top: 36.5vh;
+        font-size: 0.86vw;
+        width: 48.5vw;
+    }
+}
+
+@media only screen and (max-width: 1366px) and (orientation: landscape) { /*this is the size of an ipad 6th generation landscape*/
+    #about-summary {
+        top: 34.5vh;
+        font-size: 1.1vw;
+        width: 56.5vw;
+    }
+}
+
+@media only screen and (max-width: 1024px) and (orientation: portrait) { /*this is the size of an ipad 6th generation portrait*/
+    #about-summary {
+        top: 30vh;
+        font-size: 1.5vw;
+        width: 47.5vw;
+    }
+}
+
+@media only screen and (max-width: 812px) and (orientation: landscape) { /*this is the size of an iphone 12 mini landscape*/
+    #about-summary {
+        top: 37.5vh;
+        font-size: 0.9vw;
+        width: 47.5vw;
+    }
+}
+
+@media only screen and (max-width: 375px) and (orientation: portrait) { /*this is the size of an iphone 12 mini portrait*/
+    #about-summary {
+        top: 28vh;
+        font-size: 2.8vw;
+        width: 74.5vw;
+    }
+}
+
+#cols {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-family: 'Gopher Mono';
+    gap: 2.2vw;
+    position: absolute;
+    margin: auto;
+    left: 5vw;
+}
+
+@media only screen and (max-width: 1920px) { /*this is the size of a macbook air 13.6 inch*/
+    #cols {
+        top: 48.5vh;
+        font-size: 0.75vw;
+    }
+}
+
+@media only screen and (max-width: 1536px) { /*this is the size of a XPS 15"laptop*/
+    #cols {
+        top: 48.5vh;
+        font-size: 0.85vw;
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 1470px) { /*this is the size of a macbook air 13.6 inch*/
+    #cols {
+        top: 48vh;
+        font-size: 0.8vw;
+    }
+}
+
+@media only screen and (max-width: 1440px) { /*this is the size of a macbook pro 13inch*/
+    #cols {
+        top: 48.5vh;
+        font-size: 0.86vw;
+    }
+}
+
+@media only screen and (max-width: 1366px) and (orientation: landscape) { /*this is the size of an ipad 6th generation landscape*/
+    #cols {
+        top: 46vh;
+        font-size: 1.1vw;
+        width: 135%;
+    }
+}
+
+@media only screen and (max-width: 1024px) and (orientation: portrait) { /*this is the size of an ipad 6th generation portrait*/
+    #cols {
+        top: 46.8vh;
+        font-size: 1.5vw;
+        width: 130%;
+    }
+}
+
+@media only screen and (max-width: 812px) and (orientation: landscape) { /*this is the size of an iphone 12 mini landscape*/
+    #cols {
+        top: 54vh;
+        width: 130%;
+        font-size: 0.9vw;
+    }
+}
+
+@media only screen and (max-width: 375px) and (orientation: portrait) { /*this is the size of an iphone 12 mini portrait*/
+    #cols {
+        /*top: 39vh;
+        font-size: 1.9vw;
+        width: 130%;*/
+        display: none;
+    }
+}
+
+.about-col-1, .about-col-2 {
+    box-sizing: border-box;
+    padding-top: 2.5vh;
+    font-family: 'Gopher Mono';
+    margin-bottom: 4vh;
+}
+
+#fun-fact {
+    font-family: 'Gopher Mono';
+    gap: 2.2vw;
+    position: absolute;
+    margin: auto;
+    left: 5vw;
+}
+
+@media only screen and (max-width: 1920px) {/*this is the size of an iphone 12 mini landscape*/
+    #fun-fact {
+        bottom: 16vh;
+        font-size: 0.75vw;
+        width: 49.5vw;
+    }
+}
+
+@media only screen and (max-width: 1536px) { /*this is the size of a XPS 15"laptop*/
+    #fun-fact {
+        bottom: 14vh;
+        font-size: 0.75vw;
+        width: 49.5vw;
+    }
+}
+
+@media only screen and (max-width: 1470px) {/*this is the size of an ipad 6th generation landscape*/
+    #fun-fact {
+        bottom: 16vh;
+        font-size: 0.75vw;
+        width: 49.5vw;
+    }
+}
+
+@media only screen and (max-width: 1366px) and (orientation: landscape), {/*this is the size of an ipad 6th generation landscape*/
+    #fun-fact {
+        left: 74vh;
+        font-size: 1.1vw;
+        width: 76vw;
+        left: 5vw;
+        bottom: 21vh;
+    }
+}
+
+@media only screen and (max-width: 1024px) and (orientation: portrait) { /*this is the size of an ipad 6th generation portrait*/
+    #fun-fact {
+        font-size: 1.5vw;
+        width: 75vw;
+        bottom: 18vh;
+    }
+}
+
+@media only screen and (max-width: 812px) and (orientation: landscape) { /*this is the size of an iphone 12 mini landscape*/
+    #fun-fact {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 375px) and (orientation: portrait) { /*this is the size of an iphone 12 mini portrait*/
+    #fun-fact {
+        bottom: 26vh;
+        font-size: 2.7vw;
+        width: 50vw;
+        letter-spacing: 0.1em;
+    }
+}
+
+#cols div {flex-basis: 100%;}
+
+#about table {
+    font-family: 'Gopher Mono';
+    color: #3f423e;
+    width: 23.5vw;
+    border: 2px solid rgba(172, 221, 251, 0.4);
+    position: absolute;
+}
+
+@media only screen and (max-width: 1920px) {/*this is the size of an ipad 6th generation landscape*/
+    #about table {
+        font-size: 80%;
+        width: 23.5vw;
+    }
+}
+
+@media only screen and (max-width: 1536px), /*this is the size of a XPS 15"laptop*/
+       only screen and (max-width: 1470px) {/*this is the size of an ipad 6th generation landscape*/
+    #about table {
+        font-size: 80%;
+        width: 23.5vw;
+    }
+}
+
+@media only screen and (max-width: 1024px), /*this is the size of an ipad 6th generation portrait*/
+       only screen and (max-width: 812px) and (orientation: landscape), /*this is the size of an iphone 12 mini landscape*/
+       only screen and (max-width: 375px) and (orientation: portrait) {/*this is the size of an iphone 12 mini portrait*/
+    #about table {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1920px), /*this is the size of an iphone 12 mini landscape*/
+       only screen and (max-width: 1536px) { /*this is the size of a XPS 15"laptop*/
+    #about table td {
+        padding: 1.5% 2%;
+    }
+}
+
+@media only screen and (max-width: 1470px), /*this is the size of an iphone 12 mini landscape*/
+       only screen and (max-width: 1440px) {
+    #about table td {
+        padding: 2% 2%;
+    }
+}
+
+@media only screen and (max-width: 1366px) and (orientation: landscape) {/*this is the size of an ipad 6th generation landscape*/
+    #about table td {
+        padding: 1.8% 2%;
+    }
+}
+
+@media only screen and (max-width: 1024px) and (orientation: portrait), /*this is the size of an ipad 6th generation portrait*/
+       only screen and (max-width: 812px) and (orientation: landscape), /*this is the size of an iphone 12 mini landscape*/
+       only screen and (max-width: 375px) and (orientation: portrait) { /*this is the size of an iphone 12 mini portrait*/
+    #about table td {
+        padding: 1% 2%;
+    }
+}
+
+.border-bottom {border-bottom: 2px solid rgba(172, 221, 251, 0.4);}
+
+.youtube a {
+    font-size: 110%;
+    letter-spacing: 0.1vw;
+    text-decoration: none;
+    color: #334862 !important;
+}
+
+.youtube:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    text-decoration-color: #c15564;
+    text-decoration-thickness: 0.2vw;
+}
+
+.highlight {
+    color: #e39ba6;
+    font-weight: bold;
+}
+
+/**
+ * BOOK
+ */
+/*--------------------------------------------------------------------------------------------------------------------*/
+#book {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    padding: 0 4vw;
+    overflow: hidden;
+}
+
+#book-title {
+    position: absolute;
+    width: 60vw;
+    left: 5vw;
+    font-family: 'Gopher Mono Semi';
+    opacity: 0.4;
+    font-size: 12vw;
+    top: 10vh;
+}
+
+@media only screen and (max-width: 1366px) and (orientation: landscape) {/*this is the size of an ipad 6th generation landscape*/
+    #book-title {font-size: 13vw;}
+}
+
+@media only screen and (max-width: 1024px) and (orientation: portrait) { /*this is the size of an ipad 6th generation portrait*/
+    #book-title {font-size: 13vw;}
+}
+
+@media only screen and (max-width: 375px) and (orientation: portrait) { /*this is the size of an iphone 12 mini portrait*/
+    #book-title {
+        font-size: 21vw;
+    }
+}
+
+#large-p-book1 {
+    font-family: 'Gopher Mono';
+    text-decoration: underline;
+    text-decoration-color: #c15564;
+    letter-spacing: 0.2vw;
+    position: absolute;
+    width: 65vw;
+    margin-bottom: 5vh;
+    white-space: nowrap;
+    top: 29vh;
+    left: 13vw;
+    font-size: 2.5vw;
+}
+
+@media only screen and (max-width: 1920px) {/*this is the size of a 24 inch monitor*/
+    #large-p-book1 {
+        top: 36vh;
+        font-size: 2vw;
+    }
+}
+
+@media only screen and (max-width: 1536px) { /*this is the size of a XPS 15"laptop*/
+    #large-p-book1 {
+        top: 32vh;
+    }
+}
+
+@media only screen and (max-width: 1440px) {/*this is the size of a macbook pro 13inch*/
+    #large-p-book1 {
+        top: 31vh;
+    }
+}
+
+@media only screen and (max-width: 1366px) and (orientation: landscape) {/*this is the size of an ipad 6th generation landscape*/
+    #large-p-book1 {top: 26vh;}
+}
+
+@media only screen and (max-width: 1024px) and (orientation: portrait) { /*this is the size of an ipad 6th generation portrait*/
+    #large-p-book1 {
+        top: 19vh;
+        font-size: 3vw;
+    }
+}
+
+@media only screen and (max-width: 812px) and (orientation: landscape) { /*this is the size of an iphone 12 mini landscape*/
+    #large-p-book1 {
+        top: 32vh;
+        font-size: 3vw;
+    }
+}
+
+@media only screen and (max-width: 375px) and (orientation: portrait) { /*this is the size of an iphone 12 mini portrait*/
+    #large-p-book1 {
+        font-size: 5vw;
+    }
+}
+
+#large-p-book2 {
+    font-family: 'Gopher Mono';
+    text-decoration: underline;
+    text-decoration-color: #c15564;
+    letter-spacing: 0.2vw;
+    position: absolute;
+    width: 65vw;
+    margin-bottom: 5vh;
+    white-space: nowrap;
+    overflow: hidden;
+    top: 34vh;
+    left: 13vw;
+    font-size: 2.5vw;
+}
+
+@media only screen and (max-width: 1920px) {/*this is the size of a 24 inch monitor*/
+    #large-p-book2 {
+        top: 42vh;
+        font-size: 1.7vw;
+    }
+}
+
+@media only screen and (max-width: 1536px) { /*this is the size of a XPS 15"laptop*/
+    #large-p-book2 {
+        top: 37vh;
+    }
+}
+
+@media only screen and (max-width: 1440px) {/*this is the size of a macbook pro 13inch*/
+    #large-p-book2 {
+        top: 36vh;
+    }
+}
+
+@media only screen and (max-width: 1366px) and (orientation: landscape) {/*this is the size of an ipad 6th generation landscape*/
+    #large-p-book2 {
+        top: 31vh;
+    }
+}
+
+@media only screen and (max-width: 1024px) and (orientation: portrait) { /*this is the size of an ipad 6th generation portrait*/
+    #large-p-book2 {
+        top: 22vh;
+        font-size: 3vw;
+    }
+}
+
+@media only screen and (max-width: 812px) and (orientation: landscape) { /*this is the size of an iphone 12 mini landscape*/
+    #large-p-book2 {
+        top: 38vh;
+        font-size: 2vw;
+    }
+}
+
+@media only screen and (max-width: 375px) and (orientation: portrait) { /*this is the size of an iphone 12 mini portrait*/
+    #large-p-book2 {
+        font-size: 4vw;
+    }
+}
+
+.large-p-book-animation {
+    animation: type 3s steps(60, end);
+}
+
+#book-pic {
+    position: absolute;
+    left: 55vw;
+    top: 13vh;
+    width: 32%;
+}
+
+@media only screen and (max-width: 1920px) {/*this is the size of a 24 inch monitor*/
+    #book-pic {
+        left: 56vw;
+        top: 14vh;
+        width: 26%;
+    }
+}
+
+@media only screen and (max-width: 1536px) {/*this is the size of a XPS 15"laptop*/
+    #book-pic {
+        top: 20vh;
+        width: 29%;
+    }
+}
+
+@media only screen and (max-width: 1470px) {/*this is the size of an ipad 6th generation landscape*/
+    #book-pic {
+        top: 13vh;
+        width: 30%;
+    }
+}
+
+@media only screen and (max-width: 1440px) {/*this is the size of a macbook pro 13inch*/
+    #book-pic {
+        width: 30%;
+    }
+}
+
+@media only screen and (max-width: 1366px) and (orientation: landscape) {/*this is the size of an ipad 6th generation landscape*/
+    #book-pic {
+        width: 33%;
+        top: 17vh;
+    }
+}
+
+@media only screen and (max-width: 1024px) and (orientation: portrait) { /*this is the size of an ipad 6th generation portrait*/
+    #book-pic {
+        top: 51vh;
+        width: 32%; 
+        left: 47vw; 
+    }
+}
+
+@media only screen and (max-width: 812px) and (orientation: landscape) { /*this is the size of an iphone 12 mini landscape*/
+    #book-pic {
+        top: 21vh;
+        width: 22%; 
+        left: 62vw; 
+    }
+}
+
+@media only screen and (max-width: 375px) and (orientation: portrait) { /*this is the size of an iphone 12 mini portrait*/
+    #book-pic {
+        top: 56vh;
+        width: 35%; 
+        left: 45vw; 
+    }
+}
+
+.book-wiggle-animation {
+    animation: wiggle 2s 1;
+}
+
+
+#book-text {
+    font-family: 'Gopher Mono';
+    position: absolute;
+    left: 7vw;
+    top: 42vh;
+    width: 45%;   
+    font-size: 0.8em;
+}
+
+@media only screen and (max-width: 1920px) {/*this is the size of a 24 inch monitor*/
+    #book-text {
+        top: 49vh;
+        font-size: 0.9em;
+    }
+}
+
+@media only screen and (max-width: 1536px) {/*this is the size of a XPS 15"laptop*/
+    #book-text {
+        top: 45vh;
+        font-size: 0.8em;
+    }
+}
+
+@media only screen and (max-width: 1470px) {/*this is the size of an ipad 6th generation landscape*/
+    #book-text {
+        top: 46vh;
+        font-size: 0.75em;
+    }
+}
+
+@media only screen and (max-width: 1440px) {/*this is the size of a macbook pro 13inch*/
+    #book-text {
+        top: 43vh;
+    }
+}
+
+@media only screen and (max-width: 1366px) and (orientation: landscape) {/*this is the size of an ipad 6th generation landscape*/
+    #book-text {
+        top: 37vh;
+        font-size: 0.6em;
+    }
+}
+
+@media only screen and (max-width: 1024px) and (orientation: portrait) { /*this is the size of an ipad 6th generation portrait*/
+    #book-text {
+        top: 27vh;
+        font-size: 1.5vw;
+        width: 85%;  
+    }
+}
+
+@media only screen and (max-width: 812px) and (orientation: landscape) { /*this is the size of an iphone 12 mini landscape*/
+    #book-text {
+        top: 45vh;
+        font-size: 0.9vw;
+        width: 55%;  
+    }
+}
+
+@media only screen and (max-width: 375px) and (orientation: portrait) { /*this is the size of an iphone 12 mini portrait*/
+    #book-text {
+        font-size: 2.1vw;
+    }
+}
+
+#buy-now {
+    font-family: 'Gopher Mono';
+    position: absolute;
+    left: 7vw;
+    top: 73vh;
+    width: 45%;   
+    font-size: 1.2em;   
+}
+
+@media only screen and (max-width: 1920px) {/*this is the size of a 24 inch monitor*/
+    #buy-now {
+        top: 74vh;
+        font-size: 1.1em;   
+    }
+}
+
+@media only screen and (max-width: 1536px) {/*this is the size of a XPS 15"laptop*/
+    #buy-now {
+        top: 71vh;
+    }
+}
+
+@media only screen and (max-width: 1470px) {/*this is the size of an ipad 6th generation landscape*/
+    #buy-now {
+        top: 74vh;
+        font-size: 0.9em;
+    }
+}
+
+@media only screen and (max-width: 1440px) {/*this is the size of a macbook pro 13inch*/
+    #buy-now {
+        top: 70vh;
+        font-size: 0.9em;
+    }
+}
+
+@media only screen and (max-width: 1366px) and (orientation: landscape) {/*this is the size of an ipad 6th generation landscape*/
+    #buy-now {
+        top: 65vh;
+        font-size: 0.7em;
+    }
+}
+
+@media only screen and (max-width: 1024px) and (orientation: portrait) { /*this is the size of an ipad 6th generation portrait*/
+    #buy-now {
+        top: 56vh;
+        width: 32%;  
+        left: 13vw;
+        font-size: 1.4em;
+    }
+}
+
+@media only screen and (max-width: 812px) and (orientation: landscape) { /*this is the size of an iphone 12 mini landscape*/
+    #buy-now {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 375px) and (orientation: portrait) { /*this is the size of an iphone 12 mini portrait*/
+    #buy-now {
+        font-size: 0.7em;
+        top: 60vh;
+        left: 7vw;
+    }
+}
+
+#buy-now a {
+    text-decoration: none;
+}
+
+#buy-now li {
+    font-size: 75%;
+    list-style: none;
+}
+
+#list-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.column {
+    width: 250%;
+}
+
+.buy-now-links {
+    color: #5f9251;
+}
+
+.buy-now-worksheet {
+    color: #334862;
+}
+
+.buy-now-links:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    text-decoration-color: #c15564;
+    text-decoration-thickness: 0.2vw;
+}
+
+.book-and-text-animation {
+    animation: fade-in2 1s ease-out 0s 1;
+}
+
+/**
+ * Game
+ */
+/*--------------------------------------------------------------------------------------------------------------------*/
+@media only screen and (max-width: 1920px), /*this is the size of a 24 inch monitor*/
+       only screen and (max-width: 1536px), /*this is the size of a XPS 15"laptop*/
+       only screen and (max-width: 1470px), /*this is the size of a macbook air 13.6 inch*/
+       only screen and (max-width: 1440px) {/*this is the size of a macbook pro 13inch*/
+    #game {
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        box-sizing: border-box;
+        padding: 0 4vw;
+    }
+}
+
+@media only screen and (max-width: 375px) and (orientation: portrait), /*this is the size of an iphone 12 mini portrait*/
+       only screen and (max-width: 1366px) and (orientation: landscape), /*this is the size of an ipad 6th generation landscape*/
+       only screen and (max-width: 1024px) and (orientation: portrait), /*this is the size of an ipad 6th generation portrait*/
+       only screen and (max-width: 812px) and (orientation: landscape) { /*this is the size of an iphone 12 mini landscape*/
+    #game, #game-nav {
+        display: none;
+    }
+}
+
+#canvas-container {
+  position: absolute;
+  height: 75%;
+  width: 90%;
+  top: 13.5%; /* Adjust the height as needed */
+  left: 5%;
+  right: 0;
+  bottom: 0;
+/*  border: 4px solid;*/
+}
+
+
+#my-canvas {
+  width: 100%;
+  height: auto; /* This ensures the aspect ratio is maintained */
+  display: block; /* Remove any extra whitespace */
+}
+
+
+/**
+ * Modal
+ */
+/*--------------------------------------------------------------------------------------------------------------------*/
+#last-item:hover {
+    color: #e39ba6;
+    text-decoration: underline;
+    text-decoration-color: #c15564;
+    text-decoration-thickness: 3px;
+    cursor: pointer;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+.modal-content p {
+    font-family: 'Gopher Mono';
+}
+
+@media only screen and (max-width: 1920px), /*this is the size of a 24 inch monitor*/
+       only screen and (max-width: 1470px), /*this is the size of a macbook air 13.6 inch*/
+       only screen and (max-width: 1440px), /*this is the size of a macbook pro 13inch*/
+       only screen and (max-width: 1366px) and (orientation: landscape) { /*this is the size of an ipad 6th generation landscape*/
+    .modal-content-video {
+        margin: 15% auto;
+    }
+}
+
+@media only screen and (max-width: 1024px) and (orientation: portrait) { /*this is the size of an ipad 6th generation portrait*/
+    .modal-content-video {
+        margin: 35% auto;
+    }
+}
+
+@media only screen and (max-width: 812px) and (orientation: landscape) { /*this is the size of an iphone 12 mini landscape*/
+    .modal-content-video {
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (max-width: 375px) and (orientation: portrait) { /*this is the size of an iphone 12 mini portrait*/
+    .modal-content-video {
+        margin: 0 auto;
+    }
+}
+
+.modal-content-pdf {
+    margin-top: 2vh;
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 1920px) { /*this is the size of a 24 inch monitor*/
+    .close2 {
+        top: 8vh;
+        left: 65vw;
+    }
+}
+
+@media only screen and (max-width: 1536px) { /*this is the size of a XPS 15"laptop*/
+    .close2 {
+        left: 69vw;
+    }
+}
+
+@media only screen and (max-width: 1440px) { /*this is the size of a macbook pro 13inch*/
+    .close2 {
+        left: 70vw;
+    }
+}
+
+.close2 {
+    color: #f5faf9;
+    position: absolute;
+    font-size: 128px;
+    font-weight: bold;
+}
+
+.close:hover, .close2:hover, .close:focus, .close2:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
