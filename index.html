@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
         <title>Ben Spooner</title>
         <!-- fonts -->
         <link href = "./fonts/gopherMono/stylesheet.css" rel = "stylesheet" type = "text/css" />      
@@ -16,43 +16,28 @@
 
         <div id="smaller-body">
 
-                <!-- NAV MENU WIDE----------------------------------------------------------------------------->
-                <div id="nav-div">
-                    <table id="header" class="color-dark">                        
-                        <tr>
-                            <td id="logo"><a href="#main-body1">benSpooner<span></span></a></td>
-                            <td id="empty-nav">Ben Spooner</td>
-                            <td class="nav-links" id="about-nav"><a href="#about">about</a></td>
-                            <td class="nav-links" id="book-nav"><a href="#book">myBook</a></td>
-                            <td class="nav-links" id="game-nav"><a href="#game">myGame</a></td>                            
-                            <td class="nav-links" id="last-item">contact</td>                            
-                        </tr>
-                    </table>
-                </div>
+            <!-- NAV MENU ----------------------------------------------------------------------------->
+            <div id="nav-div">
+                <table id="header" class="color-dark">                        
+                    <tr>
+                        <td id="logo"><a href="#main-body1">benSpooner<span></span></a></td>
+                        <td id="empty-nav">Ben Spooner</td>
+                        <td class="nav-links" id="about-nav"><a href="#about">aboutMe</a></td>
+                        <td class="nav-links" id="book-nav"><a href="#book">myBook</a></td>
+                        <td class="nav-links" id="game-nav"><a href="#game">myGame</a></td>                            
+                        <td class="nav-links" id="last-item">contact</td>                            
+                    </tr>
+                </table>
+            </div>
 
-                <!-- THE CONTACT MODAL -->
-                <div id="myModal" class="modal">                    
-                    <!-- MODAL CONTENT -->
-                    <div class="modal-content">
-                        <span class="close">&times;</span>
-                        <p>Drop me an email at: <span class="bold">benpaulspooner@gmail.com</span></p>
-                    </div>
+            <!-- THE CONTACT MODAL -->
+            <div id="myModal" class="modal">                    
+                <!-- MODAL CONTENT -->
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <p>Drop me an email at: <span class="bold">benpaulspooner@gmail.com</span></p>
                 </div>
-            
-             <!-- TITLE BODY ----------------------------------------------------------------------------->
-            <section id="main-body1">
-                <h1 id="title" class="color-blue">Hello,<br>I'm <span id="ben">Ben</span></h1>
-                <div id="medium-p-homepage">
-                    <p class="color-green">I like to get things done</p>
-                </div>
-                <div id="large-p-homepage">
-                    <p class="color-dark-blue">and I like making... <span id="change-word">things</span></p>
-                </div>
-                <div id="small-p-homepage">
-                    <p class="color-dark">I thrive on bringing ideas to life. From crafting books and games to websites and musical pieces, I'm fuelled by a passion for creative endeavours, and <span id="done"><em>getting things done</em></span>.</p>
-                </div>
-                <img id="title-img" src="./images/homepage-pic.jpeg">
-            </section>
+            </div>
 
             <!-- FOOTER ----------------------------------------------------------------------------->             
             <div id="footer">
@@ -86,18 +71,42 @@
                         <td><span id="play-footer" onclick="playPause()">play</span></td>
                     </tr>                    
                 </table>  
-            </div>               
+            </div>     
+
+            <!-- HOMEPAGE ----------------------------------------------------------------------------->
+            <section id="main-body1">
+                <div id="title-img-block">
+                    <div id="title-div">
+                        <h1 id="title" class="color-blue">Hello,<br>I'm <span id="ben">Ben</span></h1>
+                        <h1 id="mobile-landscape-title" class="color-blue">Please flip me portrait!</h1>
+                    </div>
+                    <div id="img-container">
+                        <img id="title-img" src="./images/homepage-pic.jpeg">
+                    </div>
+                </div>
+                <div id="medium-p-homepage">
+                    <p class="color-green">I like to get things done</p>
+                </div>
+                <div id="large-p-homepage">
+                    <p class="color-dark-blue">and I like making... <span id="change-word">things</span></p>
+                </div>
+                <div id="small-p-homepage">
+                    <p class="color-dark">I thrive on bringing ideas to life. From crafting books and games to websites and musical pieces, I'm fuelled by a passion for creative endeavours, and <span id="done"><em>getting things done</em></span>.</p>
+                </div>
+            </section>          
 
             <!-- ABOUT --------------------------------------------------------------------------------------------->
             <section id="about">
-                <h2 id="about-title" class="color-blue">About</h2>
-                <div id="about1">                    
-                    <p class="color-dark-blue" id="large-p-about1">A little bit about me<span id="about-ellipsis">...</span></p>
-                    <img id="code-img" src="./images/code.svg">
-                    <img id="piano-img" src="./images/piano.png">         
-                    <div id="about-summary">
-                        <p class="color-dark">Following a 15yr career as a business owner, offering music/audio services, I transitioned into pastures new. I up-skilled in web development before securing a scholarship on a competitive Software Engineering & Data Science course, <span class="bold">competing against 20,000 other applicants</span> and I now spend my time combining my love for all things tech, music and art.</p>
-                    </div>
+                <h2 id="about-title" class="color-blue">aboutMe</h2>
+                <p class="color-dark-blue" id="large-p-about1">A little bit about me<span id="about-ellipsis">...</span></p>
+                <div id="about1">      
+                    <div id="piano-summary-block">
+                        <img id="piano-img" src="./images/piano.png">
+                        <img id="code-img" src="./images/code.svg">       
+                        <div id="about-summary">
+                            <p class="color-dark" id="about-summary-text">Following a 15yr career as a business owner, offering music/audio services, I transitioned into pastures new. I up-skilled in web development before securing a scholarship on a competitive Software Engineering & Data Science course, <span class="bold">competing against 20,000 other applicants</span>, and I now spend my time combining my love for all things tech, music and art.</p>
+                        </div>    
+                    </div>              
                     <div id="cols">
                         <div id="about-col-1">
                             <p class="color-green">Brief history of my tech skills:</p>
@@ -135,44 +144,32 @@
                 <h2 id="book-title" class="color-blue">myBook</h2>
                 <p class="color-dark-blue" id="large-p-book1">Beginner To Composer...</p>
                 <p class="color-dark-blue" id="large-p-book2">In 14 Days</p>
-                <img src="./images/mybook.jpg" id="book-pic">
-                <p id="book-text">
-                    <span class="color-dark">
-                        Beginner To Composer In 14 Days is delightfully different. Moving swiftly from theory to action, Ben emerges as the teacher you always wished you'd had, championing radical creative freedom, improvisation and composition - even for beginners. Especially for beginners in fact. "Students need freedom to truly fall in love with their instrument" he writes, "frameworks that pique their curiosity over and over again so that practice becomes play". Whether you're a complete beginner or have a little knowledge up your sleeve, you'll adore this dynamic and intimate guide to learning the piano, peppered with evocative vignettes of a life lived with music at its heart. Best of all, you'll come away with a method you can use time and time again to create your very own music, captured on professional quality lead sheets you can share with other musicians, to bring your work to life. Suitable for adults and a useful resource for teachers. Complements graded and traditional approaches to learning.
-                    </span>
-                </p>
-                <div id="buy-now">
-                    <span class="bold color-dark">BUY NOW</span>
-                    <div id="list-container">
-                        <div class="column">
-                            <ul>
-                                <li><a href="https://www.amazon.co.uk/Ben-Spooners-Beginner-Composer-Days/dp/139996769X/ref=sr_1_1?crid=WO4S5PFXTGBM&keywords=beginner+to+composer+in+14+days&qid=1697134011&sprefix=beginner+to+compo%2Caps%2C75&sr=8-1" target="_blank">- <span class="underline buy-now-links">Amazon↑</span></a></li>
-                                <li><a href="https://books.apple.com/gb/book/ben-spooners-beginner-to-composer-in-14-days/id6468330191" target="_blank">- <span class="underline buy-now-links">Apple Books↑</span></a></li>
-                                <li><a href="https://www.barnesandnoble.com/w/ben-spooners-beginner-to-composer-in-14-days-ben-spooner/1144130455" target="_blank">- <span class="underline buy-now-links">Barnes & Noble↑</span></a></li>
-                                <li><a href="https://www.scribd.com/book/674549841/Ben-Spooner-s-Beginner-to-Composer-in-14-Days" target="_blank">- <span class="underline buy-now-links">Scribd↑</span></a></li>
-                            </ul>  
-                        </div>
-                        <div class="column" style="display:none">
-                            <ul>
-                                <li><a href="https://www.amazon.co.uk/Ben-Spooners-Beginner-Composer-Days/dp/139996769X/ref=sr_1_1?crid=WO4S5PFXTGBM&keywords=beginner+to+composer+in+14+days&qid=1697134011&sprefix=beginner+to+compo%2Caps%2C75&sr=8-1" target="_blank">- <span class="underline buy-now-links">Amazon↑</span></a></li>
-                                <li><a href="https://books.apple.com/gb/book/ben-spooners-beginner-to-composer-in-14-days/id6468330191" target="_blank">- <span class="underline buy-now-links">Apple Books↑</span></a></li>
-                                <li><a href="https://www.barnesandnoble.com/w/ben-spooners-beginner-to-composer-in-14-days-ben-spooner/1144130455" target="_blank">- <span class="underline buy-now-links">Barnes & Noble↑</span></a></li>
-                                <li><a href="https://www.scribd.com/book/674549841/Ben-Spooner-s-Beginner-to-Composer-in-14-Days" target="_blank">- <span class="underline buy-now-links">Scribd↑</span></a></li>
-                            </ul>
-                        </div>
-                        <div class="column" style="display:none">
-                            <ul>
-                                <li><a href="https://www.amazon.co.uk/Ben-Spooners-Beginner-Composer-Days/dp/139996769X/ref=sr_1_1?crid=WO4S5PFXTGBM&keywords=beginner+to+composer+in+14+days&qid=1697134011&sprefix=beginner+to+compo%2Caps%2C75&sr=8-1" target="_blank">- <span class="underline buy-now-links">Amazon↑</span></a></li>
-                                <li><a href="https://books.apple.com/gb/book/ben-spooners-beginner-to-composer-in-14-days/id6468330191" target="_blank">- <span class="underline buy-now-links">Apple Books↑</span></a></li>
-                                <li><a href="https://www.barnesandnoble.com/w/ben-spooners-beginner-to-composer-in-14-days-ben-spooner/1144130455" target="_blank">- <span class="underline buy-now-links">Barnes & Noble↑</span></a></li>
-                                <li><a href="https://www.scribd.com/book/674549841/Ben-Spooner-s-Beginner-to-Composer-in-14-Days" target="_blank">- <span class="underline buy-now-links">Scribd↑</span></a></li>
-                            </ul>
+                <div id="book-text-block">
+                    <img src="./images/mybook.jpg" id="book-pic">
+                    <p id="book-text">
+                        <span class="color-dark" id="book-text-p">
+                            "Beginner To Composer In 14 Days is delightfully different. Moving swiftly from theory to action, Ben emerges as the teacher you always wished you'd had, championing radical creative freedom, improvisation and composition - even for beginners. Especially for beginners in fact. "Students need freedom to truly fall in love with their instrument" he writes, "frameworks that pique their curiosity over and over again so that practice becomes play". Whether you're a complete beginner or have a little knowledge up your sleeve, you'll adore this dynamic and intimate guide to learning the piano, peppered with evocative vignettes of a life lived with music at its heart. Best of all, you'll come away with a method you can use time and time again to create your very own music, captured on professional quality lead sheets you can share with other musicians, to bring your work to life. Suitable for adults and a useful resource for teachers. Complements graded and traditional approaches to learning."
+                        </span>
+                    </p>
+                    <div id="buy-now">
+                        <div id="buy-now-container">
+                            <div>
+                                <span class="bold color-dark">BUY NOW</span>
+                                <div id="list-container">
+                                    <div class="column">
+                                        <ul>
+                                            <li><a href="https://www.amazon.co.uk/Ben-Spooners-Beginner-Composer-Days/dp/139996769X/ref=sr_1_1?crid=WO4S5PFXTGBM&keywords=beginner+to+composer+in+14+days&qid=1697134011&sprefix=beginner+to+compo%2Caps%2C75&sr=8-1" target="_blank">- <span class="underline buy-now-links">Amazon↑</span></a></li>
+                                            <li><a href="https://books.apple.com/gb/book/ben-spooners-beginner-to-composer-in-14-days/id6468330191" target="_blank">- <span class="underline buy-now-links">Apple Books↑</span></a></li>
+                                        </ul>  
+                                    </div>
+                                </div>
+                                <br>
+                                <span id="book-sample" class="bold">
+                                    <a href="./images/sample and worksheet.pdf" target="_blank"><span class="buy-now-worksheet">View Sample + Free Worksheet DOWNLOAD↓</span></a>
+                                </span>
+                            </div>
                         </div>
                     </div>
-                    <br>
-                    <span id="book-sample" class="bold">
-                        <a href="./images/sample and worksheet.pdf" target="_blank"><span class="buy-now-worksheet">View Sample + Free Worksheet DOWNLOAD↓</span></a>
-                    </span>
                 </div>
             </section>
 

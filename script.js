@@ -1,4 +1,13 @@
 /**
+ * GLOBAL FUNCTIONS
+ */
+/*--------------------------------------------------------------------------------------------------------------------*/
+// Function to check if the screen width is smaller than 767px
+function isSmallScreen() {
+  return window.innerWidth < 767;
+}
+
+/**
  * CHANGING WORDS- on the homepage
  */
 /*--------------------------------------------------------------------------------------------------------------------*/
@@ -14,8 +23,6 @@ const rotateWords = () => {
 
     setInterval(changeWord, 1500);
 };
-
-// Call the rotateWords function to start the word rotation
 rotateWords();
 
 /**
@@ -100,6 +107,35 @@ function calculateAge() {
 }
 calculateAge();
 
+// Make summary text appear one letter at a time
+const textContainer = document.getElementById("about-summary");
+const text = "Following a 15yr career as a business owner, offering music/audio services, I transitioned into pastures new. I up-skilled in web development before securing a scholarship on a competitive Software Engineering & Data Science course, competing against 20,000 other applicants, and I now spend my time combining my love for all things tech, music and art.";
+let index = 0;
+let interval;
+
+// Function to add a letter to the text container
+function addLetterAbout() {
+  if (index < text.length) {
+    textContainer.innerHTML += text.charAt(index);
+    index++;
+  } else {
+    clearInterval(interval); // Stop when all letters are displayed
+  }
+}
+// Start the interval when the about section is scrolled into view
+function startTextAnimation() {
+  if (!isTextAnimationRunning && isSmallScreen()) {
+    isTextAnimationRunning = true;
+    interval = setInterval(addLetterAbout, 50);
+  }
+}
+
+// Stop the interval when the about section is scrolled out of view
+function stopTextAnimation() {
+    isTextAnimationRunning = false;
+    clearInterval(interval);
+}
+
 /**
  * Lone Legends Game
  */
@@ -171,15 +207,20 @@ const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             title.classList.add('title-animation');
+            title.classList.add('title-appear');
             titleImg.classList.add('title-img-animation');
+            titleImg.classList.add('ben-pic-fade');
             mediumP.classList.add('medium-p-animation');
             largeP.classList.add('large-p-animation');
             smallP.classList.add('small-p-animation');
+            logo.innerHTML = "benSpooner";
             logo.classList.add('nav-underline'); 
             return;
         }
         title.classList.remove('title-animation');
         titleImg.classList.remove('title-img-animation');
+        title.classList.remove('title-appear');
+        titleImg.classList.remove('ben-pic-fade');
         mediumP.classList.remove('medium-p-animation');
         largeP.classList.remove('large-p-animation');
         smallP.classList.remove('small-p-animation');
@@ -189,6 +230,7 @@ const observer = new IntersectionObserver(entries => {
 observer.observe(title, titleImg);
 
 // observer for about
+const about = document.querySelector('#about');
 const largePAbout1 = document.querySelector('#large-p-about1');
 const aboutNav = document.querySelector('#about-nav');
 
@@ -197,47 +239,111 @@ const observer2 = new IntersectionObserver(entries => {
         if (entry.isIntersecting) {
             largePAbout1.classList.add('large-p-about1-animation');          
             aboutNav.classList.add('nav-underline');
-            return;
+        } else {
+            largePAbout1.classList.remove('large-p-about1-animation');
+            aboutNav.classList.remove('nav-underline');
         }
-        largePAbout1.classList.remove('large-p-about1-animation');
-        aboutNav.classList.remove('nav-underline');
     });
 });
 observer2.observe(largePAbout1);
+
+// observer for about on devices 767px and smaller
+if (window.innerWidth <= 767) {
+    const about = document.querySelector('#about');
+    const piano = document.querySelector('#piano-img');
+    const codeImg = document.querySelector('#code-img');
+    let isPianoVisible = true; // Starting with piano visible
+    const summary = document.querySelector('#about-summary');
+    let isTextAnimationRunning = false; // Flag to track animation state
+
+    const observer3 = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {        
+                summary.classList.add('about-summary-appear');
+                
+                logo.innerHTML = "aboutMe";
+
+                if (!isTextAnimationRunning) {
+                    startTextAnimation(); // Start animation only if it's not already running
+                    isTextAnimationRunning = true;
+                }
+
+                // Function to toggle between piano and codeImg
+                function toggleImages() {
+                    if (isPianoVisible) {
+                        // If piano is currently displayed, start its fade-out animation
+                        piano.classList.add('piano-and-code-fade');
+                        piano.addEventListener('animationend', () => {
+                            piano.style.display = 'none';
+                            codeImg.style.display = 'block';
+                            codeImg.classList.add('piano-and-code-fade');
+                            isPianoVisible = false;
+                        }, { once: true });
+                    } else {
+                        // If codeImg is currently displayed, start its fade-out animation
+                        codeImg.classList.add('piano-and-code-fade');
+                        codeImg.addEventListener('animationend', () => {
+                            codeImg.style.display = 'none';
+                            piano.style.display = 'block';
+                            piano.classList.add('piano-and-code-fade');
+                            isPianoVisible = true;
+                        }, { once: true });
+                    }
+                }
+                toggleImages(); // Initial image toggle
+
+                // Set an interval to repeatedly toggle the images
+                const imageSwitchInterval = setInterval(toggleImages, 6000); // Switch every 6 seconds (adjust the duration as needed)
+
+            } else {
+                summary.classList.remove('about-summary-appear');
+
+                stopTextAnimation(); // Stop animation when the section is out of view
+                isTextAnimationRunning = false;
+            }
+        });
+    }, {
+        threshold: 0.2, // Adjust as needed
+        rootMargin: '0px 0px 0px 0px' // Adjust the margins if necessary
+    });
+    observer3.observe(about);
+}
 
 // observer for book
 const bookTitle = document.querySelector('#book-title');
 const bookNav = document.querySelector('#book-nav');
 const largePBook = document.querySelector('#large-p-book2');
 const bookPic = document.querySelector('#book-pic');
-const bookText = document.querySelector('#book-text');
 const buyNow = document.querySelector('#buy-now');
-const bookSample = document.querySelector('#book-sample');
 
-const observer3 = new IntersectionObserver(entries => {
+const observer4 = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {       
             bookNav.classList.add('nav-underline');
             largePBook.classList.add('large-p-book-animation');   
-            bookPic.classList.add('book-wiggle-animation');   
-            // bookText.classList.add('book-and-text-animation');   
-            // buyNow.classList.add('book-and-text-animation');   
+            bookPic.classList.add('book-wiggle-animation');
+            bookPic.classList.add('book-img-fade');     
+            buyNow.classList.add('book-text-appear');
+            
+            if (isSmallScreen()) logo.innerHTML = "myBook";
             return;
         }
         bookNav.classList.remove('nav-underline');
         largePBook.classList.remove('large-p-book-animation'); 
-        bookPic.classList.remove('book-wiggle-animation');    
-        // bookText.classList.remove('book-and-text-animation');   
-        // buyNow.classList.remove('book-and-text-animation');     
+        bookPic.classList.remove('book-wiggle-animation');  
+        bookPic.classList.remove('book-img-fade');  
+        buyNow.classList.remove('book-text-appear');   
+
+
     });
 });
-observer3.observe(bookTitle, bookSample);
+observer4.observe(bookPic);
 
 // observer for game
 document.addEventListener('DOMContentLoaded', function () {
     const gameNav = document.querySelector('#game-nav');
 
-    const observer4 = new IntersectionObserver(entries => {
+    const observer5 = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 gameNav.classList.add('nav-underline');
@@ -247,5 +353,5 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    observer4.observe(document.querySelector('#canvas-container')); // Change this to the correct target element
+    observer5.observe(document.querySelector('#canvas-container')); // Change this to the correct target element
 });
