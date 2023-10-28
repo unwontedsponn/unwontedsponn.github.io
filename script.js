@@ -4,7 +4,7 @@
 /*--------------------------------------------------------------------------------------------------------------------*/
 // Function to check if the screen width is smaller than 767px
 function isSmallScreen() {
-  return window.innerWidth < 767;
+  return window.innerWidth < 1366;
 }
 
 /**
@@ -247,8 +247,8 @@ const observer2 = new IntersectionObserver(entries => {
 });
 observer2.observe(largePAbout1);
 
-// observer for about on devices 767px and smaller
-if (window.innerWidth <= 767) {
+// observer for about on devices 1366px and smaller
+if (window.innerWidth <= 1366) {
     const about = document.querySelector('#about');
     const piano = document.querySelector('#piano-img');
     const codeImg = document.querySelector('#code-img');

@@ -59,6 +59,34 @@ section {scroll-snap-align: start;}
     75% {transform: rotate(10deg);}
     100% {transform: rotate(0deg);}
 }
+@keyframes equalize {
+  0% {height: 60px;}
+  4% {height: 50px;}
+  8% {height: 40px;}
+  12% {height: 30px;}
+  16% {height: 20px;}
+  20% {height: 30px;}
+  24% {height: 40px;}
+  28% {height: 10px;}
+  32% {height: 40px;}
+  36% {height: 60px;}
+  40% {height: 20px;}
+  44% {height: 40px;}
+  48% {height: 70px;}
+  52% {height: 30px;}
+  56% {height: 10px;}
+  60% {height: 30px;}
+  64% {height: 50px;}
+  68% {height: 60px;}
+  72% {height: 70px;}
+  76% {height: 80px;}
+  80% {height: 70px;}
+  84% {height: 60px;}
+  88% {height: 50px;}
+  92% {height: 60px;}
+  96% {height: 70px;}
+  100% {height: 80px;}
+}
 
 /**
  * Navbar
@@ -74,25 +102,11 @@ section {scroll-snap-align: start;}
     margin-left: 3.8vw; /* margin-left is added to center nav table as there are issues with flex in Safari */
 }
 
-@media only screen and (max-width: 1366px) and (orientation: landscape), /*this is the size of an ipad 6th generation landscape*/
-       only screen and (max-width: 812px) and (orientation: landscape) {/*this is the size of an iphone 12 mini landscape*/
-    #header {margin-left: -2.8vw;}
-}
-
-@media only screen and (max-width: 1024px) and (orientation: portrait) { /*this is the size of an ipad 6th generation portrait*/
-    #header {margin-left: 3.5vw;}
-}
-
 #logo {
     font-family: 'Gopher Mono Semi';
     text-align: left !important;
     width: 12vw;
     font-size: 150%;
-}
-
-@media only screen and (max-width: 1024px) and (orientation: portrait), /*this is the size of an ipad 6th generation portrait*/
-       only screen and (max-width: 812px) and (orientation: landscape) {/*this is the size of an iphone 12 mini landscape*/
-    #logo {padding-right: 2vw !important;}
 }
 
 #empty-nav {
@@ -123,15 +137,6 @@ section {scroll-snap-align: start;}
     }
 }
 
-@media only screen and (max-width: 1366px) and (orientation: landscape), /*this is the size of an ipad 6th generation landscape*/
-       only screen and (max-width: 1024px) and (orientation: portrait), /*this is the size of an ipad 6th generation portrait*/
-       only screen and (max-width: 812px) and (orientation: landscape) {/*this is the size of an iphone 12 mini landscape*/
-    #header td {
-        padding-left: 1vw;
-        padding-right: 1vw;
-    }
-}
-
 #last-item {border-right: none !important;}
 
 #header a, #cols a {
@@ -152,8 +157,11 @@ section {scroll-snap-align: start;}
     text-decoration-thickness: 5px;
 }
 
-@media (max-width: 767px) and (orientation: landscape) {#header {display: none;}}
-@media (max-width: 767px) and (orientation: portrait) {#empty-nav, #about-nav, #game-nav, #book-nav, #worksheet-nav {display: none;}}
+/* Tablets and Phones (landscape and portrait) */
+@media (min-width: 768px) and (max-width: 1366px) and (orientation: landscape),
+       (max-width: 767px) and (orientation: landscape) {#header {display: none;}}
+@media (min-width: 768px) and (max-width: 1366px) and (orientation: portrait),
+       (max-width: 767px) and (orientation: portrait), {#empty-nav, #about-nav, #book-nav, #game-nav {display: none;}}
 
 /**
  * Footer
@@ -178,17 +186,8 @@ section {scroll-snap-align: start;}
 @media only screen and (max-width: 1920px), /*this is the size of a 24 inch monitor*/
        only screen and (max-width: 1536px), /*this is the size of a XPS 15"laptop*/
        only screen and (max-width: 1470px), /*this is the size of a macbook air 13.6 inch*/
-       only screen and (max-width: 1440px), /*this is the size of a macbook pro 13inch*/
-       only screen and (max-width: 1366px) and (orientation: landscape) { /*this is the size of an ipad 6th generation landscape*/
+       only screen and (max-width: 1440px) {/*this is the size of a macbook pro 13inch*/
     #footer2 {left: 27vw;}
-}
-
-@media only screen and (max-width: 1024px) and (orientation: portrait) { /*this is the size of an ipad 6th generation portrait*/
-    #footer2 {left: 28.5vw;}
-}
-
-@media only screen and (max-width: 812px) and (orientation: landscape) { /*this is the size of an iphone 12 mini landscape*/
-    #footer2 {left: 25vw;}
 }
 
 #footer td {
@@ -249,22 +248,10 @@ section {scroll-snap-align: start;}
 
 @media only screen and (max-width: 1920px), /*this is the size of a 24 inch monitor*/
        only screen and (max-width: 1470px), /*this is the size of a macbook air 13.6 inch*/
-       only screen and (max-width: 1440px), /*this is the size of a macbook pro 13inch*/
-       only screen and (max-width: 1366px) and (orientation: landscape) { /*this is the size of an ipad 6th generation landscape*/
+       only screen and (max-width: 1440px) {/*this is the size of a macbook pro 13inch*/
     #equaliser {
         left: 48vw;
         bottom: 7vh;
-    }
-}
-
-@media only screen and (max-width: 1024px) and (orientation: portrait) { /*this is the size of an ipad 6th generation portrait*/
-    #equaliser {display: none;}
-}
-
-@media only screen and (max-width: 812px) and (orientation: landscape) { /*this is the size of an iphone 12 mini landscape*/
-    #equaliser {
-        left: 47vw;
-        bottom: 14.3vh;
     }
 }
 
@@ -285,43 +272,16 @@ section {scroll-snap-align: start;}
 .bar:nth-child(4) {animation-duration: 2.4s;}
 .bar:nth-child(5) {animation-duration: 2.1s;}
 
-@keyframes equalize {
-  0% {height: 60px;}
-  4% {height: 50px;}
-  8% {height: 40px;}
-  12% {height: 30px;}
-  16% {height: 20px;}
-  20% {height: 30px;}
-  24% {height: 40px;}
-  28% {height: 10px;}
-  32% {height: 40px;}
-  36% {height: 60px;}
-  40% {height: 20px;}
-  44% {height: 40px;}
-  48% {height: 70px;}
-  52% {height: 30px;}
-  56% {height: 10px;}
-  60% {height: 30px;}
-  64% {height: 50px;}
-  68% {height: 60px;}
-  72% {height: 70px;}
-  76% {height: 80px;}
-  80% {height: 70px;}
-  84% {height: 60px;}
-  88% {height: 50px;}
-  92% {height: 60px;}
-  96% {height: 70px;}
-  100% {height: 80px;}
-}
-
 #listen, #green-and-pine-footer, #play-footer {
     position: relative;
     top: 0.6vh;
 }
 
-@media (max-width: 767px) and (orientation: landscape) {#footer2 {display: none;}}
-@media (max-width: 767px) and (orientation: portrait) {#footer2 {left: auto;}}
-
+/* Phones and Tablets (portrait and landscape) */
+@media (min-width: 768px) and (max-width: 1366px) and (orientation: landscape),
+       (max-width: 767px) and (orientation: landscape) {#footer2 {display: none;}}
+@media (min-width: 768px) and (max-width: 1366px) and (orientation: portrait),
+       (max-width: 767px) and (orientation: portrait) {#footer2 {left: auto;}}
 /**
  * Homepage
  */
@@ -374,30 +334,6 @@ section {scroll-snap-align: start;}
     }
 }
 
-@media only screen and (max-width: 1366px) and (orientation: landscape) { /*this is the size of an ipad 6th generation landscape*/
-    #title {
-        font-size: 12vw;
-        top: 18vh;
-        left: 5vw;
-    }
-}
-
-@media only screen and (max-width: 1024px) and (orientation: portrait) { /*this is the size of an ipad 6th generation portrait*/
-    #title {
-        font-size: 19vw;
-        top: 12vh;
-        left: 5vw;
-    }
-}
-
-@media only screen and (max-width: 812px) and (orientation: landscape) { /*this is the size of an iphone 12 mini landscape*/
-    #title {
-        font-size: 11vw;
-        top: 18.5vh;
-        left: 1.3vw;
-    }
-}
-
 .title-animation {
     animation: 1s ease-out 0s 1 fade-in;
     animation: 1s ease-out 0s 1 slideInFromLeft;
@@ -439,33 +375,6 @@ section {scroll-snap-align: start;}
         top: 35vh;
         left: 15.5vw;
         width: 36vw;
-    }
-}
-
-@media only screen and (max-width: 1366px) and (orientation: landscape) { /*this is the size of an ipad 6th generation landscape*/
-    #medium-p-homepage {
-        font-size: 1em;
-        top: 36vh;
-        left: 15.5vw;
-        width: 36vw;
-    }
-}
-
-@media only screen and (max-width: 1024px) and (orientation: portrait) { /*this is the size of an ipad 6th generation portrait*/
-    #medium-p-homepage {
-        font-size: 0.9em;
-        top: 28vh;
-        left: 50vw;
-        width: 43vw;
-    }
-}
-
-@media only screen and (max-width: 812px) and (orientation: landscape) { /*this is the size of an iphone 12 mini landscape*/
-    #medium-p-homepage {
-        font-size: 0.7em;
-        top: 42vh;
-        left: 18vw;
-        width: 43vw;
     }
 }
 
@@ -513,33 +422,6 @@ section {scroll-snap-align: start;}
     }
 }
 
-@media only screen and (max-width: 1366px) and (orientation: landscape) { /*this is the size of an ipad 6th generation landscape*/
-    #large-p-homepage {
-        top: 51.7vh;
-        left: 12vw;
-        font-size: 2.9vw;
-        width: 45vw;
-    }
-}
-
-@media only screen and (max-width: 1024px) and (orientation: portrait) { /*this is the size of an ipad 6th generation portrait*/
-    #large-p-homepage {
-        top: 47vh;
-        left: 8.8vw;
-        font-size: 4.8vw;
-        width: 33vw;
-    }
-}
-
-@media only screen and (max-width: 812px) and (orientation: landscape) { /*this is the size of an iphone 12 mini landscape*/
-    #large-p-homepage {
-        top: 62vh;
-        left: 7vw;
-        font-size: 3.1vw;
-        width: 50vw;
-    }
-}
-
 .large-p-animation {animation: 1s ease-out 0s 1 fade-in2;}
 
 #small-p-homepage {
@@ -579,30 +461,6 @@ section {scroll-snap-align: start;}
         left: 12vw;
         font-size: 1vw;
         width: 43vw;
-    }
-}
-
-@media only screen and (max-width: 1366px) and (orientation: landscape) { /*this is the size of an ipad 6th generation landscape*/
-    #small-p-homepage {
-        top: 65.5vh;
-        left: 12vw;
-        font-size: 1.2vw;
-        width: 43vw;
-    }
-}
-
-@media only screen and (max-width: 1024px) and (orientation: portrait) { /*this is the size of an ipad 6th generation portrait*/
-    #small-p-homepage {
-        top: 66vh;
-        left: 7.5vw;
-        font-size: 2vw;
-        width: 40vw;
-    }
-}
-
-@media only screen and (max-width: 812px) and (orientation: landscape) { /*this is the size of an iphone 12 mini landscape*/
-    #small-p-homepage {
-        display: none;
     }
 }
 
@@ -646,36 +504,37 @@ section {scroll-snap-align: start;}
     }
 }
 
-@media only screen and (max-width: 1366px) and (orientation: landscape) { /*this is the size of an ipad 6th generation landscape*/
-    #main-body1 img {
-        top: 27vh;
-        left: 60vw;
-        width: 22vw;
-    }
-}
-
-@media only screen and (max-width: 1024px) and (orientation: portrait) { /*this is the size of an ipad 6th generation portrait*/
-    #main-body1 img {
-        top: 44.5vh;
-        left: 50vw;
-        width: 34vw;
-    }
-}
-
-@media only screen and (max-width: 812px) and (orientation: landscape) { /*this is the size of an iphone 12 mini landscape*/
-    #main-body1 img {
-        top: 18vh;
-        left: 55vw;
-        width: 20vw;
-    }
-}
-
 .title-img-animation {
     animation: 1s ease-out 0s 1 fade-in2;
     animation: 1s ease-out 0s 1 slideInFromRight;
 }
 
-@media (min-width: 767px) {#mobile-landscape-title {display: none;}}
+/*Remove "Please flip me portrait" from devices above 1366px*/
+@media (min-width: 1366px) {#mobile-landscape-title {display: none;}}
+
+/* Phones and Tablets (portrait and landscape) */
+@media (min-width: 768px) and (max-width: 1366px) and (orientation: landscape) {
+    #title, #large-p-homepage, #small-p-homepage, #medium-p-homepage, #img-container, #main-body1 img {display: none;}
+    #title-img-block {
+        margin-top: auto;
+        display: block;
+        top: auto;
+        left: auto;
+        width: 100%;
+        position: relative;
+    }
+
+    #mobile-landscape-title {
+        display: block;
+        top: 0vh;
+        font-size: 10em;
+        margin-top: 3vh;
+        width: 100%;
+        z-index: 1;
+        font-family: 'Gopher Mono Semi';
+        opacity: 0.4;
+    }
+}
 
 @media (max-width: 767px) and (orientation: landscape) {
     #title, #large-p-homepage, #small-p-homepage, #medium-p-homepage, #img-container, #main-body1 img {display: none;}
@@ -700,7 +559,51 @@ section {scroll-snap-align: start;}
     }
 }
 
-@media (max-width: 767px) and (orientation: portrait) { /* Styles for mobile devices */
+@media (min-width: 768px) and (max-width: 1366px) and (orientation: portrait) { /* Styles for portrait tablets */
+    #title-img-block {
+        margin-top: 2px;
+        display: block;
+        top: auto;
+        left: auto;
+        width: 100%;
+        position: relative;
+    }
+
+    #img-container {
+        position: relative;
+        width: 75%;
+        overflow: hidden;
+        top: 0;
+        left: 12vw;
+    }
+
+    #main-body1 img {
+        position: static;
+        top: auto;
+        left: auto;
+        margin-top: 20vh;
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+
+    #title {
+        top: 27vh;
+        font-size: 8.5em;
+        z-index: 1;
+        left: 12vw;
+    }
+
+    #ben {
+        font-size: 1.5em;
+    }
+
+    .ben-pic-fade {animation: benFadeOut 1.5s ease-in-out forwards;}
+    .title-appear {animation: title-fade-in-mobile 1.5s ease-in-out forwards;}
+    #mobile-landscape-title, #large-p-homepage, #small-p-homepage, #medium-p-homepage {display: none;}
+}
+
+@media (max-width: 767px) and (orientation: portrait) { /* Styles for portrait mobiles */
     #title-img-block {
         margin-top: 2px;
         display: block;
@@ -788,27 +691,6 @@ section {scroll-snap-align: start;}
     }
 }
 
-@media only screen and (max-width: 1366px) and (orientation: landscape) { /*this is the size of an ipad 6th generation landscape*/
-    #about-title {
-        font-size: 14vw;
-        top: 10vh;
-    }
-}
-
-@media only screen and (max-width: 1024px) and (orientation: portrait) { /*this is the size of an ipad 6th generation portrait*/
-    #about-title {
-        font-size: 20vw;
-        top: 10vh;
-    }
-}
-
-@media only screen and (max-width: 812px) and (orientation: landscape) { /*this is the size of an iphone 12 mini landscape*/
-    #about-title {
-        font-size: 10vw;
-        top: 15.5vh;
-    }
-}
-
 #piano-img {
     position: absolute;
     z-index: 0;
@@ -838,29 +720,6 @@ section {scroll-snap-align: start;}
     }
 }
 
-@media only screen and (max-width: 1366px) and (orientation: landscape) { /*this is the size of an ipad 6th generation landscape*/
-    #piano-img {
-        left: 55vw;
-        width: 30vw;
-    }
-}
-
-@media only screen and (max-width: 1024px) and (orientation: portrait) { /*this is the size of an ipad 6th generation portrait*/
-    #piano-img {
-        width: 40vw;
-        left: 51vw;
-        top: 16vh;
-    }
-}
-
-@media only screen and (max-width: 812px) and (orientation: landscape) { /*this is the size of an iphone 12 mini landscape*/
-    #piano-img {
-        width: 20vw;
-        left: 53vw;
-        top: 16vh;
-    }
-}
-
 #code-img {
     position: absolute;
     z-index: 0;
@@ -876,25 +735,10 @@ section {scroll-snap-align: start;}
     }
 }
 
-@media only screen and (max-width: 1440px), /*this is the size of a macbook pro 13inch*/
-       only screen and (max-width: 1366px) and (orientation: landscape) { /*this is the size of an ipad 6th generation landscape*/
+@media only screen and (max-width: 1440px) {/*this is the size of a macbook pro 13inch*/
     #code-img {
         top: 70vh;
         width: 14vw;
-    }
-}
-
-@media only screen and (max-width: 1024px) and (orientation: portrait) { /*this is the size of an ipad 6th generation portrait*/
-    #code-img {
-        width: 18vw;
-        top: 73vh;
-    }
-}
-
-@media only screen and (max-width: 812px) and (orientation: landscape) { /*this is the size of an iphone 12 mini landscape*/
-    #code-img {
-        width: 9vw;
-        top: 68vh;
     }
 }
 
@@ -949,30 +793,6 @@ section {scroll-snap-align: start;}
     }
 }
 
-@media only screen and (max-width: 1366px) and (orientation: landscape) { /*this is the size of an ipad 6th generation landscape*/
-    #large-p-about1 {
-        top: 25.5vh;
-        left: 13vw;
-        font-size: 2.5vw;
-    }
-}
-
-@media only screen and (max-width: 1024px) and (orientation: portrait) { /*this is the size of an ipad 6th generation portrait*/
-    #large-p-about1 {
-        top: 22.5vh;
-        left: 11vw;
-        font-size: 3.5vw;
-    }
-}
-
-@media only screen and (max-width: 812px) and (orientation: landscape) { /*this is the size of an iphone 12 mini landscape*/
-    #large-p-about1 {
-        top: 31.7vh;
-        left: 13vw;
-        font-size: 1.5vw;
-    }
-}
-
 .large-p-about1-animation {animation: type 3s steps(60, end);}
 
 #about-summary {
@@ -1012,30 +832,6 @@ section {scroll-snap-align: start;}
         top: 36.5vh;
         font-size: 0.86vw;
         width: 48.5vw;
-    }
-}
-
-@media only screen and (max-width: 1366px) and (orientation: landscape) { /*this is the size of an ipad 6th generation landscape*/
-    #about-summary {
-        top: 34.5vh;
-        font-size: 1.1vw;
-        width: 56.5vw;
-    }
-}
-
-@media only screen and (max-width: 1024px) and (orientation: portrait) { /*this is the size of an ipad 6th generation portrait*/
-    #about-summary {
-        top: 30vh;
-        font-size: 1.5vw;
-        width: 47.5vw;
-    }
-}
-
-@media only screen and (max-width: 812px) and (orientation: landscape) { /*this is the size of an iphone 12 mini landscape*/
-    #about-summary {
-        top: 37.5vh;
-        font-size: 0.9vw;
-        width: 47.5vw;
     }
 }
 
@@ -1079,30 +875,6 @@ section {scroll-snap-align: start;}
     }
 }
 
-@media only screen and (max-width: 1366px) and (orientation: landscape) { /*this is the size of an ipad 6th generation landscape*/
-    #cols {
-        top: 46vh;
-        font-size: 1.1vw;
-        width: 135%;
-    }
-}
-
-@media only screen and (max-width: 1024px) and (orientation: portrait) { /*this is the size of an ipad 6th generation portrait*/
-    #cols {
-        top: 46.8vh;
-        font-size: 1.5vw;
-        width: 130%;
-    }
-}
-
-@media only screen and (max-width: 812px) and (orientation: landscape) { /*this is the size of an iphone 12 mini landscape*/
-    #cols {
-        top: 54vh;
-        width: 130%;
-        font-size: 0.9vw;
-    }
-}
-
 .about-col-1, .about-col-2 {
     box-sizing: border-box;
     padding-top: 2.5vh;
@@ -1142,30 +914,6 @@ section {scroll-snap-align: start;}
     }
 }
 
-@media only screen and (max-width: 1366px) and (orientation: landscape), {/*this is the size of an ipad 6th generation landscape*/
-    #fun-fact {
-        left: 74vh;
-        font-size: 1.1vw;
-        width: 76vw;
-        left: 5vw;
-        bottom: 21vh;
-    }
-}
-
-@media only screen and (max-width: 1024px) and (orientation: portrait) { /*this is the size of an ipad 6th generation portrait*/
-    #fun-fact {
-        font-size: 1.5vw;
-        width: 75vw;
-        bottom: 18vh;
-    }
-}
-
-@media only screen and (max-width: 812px) and (orientation: landscape) { /*this is the size of an iphone 12 mini landscape*/
-    #fun-fact {
-        display: none;
-    }
-}
-
 #cols div {flex-basis: 100%;}
 
 #about table {
@@ -1191,13 +939,6 @@ section {scroll-snap-align: start;}
     }
 }
 
-@media only screen and (max-width: 1024px), /*this is the size of an ipad 6th generation portrait*/
-       only screen and (max-width: 812px) and (orientation: landscape) {/*this is the size of an iphone 12 mini landscape*/
-    #about table {
-        display: none;
-    }
-}
-
 @media only screen and (max-width: 1920px), /*this is the size of an iphone 12 mini landscape*/
        only screen and (max-width: 1536px) { /*this is the size of a XPS 15"laptop*/
     #about table td {
@@ -1209,19 +950,6 @@ section {scroll-snap-align: start;}
        only screen and (max-width: 1440px) {
     #about table td {
         padding: 2% 2%;
-    }
-}
-
-@media only screen and (max-width: 1366px) and (orientation: landscape) {/*this is the size of an ipad 6th generation landscape*/
-    #about table td {
-        padding: 1.8% 2%;
-    }
-}
-
-@media only screen and (max-width: 1024px) and (orientation: portrait), /*this is the size of an ipad 6th generation portrait*/
-       only screen and (max-width: 812px) and (orientation: landscape) {/*this is the size of an iphone 12 mini landscape*/
-    #about table td {
-        padding: 1% 2%;
     }
 }
 
@@ -1246,7 +974,69 @@ section {scroll-snap-align: start;}
     font-weight: bold;
 }
 
-@media (max-width: 767px) and (orientation: landscape) {#about {display: none;}}
+/* Phones and Tablets (portrait and landscape) */
+@media (min-width: 768px) and (max-width: 1366px) and (orientation: landscape),
+       (max-width: 767px) and (orientation: landscape) {#about {display: none;}}
+
+@media (min-width: 768px) and (max-width: 1366px) and (orientation: portrait) {
+    #about {
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    #large-p-about1 {
+        letter-spacing: 0.2vw;
+        position: static;
+        width: 100%;
+        white-space: normal;
+        top: auto;
+        left: auto;
+        font-size: 8vw;
+        margin-top: 20vh;
+        margin-bottom: 0px;
+    }
+
+    #piano-summary-block {
+        margin-top: 2px;
+        display: block;
+        top: auto;
+        left: 3.5vw;
+        width: 90%;
+        position: relative;
+    }
+
+    #piano-img {
+        top: auto;
+        left: auto;
+        width: 100%;
+    }
+
+    #code-img {
+        top: auto;
+        left: auto;
+        width: 100%;
+        display: none;
+    }
+
+    #about-summary {
+        top: 0;
+        left: 0;
+        margin-top: 2vh;
+        position: absolute;
+        font-size: 3.9vw;
+        width: 100%;
+        padding: 10px;
+        display: block;
+    }
+
+    .large-p-about1-animation {animation: fade-in2 2.5s ease-in-out forwards;}
+    .about-summary-appear {animation: fade-in2 2.5s ease-in-out forwards;}
+    .piano-and-code-fade {animation: pianoAndCodeFadeOut 4.5s ease-in-out forwards;}
+
+    #about-title, #cols, #about table, #fun-fact, #about-summary-text {
+        display: none;
+    }
+}
 
 @media (max-width: 767px) and (orientation: portrait) {
     #about {
@@ -1332,14 +1122,6 @@ section {scroll-snap-align: start;}
     top: 10vh;
 }
 
-@media only screen and (max-width: 1366px) and (orientation: landscape) {/*this is the size of an ipad 6th generation landscape*/
-    #book-title {font-size: 13vw;}
-}
-
-@media only screen and (max-width: 1024px) and (orientation: portrait) { /*this is the size of an ipad 6th generation portrait*/
-    #book-title {font-size: 13vw;}
-}
-
 #large-p-book1 {
     font-family: 'Gopher Mono';
     text-decoration: underline;
@@ -1370,24 +1152,6 @@ section {scroll-snap-align: start;}
 @media only screen and (max-width: 1440px) {/*this is the size of a macbook pro 13inch*/
     #large-p-book1 {
         top: 31vh;
-    }
-}
-
-@media only screen and (max-width: 1366px) and (orientation: landscape) {/*this is the size of an ipad 6th generation landscape*/
-    #large-p-book1 {top: 26vh;}
-}
-
-@media only screen and (max-width: 1024px) and (orientation: portrait) { /*this is the size of an ipad 6th generation portrait*/
-    #large-p-book1 {
-        top: 19vh;
-        font-size: 3vw;
-    }
-}
-
-@media only screen and (max-width: 812px) and (orientation: landscape) { /*this is the size of an iphone 12 mini landscape*/
-    #large-p-book1 {
-        top: 32vh;
-        font-size: 3vw;
     }
 }
 
@@ -1422,26 +1186,6 @@ section {scroll-snap-align: start;}
 @media only screen and (max-width: 1440px) {/*this is the size of a macbook pro 13inch*/
     #large-p-book2 {
         top: 36vh;
-    }
-}
-
-@media only screen and (max-width: 1366px) and (orientation: landscape) {/*this is the size of an ipad 6th generation landscape*/
-    #large-p-book2 {
-        top: 31vh;
-    }
-}
-
-@media only screen and (max-width: 1024px) and (orientation: portrait) { /*this is the size of an ipad 6th generation portrait*/
-    #large-p-book2 {
-        top: 22vh;
-        font-size: 3vw;
-    }
-}
-
-@media only screen and (max-width: 812px) and (orientation: landscape) { /*this is the size of an iphone 12 mini landscape*/
-    #large-p-book2 {
-        top: 38vh;
-        font-size: 2vw;
     }
 }
 
@@ -1485,29 +1229,6 @@ section {scroll-snap-align: start;}
     }
 }
 
-@media only screen and (max-width: 1366px) and (orientation: landscape) {/*this is the size of an ipad 6th generation landscape*/
-    #book-text {
-        top: 37vh;
-        font-size: 0.6em;
-    }
-}
-
-@media only screen and (max-width: 1024px) and (orientation: portrait) { /*this is the size of an ipad 6th generation portrait*/
-    #book-text {
-        top: 27vh;
-        font-size: 1.5vw;
-        width: 85%;  
-    }
-}
-
-@media only screen and (max-width: 812px) and (orientation: landscape) { /*this is the size of an iphone 12 mini landscape*/
-    #book-text {
-        top: 45vh;
-        font-size: 0.9vw;
-        width: 55%;  
-    }
-}
-
 #book-pic {
     position: absolute;
     left: 55vw;
@@ -1540,29 +1261,6 @@ section {scroll-snap-align: start;}
 @media only screen and (max-width: 1440px) {/*this is the size of a macbook pro 13inch*/
     #book-pic {
         width: 30%;
-    }
-}
-
-@media only screen and (max-width: 1366px) and (orientation: landscape) {/*this is the size of an ipad 6th generation landscape*/
-    #book-pic {
-        width: 33%;
-        top: 17vh;
-    }
-}
-
-@media only screen and (max-width: 1024px) and (orientation: portrait) { /*this is the size of an ipad 6th generation portrait*/
-    #book-pic {
-        top: 51vh;
-        width: 32%; 
-        left: 47vw; 
-    }
-}
-
-@media only screen and (max-width: 812px) and (orientation: landscape) { /*this is the size of an iphone 12 mini landscape*/
-    #book-pic {
-        top: 21vh;
-        width: 22%; 
-        left: 62vw; 
     }
 }
 
@@ -1606,28 +1304,6 @@ section {scroll-snap-align: start;}
     }
 }
 
-@media only screen and (max-width: 1366px) and (orientation: landscape) {/*this is the size of an ipad 6th generation landscape*/
-    #buy-now {
-        top: 65vh;
-        font-size: 0.7em;
-    }
-}
-
-@media only screen and (max-width: 1024px) and (orientation: portrait) { /*this is the size of an ipad 6th generation portrait*/
-    #buy-now {
-        top: 56vh;
-        width: 32%;  
-        left: 13vw;
-        font-size: 1.4em;
-    }
-}
-
-@media only screen and (max-width: 812px) and (orientation: landscape) { /*this is the size of an iphone 12 mini landscape*/
-    #buy-now {
-        display: none;
-    }
-}
-
 #buy-now a {
     text-decoration: none;
 }
@@ -1665,7 +1341,49 @@ section {scroll-snap-align: start;}
     animation: fade-in2 1s ease-out 0s 1;
 }
 
-@media (max-width: 767px) and (orientation: landscape) {#book {display: none;}}
+/* Phones and Tablets (portrait and landscape) */
+@media (min-width: 768px) and (max-width: 1366px) and (orientation: landscape),
+       (max-width: 767px) and (orientation: landscape) {#book {display: none;}}
+
+@media (min-width: 768px) and (max-width: 1366px) and (orientation: portrait) {
+    #book {overflow: hidden;}   
+
+    #book-text-block {
+        margin-top: 18.5vh;
+        margin-left: 3.5vh;
+        display: block;
+        top: auto;
+        left: auto;
+        width: 100%;
+        position: relative;
+    }
+
+    #book-pic {
+        position: static;
+        top: auto;
+        left: auto;
+        width: 80%;
+        height: 100%;
+        margin-left: 4vw;
+    }
+
+    #buy-now {
+        top: 0;
+        left: 10vw;
+        margin-top: 14vh;
+        position: absolute;
+        font-size: 6.7vw;
+        display: block;
+        width: 70%;
+    }
+
+    .book-text-appear {animation: fade-in2 4.5s ease-in-out forwards;}
+    .book-img-fade {animation: bookFadeOut 2.5s ease-in-out forwards;}
+
+    #book-title, #large-p-book1, #large-p-book2, #book-text {
+        display: none;
+    }
+}
 
 @media (max-width: 767px) and (orientation: portrait) {
     #book {overflow: hidden;}   
@@ -1723,15 +1441,6 @@ section {scroll-snap-align: start;}
     }
 }
 
-@media only screen and (max-width: 375px) and (orientation: portrait), /*this is the size of an iphone 12 mini portrait*/
-       only screen and (max-width: 1366px) and (orientation: landscape), /*this is the size of an ipad 6th generation landscape*/
-       only screen and (max-width: 1024px) and (orientation: portrait), /*this is the size of an ipad 6th generation portrait*/
-       only screen and (max-width: 812px) and (orientation: landscape) { /*this is the size of an iphone 12 mini landscape*/
-    #game, #game-nav {
-        display: none;
-    }
-}
-
 #canvas-container {
   position: absolute;
   height: 75%;
@@ -1750,7 +1459,8 @@ section {scroll-snap-align: start;}
   display: block; /* Remove any extra whitespace */
 }
 
-@media (max-width: 767px) and (orientation: landscape) {#game {display: none;}}
+/* Phones and Tablets (portrait and landscape) Game is removed */
+@media (max-width: 1366px) {#game {display: none;}}
 
 /**
  * Modal
