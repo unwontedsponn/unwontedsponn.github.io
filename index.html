@@ -3,17 +3,27 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <meta name="description" content="Personal portfolio of Ben Spooner, featuring web development, music composition, and writing.">
         <title>Ben Spooner</title>
         <!-- fonts -->
         <link href = "./fonts/gopherMono/stylesheet.css" rel = "stylesheet" type = "text/css" />      
         <!-- css -->
         <link rel="stylesheet" href="./style.css" type="text/css" media="screen"/>
         <!-- js -->
-        <script type="text/javascript" src="./script.js" defer></script>
-        <script type="text/javascript" src="./gameScript.js" defer></script>
+        <script type="text/javascript" src="./js files/navBar.js" defer></script>
+        <script type="text/javascript" src="./js files/footer.js" defer></script>
+        <script type="text/javascript" src="./js files/homePage.js" defer></script>
+        <script type="text/javascript" src="./js files/aboutMe.js" defer></script>
+        <script type="text/javascript" src="./js files/myBook.js" defer></script>
+        <script type="text/javascript" src="./js files/myGame.js" defer></script>
+        <script type="module" src="./js files/gameScripts/game1/mainGame.js" defer></script>
     </head>
     <body class="background-light">
+        <!-- Flash Overlays for the Game - added here as they span the whole body -->
+        <div id="next-level-flash-overlay"></div> 
+        <div id="died-flash-overlay"></div> 
 
+        <!-- Centered content on the website -->
         <div id="smaller-body">
 
             <!-- NAV MENU ----------------------------------------------------------------------------->
@@ -25,7 +35,7 @@
                         <td class="nav-links" id="about-nav"><a href="#about">aboutMe</a></td>
                         <td class="nav-links" id="book-nav"><a href="#book">myBook</a></td>
                         <td class="nav-links" id="game-nav"><a href="#game">myGame</a></td>                            
-                        <td class="nav-links" id="last-item">contact</td>                            
+                        <td class="nav-links" id="last-item">contactMe</td>                            
                     </tr>
                 </table>
             </div>
@@ -91,7 +101,7 @@
                     <p class="color-dark-blue">and I like making... <span id="change-word">things</span></p>
                 </div>
                 <div id="small-p-homepage">
-                    <p class="color-dark">I thrive on bringing ideas to life. From crafting books and games to websites and musical pieces, I'm fuelled by a passion for creative endeavours, and <span id="done"><em>getting things done</em></span>.</p>
+                    <p class="color-dark">I thrive on bringing ideas to life. From creating books and games to websites and musical pieces, I'm fuelled by a passion for creative endeavours, and <span id="done"><em>getting things done</em></span>.</p>
                 </div>
             </section>          
 
@@ -118,14 +128,14 @@
                         </div>
                         <div id="about-table">
                             <table>
-                                <tr><td class="border-bottom"><span class="bold">Name:</span> Ben Spooner</td></tr>
-                                <tr><td class="border-bottom"><span class="bold">Age: </span><span id="age"></span> years young</td></tr>
-                                <tr><td class="border-bottom"><span class="bold">Favourite Book:</span> In The Miso Soup</td></tr>
-                                <tr><td class="border-bottom"><span class="bold">Tech Stack: </span>Javascript (TDD), HTML & CSS</td></tr>
-                                <tr><td class="border-bottom"><span class="bold">Sound Stack: </span>Logic X, Sibelius & FMOD</td></tr>
-                                <tr><td class="border-bottom"><span class="bold">Education: </span>Music and Sound for Film and Games (MSc)<br><span class="highlight">Distinction</span><br>
+                                <tr><td class="border-bottom"><span class="bold">name:</span> Ben Spooner</td></tr>
+                                <tr><td class="border-bottom"><span class="bold">age: </span><span id="age"></span> years young</td></tr>
+                                <tr><td class="border-bottom"><span class="bold">favouriteBook:</span> Hear The Wind Sing</td></tr>
+                                <tr><td class="border-bottom"><span class="bold">techStack: </span>Javascript, HTML & CSS</td></tr>
+                                <tr><td class="border-bottom"><span class="bold">soundStack: </span>Logic X, Sibelius & FMOD</td></tr>
+                                <tr><td class="border-bottom"><span class="bold">education: </span>Music and Sound for Film and Games (MSc)<br><span class="highlight">Distinction</span><br>
                                 </td></tr>
-                                <tr><td class="border-bottom"><span class="bold">Hobbies:</span> Reading, Walking, Eating, Learning, Cooking & Creating</td></tr>
+                                <tr><td class="border-bottom"><span class="bold">hobbies:</span> Reading, Walking, Eating, Learning, Cooking & Creating</td></tr>
                                 <tr><td><span class="bold">Extra links: </span>
                                     <a href="https://github.com/unwontedsponn" target="_blank"><span class="underline">gitHub↑</span></a> | 
                                     <a href="https://www.linkedin.com/in/ben-spooner-12aab937/" target="_blank"><span class="underline">linkedIn↑</span></a> | 
@@ -174,9 +184,14 @@
             </section>
 
             <!-- GAME ------------------------------------------------------------------------------------------>
-            <section id="game">                                  
+            <section id="game">  
+                <h2 id="game-title" class="color-blue">myGame</h2> 
+                <p class="color-dark-blue" id="large-p-game1"></p>
                 <div id="canvas-container">
                     <canvas id="my-canvas"></canvas>
+                    <p id="arrow-key-instructions" class="color-dark arrow-key-instructions">&larr;&uarr;&rarr;&darr;</p>
+                    <p id="try-not-to-die" class="color-dark">Try not to die...</p>
+                    <p id="level-complete" class="color-dark">Level complete</p>
                 </div>                    
             </section>
 

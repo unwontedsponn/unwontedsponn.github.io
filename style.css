@@ -52,6 +52,7 @@ section {scroll-snap-align: start;}
 @keyframes pianoAndCodeFadeOut {0% {opacity: 0;}50% {opacity: 0.07;}100% {opacity: 0;}}
 @keyframes bookFadeOut {0% {opacity: 0.8;}100% {opacity: 0.03;}}
 @keyframes type {from {width: 0;}}
+@keyframes typewriter {from {width: 0;}to {width: 100%;}}
 @keyframes wiggle {
     0% {transform: rotate(0deg);}
     25% {transform: rotate(10deg);}
@@ -161,7 +162,7 @@ section {scroll-snap-align: start;}
 @media (min-width: 768px) and (max-width: 1366px) and (orientation: landscape),
        (max-width: 767px) and (orientation: landscape) {#header {display: none;}}
 @media (min-width: 768px) and (max-width: 1366px) and (orientation: portrait),
-       (max-width: 767px) and (orientation: portrait), {#empty-nav, #about-nav, #book-nav, #game-nav {display: none;}}
+       (max-width: 767px) and (orientation: portrait) {#empty-nav, #about-nav, #book-nav, #game-nav {display: none;}}
 
 /**
  * Footer
@@ -512,7 +513,7 @@ section {scroll-snap-align: start;}
 /*Remove "Please flip me portrait" from devices above 1366px*/
 @media (min-width: 1366px) {#mobile-landscape-title {display: none;}}
 
-/* Phones and Tablets (portrait and landscape) */
+/* Tablets landscape */
 @media (min-width: 768px) and (max-width: 1366px) and (orientation: landscape) {
     #title, #large-p-homepage, #small-p-homepage, #medium-p-homepage, #img-container, #main-body1 img {display: none;}
     #title-img-block {
@@ -536,6 +537,7 @@ section {scroll-snap-align: start;}
     }
 }
 
+/* Phones landscape */
 @media (max-width: 767px) and (orientation: landscape) {
     #title, #large-p-homepage, #small-p-homepage, #medium-p-homepage, #img-container, #main-body1 img {display: none;}
     #title-img-block {
@@ -559,6 +561,7 @@ section {scroll-snap-align: start;}
     }
 }
 
+/* Tablets portrait */
 @media (min-width: 768px) and (max-width: 1366px) and (orientation: portrait) { /* Styles for portrait tablets */
     #title-img-block {
         margin-top: 2px;
@@ -603,9 +606,10 @@ section {scroll-snap-align: start;}
     #mobile-landscape-title, #large-p-homepage, #small-p-homepage, #medium-p-homepage {display: none;}
 }
 
+/* Mobiles portrait */
 @media (max-width: 767px) and (orientation: portrait) { /* Styles for portrait mobiles */
     #title-img-block {
-        margin-top: 2px;
+        margin-top: 15vh;
         display: block;
         top: auto;
         left: auto;
@@ -625,14 +629,13 @@ section {scroll-snap-align: start;}
         position: static;
         top: auto;
         left: auto;
-        margin-top: 15vh;
         width: 100%;
         height: 100%;
         border: none;
     }
 
     #title {
-        top: 20vh;
+        top: 5vh;
         font-size: 5.5em;
         z-index: 1;
         left: 0;
@@ -1033,9 +1036,7 @@ section {scroll-snap-align: start;}
     .about-summary-appear {animation: fade-in2 2.5s ease-in-out forwards;}
     .piano-and-code-fade {animation: pianoAndCodeFadeOut 4.5s ease-in-out forwards;}
 
-    #about-title, #cols, #about table, #fun-fact, #about-summary-text {
-        display: none;
-    }
+    #about-title, #cols, #about table, #fun-fact, #about-summary-text {display: none;}
 }
 
 @media (max-width: 767px) and (orientation: portrait) {
@@ -1093,9 +1094,7 @@ section {scroll-snap-align: start;}
     .about-summary-appear {animation: fade-in2 2.5s ease-in-out forwards;}
     .piano-and-code-fade {animation: pianoAndCodeFadeOut 4.5s ease-in-out forwards;}
 
-    #about-title, #cols, #about table, #fun-fact, #about-summary-text {
-        display: none;
-    }
+    #about-title, #cols, #about table, #fun-fact, #about-summary-text {display: none;}
 }
 
 /**
@@ -1144,15 +1143,11 @@ section {scroll-snap-align: start;}
 }
 
 @media only screen and (max-width: 1536px) { /*this is the size of a XPS 15"laptop*/
-    #large-p-book1 {
-        top: 32vh;
-    }
+    #large-p-book1 {top: 32vh;}
 }
 
 @media only screen and (max-width: 1440px) {/*this is the size of a macbook pro 13inch*/
-    #large-p-book1 {
-        top: 31vh;
-    }
+    #large-p-book1 {top: 31vh;}
 }
 
 #large-p-book2 {
@@ -1178,20 +1173,14 @@ section {scroll-snap-align: start;}
 }
 
 @media only screen and (max-width: 1536px) { /*this is the size of a XPS 15"laptop*/
-    #large-p-book2 {
-        top: 37vh;
-    }
+    #large-p-book2 {top: 37vh;}
 }
 
 @media only screen and (max-width: 1440px) {/*this is the size of a macbook pro 13inch*/
-    #large-p-book2 {
-        top: 36vh;
-    }
+    #large-p-book2 {top: 36vh;}
 }
 
-.large-p-book-animation {
-    animation: type 3s steps(60, end);
-}
+.large-p-book-animation {animation: type 3s steps(60, end);}
 
 #book-text {
     font-family: 'Gopher Mono';
@@ -1224,9 +1213,7 @@ section {scroll-snap-align: start;}
 }
 
 @media only screen and (max-width: 1440px) {/*this is the size of a macbook pro 13inch*/
-    #book-text {
-        top: 43vh;
-    }
+    #book-text {top: 43vh;}
 }
 
 #book-pic {
@@ -1259,14 +1246,10 @@ section {scroll-snap-align: start;}
 }
 
 @media only screen and (max-width: 1440px) {/*this is the size of a macbook pro 13inch*/
-    #book-pic {
-        width: 30%;
-    }
+    #book-pic {width: 30%;}
 }
 
-.book-wiggle-animation {
-    animation: wiggle 2s 1;
-}
+.book-wiggle-animation {animation: wiggle 2s 1;}
 
 #buy-now {
     font-family: 'Gopher Mono';
@@ -1304,9 +1287,7 @@ section {scroll-snap-align: start;}
     }
 }
 
-#buy-now a {
-    text-decoration: none;
-}
+#buy-now a {text-decoration: none;}
 
 #buy-now li {
     font-size: 75%;
@@ -1318,17 +1299,11 @@ section {scroll-snap-align: start;}
     justify-content: space-between;
 }
 
-.column {
-    width: 250%;
-}
+.column {width: 250%;}
 
-.buy-now-links {
-    color: #5f9251;
-}
+.buy-now-links {color: #5f9251;}
 
-.buy-now-worksheet {
-    color: #334862;
-}
+.buy-now-worksheet {color: #334862;}
 
 .buy-now-links:hover {
     text-decoration: underline;
@@ -1337,9 +1312,7 @@ section {scroll-snap-align: start;}
     text-decoration-thickness: 0.2vw;
 }
 
-.book-and-text-animation {
-    animation: fade-in2 1s ease-out 0s 1;
-}
+.book-and-text-animation {animation: fade-in2 1s ease-out 0s 1;}
 
 /* Phones and Tablets (portrait and landscape) */
 @media (min-width: 768px) and (max-width: 1366px) and (orientation: landscape),
@@ -1380,9 +1353,7 @@ section {scroll-snap-align: start;}
     .book-text-appear {animation: fade-in2 4.5s ease-in-out forwards;}
     .book-img-fade {animation: bookFadeOut 2.5s ease-in-out forwards;}
 
-    #book-title, #large-p-book1, #large-p-book2, #book-text {
-        display: none;
-    }
+    #book-title, #large-p-book1, #large-p-book2, #book-text {display: none;}
 }
 
 @media (max-width: 767px) and (orientation: portrait) {
@@ -1418,9 +1389,7 @@ section {scroll-snap-align: start;}
     .book-text-appear {animation: fade-in2 4.5s ease-in-out forwards;}
     .book-img-fade {animation: bookFadeOut 2.5s ease-in-out forwards;}
 
-    #book-title, #large-p-book1, #large-p-book2, #book-text {
-        display: none;
-    }
+    #book-title, #large-p-book1, #large-p-book2, #book-text {display: none;}
 }
 
 /**
@@ -1441,22 +1410,95 @@ section {scroll-snap-align: start;}
     }
 }
 
-#canvas-container {
-  position: absolute;
-  height: 75%;
-  width: 90%;
-  top: 13.5%; /* Adjust the height as needed */
-  left: 5%;
-  right: 0;
-  bottom: 0;
-/*  border: 4px solid;*/
+#game-title {
+    position: absolute;
+    width: 90vw;
+    left: 5vw;
+    font-family: 'Gopher Mono Semi';
+    opacity: 0.4;
+    font-size: 12vw;
+    top: 10vh;
 }
 
+#large-p-game1 {
+    font-family: 'Gopher Mono';
+    text-decoration: underline;
+    text-decoration-color: #c15564;
+    letter-spacing: 0.2vw;
+    position: absolute;
+    width: 65vw;
+    margin-bottom: 5vh;
+    white-space: nowrap;
+    top: 31vh;
+    left: 13vw;
+    font-size: 2.2vw;
+    overflow: hidden; /* Hide overflow content */
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.large-p-game-animation {animation: type 3s steps(60, end);}
+
+#canvas-container {
+    position: absolute;
+    height: 75%;
+    width: 90%;
+    top: 13.5%; /* Adjust the height as needed */
+    left: 5%;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center; /* Center vertically */
+}
+
+#arrow-key-instructions {
+    position: relative;
+    left: -58vw;
+    top: 10vh;
+    font-family: 'Gopher Mono Semi';
+    font-size: 13em;
+    width: 150%;
+    opacity: 0.1;
+    display: block;
+    text-align: center; /* Center the text */
+}
+
+.arrow-key-instructions {
+    transition: opacity 0.5s ease-out; /* Adjust the duration and timing function as needed */
+}
+
+#try-not-to-die {
+    position: relative;
+    left: -100vw;
+    top: 0vh;
+    font-family: 'Gopher Mono Semi';
+    font-size: 4em;
+    min-width: 200vw;
+    opacity: 0;
+}
+
+#level-complete {
+    position: absolute;
+    left: 20vw;
+    top: 30vh;
+    font-family: 'Gopher Mono Semi';
+    font-size: 4em;
+    min-width: 200vw;
+    opacity: 0;
+}
 
 #my-canvas {
   width: 100%;
   height: auto; /* This ensures the aspect ratio is maintained */
   display: block; /* Remove any extra whitespace */
+}
+
+#next-level-flash-overlay, #died-flash-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: background 0.3s ease; /* Transition only when hiding */
 }
 
 /* Phones and Tablets (portrait and landscape) Game is removed */
@@ -1495,40 +1537,28 @@ section {scroll-snap-align: start;}
     width: 80%; /* Could be more or less, depending on screen size */
 }
 
-.modal-content p {
-    font-family: 'Gopher Mono';
-}
+.modal-content p {font-family: 'Gopher Mono';}
 
 @media only screen and (max-width: 1920px), /*this is the size of a 24 inch monitor*/
        only screen and (max-width: 1470px), /*this is the size of a macbook air 13.6 inch*/
        only screen and (max-width: 1440px), /*this is the size of a macbook pro 13inch*/
        only screen and (max-width: 1366px) and (orientation: landscape) { /*this is the size of an ipad 6th generation landscape*/
-    .modal-content-video {
-        margin: 15% auto;
-    }
+    .modal-content-video {margin: 15% auto;}
 }
 
 @media only screen and (max-width: 1024px) and (orientation: portrait) { /*this is the size of an ipad 6th generation portrait*/
-    .modal-content-video {
-        margin: 35% auto;
-    }
+    .modal-content-video {margin: 35% auto;}
 }
 
 @media only screen and (max-width: 812px) and (orientation: landscape) { /*this is the size of an iphone 12 mini landscape*/
-    .modal-content-video {
-        margin: 0 auto;
-    }
+    .modal-content-video {margin: 0 auto;}
 }
 
 @media only screen and (max-width: 375px) and (orientation: portrait) { /*this is the size of an iphone 12 mini portrait*/
-    .modal-content-video {
-        margin: 0 auto;
-    }
+    .modal-content-video {margin: 0 auto;}
 }
 
-.modal-content-pdf {
-    margin-top: 2vh;
-}
+.modal-content-pdf {margin-top: 2vh;}
 
 /* The Close Button */
 .close {
@@ -1546,15 +1576,11 @@ section {scroll-snap-align: start;}
 }
 
 @media only screen and (max-width: 1536px) { /*this is the size of a XPS 15"laptop*/
-    .close2 {
-        left: 69vw;
-    }
+    .close2 {left: 69vw;}
 }
 
 @media only screen and (max-width: 1440px) { /*this is the size of a macbook pro 13inch*/
-    .close2 {
-        left: 70vw;
-    }
+    .close2 {left: 70vw;}
 }
 
 .close2 {
