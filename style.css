@@ -1466,16 +1466,6 @@ section {scroll-snap-align: start;}
     transition: opacity 0.5s ease-out; /* Adjust the duration and timing function as needed */
 }
 
-#try-not-to-die {
-    position: relative;
-    left: -100vw;
-    top: 0vh;
-    font-family: 'Gopher Mono Semi';
-    font-size: 4em;
-    min-width: 200vw;
-    opacity: 0;
-}
-
 #level-complete {
     position: absolute;
     left: 20vw;
